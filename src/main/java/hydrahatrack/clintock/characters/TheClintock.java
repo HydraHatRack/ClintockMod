@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
+import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -25,6 +26,8 @@ import java.util.ArrayList;
 
 public class TheClintock extends CustomPlayer {
     private static final int ENERGY_PER_TURN = 3;
+    private static final String CLINTOCK_NAME = "The Clintock";
+    private static final Color CLINTOCK_COLOR = CardHelper.getColor(108.0f, 48.0f, 130.0f);
 
     private static final String CLINTOCK_SKELETON_ATLAS_PATH = "img/characters/clintock/idle/skeleton.atlas";
     private static final String CLINTOCK_SKELETON_JSON_PATH = "img/characters/clintock/idle/skeleton.json";
@@ -67,7 +70,7 @@ public class TheClintock extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo("The Clintock",
+        return new CharSelectInfo(CLINTOCK_NAME,
                 "A genetic engineer who got tired of CRISPR getting all the credit in TV shows and movies. NL" +
                         "She wields the tools of biology to slay the parasites of the spire.",
                 75, 75, 0, 99, 5,
@@ -76,7 +79,7 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public String getTitle(PlayerClass playerClass) {
-        return "The Clintock";
+        return CLINTOCK_NAME;
     }
 
     @Override
@@ -86,7 +89,7 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public Color getCardRenderColor() {
-        return Color.PURPLE;
+        return CLINTOCK_COLOR;
     }
 
     @Override
@@ -96,7 +99,7 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public Color getCardTrailColor() {
-        return Color.PURPLE;
+        return CLINTOCK_COLOR;
     }
 
     @Override
@@ -122,12 +125,12 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public String getLocalizedCharacterName() {
-        return "The Clintock";
+        return CLINTOCK_NAME;
     }
 
     @Override
     public AbstractPlayer newInstance() {
-        return new TheClintock("The Clintock", TheClintockEnum.CLINTOCK_CLASS);
+        return new TheClintock(CLINTOCK_NAME, TheClintockEnum.CLINTOCK_CLASS);
     }
 
     @Override
@@ -137,7 +140,7 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public Color getSlashAttackColor() {
-        return Color.PURPLE;
+        return CLINTOCK_COLOR;
     }
 
     @Override

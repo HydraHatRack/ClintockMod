@@ -3,12 +3,16 @@ package hydrahatrack.clintock;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.interfaces.*;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import hydrahatrack.clintock.cards.ClintockDefend;
 import hydrahatrack.clintock.cards.ClintockStrike;
@@ -20,21 +24,30 @@ import hydrahatrack.clintock.relics.NTerminusArginine;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
+
 @SpireInitializer
 public class ClintockMod implements
         EditCardsSubscriber,
         EditCharactersSubscriber,
+        EditKeywordsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
         PostInitializeSubscriber {
 
     private final Logger logger = LogManager.getLogger(TheClintock.class.getName());
 
+    // Mod metadata
     private static final String MOD_NAME = "The Clintock";
     private static final String AUTHOR = "HydraHatRack";
     private static final String DESCRIPTION = "Adds a new playable character, The Clintock.";
 
-    private static final Color CLINTOCK_COLOR = CardHelper.getColor(108.0f, 48.0f, 130.0f);
+    // Color theme
+    private static final Color CLINTOCK_THEME_COLOR = CardHelper.getColor(108.0f, 48.0f, 130.0f);
+
+    // Asset paths
     private static final String CLINTOCK_ATTACK_BACKGROUND = "img/512/attackCardBackground.png";
     private static final String CLINTOCK_SKILL_BACKGROUND = "img/512/skillCardBackground.png";
     private static final String CLINTOCK_POWER_BACKGROUND = "img/512/powerCardBackground.png";
@@ -44,12 +57,13 @@ public class ClintockMod implements
     private static final String CLINTOCK_POWER_PORTRAIT_BACKGROUND = "img/1024/powerCardBackground.png";
     private static final String CLINTOCK_ENERGY_ORB_PORTRAIT = "img/1024/energyOrb.png";
     private static final String CLINTOCK_ENERGY_ORB_IN_DESCRIPTION = "img/energy/energyOrbInDescription.png";
-
     private static final String CLINTOCK_BUTTON = "img/characters/clintock/characterSelectButton.png";
     private static final String CLINTOCK_PORTRAIT = "img/characters/clintock/portrait.jpg";
     private static final String CLINTOCK_BADGE = "img/ModBadge.png";
 
+    // Localization strings
     private static final String CARD_STRINGS_PATH = "localization/TheClintock-CardStrings.json";
+    private static final String KEYWORD_STRINGS_PATH = "localization/TheClintock-KeywordStrings.json";
     private static final String RELIC_STRINGS_PATH = "localization/TheClintock-RelicStrings.json";
 
     public ClintockMod() {
@@ -58,7 +72,7 @@ public class ClintockMod implements
         logger.info("Creating the color " + AbstractCardEnum.CLINTOCK_COLOR.toString());
 
         BaseMod.addColor(AbstractCardEnum.CLINTOCK_COLOR,
-                CLINTOCK_COLOR,
+                CLINTOCK_THEME_COLOR,
                 CLINTOCK_ATTACK_BACKGROUND,
                 CLINTOCK_SKILL_BACKGROUND,
                 CLINTOCK_POWER_BACKGROUND,
@@ -73,21 +87,23 @@ public class ClintockMod implements
 
     public static void initialize() {
         new ClintockMod();
-        System.out.println("============ The Clintock - initialized ============");
     }
 
     @Override
     public void receivePostInitialize() {
+        logger.info("Begin setting up post-initialization");
+
         // Add mod badge
         Texture badgeTexture = ImageMaster.loadImage(CLINTOCK_BADGE);
         ModPanel settingsPanel = new ModPanel();
         BaseMod.registerModBadge(badgeTexture, MOD_NAME, AUTHOR, DESCRIPTION, settingsPanel);
+
+        logger.info("Done setting up post-initialization");
     }
 
     @Override
     public void receiveEditCards() {
         logger.info("Begin editing cards");
-        logger.info("Adding cards for " + TheClintockEnum.CLINTOCK_CLASS.toString());
 
         BaseMod.addCard(new ClintockStrike());
         BaseMod.addCard(new ClintockDefend());
@@ -99,7 +115,6 @@ public class ClintockMod implements
     @Override
     public void receiveEditCharacters() {
         logger.info("Begin editing characters");
-        logger.info("Adding " + TheClintockEnum.CLINTOCK_CLASS.toString());
 
         BaseMod.addCharacter(
                 new TheClintock(MOD_NAME, TheClintockEnum.CLINTOCK_CLASS),
@@ -109,6 +124,22 @@ public class ClintockMod implements
         );
 
         logger.info("Done editing characters");
+    }
+
+    @Override
+    public void receiveEditKeywords() {
+        logger.info("Begin editing keywords");
+
+        Gson gson = new Gson();
+
+        String keywordStrings = Gdx.files.internal(KEYWORD_STRINGS_PATH)
+                .readString(String.valueOf(StandardCharsets.UTF_8));
+        Type typeToken = new TypeToken<Map<String, Keyword>>() {}.getType();
+
+        Map<String, Keyword> keywords = gson.fromJson(keywordStrings, typeToken);
+        keywords.forEach((k, v) -> BaseMod.addKeyword(v.NAMES, v.DESCRIPTION));
+
+        logger.info("Done editing keywords");
     }
 
     @Override

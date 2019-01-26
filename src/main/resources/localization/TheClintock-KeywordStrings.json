@@ -1,0 +1,33 @@
+{
+  "clintock:AdenineKeyword": {
+    "NAMES": [
+      "adenine"
+    ],
+    "DESCRIPTION": "Deals 3 damage to a random enemy"
+  },
+  "clintock:CytosineKeyword": {
+    "NAMES": [
+      "cytosine"
+    ],
+    "DESCRIPTION": "Deals 1 damage to all enemies"
+  },
+  "clintock:GuanineKeyword": {
+    "NAMES": [
+      "guanine"
+    ],
+    "DESCRIPTION": "Gains 3 block"
+  },
+  "clintock:ThymineKeyword": {
+    "NAMES": [
+      "thymine"
+    ],
+    "DESCRIPTION": "Gains 1 energy"
+  },
+  "clintock:AlanineKeyword": {
+    "NAMES": [
+      "alanine",
+      "ala"
+    ],
+    "DESCRIPTION": "GCT, GCC, GCA, GCG"
+  }
+}
