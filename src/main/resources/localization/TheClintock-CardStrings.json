@@ -1,0 +1,14 @@
+{
+  "clintock:ClintockStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "clintock:ClintockDefend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "clintock:GeneDrive": {
+    "NAME": "Gene Drive",
+    "DESCRIPTION": "Deal !D! damage twice. NL Apply !M! Vulnerable."
+  }
+}
