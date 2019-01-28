@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -17,7 +19,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hydrahatrack.clintock.cards.ClintockDefend;
 import hydrahatrack.clintock.cards.ClintockStrike;
-import hydrahatrack.clintock.cards.GeneDrive;
+import hydrahatrack.clintock.cards.MonomerSynthesis;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.enums.TheClintockEnum;
 import hydrahatrack.clintock.relics.NTerminusArginine;
@@ -35,6 +37,9 @@ public class TheClintock extends CustomPlayer {
     private static final String CLINTOCK_SHOULDER_2 = "img/characters/clintock/shoulder2.png";
     private static final String CLINTOCK_CORPSE = "img/characters/clintock/corpse.png";
 
+    public float[] orbPositionsX = {0, 0, 0};
+    public float[] orbPositionsY = {0, 0, 0};
+
     public TheClintock(String name, PlayerClass setClass) {
         super(name, setClass, null, null, (String) null, null);
 
@@ -44,6 +49,19 @@ public class TheClintock extends CustomPlayer {
         this.loadAnimation(CLINTOCK_SKELETON_ATLAS_PATH, CLINTOCK_SKELETON_JSON_PATH, 1.0f);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "animation", true);
         e.setTime(e.getEndTime() * MathUtils.random());
+
+        // Initialize slot positions
+        float xStartOffset = (float)Settings.WIDTH * 0.22F;
+        float yStartOffset = AbstractDungeon.floorY + (100 * Settings.scale) + 200;
+        float xSpaceBetweenSlots = 90 * Settings.scale;
+
+        orbPositionsX[0] = xStartOffset;
+        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 1);
+        orbPositionsX[2] = xStartOffset + (xSpaceBetweenSlots * 2);
+
+        orbPositionsY[0] = yStartOffset;
+        orbPositionsY[1] = yStartOffset;
+        orbPositionsY[2] = yStartOffset;
     }
 
     public ArrayList<String> getStartingDeck() {
@@ -52,13 +70,12 @@ public class TheClintock extends CustomPlayer {
         startingDeck.add(ClintockStrike.ID);
         startingDeck.add(ClintockStrike.ID);
         startingDeck.add(ClintockStrike.ID);
-        startingDeck.add(ClintockDefend.ID);
-        startingDeck.add(ClintockDefend.ID);
-        startingDeck.add(ClintockDefend.ID);
-        startingDeck.add(ClintockDefend.ID);
         startingDeck.add(ClintockStrike.ID);
         startingDeck.add(ClintockDefend.ID);
-
+        startingDeck.add(ClintockDefend.ID);
+        startingDeck.add(ClintockDefend.ID);
+        startingDeck.add(ClintockDefend.ID);
+        startingDeck.add(MonomerSynthesis.ID);
         return startingDeck;
     }
 
@@ -73,7 +90,7 @@ public class TheClintock extends CustomPlayer {
         return new CharSelectInfo(CLINTOCK_NAME,
                 "A genetic engineer who got tired of CRISPR getting all the credit in TV shows and movies. NL" +
                         "She wields the tools of biology to slay the parasites of the spire.",
-                75, 75, 0, 99, 5,
+                75, 75, 3, 99, 5,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
 
@@ -94,7 +111,7 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new GeneDrive();
+        return new MonomerSynthesis();
     }
 
     @Override
@@ -145,7 +162,10 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[]{AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.BLUNT_HEAVY, AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.BLUNT_HEAVY};
+        return new AbstractGameAction.AttackEffect[]{AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY};
     }
 
     @Override

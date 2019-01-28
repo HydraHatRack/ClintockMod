@@ -1,4 +1,8 @@
 {
+  "clintock:Adenine": {
+    "NAME": "Adenine",
+    "DESCRIPTION": "Bind 1 Adenine. Exhaust."
+  },
   "clintock:ClintockStrike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -7,8 +11,20 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "clintock:GeneDrive": {
-    "NAME": "Gene Drive",
-    "DESCRIPTION": "Deal !D! damage twice. NL Apply !M! Vulnerable."
+  "clintock:Cytosine": {
+    "NAME": "Cytosine",
+    "DESCRIPTION": "Bind 1 Cytosine. Exhaust."
+  },
+  "clintock:Guanine": {
+    "NAME": "Guanine",
+    "DESCRIPTION": "Bind 1 Guanine. Exhaust."
+  },
+  "clintock:MonomerSynthesis": {
+    "NAME": "Monomer Synthesis",
+    "DESCRIPTION": "Add a random nucleotide to your hand."
+  },
+  "clintock:Thymine": {
+    "NAME": "Thymine",
+    "DESCRIPTION": "Bind 1 Thymine. Exhaust."
   }
 }

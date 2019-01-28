@@ -1,27 +1,40 @@
 {
+  "clintock:BindKeyword": {
+    "NAMES": [
+      "bind"
+    ],
+    "DESCRIPTION": "Binding a nucleotide puts it in your first empty slot. If you have no empty slots, your existing nucleotides form an amino acid and join the peptide chain."
+  },
   "clintock:AdenineKeyword": {
     "NAMES": [
       "adenine"
     ],
-    "DESCRIPTION": "Deals 3 damage to a random enemy"
+    "DESCRIPTION": "Gains block."
   },
   "clintock:CytosineKeyword": {
     "NAMES": [
       "cytosine"
     ],
-    "DESCRIPTION": "Deals 1 damage to all enemies"
+    "DESCRIPTION": "Deals damage to a random enemy."
   },
   "clintock:GuanineKeyword": {
     "NAMES": [
       "guanine"
     ],
-    "DESCRIPTION": "Gains 3 block"
+    "DESCRIPTION": "Gains energy."
+  },
+  "clintock:Nucleotide": {
+    "NAMES": [
+      "nucleotide",
+      "nucleotides"
+    ],
+    "DESCRIPTION": "One of four organic molecules used in synthesizing amino acids (adenine, cytosine, guanine, thymine)."
   },
   "clintock:ThymineKeyword": {
     "NAMES": [
       "thymine"
     ],
-    "DESCRIPTION": "Gains 1 energy"
+    "DESCRIPTION": "Deals damage to all enemies."
   },
   "clintock:AlanineKeyword": {
     "NAMES": [

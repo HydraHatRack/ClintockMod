@@ -11,12 +11,8 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.Keyword;
-import com.megacrit.cardcrawl.localization.RelicStrings;
-import hydrahatrack.clintock.cards.ClintockDefend;
-import hydrahatrack.clintock.cards.ClintockStrike;
-import hydrahatrack.clintock.cards.GeneDrive;
+import com.megacrit.cardcrawl.localization.*;
+import hydrahatrack.clintock.cards.*;
 import hydrahatrack.clintock.characters.TheClintock;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.enums.TheClintockEnum;
@@ -64,6 +60,8 @@ public class ClintockMod implements
     // Localization strings
     private static final String CARD_STRINGS_PATH = "localization/TheClintock-CardStrings.json";
     private static final String KEYWORD_STRINGS_PATH = "localization/TheClintock-KeywordStrings.json";
+    private static final String ORB_STRINGS_PATH = "localization/TheClintock-OrbStrings.json";
+    private static final String POWER_STRINGS_PATH = "localization/TheClintock-PowerStrings.json";
     private static final String RELIC_STRINGS_PATH = "localization/TheClintock-RelicStrings.json";
 
     public ClintockMod() {
@@ -105,9 +103,13 @@ public class ClintockMod implements
     public void receiveEditCards() {
         logger.info("Begin editing cards");
 
+        BaseMod.addCard(new Adenine());
         BaseMod.addCard(new ClintockStrike());
         BaseMod.addCard(new ClintockDefend());
-        BaseMod.addCard(new GeneDrive());
+        BaseMod.addCard(new Cytosine());
+        BaseMod.addCard(new Guanine());
+        BaseMod.addCard(new MonomerSynthesis());
+        BaseMod.addCard(new Thymine());
 
         logger.info("Done editing cards");
     }
@@ -156,14 +158,24 @@ public class ClintockMod implements
         logger.info("Begin editing strings");
 
         BaseMod.loadCustomStringsFile(CardStrings.class, CARD_STRINGS_PATH);
+        BaseMod.loadCustomStringsFile(OrbStrings.class, ORB_STRINGS_PATH);
+        BaseMod.loadCustomStringsFile(PowerStrings.class, POWER_STRINGS_PATH);
         BaseMod.loadCustomStringsFile(RelicStrings.class, RELIC_STRINGS_PATH);
 
         logger.info("Done editing strings");
     }
 
     public static String getCardImagePath(String cardID) {
-//        return "img/cards/" + cardID.replaceFirst("clintock:", "") + ".png";
-        return "img/cards/Placeholder.png";
+        return "img/cards/" + cardID.replaceFirst("clintock:", "") + ".png";
+    }
+
+    public static String getOrbImagePath(String orbID) {
+        return "img/orbs/" + orbID.replaceFirst("clintock:", "") + ".png";
+    }
+
+    public static String getPowerImagePath(String powerID) {
+        //        return "img/powers/" + powerID.replaceFirst("clintock:", "") + ".png";
+        return "img/powers/Placeholder.png";
     }
 
     public static String getRelicImagePath(String relicID) {

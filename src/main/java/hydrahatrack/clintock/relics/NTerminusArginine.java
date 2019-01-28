@@ -8,8 +8,8 @@ import hydrahatrack.clintock.ClintockMod;
 public class NTerminusArginine extends CustomRelic {
 
     public static final String ID = "clintock:NTerminusArginine";
-    public static final Texture IMG = ImageMaster.loadImage(ClintockMod.getRelicImagePath(ID));
-    public static final Texture OUTLINE = ImageMaster.loadImage(ClintockMod.getRelicOutlineImagePath(ID));
+    private static final Texture IMG = ImageMaster.loadImage(ClintockMod.getRelicImagePath(ID));
+    private static final Texture OUTLINE = ImageMaster.loadImage(ClintockMod.getRelicOutlineImagePath(ID));
 
     public NTerminusArginine() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);

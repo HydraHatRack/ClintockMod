@@ -14,9 +14,9 @@ import hydrahatrack.clintock.enums.AbstractCardEnum;
 
 public class ClintockDefend extends CustomCard {
     public static final String ID = "clintock:ClintockDefend";
-    private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = CARD_STRINGS.NAME;
-    public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int BLOCK_AMOUNT = 5;
     private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 3;

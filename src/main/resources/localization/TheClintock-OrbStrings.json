@@ -1,0 +1,30 @@
+{
+  "clintock:AdenineOrb": {
+    "NAME": "Adenine",
+    "DESCRIPTION": [
+      "Gain #b",
+      " block."
+    ]
+  },
+  "clintock:CytosineOrb": {
+    "NAME": "Cytosine",
+    "DESCRIPTION": [
+      "Deals #b",
+      " damage to a random enemy."
+    ]
+  },
+  "clintock:GuanineOrb": {
+    "NAME": "Guanine",
+    "DESCRIPTION": [
+      "Gain #b",
+      " energy."
+    ]
+  },
+  "clintock:ThymineOrb": {
+    "NAME": "Thymine",
+    "DESCRIPTION": [
+      "Deals #b",
+      " damage to all enemies."
+    ]
+  }
+}
