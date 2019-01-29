@@ -1,4 +1,8 @@
 {
+  "clintock:Acupuncture": {
+    "NAME": "Acupuncture",
+    "DESCRIPTION": "Deal !D! damage !M! times."
+  },
   "clintock:Adenine": {
     "NAME": "Adenine",
     "DESCRIPTION": "Bind 1 Adenine. Exhaust."
@@ -14,6 +18,10 @@
   "clintock:Cytosine": {
     "NAME": "Cytosine",
     "DESCRIPTION": "Bind 1 Cytosine. Exhaust."
+  },
+  "clintock:ElastomericPump": {
+    "NAME": "Elastomeric Pump",
+    "DESCRIPTION": "At the start of each turn, add a random nucleotide to your hand."
   },
   "clintock:Guanine": {
     "NAME": "Guanine",

@@ -31,16 +31,16 @@ public class PeptideChainPower extends AbstractPower {
     }
 
     @Override
-    public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
-    }
-
-    @Override
     public void atEndOfTurn(boolean isPlayer) {
         this.flash();
         for (int i = 0; i < this.amount; i++) {
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
                     this.owner, new int[] {3}, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
         }
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0];
     }
 }

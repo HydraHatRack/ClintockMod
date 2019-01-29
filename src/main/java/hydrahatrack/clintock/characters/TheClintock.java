@@ -17,9 +17,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import hydrahatrack.clintock.cards.ClintockDefend;
-import hydrahatrack.clintock.cards.ClintockStrike;
-import hydrahatrack.clintock.cards.MonomerSynthesis;
+import hydrahatrack.clintock.cards.*;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.enums.TheClintockEnum;
 import hydrahatrack.clintock.relics.NTerminusArginine;
@@ -67,15 +65,17 @@ public class TheClintock extends CustomPlayer {
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> startingDeck = new ArrayList<>();
         startingDeck.add(ClintockStrike.ID);
-        startingDeck.add(ClintockStrike.ID);
-        startingDeck.add(ClintockStrike.ID);
-        startingDeck.add(ClintockStrike.ID);
-        startingDeck.add(ClintockStrike.ID);
-        startingDeck.add(ClintockDefend.ID);
-        startingDeck.add(ClintockDefend.ID);
-        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockDefend.ID);
         startingDeck.add(ClintockDefend.ID);
         startingDeck.add(MonomerSynthesis.ID);
+        startingDeck.add(ElastomericPump.ID);
+        startingDeck.add(Acupuncture.ID);
         return startingDeck;
     }
 

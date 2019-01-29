@@ -36,6 +36,12 @@
     ],
     "DESCRIPTION": "Deals damage to all enemies."
   },
+  "clintock:ToolKeyword": {
+    "NAMES": [
+      "tool"
+    ],
+    "DESCRIPTION": "Tools are cards that lose an element of randomness when upgraded."
+  },
   "clintock:AlanineKeyword": {
     "NAMES": [
       "alanine",

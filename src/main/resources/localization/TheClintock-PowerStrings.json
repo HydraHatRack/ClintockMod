@@ -1,4 +1,10 @@
 {
+  "clintock:ElastomericPumpPower": {
+    "NAME": "Elastomeric Pump",
+    "DESCRIPTIONS": [
+      "At the start of each turn, add a random nucleotide to your hand."
+    ]
+  },
   "clintock:PeptideChainPower": {
     "NAME": "Peptide Chain",
     "DESCRIPTIONS": [

@@ -3,7 +3,6 @@ package hydrahatrack.clintock.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -26,8 +25,6 @@ public class AdenineOrbPassiveAction extends AbstractGameAction {
 
         AbstractDungeon.actionManager.addToTop(
                 new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.orb.passiveAmount));
-        AbstractDungeon.actionManager.addToTop(
-                new SFXAction("ORB_FROST_EVOKE"));
 
         if (this.orb != null) {
             AbstractDungeon.actionManager.addToTop(

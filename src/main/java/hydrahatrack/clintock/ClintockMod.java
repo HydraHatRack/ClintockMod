@@ -103,10 +103,12 @@ public class ClintockMod implements
     public void receiveEditCards() {
         logger.info("Begin editing cards");
 
+        BaseMod.addCard(new Acupuncture());
         BaseMod.addCard(new Adenine());
         BaseMod.addCard(new ClintockStrike());
         BaseMod.addCard(new ClintockDefend());
         BaseMod.addCard(new Cytosine());
+        BaseMod.addCard(new ElastomericPump());
         BaseMod.addCard(new Guanine());
         BaseMod.addCard(new MonomerSynthesis());
         BaseMod.addCard(new Thymine());
@@ -174,8 +176,7 @@ public class ClintockMod implements
     }
 
     public static String getPowerImagePath(String powerID) {
-        //        return "img/powers/" + powerID.replaceFirst("clintock:", "") + ".png";
-        return "img/powers/Placeholder.png";
+        return "img/powers/" + powerID.replaceFirst("clintock:", "") + ".png";
     }
 
     public static String getRelicImagePath(String relicID) {
