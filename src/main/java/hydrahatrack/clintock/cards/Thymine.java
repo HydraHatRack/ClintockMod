@@ -1,13 +1,13 @@
 package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
+import hydrahatrack.clintock.actions.BindAction;
 import hydrahatrack.clintock.orbs.ThymineOrb;
 
 public class Thymine extends CustomCard {
@@ -28,7 +28,7 @@ public class Thymine extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new ThymineOrb()));
+        AbstractDungeon.actionManager.addToBottom(new BindAction(new ThymineOrb()));
     }
 
     public void upgrade() {

@@ -20,6 +20,10 @@ public class NucleotideOrb extends AbstractOrb {
         this.channelAnimTimer = 0.5F;
     }
 
+    public String getLabel() {
+        return label;
+    }
+
     @Override
     public void updateDescription() {
         applyFocus();

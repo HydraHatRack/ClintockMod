@@ -25,7 +25,7 @@ public class CytosineOrbPassiveAction extends AbstractGameAction {
     public void update() {
         AbstractCreature m = AbstractDungeon.getRandomMonster();
         if (m != null) {
-            float speedTime = 0.2F / AbstractDungeon.player.orbs.size();
+            float speedTime = 0.2F;
             if (Settings.FAST_MODE) {
                 speedTime = 0.0F;
             }

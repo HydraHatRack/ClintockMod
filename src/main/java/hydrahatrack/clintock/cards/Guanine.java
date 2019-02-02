@@ -1,13 +1,13 @@
 package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
+import hydrahatrack.clintock.actions.BindAction;
 import hydrahatrack.clintock.orbs.GuanineOrb;
 
 public class Guanine extends CustomCard {
@@ -28,7 +28,7 @@ public class Guanine extends CustomCard {
     }
 
     public void use(AbstractPlayer player, AbstractMonster monster) {
-        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new GuanineOrb()));
+        AbstractDungeon.actionManager.addToBottom(new BindAction(new GuanineOrb()));
     }
 
     public void upgrade() {
