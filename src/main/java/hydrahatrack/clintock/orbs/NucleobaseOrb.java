@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbPassiveEffect;
 
-public class NucleotideOrb extends AbstractOrb {
+public class NucleobaseOrb extends AbstractOrb {
     private float vfxTimer = 1.0F;
     String label = "";
 
-    NucleotideOrb() {
+    NucleobaseOrb() {
         this.angle = MathUtils.random(360.0F);
         this.channelAnimTimer = 0.5F;
     }

@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.actions.CytosineOrbPassiveAction;
 
-public class CytosineOrb extends NucleotideOrb {
+public class CytosineOrb extends NucleobaseOrb {
     private static final String ORB_ID = "clintock:CytosineOrb";
     private static final OrbStrings orbStrings = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     private static final String NAME = orbStrings.NAME;

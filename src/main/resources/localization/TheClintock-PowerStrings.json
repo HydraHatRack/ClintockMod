@@ -2,13 +2,25 @@
   "clintock:ElastomericPumpPower": {
     "NAME": "Elastomeric Pump",
     "DESCRIPTIONS": [
-      "At the start of each turn, add a random nucleotide to your hand."
+      "At the start of each turn, add a random Nucleobase to your hand."
+    ]
+  },
+  "clintock:DeoxyribosePower": {
+    "NAME": "Deoxyribose",
+    "DESCRIPTIONS": [
+      "Sugar derived from ribose. NL Essential molecule in generating nucleotides."
     ]
   },
   "clintock:PeptideChainPower": {
     "NAME": "Peptide Chain",
     "DESCRIPTIONS": [
       "At the end of each turn, activate your chain of amino acids."
+    ]
+  },
+  "clintock:PhosphatePower": {
+    "NAME": "Phosphate",
+    "DESCRIPTIONS": [
+      "Phosphorus bound to 4 oxygen residues. NL Essential molecule in generating nucleotides."
     ]
   }
 }

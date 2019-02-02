@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import hydrahatrack.clintock.aminoacids.*;
-import hydrahatrack.clintock.orbs.NucleotideOrb;
+import hydrahatrack.clintock.orbs.NucleobaseOrb;
 import hydrahatrack.clintock.powers.PeptideChainPower;
 
 public class BindAction extends AbstractGameAction {
@@ -28,7 +28,7 @@ public class BindAction extends AbstractGameAction {
                 foundEmptyOrbSlot = true;
                 break;
             } else {
-                dnaCodonBuilder.append(((NucleotideOrb) o).getLabel());
+                dnaCodonBuilder.append(((NucleobaseOrb) o).getLabel());
             }
         }
 

@@ -1,15 +1,16 @@
 {
-  "clintock:BindKeyword": {
-    "NAMES": [
-      "bind"
-    ],
-    "DESCRIPTION": "Binding a nucleotide puts it in your first empty slot. If you have no empty slots, your existing nucleotides form an amino acid and join the peptide chain."
-  },
   "clintock:AdenineKeyword": {
     "NAMES": [
       "adenine"
     ],
     "DESCRIPTION": "Gains block."
+  },
+  "clintock:BindKeyword": {
+    "NAMES": [
+      "bind",
+      "bound"
+    ],
+    "DESCRIPTION": "Binding a nucleobase puts it in your first empty slot, consuming a pentose sugar and phosphate in the process. If you have no empty slots, an amino acid forms from the nucleotides and joins the peptide chain."
   },
   "clintock:CytosineKeyword": {
     "NAMES": [
@@ -17,36 +18,43 @@
     ],
     "DESCRIPTION": "Deals damage to a random enemy."
   },
+  "clintock:FluorophoreKeyword": {
+    "NAMES": [
+      "fluorophore",
+      "fluorophores"
+    ],
+    "DESCRIPTION": "Increases the potency of bound nucleobases."
+  },
   "clintock:GuanineKeyword": {
     "NAMES": [
       "guanine"
     ],
-    "DESCRIPTION": "Gains energy."
+    "DESCRIPTION": "Gains energy. Unaffected by fluorophores."
   },
-  "clintock:Nucleotide": {
+  "clintock:Nucleobase": {
     "NAMES": [
-      "nucleotide",
-      "nucleotides"
+      "nucleobase",
+      "nucleobases"
     ],
-    "DESCRIPTION": "One of four organic molecules used in synthesizing amino acids (adenine, cytosine, guanine, thymine)."
+    "DESCRIPTION": "Fundamental units of the genetic code found in DNA (adenine, cytosine, guanine, thymine)."
+  },
+  "clintock:DeoxyriboseKeyword": {
+    "NAMES": [
+      "deoxyribose"
+    ],
+    "DESCRIPTION": "Sugar derived from ribose. NL Essential molecule in generating nucleotides."
+  },
+  "clintock:PhosphateKeyword": {
+    "NAMES": [
+      "phosphate",
+      "phosphates"
+    ],
+    "DESCRIPTION": "Phosphorus bound to 4 oxygen residues. NL Essential molecule in generating nucleotides."
   },
   "clintock:ThymineKeyword": {
     "NAMES": [
       "thymine"
     ],
     "DESCRIPTION": "Deals damage to all enemies."
-  },
-  "clintock:ToolKeyword": {
-    "NAMES": [
-      "tool"
-    ],
-    "DESCRIPTION": "Tools are cards that lose an element of randomness when upgraded."
-  },
-  "clintock:AlanineKeyword": {
-    "NAMES": [
-      "alanine",
-      "ala"
-    ],
-    "DESCRIPTION": "GCT, GCC, GCA, GCG"
   }
 }

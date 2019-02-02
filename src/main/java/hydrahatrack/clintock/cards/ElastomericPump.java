@@ -23,7 +23,7 @@ public class ElastomericPump extends CustomCard {
 
     public ElastomericPump() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, AbstractCard.CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = BASE_MAGIC_NUMBER;
     }

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import hydrahatrack.clintock.ClintockMod;
 
-public class GuanineOrb extends NucleotideOrb {
+public class GuanineOrb extends NucleobaseOrb {
     private static final String ORB_ID = "clintock:GuanineOrb";
     private static final OrbStrings orbStrings = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     private static final String NAME = orbStrings.NAME;

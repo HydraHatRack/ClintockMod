@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.actions.AdenineOrbPassiveAction;
 
-public class AdenineOrb extends NucleotideOrb {
+public class AdenineOrb extends NucleobaseOrb {
     private static final String ORB_ID = "clintock:AdenineOrb";
     private static final OrbStrings orbStrings = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     private static final String NAME = orbStrings.NAME;

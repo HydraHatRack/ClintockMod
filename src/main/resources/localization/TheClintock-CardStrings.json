@@ -5,7 +5,12 @@
   },
   "clintock:Adenine": {
     "NAME": "Adenine",
-    "DESCRIPTION": "Bind 1 Adenine. Exhaust."
+    "DESCRIPTION": "Ethereal. NL Bind 1 Adenine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Bind 1 Adenine. NL Exhaust."
+  },
+  "clintock:Adenosine": {
+    "NAME": "Adenosine",
+    "DESCRIPTION": "Gain !B! Block. NL Add an Adenine to your hand."
   },
   "clintock:ClintockStrike": {
     "NAME": "Strike",
@@ -15,24 +20,48 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "clintock:Cytidine": {
+    "NAME": "Cytidine",
+    "DESCRIPTION": "Deal !D! damage. NL Add a Cytosine to your hand."
+  },
   "clintock:Cytosine": {
     "NAME": "Cytosine",
-    "DESCRIPTION": "Bind 1 Cytosine. Exhaust."
+    "DESCRIPTION": "Ethereal. NL Bind 1 Cytosine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Bind 1 Cytosine. NL Exhaust."
   },
   "clintock:ElastomericPump": {
     "NAME": "Elastomeric Pump",
-    "DESCRIPTION": "At the start of each turn, add a random nucleotide to your hand."
+    "DESCRIPTION": "At the start of each turn, add a random Nucleobase to your hand."
   },
   "clintock:Guanine": {
     "NAME": "Guanine",
-    "DESCRIPTION": "Bind 1 Guanine. Exhaust."
+    "DESCRIPTION": "Ethereal. NL Bind 1 Guanine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Bind 1 Guanine. NL Exhaust."
+  },
+  "clintock:Ketosis": {
+    "NAME": "Ketosis",
+    "DESCRIPTION": "Lose !M! HP. NL For each bound Guanine or Thymine, deal !D! damage."
   },
   "clintock:MonomerSynthesis": {
     "NAME": "Monomer Synthesis",
-    "DESCRIPTION": "Add a random nucleotide to your hand."
+    "DESCRIPTION": "Add a random Nucleobase to your hand."
+  },
+  "clintock:Polymerize": {
+    "NAME": "Polymerize",
+    "DESCRIPTION": "Gain !B! Block. If you Bound a Nucleobase this turn, gain !B! more Block."
+  },
+  "clintock:Reductase": {
+    "NAME": "Reductase",
+    "DESCRIPTION": "Double your Deoxyribose. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Double your Deoxyribose."
+  },
+  "clintock:Replenish": {
+    "NAME": "Replenish",
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Deoxyribose. Gain !M! Phosphates."
   },
   "clintock:Thymine": {
     "NAME": "Thymine",
-    "DESCRIPTION": "Bind 1 Thymine. Exhaust."
+    "DESCRIPTION": "Ethereal. NL Bind 1 Thymine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Bind 1 Thymine. NL Exhaust."
   }
 }

@@ -1,9 +1,16 @@
 {
+  "clintock:BiomoleculePool": {
+    "NAME": "Biomolecule Pool",
+    "FLAVOR": "Don't let your organs see you drinking from this.",
+    "DESCRIPTIONS": [
+      "At the start of battle, gain 3 Deoxyribose and 3 Phosphates."
+    ]
+  },
   "clintock:NTerminusArginine": {
     "NAME": "N-terminus Arginine",
-    "FLAVOR": "Beginnings were made to be ended",
+    "FLAVOR": "Beginnings were made to be ended.",
     "DESCRIPTIONS": [
-      "Doesn't do anything yet. But look on the bright side, the mod works!"
+      "At the start of battle, add arginine to your peptide chain."
     ]
   }
 }

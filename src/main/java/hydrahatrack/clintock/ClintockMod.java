@@ -16,6 +16,7 @@ import hydrahatrack.clintock.cards.*;
 import hydrahatrack.clintock.characters.TheClintock;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.enums.TheClintockEnum;
+import hydrahatrack.clintock.relics.BiomoleculePool;
 import hydrahatrack.clintock.relics.NTerminusArginine;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -105,12 +106,18 @@ public class ClintockMod implements
 
         BaseMod.addCard(new Acupuncture());
         BaseMod.addCard(new Adenine());
+        BaseMod.addCard(new Adenosine());
         BaseMod.addCard(new ClintockStrike());
         BaseMod.addCard(new ClintockDefend());
+        BaseMod.addCard(new Cytidine());
         BaseMod.addCard(new Cytosine());
         BaseMod.addCard(new ElastomericPump());
         BaseMod.addCard(new Guanine());
+        BaseMod.addCard(new Ketosis());
         BaseMod.addCard(new MonomerSynthesis());
+        BaseMod.addCard(new Polymerize());
+        BaseMod.addCard(new Reductase());
+        BaseMod.addCard(new Replenish());
         BaseMod.addCard(new Thymine());
 
         logger.info("Done editing cards");
@@ -150,6 +157,7 @@ public class ClintockMod implements
     public void receiveEditRelics() {
         logger.info("Begin editing relics");
 
+        BaseMod.addRelicToCustomPool(new BiomoleculePool(), AbstractCardEnum.CLINTOCK_COLOR);
         BaseMod.addRelicToCustomPool(new NTerminusArginine(), AbstractCardEnum.CLINTOCK_COLOR);
 
         logger.info("Done editing relics");
@@ -167,25 +175,23 @@ public class ClintockMod implements
         logger.info("Done editing strings");
     }
 
-    public static String getCardImagePath(String cardID) {
+    public static String getCardImagePath(final String cardID) {
         return "img/cards/" + cardID.replaceFirst("clintock:", "") + ".png";
     }
 
-    public static String getOrbImagePath(String orbID) {
+    public static String getOrbImagePath(final String orbID) {
         return "img/orbs/" + orbID.replaceFirst("clintock:", "") + ".png";
     }
 
-    public static String getPowerImagePath(String powerID) {
+    public static String getPowerImagePath(final String powerID) {
         return "img/powers/" + powerID.replaceFirst("clintock:", "") + ".png";
     }
 
-    public static String getRelicImagePath(String relicID) {
-//        return "img/relics/" + relicID.replaceFirst("clintock:", "") + ".png";
-        return "img/relics/Placeholder.png";
+    public static String getRelicImagePath(final String relicID) {
+        return "img/relics/" + relicID.replaceFirst("clintock:", "") + ".png";
     }
 
-    public static String getRelicOutlineImagePath(String relicID) {
-        //        return "img/relics/outlines/" + relicID.replaceFirst("clintock:", "") + ".png";
-        return "img/relics/outlines/Placeholder.png";
+    public static String getRelicOutlineImagePath(final String relicID) {
+        return "img/relics/outlines/" + relicID.replaceFirst("clintock:", "") + ".png";
     }
 }

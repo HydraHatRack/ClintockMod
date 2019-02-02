@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hydrahatrack.clintock.cards.*;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.enums.TheClintockEnum;
-import hydrahatrack.clintock.relics.NTerminusArginine;
+import hydrahatrack.clintock.relics.BiomoleculePool;
 
 import java.util.ArrayList;
 
@@ -64,31 +64,39 @@ public class TheClintock extends CustomPlayer {
 
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> startingDeck = new ArrayList<>();
+
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(MonomerSynthesis.ID);
+//        startingDeck.add(Replenish.ID);
+
         startingDeck.add(ClintockStrike.ID);
-//        startingDeck.add(ClintockStrike.ID);
-//        startingDeck.add(ClintockStrike.ID);
-//        startingDeck.add(ClintockStrike.ID);
-//        startingDeck.add(ClintockStrike.ID);
-//        startingDeck.add(ClintockDefend.ID);
-//        startingDeck.add(ClintockDefend.ID);
-//        startingDeck.add(ClintockDefend.ID);
         startingDeck.add(ClintockDefend.ID);
         startingDeck.add(MonomerSynthesis.ID);
+        startingDeck.add(Ketosis.ID);
         startingDeck.add(ElastomericPump.ID);
-        startingDeck.add(Acupuncture.ID);
+        startingDeck.add(Replenish.ID);
+        startingDeck.add(Reductase.ID);
+
         return startingDeck;
     }
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> startingRelics = new ArrayList<>();
-        startingRelics.add(NTerminusArginine.ID);
-        UnlockTracker.markRelicAsSeen(NTerminusArginine.ID);
+        startingRelics.add(BiomoleculePool.ID);
+        UnlockTracker.markRelicAsSeen(BiomoleculePool.ID);
         return startingRelics;
     }
 
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(CLINTOCK_NAME,
-                "A genetic engineer who got tired of CRISPR getting all the credit in TV shows and movies. NL" +
+                "A genetic engineer who got tired of CRISPR getting all the credit in TV shows and movies. NL " +
                         "She wields the tools of biology to slay the parasites of the spire.",
                 75, 75, 3, 99, 5,
                 this, getStartingRelics(), getStartingDeck(), false);
