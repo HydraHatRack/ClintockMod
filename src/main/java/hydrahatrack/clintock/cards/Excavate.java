@@ -33,7 +33,7 @@ public class Excavate extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                AbstractDungeon.player.getPower(PhosphatePower.POWER_ID), this.magicNumber));
+                new PhosphatePower(p, this.magicNumber), this.magicNumber));
     }
 
     @Override

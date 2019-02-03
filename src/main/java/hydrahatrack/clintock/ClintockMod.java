@@ -106,12 +106,14 @@ public class ClintockMod implements
 
         BaseMod.addCard(new Acupuncture());
         BaseMod.addCard(new Adenine());
-        BaseMod.addCard(new Adenosine());
-        BaseMod.addCard(new ClintockStrike());
         BaseMod.addCard(new ClintockDefend());
-        BaseMod.addCard(new Cytidine());
+        BaseMod.addCard(new ClintockStrike());
         BaseMod.addCard(new Cytosine());
+        BaseMod.addCard(new Deoxyadenosine());
+        BaseMod.addCard(new Deoxycytidine());
+        BaseMod.addCard(new Deoxyguanosine());
         BaseMod.addCard(new ElastomericPump());
+        BaseMod.addCard(new Excavate());
         BaseMod.addCard(new Fluorescein());
         BaseMod.addCard(new Guanine());
         BaseMod.addCard(new Ketosis());
@@ -119,7 +121,7 @@ public class ClintockMod implements
         BaseMod.addCard(new Polymerize());
         BaseMod.addCard(new Reductase());
         BaseMod.addCard(new Replenish());
-        BaseMod.addCard(new Excavate());
+        BaseMod.addCard(new Thymidine());
         BaseMod.addCard(new Thymine());
 
         logger.info("Done editing cards");

@@ -8,10 +8,6 @@
     "DESCRIPTION": "Ethereal. NL Bind 1 Adenine. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Bind 1 Adenine. NL Exhaust."
   },
-  "clintock:Adenosine": {
-    "NAME": "Adenosine",
-    "DESCRIPTION": "Gain !B! Block. NL Add an Adenine to your hand."
-  },
   "clintock:ClintockStrike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -20,14 +16,22 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "clintock:Cytidine": {
-    "NAME": "Cytidine",
-    "DESCRIPTION": "Deal !D! damage. NL Add a Cytosine to your hand."
-  },
   "clintock:Cytosine": {
     "NAME": "Cytosine",
     "DESCRIPTION": "Ethereal. NL Bind 1 Cytosine. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Bind 1 Cytosine. NL Exhaust."
+  },
+  "clintock:Deoxyadenosine": {
+    "NAME": "Deoxyadenosine",
+    "DESCRIPTION": "Nucleoside. NL Gain !B! Block. NL Bind 1 Adenine."
+  },
+  "clintock:Deoxycytidine": {
+    "NAME": "Deoxycytidine",
+    "DESCRIPTION": "Nucleoside. NL Deal !D! damage. NL Bind 1 Cytosine."
+  },
+  "clintock:Deoxyguanosine": {
+    "NAME": "Deoxyguanosine",
+    "DESCRIPTION": "Nucleoside. NL Next turn, gain !M! energy. NL Bind 1 Guanine."
   },
   "clintock:ElastomericPump": {
     "NAME": "Elastomeric Pump",
@@ -49,7 +53,7 @@
   },
   "clintock:Ketosis": {
     "NAME": "Ketosis",
-    "DESCRIPTION": "Lose !M! HP. NL For each bound Guanine or Thymine, deal !D! damage."
+    "DESCRIPTION": "Lose !M! HP. NL For each Bound Guanine or Thymine, deal !D! damage."
   },
   "clintock:MonomerSynthesis": {
     "NAME": "Monomer Synthesis",
@@ -73,5 +77,9 @@
     "NAME": "Thymine",
     "DESCRIPTION": "Ethereal. NL Bind 1 Thymine. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Bind 1 Thymine. NL Exhaust."
+  },
+  "clintock:Thymidine": {
+    "NAME": "Thymidine",
+    "DESCRIPTION": "Nucleoside. NL Deal !D! damage to ALL enemies. NL Bind 1 Thymine."
   }
 }

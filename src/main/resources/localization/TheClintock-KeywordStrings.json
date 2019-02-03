@@ -8,6 +8,7 @@
   "clintock:BindKeyword": {
     "NAMES": [
       "bind",
+      "binding",
       "bound"
     ],
     "DESCRIPTION": "Binding a nucleobase puts it in your first empty slot, consuming a Deoxyribose and Phosphate in the process. If you have no empty slots, an amino acid forms from the nucleotides and joins the peptide chain."
@@ -17,6 +18,12 @@
       "cytosine"
     ],
     "DESCRIPTION": "Deals damage to a random enemy."
+  },
+  "clintock:DeoxyriboseKeyword": {
+    "NAMES": [
+      "deoxyribose"
+    ],
+    "DESCRIPTION": "Sugar derived from ribose. NL Essential molecule in generating nucleotides."
   },
   "clintock:FluorophoreKeyword": {
     "NAMES": [
@@ -31,18 +38,19 @@
     ],
     "DESCRIPTION": "Gains energy. Unaffected by Fluorophores."
   },
-  "clintock:Nucleobase": {
+  "clintock:NucleobaseKeyword": {
     "NAMES": [
       "nucleobase",
       "nucleobases"
     ],
     "DESCRIPTION": "Fundamental units of the genetic code found in DNA (Adenine, Cytosine, Guanine, Thymine)."
   },
-  "clintock:DeoxyriboseKeyword": {
+  "clintock:NucleosideKeyword": {
     "NAMES": [
-      "deoxyribose"
+      "nucleoside",
+      "nucleosides"
     ],
-    "DESCRIPTION": "Sugar derived from ribose. NL Essential molecule in generating nucleotides."
+    "DESCRIPTION": "A Nucleobase linked to a sugar. Does not require Deoxyribose when Binding."
   },
   "clintock:PhosphateKeyword": {
     "NAMES": [

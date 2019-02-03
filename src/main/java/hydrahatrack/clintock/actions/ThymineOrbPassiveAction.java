@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -23,19 +22,17 @@ public class ThymineOrbPassiveAction extends AbstractGameAction {
     }
 
     public void update() {
-        AbstractCreature m = AbstractDungeon.getRandomMonster();
-        if (m != null) {
-            float speedTime = 0.2F / AbstractDungeon.player.orbs.size();
-            if (Settings.FAST_MODE) {
-                speedTime = 0.0F;
-            }
-            AbstractDungeon.actionManager.addToTop(
-                    new DamageAllEnemiesAction(m, DamageInfo.createDamageMatrix(this.info.base, true),
-                            DamageInfo.DamageType.THORNS, this.attackEffect));
-            if (this.orb != null) {
-                AbstractDungeon.actionManager.addToTop(new VFXAction(
-                        new OrbFlareEffect(this.orb, OrbFlareColor.LIGHTNING), speedTime));
-            }
+        float speedTime = 0.2F / AbstractDungeon.player.orbs.size();
+        if (Settings.FAST_MODE) {
+            speedTime = 0.0F;
+        }
+        AbstractDungeon.actionManager.addToTop(
+                new DamageAllEnemiesAction(AbstractDungeon.player,
+                        DamageInfo.createDamageMatrix(this.info.base, true),
+                        DamageInfo.DamageType.THORNS, this.attackEffect));
+        if (this.orb != null) {
+            AbstractDungeon.actionManager.addToTop(new VFXAction(
+                    new OrbFlareEffect(this.orb, OrbFlareColor.LIGHTNING), speedTime));
         }
         this.isDone = true;
     }
