@@ -19,6 +19,7 @@ public class Replenish extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 0;
     private static final int BLOCK_AMOUNT = 3;
     private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 2;
@@ -48,6 +49,8 @@ public class Replenish extends CustomCard {
             this.upgradeName();
             this.upgradeBlock(UPGRADE_PLUS_BLOCK_AMOUNT);
             this.upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

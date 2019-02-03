@@ -38,29 +38,25 @@ public class Ketosis extends CustomCard {
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if (abstractMonster != null) {
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if (m != null) {
             boolean dealsDamage = false;
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof GuanineOrb || o instanceof ThymineOrb) {
                     dealsDamage = true;
-                    AbstractDungeon.actionManager.addToTop(new DamageAction(abstractMonster,
-                            new DamageInfo(abstractPlayer, this.damage,
-                                    this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                    AbstractDungeon.actionManager.addToTop(
+                            new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                                    AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 }
             }
 
             if (dealsDamage) {
-                AbstractDungeon.actionManager.addToTop(new VFXAction(new HemokinesisEffect(
-                        abstractPlayer.hb.cX,
-                        abstractPlayer.hb.cY,
-                        abstractMonster.hb.cX,
-                        abstractMonster.hb.cY), 0.5F));
+                AbstractDungeon.actionManager.addToTop(new VFXAction(
+                        new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
             }
         }
 
-        AbstractDungeon.actionManager.addToTop(
-                new LoseHPAction(abstractPlayer, abstractPlayer, this.magicNumber));
+        AbstractDungeon.actionManager.addToTop(new LoseHPAction(p, p, this.magicNumber));
     }
 
     @Override

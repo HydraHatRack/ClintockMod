@@ -33,6 +33,15 @@
     "NAME": "Elastomeric Pump",
     "DESCRIPTION": "At the start of each turn, add a random Nucleobase to your hand."
   },
+  "clintock:Excavate": {
+    "NAME": "Excavate",
+    "DESCRIPTION": "Draw !M! cards. NL Gain !M! Phosphates."
+  },
+  "clintock:Fluorescein": {
+    "NAME": "Fluorescein",
+    "DESCRIPTION": "Gain !M! Fluorophore.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Fluorophores."
+  },
   "clintock:Guanine": {
     "NAME": "Guanine",
     "DESCRIPTION": "Ethereal. NL Bind 1 Guanine. NL Exhaust.",
@@ -57,7 +66,8 @@
   },
   "clintock:Replenish": {
     "NAME": "Replenish",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Deoxyribose. Gain !M! Phosphates."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Deoxyribose. NL Gain !M! Phosphate.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Deoxyribose. NL Gain !M! Phosphates."
   },
   "clintock:Thymine": {
     "NAME": "Thymine",

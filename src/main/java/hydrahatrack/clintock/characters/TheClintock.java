@@ -83,6 +83,8 @@ public class TheClintock extends CustomPlayer {
         startingDeck.add(ElastomericPump.ID);
         startingDeck.add(Replenish.ID);
         startingDeck.add(Reductase.ID);
+        startingDeck.add(Fluorescein.ID);
+        startingDeck.add(Excavate.ID);
 
         return startingDeck;
     }
@@ -96,7 +98,7 @@ public class TheClintock extends CustomPlayer {
 
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(CLINTOCK_NAME,
-                "A genetic engineer who got tired of CRISPR getting all the credit in TV shows and movies. NL " +
+                "A genetic engineer tired of CRISPR getting all the credit in the movies. NL " +
                         "She wields the tools of biology to slay the parasites of the spire.",
                 75, 75, 3, 99, 5,
                 this, getStartingRelics(), getStartingDeck(), false);

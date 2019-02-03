@@ -32,16 +32,14 @@ public class Acupuncture extends CustomCard {
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber - 1; i++) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                    abstractMonster,
-                    new DamageInfo(abstractPlayer, this.damage, this.damageTypeForTurn),
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                     AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                abstractMonster,
-                new DamageInfo(abstractPlayer, this.damage, this.damageTypeForTurn),
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 

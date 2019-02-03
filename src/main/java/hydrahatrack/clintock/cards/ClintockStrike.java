@@ -34,10 +34,9 @@ public class ClintockStrike extends CustomCard {
     }
 
     @Override
-    public void use(AbstractPlayer player, AbstractMonster monster) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                monster,
-                new DamageInfo(player, this.damage, this.damageTypeForTurn),
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 

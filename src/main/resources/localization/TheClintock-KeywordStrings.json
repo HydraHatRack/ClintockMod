@@ -3,14 +3,14 @@
     "NAMES": [
       "adenine"
     ],
-    "DESCRIPTION": "Gains block."
+    "DESCRIPTION": "Gains Block."
   },
   "clintock:BindKeyword": {
     "NAMES": [
       "bind",
       "bound"
     ],
-    "DESCRIPTION": "Binding a nucleobase puts it in your first empty slot, consuming a pentose sugar and phosphate in the process. If you have no empty slots, an amino acid forms from the nucleotides and joins the peptide chain."
+    "DESCRIPTION": "Binding a nucleobase puts it in your first empty slot, consuming a Deoxyribose and Phosphate in the process. If you have no empty slots, an amino acid forms from the nucleotides and joins the peptide chain."
   },
   "clintock:CytosineKeyword": {
     "NAMES": [
@@ -23,20 +23,20 @@
       "fluorophore",
       "fluorophores"
     ],
-    "DESCRIPTION": "Increases the potency of bound nucleobases."
+    "DESCRIPTION": "Increases the potency of Bound Nucleobases."
   },
   "clintock:GuanineKeyword": {
     "NAMES": [
       "guanine"
     ],
-    "DESCRIPTION": "Gains energy. Unaffected by fluorophores."
+    "DESCRIPTION": "Gains energy. Unaffected by Fluorophores."
   },
   "clintock:Nucleobase": {
     "NAMES": [
       "nucleobase",
       "nucleobases"
     ],
-    "DESCRIPTION": "Fundamental units of the genetic code found in DNA (adenine, cytosine, guanine, thymine)."
+    "DESCRIPTION": "Fundamental units of the genetic code found in DNA (Adenine, Cytosine, Guanine, Thymine)."
   },
   "clintock:DeoxyriboseKeyword": {
     "NAMES": [

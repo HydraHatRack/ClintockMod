@@ -1,14 +1,20 @@
 {
+  "clintock:DeoxyribosePower": {
+    "NAME": "Deoxyribose",
+    "DESCRIPTIONS": [
+      "Sugar derived from ribose. NL Essential molecule in generating nucleotides."
+    ]
+  },
   "clintock:ElastomericPumpPower": {
     "NAME": "Elastomeric Pump",
     "DESCRIPTIONS": [
       "At the start of each turn, add a random Nucleobase to your hand."
     ]
   },
-  "clintock:DeoxyribosePower": {
-    "NAME": "Deoxyribose",
+  "clintock:FluorophorePower": {
+    "NAME": "Fluorophore",
     "DESCRIPTIONS": [
-      "Sugar derived from ribose. NL Essential molecule in generating nucleotides."
+      "Increases the potency of Bound Nucleobases."
     ]
   },
   "clintock:PeptideChainPower": {

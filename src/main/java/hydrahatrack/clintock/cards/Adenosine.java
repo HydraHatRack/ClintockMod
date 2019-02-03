@@ -22,7 +22,7 @@ public class Adenosine extends CustomCard {
 
     public Adenosine() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.NONE);
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.NONE);
 
         this.baseBlock = this.block = BLOCK_AMOUNT;
     }

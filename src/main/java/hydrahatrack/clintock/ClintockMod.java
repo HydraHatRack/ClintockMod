@@ -112,12 +112,14 @@ public class ClintockMod implements
         BaseMod.addCard(new Cytidine());
         BaseMod.addCard(new Cytosine());
         BaseMod.addCard(new ElastomericPump());
+        BaseMod.addCard(new Fluorescein());
         BaseMod.addCard(new Guanine());
         BaseMod.addCard(new Ketosis());
         BaseMod.addCard(new MonomerSynthesis());
         BaseMod.addCard(new Polymerize());
         BaseMod.addCard(new Reductase());
         BaseMod.addCard(new Replenish());
+        BaseMod.addCard(new Excavate());
         BaseMod.addCard(new Thymine());
 
         logger.info("Done editing cards");

@@ -29,9 +29,12 @@ public class ThymineOrbPassiveAction extends AbstractGameAction {
             if (Settings.FAST_MODE) {
                 speedTime = 0.0F;
             }
-            AbstractDungeon.actionManager.addToTop(new DamageAllEnemiesAction(m, DamageInfo.createDamageMatrix(this.info.base, true), DamageInfo.DamageType.THORNS, this.attackEffect));
+            AbstractDungeon.actionManager.addToTop(
+                    new DamageAllEnemiesAction(m, DamageInfo.createDamageMatrix(this.info.base, true),
+                            DamageInfo.DamageType.THORNS, this.attackEffect));
             if (this.orb != null) {
-                AbstractDungeon.actionManager.addToTop(new VFXAction(new OrbFlareEffect(this.orb, OrbFlareColor.LIGHTNING), speedTime));
+                AbstractDungeon.actionManager.addToTop(new VFXAction(
+                        new OrbFlareEffect(this.orb, OrbFlareColor.LIGHTNING), speedTime));
             }
         }
         this.isDone = true;
