@@ -8,13 +8,13 @@
   "clintock:ElastomericPumpPower": {
     "NAME": "Elastomeric Pump",
     "DESCRIPTIONS": [
-      "At the start of each turn, add a random Nucleobase to your hand."
+      "At the start of each turn, add a random nucleobase to your hand."
     ]
   },
   "clintock:FluorophorePower": {
     "NAME": "Fluorophore",
     "DESCRIPTIONS": [
-      "Increases the potency of Bound Nucleobases."
+      "Increases the potency of bound nucleobases."
     ]
   },
   "clintock:PeptideChainPower": {

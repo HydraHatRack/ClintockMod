@@ -25,12 +25,11 @@ public class GuanineOrb extends NucleobaseOrb {
         this.img = ImageMaster.loadImage(ClintockMod.getOrbImagePath(ORB_ID));
         this.basePassiveAmount = ENERGY_AMOUNT;
         this.passiveAmount = this.basePassiveAmount;
-        updateDescription();
+        this.updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        applyFocus();
         this.description = (DESCRIPTIONS[0] + this.passiveAmount + DESCRIPTIONS[1]);
     }
 

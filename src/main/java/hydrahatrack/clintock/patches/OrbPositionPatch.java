@@ -6,7 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import hydrahatrack.clintock.characters.TheClintock;
 
-@SpirePatch(clz = AbstractOrb.class,
+@SpirePatch(
+        clz = AbstractOrb.class,
         method = "setSlot",
         paramtypez = {
                 int.class,
@@ -14,11 +15,11 @@ import hydrahatrack.clintock.characters.TheClintock;
         }
 )
 public class OrbPositionPatch {
-    public static SpireReturn<Void> Prefix(AbstractOrb abstractOrb_instance, int slotNumber) {
+    public static SpireReturn<Void> Prefix(AbstractOrb o, int slotNumber) {
         if (AbstractDungeon.player instanceof TheClintock) {
-            abstractOrb_instance.tX = ((TheClintock) AbstractDungeon.player).orbPositionsX[slotNumber];
-            abstractOrb_instance.tY = ((TheClintock) AbstractDungeon.player).orbPositionsY[slotNumber];
-            abstractOrb_instance.hb.move(abstractOrb_instance.tX, abstractOrb_instance.tY);
+            o.tX = ((TheClintock) AbstractDungeon.player).orbPositionsX[slotNumber];
+            o.tY = ((TheClintock) AbstractDungeon.player).orbPositionsY[slotNumber];
+            o.hb.move(o.tX, o.tY);
             return SpireReturn.Return(null);
         } else {
             return SpireReturn.Continue();

@@ -9,7 +9,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbPassiveEffect;
+import hydrahatrack.clintock.powers.FluorophorePower;
 
 public class NucleobaseOrb extends AbstractOrb {
     private float vfxTimer = 1.0F;
@@ -22,6 +24,18 @@ public class NucleobaseOrb extends AbstractOrb {
 
     public String getLabel() {
         return label;
+    }
+
+    @Override
+    public void applyFocus() {
+        AbstractPower power = AbstractDungeon.player.getPower(FluorophorePower.POWER_ID);
+        if (null != power) {
+            this.passiveAmount = Math.max(0, this.basePassiveAmount + power.amount);
+            this.evokeAmount = Math.max(0, this.baseEvokeAmount + power.amount);
+        } else {
+            this.passiveAmount = this.basePassiveAmount;
+            this.evokeAmount = this.baseEvokeAmount;
+        }
     }
 
     @Override

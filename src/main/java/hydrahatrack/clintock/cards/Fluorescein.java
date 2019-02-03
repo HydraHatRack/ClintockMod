@@ -19,7 +19,7 @@ public class Fluorescein extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
-    private static final int FLUOROPHORE_AMOUNT = 1;
+    private static final int FLUOROPHORE_AMOUNT = 2;
     private static final int UPGRADE_PLUS_FLUOROPHORE_AMOUNT = 1;
 
     public Fluorescein() {
