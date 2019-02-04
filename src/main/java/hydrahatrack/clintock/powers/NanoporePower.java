@@ -17,14 +17,14 @@ import hydrahatrack.clintock.cards.Thymine;
 
 import java.util.Random;
 
-public class ElastomericPumpPower extends AbstractPower {
-    private static final String POWER_ID = "clintock:ElastomericPumpPower";
+public class NanoporePower extends AbstractPower {
+    private static final String POWER_ID = "clintock:NanoporePower";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private static final Texture IMG = ImageMaster.loadImage(ClintockMod.getPowerImagePath(POWER_ID));
 
-    public ElastomericPumpPower(AbstractCreature owner, int amount) {
+    public NanoporePower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
         this.name = NAME;
         this.owner = owner;

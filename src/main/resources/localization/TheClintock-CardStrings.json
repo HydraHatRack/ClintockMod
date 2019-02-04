@@ -1,7 +1,7 @@
 {
   "clintock:Acupuncture": {
     "NAME": "Acupuncture",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "DESCRIPTION": "Deal !D! damage NL !M! times."
   },
   "clintock:Adenine": {
     "NAME": "Adenine",
@@ -33,9 +33,9 @@
     "NAME": "Deoxyguanosine",
     "DESCRIPTION": "Nucleoside. NL Next turn, gain !M! energy. NL Bind 1 Guanine."
   },
-  "clintock:ElastomericPump": {
-    "NAME": "Elastomeric Pump",
-    "DESCRIPTION": "At the start of each turn, add a random Nucleobase to your hand."
+  "clintock:DnaMicroarray": {
+    "NAME": "DNA Microarray",
+    "DESCRIPTION": "Add all four Nucleobases to your hand. Exhaust."
   },
   "clintock:Excavate": {
     "NAME": "Excavate",
@@ -58,6 +58,10 @@
   "clintock:MonomerSynthesis": {
     "NAME": "Monomer Synthesis",
     "DESCRIPTION": "Add a random Nucleobase to your hand."
+  },
+  "clintock:Nanopore": {
+    "NAME": "Nanopore",
+    "DESCRIPTION": "At the start of each turn, add a random Nucleobase to your hand."
   },
   "clintock:Polymerize": {
     "NAME": "Polymerize",
