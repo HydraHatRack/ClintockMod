@@ -38,9 +38,9 @@ public class Replenish extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                AbstractDungeon.player.getPower(DeoxyribosePower.POWER_ID), this.magicNumber));
+                new DeoxyribosePower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                AbstractDungeon.player.getPower(PhosphatePower.POWER_ID), this.magicNumber));
+                new PhosphatePower(p, this.magicNumber), this.magicNumber));
     }
 
     @Override

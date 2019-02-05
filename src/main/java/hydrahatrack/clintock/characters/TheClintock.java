@@ -89,6 +89,7 @@ public class TheClintock extends CustomPlayer {
         startingDeck.add(MonomerSynthesis.ID); // DONE
         startingDeck.add(Nanopore.ID); // DONE
         startingDeck.add(Polymerize.ID); // DONE
+        startingDeck.add(PurineMetabolism.ID);
         startingDeck.add(Reductase.ID); // DONE
         startingDeck.add(Replenish.ID); // DONE
         startingDeck.add(Thymidine.ID); // DONE

@@ -16,8 +16,7 @@
   "clintock:GuanineOrb": {
     "NAME": "Guanine",
     "DESCRIPTION": [
-      "Next turn, gain #b",
-      " energy."
+      "Next turn, gain [R]."
     ]
   },
   "clintock:ThymineOrb": {

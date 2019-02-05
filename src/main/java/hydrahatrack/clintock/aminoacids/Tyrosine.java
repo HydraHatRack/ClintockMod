@@ -1,8 +1,17 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import hydrahatrack.clintock.powers.FluorophorePower;
 
 public class Tyrosine extends AbstractAminoAcid {
+    private static final int FLUOROPHORE_AMOUNT = 1;
+
+    public Tyrosine() {
+        this.baseNumber = FLUOROPHORE_AMOUNT;
+    }
+
     @Override
     public String getLabel() {
         return "Tyr";
@@ -10,6 +19,8 @@ public class Tyrosine extends AbstractAminoAcid {
 
     @Override
     public AbstractGameAction getAction() {
-        return null;
+        return new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                new FluorophorePower(AbstractDungeon.player, this.baseNumber),
+                this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
     }
 }

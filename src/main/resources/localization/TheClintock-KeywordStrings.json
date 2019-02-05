@@ -3,7 +3,7 @@
     "NAMES": [
       "adenine"
     ],
-    "DESCRIPTION": "Gains Block."
+    "DESCRIPTION": "Nucleobase indicated by the color blue."
   },
   "clintock:BindKeyword": {
     "NAMES": [
@@ -17,7 +17,7 @@
     "NAMES": [
       "cytosine"
     ],
-    "DESCRIPTION": "Deals damage to a random enemy."
+    "DESCRIPTION": "Nucleobase indicated by the color red."
   },
   "clintock:DeoxyriboseKeyword": {
     "NAMES": [
@@ -36,7 +36,7 @@
     "NAMES": [
       "guanine"
     ],
-    "DESCRIPTION": "Gains energy. Unaffected by Fluorophores."
+    "DESCRIPTION": "Nucleobase indicated by the color green."
   },
   "clintock:NucleobaseKeyword": {
     "NAMES": [
@@ -63,6 +63,6 @@
     "NAMES": [
       "thymine"
     ],
-    "DESCRIPTION": "Deals damage to all enemies."
+    "DESCRIPTION": "Nucleobase indicated by the color yellow."
   }
 }

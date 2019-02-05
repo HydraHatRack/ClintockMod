@@ -120,6 +120,7 @@ public class ClintockMod implements
         BaseMod.addCard(new MonomerSynthesis());
         BaseMod.addCard(new Nanopore());
         BaseMod.addCard(new Polymerize());
+        BaseMod.addCard(new PurineMetabolism());
         BaseMod.addCard(new Reductase());
         BaseMod.addCard(new Replenish());
         BaseMod.addCard(new Thymidine());

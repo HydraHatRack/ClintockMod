@@ -67,6 +67,10 @@
     "NAME": "Polymerize",
     "DESCRIPTION": "Gain !B! Block. If you Bound a Nucleobase this turn, gain !B! more Block."
   },
+  "clintock:PurineMetabolism": {
+    "NAME": "Purine Metabolism",
+    "DESCRIPTION": "Gain !B! Block for each Bound Adenine or Guanine."
+  },
   "clintock:Reductase": {
     "NAME": "Reductase",
     "DESCRIPTION": "Double your Deoxyribose. NL Exhaust.",

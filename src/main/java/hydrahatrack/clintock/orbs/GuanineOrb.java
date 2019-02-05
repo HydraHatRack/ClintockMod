@@ -30,7 +30,7 @@ public class GuanineOrb extends NucleobaseOrb {
 
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.passiveAmount + DESCRIPTIONS[1]);
+        this.description = DESCRIPTIONS[0];
     }
 
     @Override
