@@ -86,11 +86,12 @@ public class TheClintock extends CustomPlayer {
         startingDeck.add(EnergyDrink.ID); // DONE
         startingDeck.add(Excavate.ID); // DONE
         startingDeck.add(Fluorescein.ID); // DONE
+        startingDeck.add(GeneAmplification.ID);
         startingDeck.add(Ketosis.ID); // DONE
         startingDeck.add(MonomerSynthesis.ID); // DONE
         startingDeck.add(Nanopore.ID); // DONE
         startingDeck.add(Polymerize.ID); // DONE
-        startingDeck.add(PurineMetabolism.ID);
+        startingDeck.add(PurineMetabolism.ID); // DONE
         startingDeck.add(Reductase.ID); // DONE
         startingDeck.add(Replenish.ID); // DONE
         startingDeck.add(Thymidine.ID); // DONE

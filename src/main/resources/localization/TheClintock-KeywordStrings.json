@@ -3,7 +3,7 @@
     "NAMES": [
       "adenine"
     ],
-    "DESCRIPTION": "Nucleobase indicated by the color blue."
+    "DESCRIPTION": "Blue nucleobase."
   },
   "clintock:BindKeyword": {
     "NAMES": [
@@ -11,59 +11,65 @@
       "binding",
       "bound"
     ],
-    "DESCRIPTION": "Binding a nucleobase puts it in your first empty slot, consuming a Deoxyribose and Phosphate in the process. If you have no empty slots, an amino acid forms from the nucleotides and joins the peptide chain."
+    "DESCRIPTION": "Puts a nucleobase in an empty slot, consuming sugar and phosphate in the process. An amino acid forms when no empty slots remain."
   },
   "clintock:CytosineKeyword": {
     "NAMES": [
       "cytosine"
     ],
-    "DESCRIPTION": "Nucleobase indicated by the color red."
+    "DESCRIPTION": "Red nucleobase."
   },
   "clintock:FluorophoreKeyword": {
     "NAMES": [
       "fluorophore",
       "fluorophores"
     ],
-    "DESCRIPTION": "Increases the potency of Bound Nucleobases."
+    "DESCRIPTION": "Increases the potency of bound nucleobases."
   },
   "clintock:GuanineKeyword": {
     "NAMES": [
       "guanine"
     ],
-    "DESCRIPTION": "Nucleobase indicated by the color green."
+    "DESCRIPTION": "Green nucleobase."
   },
   "clintock:NucleobaseKeyword": {
     "NAMES": [
       "nucleobase",
       "nucleobases"
     ],
-    "DESCRIPTION": "Fundamental units of the genetic code found in DNA (Adenine, Cytosine, Guanine, Thymine)."
+    "DESCRIPTION": "Fundamental units of the genetic code found in DNA (adenine, cytosine, guanine, thymine)."
   },
   "clintock:NucleosideKeyword": {
     "NAMES": [
       "nucleoside",
       "nucleosides"
     ],
-    "DESCRIPTION": "A Nucleobase linked to a sugar. Does not require Deoxyribose when Binding."
+    "DESCRIPTION": "Does not require sugar when binding."
+  },
+  "clintock:Peptide": {
+    "NAMES": [
+      "peptide"
+    ],
+    "DESCRIPTION": "Chain of amino acids that activate at the end of each turn."
   },
   "clintock:PhosphateKeyword": {
     "NAMES": [
       "phosphate",
       "phosphates"
     ],
-    "DESCRIPTION": "Phosphorus bound to 4 oxygen residues. NL Essential molecule in generating nucleotides."
+    "DESCRIPTION": "Phosphorus bound to four oxygen residues. Essential molecule in generating nucleotides."
   },
   "clintock:SugarKeyword": {
     "NAMES": [
       "sugar",
       "sugars"
     ],
-    "DESCRIPTION": "Specifically deoxyribose. NL Essential molecule in generating nucleotides."
+    "DESCRIPTION": "Specifically deoxyribose. Essential molecule in generating nucleotides."
   },
   "clintock:ThymineKeyword": {
     "NAMES": [
       "thymine"
     ],
-    "DESCRIPTION": "Nucleobase indicated by the color yellow."
+    "DESCRIPTION": "Yellow nucleobase."
   }
 }

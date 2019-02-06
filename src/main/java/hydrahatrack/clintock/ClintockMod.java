@@ -116,6 +116,7 @@ public class ClintockMod implements
         BaseMod.addCard(new EnergyDrink());
         BaseMod.addCard(new Excavate());
         BaseMod.addCard(new Fluorescein());
+        BaseMod.addCard(new GeneAmplification());
         BaseMod.addCard(new Guanine());
         BaseMod.addCard(new Ketosis());
         BaseMod.addCard(new MonomerSynthesis());
@@ -202,3 +203,20 @@ public class ClintockMod implements
         return "img/relics/outlines/" + relicID.replaceFirst("clintock:", "") + ".png";
     }
 }
+
+// ERRORS
+
+// Happened at end of battle
+//05:08:36.433 INFO helpers.File> Attempting to save file=C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\preferences\CLINTOCK_CLASS
+//        05:08:36.434 ERROR core.CardCrawlGame> Exception caught
+//        java.lang.NullPointerException: null
+//        at com.megacrit.cardcrawl.actions.GameActionManager.clearPostCombatActions(GameActionManager.java:120) ~[?:?]
+//        at com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction.update(DamageRandomEnemyAction.java:50) ~[desktop-1.0.jar:?]
+//        at com.megacrit.cardcrawl.actions.GameActionManager.update(GameActionManager.java:155) ~[?:?]
+//        at com.megacrit.cardcrawl.rooms.AbstractRoom.update(AbstractRoom.java:279) ~[?:?]
+//        at com.megacrit.cardcrawl.dungeons.AbstractDungeon.update(AbstractDungeon.java:2552) ~[?:?]
+//        at com.megacrit.cardcrawl.core.CardCrawlGame.update(CardCrawlGame.java:878) ~[?:?]
+//        at com.megacrit.cardcrawl.core.CardCrawlGame.render(CardCrawlGame.java:429) [?:?]
+//        at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225) [?:?]
+//        at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126) [desktop-1.0.jar:?]
+//        Controllers: removed manager for application, 0 managers active

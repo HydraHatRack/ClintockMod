@@ -12,6 +12,8 @@ import hydrahatrack.clintock.aminoacids.AbstractAminoAcid;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class PeptideChainPower extends AbstractPower {
     public static final String POWER_ID = "clintock:PeptideChainPower";
@@ -33,6 +35,20 @@ public class PeptideChainPower extends AbstractPower {
 
     public void addAminoAcid(final AbstractAminoAcid aminoAcid) {
         aminoAcids.add(aminoAcid);
+        this.amount = aminoAcids.size();
+        this.updateDescription();
+    }
+
+    public void doubleAminoAcidList() {
+        aminoAcids = Stream.concat(aminoAcids.stream(), aminoAcids.stream())
+                .collect(Collectors.toList());
+        this.amount = aminoAcids.size();
+        this.updateDescription();
+    }
+
+    public void tripleAminoAcidList() {
+        aminoAcids = Stream.concat(Stream.concat(aminoAcids.stream(), aminoAcids.stream()), aminoAcids.stream())
+                .collect(Collectors.toList());
         this.amount = aminoAcids.size();
         this.updateDescription();
     }

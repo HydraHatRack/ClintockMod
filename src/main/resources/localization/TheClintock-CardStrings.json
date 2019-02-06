@@ -39,7 +39,7 @@
   },
   "clintock:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain !M! Sugar. Exhaust."
+    "DESCRIPTION": "Gain !M! Sugar. NL Exhaust."
   },
   "clintock:Excavate": {
     "NAME": "Excavate",
@@ -52,8 +52,8 @@
   },
   "clintock:GeneAmplification": {
     "NAME": "Gene Amplification",
-    "DESCRIPTION": "Double your peptide chain. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple your peptide chain. Exhaust."
+    "DESCRIPTION": "Double your Peptide chain. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple your Peptide chain. Exhaust."
   },
   "clintock:Guanine": {
     "NAME": "Guanine",
@@ -74,7 +74,7 @@
   },
   "clintock:Polymerize": {
     "NAME": "Polymerize",
-    "DESCRIPTION": "Gain !B! Block. If you Bound a Nucleobase this turn, gain !B! more Block."
+    "DESCRIPTION": "Gain !B! Block. NL If you Bound a Nucleobase this turn, gain !B! Block again."
   },
   "clintock:PurineMetabolism": {
     "NAME": "Purine Metabolism",
