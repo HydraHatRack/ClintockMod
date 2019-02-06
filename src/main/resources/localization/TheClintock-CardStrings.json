@@ -37,6 +37,10 @@
     "NAME": "DNA Microarray",
     "DESCRIPTION": "Add all four Nucleobases to your hand. Exhaust."
   },
+  "clintock:EnergyDrink": {
+    "NAME": "Energy Drink",
+    "DESCRIPTION": "Gain !M! Sugar. Exhaust."
+  },
   "clintock:Excavate": {
     "NAME": "Excavate",
     "DESCRIPTION": "Draw !M! cards. NL Gain !M! Phosphates."
@@ -45,6 +49,11 @@
     "NAME": "Fluorescein",
     "DESCRIPTION": "Gain !M! Fluorophore.",
     "UPGRADE_DESCRIPTION": "Gain !M! Fluorophores."
+  },
+  "clintock:GeneAmplification": {
+    "NAME": "Gene Amplification",
+    "DESCRIPTION": "Double your peptide chain. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple your peptide chain. Exhaust."
   },
   "clintock:Guanine": {
     "NAME": "Guanine",
@@ -73,13 +82,13 @@
   },
   "clintock:Reductase": {
     "NAME": "Reductase",
-    "DESCRIPTION": "Double your Deoxyribose. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Double your Deoxyribose."
+    "DESCRIPTION": "Double your Sugar. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Double your Sugar."
   },
   "clintock:Replenish": {
     "NAME": "Replenish",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Deoxyribose. NL Gain !M! Phosphate.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Deoxyribose. NL Gain !M! Phosphates."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Sugar. NL Gain !M! Phosphate.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Sugar. NL Gain !M! Phosphates."
   },
   "clintock:Thymine": {
     "NAME": "Thymine",

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.powers.DeoxyribosePower;
+import hydrahatrack.clintock.powers.SugarPower;
 import hydrahatrack.clintock.powers.PhosphatePower;
 
 public class BiomoleculePool extends CustomRelic {
@@ -23,7 +23,7 @@ public class BiomoleculePool extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 AbstractDungeon.player,
                 AbstractDungeon.player,
-                new DeoxyribosePower(AbstractDungeon.player, 3)));
+                new SugarPower(AbstractDungeon.player, 3)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 AbstractDungeon.player,
                 AbstractDungeon.player,

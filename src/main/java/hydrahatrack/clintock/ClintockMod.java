@@ -113,6 +113,7 @@ public class ClintockMod implements
         BaseMod.addCard(new Deoxycytidine());
         BaseMod.addCard(new Deoxyguanosine());
         BaseMod.addCard(new DnaMicroarray());
+        BaseMod.addCard(new EnergyDrink());
         BaseMod.addCard(new Excavate());
         BaseMod.addCard(new Fluorescein());
         BaseMod.addCard(new Guanine());

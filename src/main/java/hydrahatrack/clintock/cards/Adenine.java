@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.actions.BindAction;
 import hydrahatrack.clintock.orbs.AdenineOrb;
-import hydrahatrack.clintock.powers.DeoxyribosePower;
+import hydrahatrack.clintock.powers.SugarPower;
 import hydrahatrack.clintock.powers.PhosphatePower;
 
 public class Adenine extends CustomCard {
@@ -33,7 +33,7 @@ public class Adenine extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (null == p.getPower(DeoxyribosePower.POWER_ID)) {
+        if (null == p.getPower(SugarPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(
                     new TalkAction(true, "I need more deoxyribose!", 2.0F, 2.0F));
         } else if (null == p.getPower(PhosphatePower.POWER_ID)) {
@@ -42,7 +42,7 @@ public class Adenine extends CustomCard {
         } else {
             AbstractDungeon.actionManager.addToBottom(new BindAction(new AdenineOrb()));
             AbstractDungeon.actionManager.addToBottom(
-                    new ReducePowerAction(p, p, DeoxyribosePower.POWER_ID, 1));
+                    new ReducePowerAction(p, p, SugarPower.POWER_ID, 1));
             AbstractDungeon.actionManager.addToBottom(
                     new ReducePowerAction(p, p, PhosphatePower.POWER_ID, 1));
         }

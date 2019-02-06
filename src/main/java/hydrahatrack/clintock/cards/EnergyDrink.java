@@ -14,39 +14,34 @@ import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.powers.SugarPower;
 
-public class Reductase extends CustomCard {
-    public static final String ID = "clintock:Reductase";
+public class EnergyDrink extends CustomCard {
+    public static final String ID = "clintock:EnergyDrink";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    private static final int COST = 1;
+    private static final int COST = 0;
+    private static final int SUGAR_AMOUNT = 10;
+    private static final int UPGRADE_PLUS_SUGAR_AMOUNT = 10;
 
-    public Reductase() {
+    public EnergyDrink() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 
+        this.baseMagicNumber = this.magicNumber = SUGAR_AMOUNT;
         this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower power = AbstractDungeon.player.getPower(SugarPower.POWER_ID);
-        if (null != power) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, power, power.amount));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(
-                    new TalkAction(true, "I don't have any deoxyribose!", 2.0F, 2.0F));
-        }
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new SugarPower(p, this.baseMagicNumber), this.baseMagicNumber));
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.exhaust = false;
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            this.upgradeMagicNumber(UPGRADE_PLUS_SUGAR_AMOUNT);
         }
     }
 }

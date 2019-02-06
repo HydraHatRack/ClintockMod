@@ -3,7 +3,7 @@
     "NAME": "Biomolecule Pool",
     "FLAVOR": "Don't let your organs see you drinking from this.",
     "DESCRIPTIONS": [
-      "At the start of battle, gain 3 Deoxyribose and 3 Phosphates."
+      "At the start of battle, gain 3 Sugar and 3 Phosphates."
     ]
   },
   "clintock:NTerminusArginine": {

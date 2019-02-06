@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
-import hydrahatrack.clintock.powers.DeoxyribosePower;
+import hydrahatrack.clintock.powers.SugarPower;
 import hydrahatrack.clintock.powers.PhosphatePower;
 
 public class Replenish extends CustomCard {
@@ -38,7 +38,7 @@ public class Replenish extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new DeoxyribosePower(p, this.magicNumber), this.magicNumber));
+                new SugarPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new PhosphatePower(p, this.magicNumber), this.magicNumber));
     }

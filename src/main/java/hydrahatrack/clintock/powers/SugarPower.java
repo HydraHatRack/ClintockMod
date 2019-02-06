@@ -8,14 +8,14 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import hydrahatrack.clintock.ClintockMod;
 
-public class DeoxyribosePower extends AbstractPower {
-    public static final String POWER_ID = "clintock:DeoxyribosePower";
+public class SugarPower extends AbstractPower {
+    public static final String POWER_ID = "clintock:SugarPower";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private static final Texture IMG = ImageMaster.loadImage(ClintockMod.getPowerImagePath(POWER_ID));
 
-    public DeoxyribosePower(AbstractCreature owner, int amount) {
+    public SugarPower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
         this.name = NAME;
         this.owner = owner;

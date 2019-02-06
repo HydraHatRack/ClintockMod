@@ -19,12 +19,6 @@
     ],
     "DESCRIPTION": "Nucleobase indicated by the color red."
   },
-  "clintock:DeoxyriboseKeyword": {
-    "NAMES": [
-      "deoxyribose"
-    ],
-    "DESCRIPTION": "Sugar derived from ribose. NL Essential molecule in generating nucleotides."
-  },
   "clintock:FluorophoreKeyword": {
     "NAMES": [
       "fluorophore",
@@ -58,6 +52,13 @@
       "phosphates"
     ],
     "DESCRIPTION": "Phosphorus bound to 4 oxygen residues. NL Essential molecule in generating nucleotides."
+  },
+  "clintock:SugarKeyword": {
+    "NAMES": [
+      "sugar",
+      "sugars"
+    ],
+    "DESCRIPTION": "Specifically deoxyribose. NL Essential molecule in generating nucleotides."
   },
   "clintock:ThymineKeyword": {
     "NAMES": [

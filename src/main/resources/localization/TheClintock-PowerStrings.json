@@ -1,8 +1,8 @@
 {
-  "clintock:DeoxyribosePower": {
-    "NAME": "Deoxyribose",
+  "clintock:SugarPower": {
+    "NAME": "Sugar",
     "DESCRIPTIONS": [
-      "Sugar derived from ribose. NL Essential molecule in generating nucleotides."
+      "Specifically deoxyribose. NL Essential molecule in generating nucleotides."
     ]
   },
   "clintock:FluorophorePower": {
