@@ -3,7 +3,6 @@ package hydrahatrack.clintock.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -23,14 +22,14 @@ public class Excavate extends CustomCard {
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
     public Excavate() {
-        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = BASE_MAGIC_NUMBER;
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new PhosphatePower(p, this.magicNumber), this.magicNumber));

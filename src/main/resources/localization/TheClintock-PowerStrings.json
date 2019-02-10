@@ -1,8 +1,8 @@
 {
-  "clintock:SugarPower": {
-    "NAME": "Sugar",
+  "clintock:AminoAcidPower": {
+    "NAME": "A4",
     "DESCRIPTIONS": [
-      "Specifically deoxyribose. NL Essential molecule in generating nucleotides."
+      "At the start of each turn, apply a random amino acid."
     ]
   },
   "clintock:FluorophorePower": {
@@ -20,13 +20,19 @@
   "clintock:PeptideChainPower": {
     "NAME": "Peptide Chain",
     "DESCRIPTIONS": [
-      "At the end of each turn, activate your Peptide chain."
+      "At the end of each turn, activate your peptide chain:"
     ]
   },
   "clintock:PhosphatePower": {
     "NAME": "Phosphate",
     "DESCRIPTIONS": [
-      "Phosphorus bound to 4 oxygen residues. NL Essential molecule in generating nucleotides."
+      "Essential molecule in generating nucleotides."
+    ]
+  },
+  "clintock:SugarPower": {
+    "NAME": "Sugar",
+    "DESCRIPTIONS": [
+      "Essential molecule in generating nucleotides."
     ]
   }
 }

@@ -14,7 +14,7 @@ public class Cysteine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Cys";
+        return " NL Cysteine (Gain " + this.baseNumber + " Strength)";
     }
 
     @Override

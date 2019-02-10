@@ -76,25 +76,29 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(MonomerSynthesis.ID);
 //        startingDeck.add(Replenish.ID);
 
-        startingDeck.add(Acupuncture.ID); // DONE
-        startingDeck.add(ClintockDefend.ID); // DONE
-        startingDeck.add(ClintockStrike.ID); // DONE
-        startingDeck.add(Deoxyadenosine.ID); // DONE
-        startingDeck.add(Deoxycytidine.ID); // DONE
-        startingDeck.add(Deoxyguanosine.ID); // DONE
+        startingDeck.add(A1.ID);
+        startingDeck.add(A2.ID);
+        startingDeck.add(A3.ID);
+        startingDeck.add(A4.ID);
+//        startingDeck.add(Acupuncture.ID); // DONE
+//        startingDeck.add(ClintockDefend.ID); // DONE
+//        startingDeck.add(ClintockStrike.ID); // DONE
+//        startingDeck.add(Deoxyadenosine.ID); // DONE
+//        startingDeck.add(Deoxycytidine.ID); // DONE
+//        startingDeck.add(Deoxyguanosine.ID); // DONE
         startingDeck.add(DnaMicroarray.ID); // DONE
-        startingDeck.add(EnergyDrink.ID); // DONE
+//        startingDeck.add(EnergyDrink.ID); // DONE
         startingDeck.add(Excavate.ID); // DONE
         startingDeck.add(Fluorescein.ID); // DONE
-        startingDeck.add(GeneAmplification.ID);
-        startingDeck.add(Ketosis.ID); // DONE
-        startingDeck.add(MonomerSynthesis.ID); // DONE
+        startingDeck.add(GeneAmplification.ID); // DONE
+//        startingDeck.add(Ketosis.ID); // DONE
+//        startingDeck.add(MonomerSynthesis.ID); // DONE
         startingDeck.add(Nanopore.ID); // DONE
-        startingDeck.add(Polymerize.ID); // DONE
+//        startingDeck.add(Polymerize.ID); // DONE
         startingDeck.add(PurineMetabolism.ID); // DONE
-        startingDeck.add(Reductase.ID); // DONE
+//        startingDeck.add(Reductase.ID); // DONE
         startingDeck.add(Replenish.ID); // DONE
-        startingDeck.add(Thymidine.ID); // DONE
+//        startingDeck.add(Thymidine.ID); // DONE
 
         return startingDeck;
     }

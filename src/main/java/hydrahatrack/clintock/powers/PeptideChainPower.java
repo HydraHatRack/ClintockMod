@@ -66,9 +66,9 @@ public class PeptideChainPower extends AbstractPower {
     @Override
     public void updateDescription() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(DESCRIPTIONS[0]).append(": ");
+        stringBuilder.append(DESCRIPTIONS[0]);
         for (AbstractAminoAcid aminoAcid : aminoAcids) {
-            stringBuilder.append(aminoAcid.getLabel()).append(" ");
+            stringBuilder.append(aminoAcid.getLabel());
         }
         this.description = stringBuilder.toString();
     }

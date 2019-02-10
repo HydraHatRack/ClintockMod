@@ -29,7 +29,7 @@ public class MonomerSynthesis extends CustomCard {
         this.baseMagicNumber = this.magicNumber = BASE_MAGIC_NUMBER;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
         Random random = new Random();
         AbstractCard card;
         switch (random.nextInt(4)) {

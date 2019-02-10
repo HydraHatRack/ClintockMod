@@ -2,12 +2,10 @@ package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,27 +29,33 @@ public class Thymidine extends CustomCard {
 
     public Thymidine() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, AbstractCard.CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.ALL);
 
         this.baseDamage = this.damage = ATTACK_DMG;
         this.isMultiDamage = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    @Override
+    public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
+        if (null == AbstractDungeon.player.getPower(PhosphatePower.POWER_ID)) {
+            this.cantUseMessage = ClintockMod.NEEDS_MORE_PHOSPHATE;
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.0F));
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
                 p, this.multiDamage, this.damageType, AbstractGameAction.AttackEffect.NONE, false));
-        if (null == p.getPower(PhosphatePower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new TalkAction(true, "I need more phosphate!", 2.0F, 2.0F));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new BindAction(new ThymineOrb()));
-            AbstractDungeon.actionManager.addToBottom(
-                    new ReducePowerAction(p, p, PhosphatePower.POWER_ID, 1));
-        }
+        AbstractDungeon.actionManager.addToBottom(new BindAction(new ThymineOrb()));
+        AbstractDungeon.actionManager.addToBottom(
+                new ReducePowerAction(p, p, PhosphatePower.POWER_ID, 1));
     }
 
+    @Override
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();

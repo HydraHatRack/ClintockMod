@@ -3,7 +3,6 @@ package hydrahatrack.clintock.cards;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,8 +21,8 @@ public class ClintockDefend extends CustomCard {
     private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 3;
 
     public ClintockDefend() {
-        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.BASIC, AbstractCard.CardTarget.SELF);
+        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.BASIC, CardTarget.SELF);
 
         this.baseBlock = this.block = BLOCK_AMOUNT;
 
@@ -31,7 +30,7 @@ public class ClintockDefend extends CustomCard {
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
     }
 

@@ -13,7 +13,7 @@ public class Methionine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Met";
+        return " NL Methionine (Heal " + this.baseNumber + " HP)";
     }
 
     @Override

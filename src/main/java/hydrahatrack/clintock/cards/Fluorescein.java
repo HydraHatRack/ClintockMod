@@ -2,7 +2,6 @@ package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -23,14 +22,14 @@ public class Fluorescein extends CustomCard {
     private static final int UPGRADE_PLUS_FLUOROPHORE_AMOUNT = 1;
 
     public Fluorescein() {
-        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = FLUOROPHORE_AMOUNT;
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new FluorophorePower(p, this.magicNumber), this.magicNumber));
     }

@@ -14,7 +14,7 @@ public class Leucine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Leu";
+        return " NL Leucine (Deal " + this.baseNumber + " damage to a random enemy)";
     }
 
     @Override

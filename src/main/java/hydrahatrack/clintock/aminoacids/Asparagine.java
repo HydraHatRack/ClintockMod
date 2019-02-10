@@ -14,7 +14,7 @@ public class Asparagine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Asn";
+        return " NL Asparagine (Gain " + this.baseNumber + " Dexterity)";
     }
 
     @Override

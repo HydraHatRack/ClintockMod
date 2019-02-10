@@ -14,7 +14,7 @@ public class Valine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Val";
+        return " NL Valine (Gain " + this.baseNumber + " Phosphate)";
     }
 
     @Override

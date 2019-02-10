@@ -29,11 +29,11 @@ public class GeneAmplification extends CustomCard {
         this.exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractPower power = AbstractDungeon.player.getPower(PeptideChainPower.POWER_ID);
         if (null == power) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TalkAction(true, "I don't have a peptide chain yet!", 2.0F, 2.0F));
+                    new TalkAction(true, ClintockMod.NEEDS_PEPTIDE_CHAIN, 2.0F, 2.0F));
         } else if (!this.upgraded){
             AbstractDungeon.actionManager.addToBottom(new DoublePeptideChainAction());
         } else {

@@ -14,7 +14,7 @@ public class Lysine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Lys";
+        return " NL Lysine (Gain " + this.baseNumber + " Plated Armor)";
     }
 
     @Override

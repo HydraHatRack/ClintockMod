@@ -15,7 +15,7 @@ public class Proline extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Pro";
+        return " NL Proline (Apply " + this.baseNumber + " Vulnerable to a random enemy)";
     }
 
     @Override

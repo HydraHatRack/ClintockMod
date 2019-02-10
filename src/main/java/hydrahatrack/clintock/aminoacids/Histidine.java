@@ -10,7 +10,7 @@ public class Histidine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "His";
+        return " NL Histidine (Remove all Block from a random enemy)";
     }
 
     @Override

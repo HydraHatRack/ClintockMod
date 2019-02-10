@@ -1,7 +1,6 @@
 package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -32,22 +31,28 @@ public class Thymine extends CustomCard {
         this.exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        if (null == p.getPower(SugarPower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new TalkAction(true, "I need more deoxyribose!", 2.0F, 2.0F));
-        } else if (null == p.getPower(PhosphatePower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new TalkAction(true, "I need more phosphate!", 2.0F, 2.0F));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new BindAction(new ThymineOrb()));
-            AbstractDungeon.actionManager.addToBottom(
-                    new ReducePowerAction(p, p, SugarPower.POWER_ID, 1));
-            AbstractDungeon.actionManager.addToBottom(
-                    new ReducePowerAction(p, p, PhosphatePower.POWER_ID, 1));
+    @Override
+    public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
+        if (null == AbstractDungeon.player.getPower(SugarPower.POWER_ID)) {
+            this.cantUseMessage = ClintockMod.NEEDS_MORE_SUGAR;
+            return false;
+        } else if (null == AbstractDungeon.player.getPower(PhosphatePower.POWER_ID)) {
+            this.cantUseMessage = ClintockMod.NEEDS_MORE_PHOSPHATE;
+            return false;
         }
+        return true;
     }
 
+    @Override
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new BindAction(new ThymineOrb()));
+        AbstractDungeon.actionManager.addToBottom(
+                new ReducePowerAction(p, p, SugarPower.POWER_ID, 1));
+        AbstractDungeon.actionManager.addToBottom(
+                new ReducePowerAction(p, p, PhosphatePower.POWER_ID, 1));
+    }
+
+    @Override
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();

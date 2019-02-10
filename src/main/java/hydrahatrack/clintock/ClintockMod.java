@@ -41,6 +41,13 @@ public class ClintockMod implements
     private static final String AUTHOR = "HydraHatRack";
     private static final String DESCRIPTION = "Adds a new playable character, The Clintock.";
 
+    // In-game messages
+    public static final String NEEDS_MORE_SUGAR = "I need more sugar!";
+    public static final String NEEDS_MORE_PHOSPHATE = "I need more phosphate!";
+    public static final String NEEDS_MORE_RESOURCES = "I need more resources!";
+    public static final String NEEDS_PEPTIDE_CHAIN = "I don't have a peptide chain yet!";
+    public static final String NEEDS_PURINE_NUCLEOBASE = "I need at least one purine!";
+
     // Color theme
     private static final Color CLINTOCK_THEME_COLOR = CardHelper.getColor(108.0f, 48.0f, 130.0f);
 
@@ -104,6 +111,10 @@ public class ClintockMod implements
     public void receiveEditCards() {
         logger.info("Begin editing cards");
 
+        BaseMod.addCard(new A1());
+        BaseMod.addCard(new A2());
+        BaseMod.addCard(new A3());
+        BaseMod.addCard(new A4());
         BaseMod.addCard(new Acupuncture());
         BaseMod.addCard(new Adenine());
         BaseMod.addCard(new ClintockDefend());

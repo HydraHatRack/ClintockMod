@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 public class StopCodon extends AbstractAminoAcid {
     @Override
     public String getLabel() {
-        return "STOP";
+        return " NL STOP (Does nothing)";
     }
 
     @Override

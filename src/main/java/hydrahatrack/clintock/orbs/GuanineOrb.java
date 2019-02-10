@@ -23,8 +23,6 @@ public class GuanineOrb extends NucleobaseOrb {
         this.label = LABEL;
         this.name = NAME;
         this.img = ImageMaster.loadImage(ClintockMod.getOrbImagePath(ORB_ID));
-        this.basePassiveAmount = ENERGY_AMOUNT;
-        this.passiveAmount = this.basePassiveAmount;
         this.updateDescription();
     }
 
@@ -42,6 +40,6 @@ public class GuanineOrb extends NucleobaseOrb {
     public void onStartOfTurn() {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(
                 new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), 0.1F));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.passiveAmount));
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_AMOUNT));
     }
 }

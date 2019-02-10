@@ -3,7 +3,6 @@ package hydrahatrack.clintock.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -23,14 +22,14 @@ public class Reductase extends CustomCard {
     private static final int COST = 1;
 
     public Reductase() {
-        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
 
         this.exhaust = true;
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractPower power = AbstractDungeon.player.getPower(SugarPower.POWER_ID);
         if (null != power) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, power, power.amount));

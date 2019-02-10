@@ -12,7 +12,7 @@ public class GlutamicAcid extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Glu";
+        return " NL Glutamic Acid (Upgrade a card in your hand for the rest of combat)";
     }
 
     @Override

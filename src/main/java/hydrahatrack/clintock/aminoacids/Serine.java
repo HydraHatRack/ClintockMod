@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPoisonOnRandomMonsterAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class Serine extends AbstractAminoAcid {
-    private static final int POISON_AMOUNT = 2;
+    private static final int POISON_AMOUNT = 3;
 
     public Serine() {
         this.baseNumber = POISON_AMOUNT;
@@ -13,7 +13,7 @@ public class Serine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Ser";
+        return " NL Serine (Apply " + this.baseNumber + " Poison to a random enemy)";
     }
 
     @Override

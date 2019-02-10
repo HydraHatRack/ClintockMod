@@ -16,7 +16,7 @@
   "clintock:GuanineOrb": {
     "NAME": "Guanine",
     "DESCRIPTION": [
-      "Next turn, gain [R]."
+      "Next turn, gain [R] . NL Unaffected by Fluorophores."
     ]
   },
   "clintock:ThymineOrb": {

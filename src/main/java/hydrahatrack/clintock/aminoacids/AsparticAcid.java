@@ -14,7 +14,7 @@ public class AsparticAcid extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Asp";
+        return " NL Aspartic Acid (Block is not removed at the start of your next turn)";
     }
 
     @Override

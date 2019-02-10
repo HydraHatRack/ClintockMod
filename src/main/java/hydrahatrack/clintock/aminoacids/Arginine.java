@@ -13,7 +13,7 @@ public class Arginine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Arg";
+        return " NL Arginine (Gain " + this.baseNumber + " Block)";
     }
 
     @Override

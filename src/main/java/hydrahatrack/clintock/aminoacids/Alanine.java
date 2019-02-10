@@ -14,7 +14,7 @@ public class Alanine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Ala";
+        return " NL Alanine (Gain " + this.baseNumber + " additional [R] next turn)";
     }
 
     @Override

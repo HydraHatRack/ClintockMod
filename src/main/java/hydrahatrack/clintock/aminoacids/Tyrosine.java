@@ -14,7 +14,7 @@ public class Tyrosine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Tyr";
+        return " NL Tyrosine (Gain " + this.baseNumber + " Fluorophore)";
     }
 
     @Override

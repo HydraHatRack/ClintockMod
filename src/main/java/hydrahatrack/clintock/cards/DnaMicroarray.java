@@ -1,9 +1,7 @@
 package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,14 +19,14 @@ public class DnaMicroarray extends CustomCard {
     private static final int UPGRADED_COST = 2;
 
     public DnaMicroarray() {
-        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, AbstractCard.CardTarget.SELF);
+        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, CardTarget.NONE);
 
         this.exhaust = true;
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Adenine(), 1));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Cytosine(), 1));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Guanine(), 1));

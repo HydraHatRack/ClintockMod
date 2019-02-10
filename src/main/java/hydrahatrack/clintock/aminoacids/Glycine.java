@@ -15,7 +15,7 @@ public class Glycine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Gly";
+        return " NL Glycine (Apply " + this.baseNumber + " Weak to a random enemy)";
     }
 
     @Override

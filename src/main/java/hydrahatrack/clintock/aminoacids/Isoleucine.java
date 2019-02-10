@@ -14,7 +14,7 @@ public class Isoleucine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Ile";
+        return " NL Isoleucine (Apply " + this.baseNumber + " Thorns)";
     }
 
     @Override

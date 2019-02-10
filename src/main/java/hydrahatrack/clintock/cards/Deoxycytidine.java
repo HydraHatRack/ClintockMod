@@ -2,10 +2,8 @@ package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -28,27 +26,33 @@ public class Deoxycytidine extends CustomCard {
     private static final int UPGRADE_PLUS_ATTACK_DMG = 3;
 
     public Deoxycytidine() {
-        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
+        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
 
         this.baseDamage = this.damage = ATTACK_DMG;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    @Override
+    public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
+        if (null == AbstractDungeon.player.getPower(PhosphatePower.POWER_ID)) {
+            this.cantUseMessage = ClintockMod.NEEDS_MORE_PHOSPHATE;
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(
                 m,
                 new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        if (null == p.getPower(PhosphatePower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new TalkAction(true, "I need more phosphate!", 2.0F, 2.0F));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new BindAction(new CytosineOrb()));
-            AbstractDungeon.actionManager.addToBottom(
-                    new ReducePowerAction(p, p, PhosphatePower.POWER_ID, 1));
-        }
+        AbstractDungeon.actionManager.addToBottom(new BindAction(new CytosineOrb()));
+        AbstractDungeon.actionManager.addToBottom(
+                new ReducePowerAction(p, p, PhosphatePower.POWER_ID, 1));
     }
 
+    @Override
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();

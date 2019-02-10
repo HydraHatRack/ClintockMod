@@ -15,7 +15,7 @@ public class Tryptophan extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return "Trp";
+        return " NL Tryptophan (A random enemy loses " + this.baseNumber + " Strength)";
     }
 
     @Override

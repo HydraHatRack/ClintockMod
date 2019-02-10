@@ -1,4 +1,21 @@
 {
+  "clintock:A1": {
+    "NAME": "A1",
+    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [R] for each Nucleobase Bound this turn."
+  },
+  "clintock:A2": {
+    "NAME": "A2",
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. Gain 1 Phosphate for each Weakened enemy."
+  },
+  "clintock:A3": {
+    "NAME": "A3",
+    "DESCRIPTION": "Draw 1 card. If you draw a Power, gain !M! Fluorophore.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card. If you draw a Power, gain !M! Fluorophores."
+  },
+  "clintock:A4": {
+    "NAME": "A4",
+    "DESCRIPTION": "At the start of each turn, apply a random amino acid."
+  },
   "clintock:Acupuncture": {
     "NAME": "Acupuncture",
     "DESCRIPTION": "Deal !D! damage NL !M! times."
