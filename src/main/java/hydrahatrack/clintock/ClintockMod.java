@@ -9,9 +9,12 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import hydrahatrack.clintock.cards.*;
 import hydrahatrack.clintock.characters.TheClintock;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
@@ -32,6 +35,8 @@ public class ClintockMod implements
         EditKeywordsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
+        PostExhaustSubscriber,
+        PostBattleSubscriber,
         PostInitializeSubscriber {
 
     private final Logger logger = LogManager.getLogger(TheClintock.class.getName());
@@ -45,7 +50,7 @@ public class ClintockMod implements
     public static final String NEEDS_MORE_SUGAR = "I need more sugar!";
     public static final String NEEDS_MORE_PHOSPHATE = "I need more phosphate!";
     public static final String NEEDS_MORE_RESOURCES = "I need more resources!";
-    public static final String NEEDS_PEPTIDE_CHAIN = "I don't have a peptide chain yet!";
+    public static final String NEEDS_PEPTIDE_CHAIN = "I don't have a peptide-chain yet!";
     public static final String NEEDS_PURINE_NUCLEOBASE = "I need at least one purine!";
 
     // Color theme
@@ -115,6 +120,9 @@ public class ClintockMod implements
         BaseMod.addCard(new A2());
         BaseMod.addCard(new A3());
         BaseMod.addCard(new A4());
+        BaseMod.addCard(new A5());
+        BaseMod.addCard(new A6());
+        BaseMod.addCard(new A7());
         BaseMod.addCard(new Acupuncture());
         BaseMod.addCard(new Adenine());
         BaseMod.addCard(new ClintockDefend());
@@ -130,6 +138,7 @@ public class ClintockMod implements
         BaseMod.addCard(new GeneAmplification());
         BaseMod.addCard(new Guanine());
         BaseMod.addCard(new Ketosis());
+        BaseMod.addCard(new MineAndDine());
         BaseMod.addCard(new MonomerSynthesis());
         BaseMod.addCard(new Nanopore());
         BaseMod.addCard(new Polymerize());
@@ -192,6 +201,20 @@ public class ClintockMod implements
         BaseMod.loadCustomStringsFile(RelicStrings.class, RELIC_STRINGS_PATH);
 
         logger.info("Done editing strings");
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        if (AbstractDungeon.player instanceof TheClintock) {
+            ((TheClintock) AbstractDungeon.player).resetCardExhaustCount();
+        }
+    }
+
+    @Override
+    public void receivePostExhaust(final AbstractCard c) {
+        if (AbstractDungeon.player instanceof TheClintock) {
+            ((TheClintock) AbstractDungeon.player).incrementCardExhaustCount();
+        }
     }
 
     public static String getCardImagePath(final String cardID) {

@@ -1,20 +1,34 @@
 {
   "clintock:A1": {
-    "NAME": "A1",
+    "NAME": "Vector Flow",
     "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [R] for each Nucleobase Bound this turn."
   },
   "clintock:A2": {
-    "NAME": "A2",
+    "NAME": "Brute Force",
     "DESCRIPTION": "Apply !M! Weak to ALL enemies. Gain 1 Phosphate for each Weakened enemy."
   },
   "clintock:A3": {
-    "NAME": "A3",
+    "NAME": "Eureka!",
     "DESCRIPTION": "Draw 1 card. If you draw a Power, gain !M! Fluorophore.",
     "UPGRADE_DESCRIPTION": "Draw 1 card. If you draw a Power, gain !M! Fluorophores."
   },
   "clintock:A4": {
-    "NAME": "A4",
+    "NAME": "Sequencer\\\\XChrom3.2",
     "DESCRIPTION": "At the start of each turn, apply a random amino acid."
+  },
+  "clintock:A5": {
+    "NAME": "ATP Reserves",
+    "DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted !M! cards).",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted 1 card)."
+  },
+  "clintock:A6": {
+    "NAME": "Alkylation",
+    "DESCRIPTION": "Evoke each Pyrimidine X times.",
+    "UPGRADE_DESCRIPTION": "Evoke each Pyrimidine orb X+1 times."
+  },
+  "clintock:A7": {
+    "NAME": "Sugar Rush",
+    "DESCRIPTION": "Lose half of your Sugar. Apply that much Poison."
   },
   "clintock:Acupuncture": {
     "NAME": "Acupuncture",
@@ -56,7 +70,7 @@
   },
   "clintock:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain !M! Sugar. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Sugars. NL Exhaust."
   },
   "clintock:Excavate": {
     "NAME": "Excavate",
@@ -69,8 +83,8 @@
   },
   "clintock:GeneAmplification": {
     "NAME": "Gene Amplification",
-    "DESCRIPTION": "Double your Peptide chain. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple your Peptide chain. Exhaust."
+    "DESCRIPTION": "Double your Peptide-Chain. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple your Peptide-Chain. Exhaust."
   },
   "clintock:Guanine": {
     "NAME": "Guanine",
@@ -80,6 +94,10 @@
   "clintock:Ketosis": {
     "NAME": "Ketosis",
     "DESCRIPTION": "Lose !M! HP. NL For each Bound Guanine or Thymine, deal !D! damage."
+  },
+  "clintock:MineAndDine": {
+    "NAME": "Mine and Dine",
+    "DESCRIPTION": "At the start of each turn, gain !M! Sugar and !M! Phosphate."
   },
   "clintock:MonomerSynthesis": {
     "NAME": "Monomer Synthesis",
@@ -95,7 +113,7 @@
   },
   "clintock:PurineMetabolism": {
     "NAME": "Purine Metabolism",
-    "DESCRIPTION": "Gain !B! Block for each Bound Adenine or Guanine."
+    "DESCRIPTION": "Gain !B! Block for each Purine orb."
   },
   "clintock:Reductase": {
     "NAME": "Reductase",
@@ -105,7 +123,7 @@
   "clintock:Replenish": {
     "NAME": "Replenish",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Sugar. NL Gain !M! Phosphate.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Sugar. NL Gain !M! Phosphates."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Sugars. NL Gain !M! Phosphates."
   },
   "clintock:Thymine": {
     "NAME": "Thymine",

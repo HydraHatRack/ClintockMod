@@ -2,25 +2,40 @@
   "clintock:AminoAcidPower": {
     "NAME": "A4",
     "DESCRIPTIONS": [
-      "At the start of each turn, apply a random amino acid."
+      "At the start of each turn, apply #b",
+      " random amino acid.",
+      " random amino acids."
     ]
   },
   "clintock:FluorophorePower": {
     "NAME": "Fluorophore",
     "DESCRIPTIONS": [
-      "Increases the potency of bound nucleobases."
+      "Increases the potency of bound #yNucleobases."
+    ]
+  },
+  "clintock:MineAndDinePower": {
+    "NAME": "Mine and Dine",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b",
+      " Sugar",
+      " and #b",
+      " Phosphate",
+      " Sugars",
+      " Phosphates"
     ]
   },
   "clintock:NanoporePower": {
     "NAME": "Nanopore",
     "DESCRIPTIONS": [
-      "At the start of each turn, add a random nucleobase to your hand."
+      "At the start of each turn, add #b",
+      " random nucleobase to your hand.",
+      " random nucleobases to your hand."
     ]
   },
   "clintock:PeptideChainPower": {
-    "NAME": "Peptide Chain",
+    "NAME": "Peptide-Chain",
     "DESCRIPTIONS": [
-      "At the end of each turn, activate your peptide chain:"
+      "At the end of each turn, activate your #yPeptide-Chain:"
     ]
   },
   "clintock:PhosphatePower": {

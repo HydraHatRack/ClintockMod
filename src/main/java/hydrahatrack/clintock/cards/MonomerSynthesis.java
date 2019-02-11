@@ -29,6 +29,7 @@ public class MonomerSynthesis extends CustomCard {
         this.baseMagicNumber = this.magicNumber = BASE_MAGIC_NUMBER;
     }
 
+    @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         Random random = new Random();
         AbstractCard card;
@@ -50,6 +51,7 @@ public class MonomerSynthesis extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, this.magicNumber));
     }
 
+    @Override
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();

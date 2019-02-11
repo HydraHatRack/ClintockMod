@@ -3,14 +3,14 @@
     "NAME": "Biomolecule Pool",
     "FLAVOR": "Don't let your organs see you drinking from this.",
     "DESCRIPTIONS": [
-      "At the start of battle, gain 3 Sugar and 3 Phosphates."
+      "At the start of battle, gain 3 Sugars and 3 Phosphates."
     ]
   },
   "clintock:NTerminusArginine": {
     "NAME": "N-terminus Arginine",
     "FLAVOR": "Beginnings were made to be ended.",
     "DESCRIPTIONS": [
-      "At the start of battle, add arginine to your peptide chain."
+      "At the start of battle, add arginine to your Peptide-Chain."
     ]
   }
 }

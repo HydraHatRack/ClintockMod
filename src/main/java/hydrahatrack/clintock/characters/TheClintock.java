@@ -38,6 +38,8 @@ public class TheClintock extends CustomPlayer {
     public float[] orbPositionsX = {0, 0, 0};
     public float[] orbPositionsY = {0, 0, 0};
 
+    private int cardExhaustCount;
+
     public TheClintock(String name, PlayerClass setClass) {
         super(name, setClass, null, null, (String) null, null);
 
@@ -60,6 +62,8 @@ public class TheClintock extends CustomPlayer {
         orbPositionsY[0] = yStartOffset;
         orbPositionsY[1] = yStartOffset;
         orbPositionsY[2] = yStartOffset;
+
+        resetCardExhaustCount();
     }
 
     public ArrayList<String> getStartingDeck() {
@@ -80,6 +84,9 @@ public class TheClintock extends CustomPlayer {
         startingDeck.add(A2.ID);
         startingDeck.add(A3.ID);
         startingDeck.add(A4.ID);
+        startingDeck.add(A5.ID);
+        startingDeck.add(A6.ID);
+        startingDeck.add(A7.ID);
 //        startingDeck.add(Acupuncture.ID); // DONE
 //        startingDeck.add(ClintockDefend.ID); // DONE
 //        startingDeck.add(ClintockStrike.ID); // DONE
@@ -87,15 +94,16 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(Deoxycytidine.ID); // DONE
 //        startingDeck.add(Deoxyguanosine.ID); // DONE
         startingDeck.add(DnaMicroarray.ID); // DONE
-//        startingDeck.add(EnergyDrink.ID); // DONE
+        startingDeck.add(EnergyDrink.ID); // DONE
         startingDeck.add(Excavate.ID); // DONE
-        startingDeck.add(Fluorescein.ID); // DONE
+//        startingDeck.add(Fluorescein.ID); // DONE
         startingDeck.add(GeneAmplification.ID); // DONE
 //        startingDeck.add(Ketosis.ID); // DONE
+        startingDeck.add(MineAndDine.ID);
 //        startingDeck.add(MonomerSynthesis.ID); // DONE
         startingDeck.add(Nanopore.ID); // DONE
 //        startingDeck.add(Polymerize.ID); // DONE
-        startingDeck.add(PurineMetabolism.ID); // DONE
+//        startingDeck.add(PurineMetabolism.ID); // DONE
 //        startingDeck.add(Reductase.ID); // DONE
         startingDeck.add(Replenish.ID); // DONE
 //        startingDeck.add(Thymidine.ID); // DONE
@@ -116,6 +124,23 @@ public class TheClintock extends CustomPlayer {
                         "Wields the tools of biology to slay the parasites of the spire.",
                 75, 75, 3, 99, 5,
                 this, getStartingRelics(), getStartingDeck(), false);
+    }
+
+    public void resetCardExhaustCount() {
+        cardExhaustCount = 0;
+    }
+
+    public void incrementCardExhaustCount() {
+        cardExhaustCount++;
+        for (AbstractCard c : hand.group) {
+            if (c instanceof A5) {
+                ((A5) c).incrementCardExhaustCount();
+            }
+        }
+    }
+
+    public int getCardExhaustCount() {
+        return cardExhaustCount;
     }
 
     @Override
@@ -194,6 +219,9 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~oh~ ~Great~ ~Clintock,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~";
+        return "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. " +
+                "As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and" +
+                " extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~oh~ ~Great~ ~Clintock,~ ~and~ ~feel~" +
+                " ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~";
     }
 }

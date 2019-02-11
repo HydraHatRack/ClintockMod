@@ -9,6 +9,7 @@
     "NAMES": [
       "bind",
       "binding",
+      "binds",
       "bound"
     ],
     "DESCRIPTION": "Puts a nucleobase in an empty slot, consuming sugar and phosphate in the process. An amino acid forms when no empty slots remain."
@@ -46,11 +47,11 @@
     ],
     "DESCRIPTION": "Does not require sugar when binding."
   },
-  "clintock:Peptide": {
+  "clintock:PeptideChainKeyword": {
     "NAMES": [
-      "peptide"
+      "peptide-chain"
     ],
-    "DESCRIPTION": "Chain of amino acids that activate at the end of each turn."
+    "DESCRIPTION": "Group of amino acids that activate at the end of each turn."
   },
   "clintock:PhosphateKeyword": {
     "NAMES": [
@@ -58,6 +59,20 @@
       "phosphates"
     ],
     "DESCRIPTION": "Phosphorus bound to four oxygen residues. Essential molecule in generating nucleotides."
+  },
+  "clintock:PurineKeyword": {
+    "NAMES": [
+      "purine",
+      "purines"
+    ],
+    "DESCRIPTION": "Adenine or Guanine"
+  },
+  "clintock:PyrimidineKeyword": {
+    "NAMES": [
+      "pyrimidine",
+      "pyrimidines"
+    ],
+    "DESCRIPTION": "Cytosine or Thymine"
   },
   "clintock:SugarKeyword": {
     "NAMES": [
