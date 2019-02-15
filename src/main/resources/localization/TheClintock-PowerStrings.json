@@ -3,8 +3,8 @@
     "NAME": "A4",
     "DESCRIPTIONS": [
       "At the start of each turn, apply #b",
-      " random amino acid.",
-      " random amino acids."
+      " random amino acid to your Peptide-chain.",
+      " random amino acids to your Peptide-chain."
     ]
   },
   "clintock:FluorophorePower": {

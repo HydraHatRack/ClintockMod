@@ -35,9 +35,8 @@ public class NanoporePower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        Random random = new Random();
         AbstractCard card;
-        switch (random.nextInt(4)) {
+        switch (new Random().nextInt(4)) {
             case 0:
                 card = new Adenine();
                 break;

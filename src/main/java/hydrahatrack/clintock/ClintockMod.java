@@ -123,6 +123,9 @@ public class ClintockMod implements
         BaseMod.addCard(new A5());
         BaseMod.addCard(new A6());
         BaseMod.addCard(new A7());
+        BaseMod.addCard(new A8());
+        BaseMod.addCard(new A9());
+        BaseMod.addCard(new A10());
         BaseMod.addCard(new Acupuncture());
         BaseMod.addCard(new Adenine());
         BaseMod.addCard(new ClintockDefend());

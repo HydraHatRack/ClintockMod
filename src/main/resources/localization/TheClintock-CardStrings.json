@@ -30,6 +30,19 @@
     "NAME": "Sugar Rush",
     "DESCRIPTION": "Lose half of your Sugar. Apply that much Poison."
   },
+  "clintock:A8": {
+    "NAME": "Mirror Pool",
+    "DESCRIPTION": "Swap Sugar and Phosphate amounts. Exhaust."
+  },
+  "clintock:A9": {
+    "NAME": "Lethal Injection",
+    "DESCRIPTION": "Deal !D! damage. NL Apply a random amino acid to your Peptide-chain."
+  },
+  "clintock:A10": {
+    "NAME": "Random Buff",
+    "DESCRIPTION": "Randomly gain X NL of one of the following: Strength, Dexterity, or Fluorophores",
+    "UPGRADE_DESCRIPTION": "Gain X NL of ALL of the following: Strength, Dexterity, and Fluorophores"
+  },
   "clintock:Acupuncture": {
     "NAME": "Acupuncture",
     "DESCRIPTION": "Deal !D! damage NL !M! times."
