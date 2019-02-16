@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.aminoacids.AbstractAminoAcid;
+import hydrahatrack.clintock.aminoacids.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +51,23 @@ public class PeptideChainPower extends AbstractPower {
                 .collect(Collectors.toList());
         this.amount = aminoAcids.size();
         this.updateDescription();
+    }
+
+    public boolean containsAtLeastOneEssentialAminoAcid() {
+        for (AbstractAminoAcid aminoAcid : aminoAcids) {
+            if (aminoAcid instanceof Histidine ||
+                aminoAcid instanceof Isoleucine ||
+                aminoAcid instanceof Leucine ||
+                aminoAcid instanceof Lysine ||
+                aminoAcid instanceof Methionine ||
+                aminoAcid instanceof Phenylalanine ||
+                aminoAcid instanceof Threonine ||
+                aminoAcid instanceof Tryptophan ||
+                aminoAcid instanceof Valine) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

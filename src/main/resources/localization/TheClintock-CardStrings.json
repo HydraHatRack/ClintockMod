@@ -18,7 +18,7 @@
   },
   "clintock:A9": {
     "NAME": "Lethal Injection",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply a random amino acid to your Peptide-chain."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply a random amino acid to your Peptide-Chain."
   },
   "clintock:A10": {
     "NAME": "Random Buff",
@@ -137,6 +137,10 @@
   "clintock:Polymerize": {
     "NAME": "Polymerize",
     "DESCRIPTION": "Gain !B! Block. NL If you Bound a Nucleobase this turn, gain !B! Block again."
+  },
+  "clintock:ProteinUtilization": {
+    "NAME": "Protein Utilization",
+    "DESCRIPTION": "Deal !D! damage. NL If your Peptide-Chain contains an Essential amino acid, target ALL enemies."
   },
   "clintock:PurineMetabolism": {
     "NAME": "Purine Metabolism",
