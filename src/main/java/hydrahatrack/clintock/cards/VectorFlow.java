@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 
-public class A1 extends CustomCard {
-    public static final String ID = "clintock:A1";
+public class VectorFlow extends CustomCard {
+    public static final String ID = "clintock:VectorFlow";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -22,7 +22,7 @@ public class A1 extends CustomCard {
     private static final int ATTACK_DMG = 12;
     private static final int UPGRADE_PLUS_ATTACK_DMG = 4;
 
-    public A1() {
+    public VectorFlow() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
 

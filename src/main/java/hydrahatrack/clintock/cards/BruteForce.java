@@ -17,8 +17,8 @@ import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.powers.PhosphatePower;
 
-public class A2 extends CustomCard {
-    public static final String ID = "clintock:A2";
+public class BruteForce extends CustomCard {
+    public static final String ID = "clintock:BruteForce";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -26,7 +26,7 @@ public class A2 extends CustomCard {
     private static final int WEAK_AMOUNT = 1;
     private static final int UPGRADE_PLUS_WEAK_AMOUNT = 1;
 
-    public A2() {
+    public BruteForce() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.ALL);
 

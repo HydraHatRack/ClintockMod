@@ -16,15 +16,15 @@ import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.orbs.CytosineOrb;
 import hydrahatrack.clintock.orbs.ThymineOrb;
 
-public class A6 extends CustomCard {
-    public static final String ID = "clintock:A6";
+public class Alkylation extends CustomCard {
+    public static final String ID = "clintock:Alkylation";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = -1;
 
-    public A6() {
+    public Alkylation() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.NONE);
     }

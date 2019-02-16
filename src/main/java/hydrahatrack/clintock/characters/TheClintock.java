@@ -7,6 +7,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.red.Intimidate;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -80,24 +81,28 @@ public class TheClintock extends CustomPlayer {
         startingDeck.add(MonomerSynthesis.ID);
         startingDeck.add(Replenish.ID);
 
-//        startingDeck.add(A1.ID);
-//        startingDeck.add(A2.ID);
-//        startingDeck.add(A3.ID);
 //        startingDeck.add(A4.ID);
 //        startingDeck.add(A5.ID);
-//        startingDeck.add(A6.ID);
 //        startingDeck.add(A7.ID);
 //        startingDeck.add(A8.ID);
 //        startingDeck.add(A9.ID);
 //        startingDeck.add(A10.ID);
+//        startingDeck.add(A11.ID);
+//        startingDeck.add(A12.ID);
+//        startingDeck.add(A13.ID);
 //        startingDeck.add(Acupuncture.ID); // DONE
+//        startingDeck.add(Alkylation.ID);
+//        startingDeck.add(BruteForce.ID);
 //        startingDeck.add(ClintockDefend.ID); // DONE
 //        startingDeck.add(ClintockStrike.ID); // DONE
+//        startingDeck.add(CompostBin.ID);
 //        startingDeck.add(Deoxyadenosine.ID); // DONE
 //        startingDeck.add(Deoxycytidine.ID); // DONE
 //        startingDeck.add(Deoxyguanosine.ID); // DONE
 //        startingDeck.add(DnaMicroarray.ID); // DONE
+//        startingDeck.add(Intimidate.ID);
 //        startingDeck.add(EnergyDrink.ID); // DONE
+//        startingDeck.add(Eureka.ID);
 //        startingDeck.add(Excavate.ID); // DONE
 //        startingDeck.add(Fluorescein.ID); // DONE
 //        startingDeck.add(GeneAmplification.ID); // DONE
@@ -109,7 +114,9 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(PurineMetabolism.ID); // DONE
 //        startingDeck.add(Reductase.ID); // DONE
 //        startingDeck.add(Replenish.ID); // DONE
+//        startingDeck.add(TelomereErosion.ID);
 //        startingDeck.add(Thymidine.ID); // DONE
+//        startingDeck.add(VectorFlow.ID);
 
         return startingDeck;
     }

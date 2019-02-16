@@ -1,17 +1,4 @@
 {
-  "clintock:A1": {
-    "NAME": "Vector Flow",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [R] for each Nucleobase Bound this turn."
-  },
-  "clintock:A2": {
-    "NAME": "Brute Force",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies. Gain 1 Phosphate for each Weakened enemy."
-  },
-  "clintock:A3": {
-    "NAME": "Eureka!",
-    "DESCRIPTION": "Draw 1 card. If you draw a Power, gain !M! Fluorophore.",
-    "UPGRADE_DESCRIPTION": "Draw 1 card. If you draw a Power, gain !M! Fluorophores."
-  },
   "clintock:A4": {
     "NAME": "Sequencer\\\\XChrom3.2",
     "DESCRIPTION": "At the start of each turn, apply a random amino acid."
@@ -20,11 +7,6 @@
     "NAME": "ATP Reserves",
     "DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted !M! cards).",
     "UPGRADE_DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted 1 card)."
-  },
-  "clintock:A6": {
-    "NAME": "Alkylation",
-    "DESCRIPTION": "Evoke each Pyrimidine X times.",
-    "UPGRADE_DESCRIPTION": "Evoke each Pyrimidine orb X+1 times."
   },
   "clintock:A7": {
     "NAME": "Sugar Rush",
@@ -36,12 +18,25 @@
   },
   "clintock:A9": {
     "NAME": "Lethal Injection",
-    "DESCRIPTION": "Deal !D! damage. NL Apply a random amino acid to your Peptide-chain."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply a random amino acid to your Peptide-chain."
   },
   "clintock:A10": {
     "NAME": "Random Buff",
     "DESCRIPTION": "Randomly gain X NL of one of the following: Strength, Dexterity, or Fluorophores",
     "UPGRADE_DESCRIPTION": "Gain X NL of ALL of the following: Strength, Dexterity, and Fluorophores"
+  },
+  "clintock:A11": {
+    "NAME": "Life Tap",
+    "DESCRIPTION": "Lose X HP. NL Gain X Energy. NL Draw X cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose X HP. NL Gain X Energy. NL Draw X cards."
+  },
+  "clintock:A12": {
+    "NAME": "Phalanx Support",
+    "DESCRIPTION": "Gain !B! Block. NL If you Bound a Nucleobase this turn, draw 1 card."
+  },
+  "clintock:A13": {
+    "NAME": "Feel Less Pain",
+    "DESCRIPTION": "Whenever a card is Exhausted, NL gain !M! Block."
   },
   "clintock:Acupuncture": {
     "NAME": "Acupuncture",
@@ -52,6 +47,15 @@
     "DESCRIPTION": "Ethereal. NL Bind 1 Adenine. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Bind 1 Adenine. NL Exhaust."
   },
+  "clintock:Alkylation": {
+    "NAME": "Alkylation",
+    "DESCRIPTION": "Evoke each Pyrimidine X times.",
+    "UPGRADE_DESCRIPTION": "Evoke each Pyrimidine orb X+1 times."
+  },
+  "clintock:BruteForce": {
+    "NAME": "Brute Force",
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. Gain 1 Phosphate for each Weakened enemy."
+  },
   "clintock:ClintockStrike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -59,6 +63,11 @@
   "clintock:ClintockDefend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "clintock:CompostBin": {
+    "NAME": "Compost Bin",
+    "DESCRIPTION": "Exhaust a card. NL Gain Phosphate equal to twice its cost.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. NL Gain Phosphate equal to three times its cost."
   },
   "clintock:Cytosine": {
     "NAME": "Cytosine",
@@ -84,6 +93,11 @@
   "clintock:EnergyDrink": {
     "NAME": "Energy Drink",
     "DESCRIPTION": "Gain !M! Sugars. NL Exhaust."
+  },
+  "clintock:Eureka": {
+    "NAME": "Eureka!",
+    "DESCRIPTION": "Draw 1 card. If you draw a Power, gain !M! Fluorophore.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card. If you draw a Power, gain !M! Fluorophores."
   },
   "clintock:Excavate": {
     "NAME": "Excavate",
@@ -138,6 +152,10 @@
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Sugar. NL Gain !M! Phosphate.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Sugars. NL Gain !M! Phosphates."
   },
+  "clintock:TelomereErosion": {
+    "NAME": "Telomere Erosion",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, draw !M! cards."
+  },
   "clintock:Thymine": {
     "NAME": "Thymine",
     "DESCRIPTION": "Ethereal. NL Bind 1 Thymine. NL Exhaust.",
@@ -146,5 +164,9 @@
   "clintock:Thymidine": {
     "NAME": "Thymidine",
     "DESCRIPTION": "Nucleoside. NL Deal !D! damage to ALL enemies. NL Bind 1 Thymine."
+  },
+  "clintock:VectorFlow": {
+    "NAME": "Vector Flow",
+    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [R] for each Nucleobase Bound this turn."
   }
 }

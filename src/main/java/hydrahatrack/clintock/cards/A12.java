@@ -1,6 +1,7 @@
 package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,16 +11,16 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 
-public class Polymerize extends CustomCard {
-    public static final String ID = "clintock:Polymerize";
+public class A12 extends CustomCard {
+    public static final String ID = "clintock:A12";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BLOCK_AMOUNT = 8;
+    private static final int BLOCK_AMOUNT = 9;
     private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 3;
 
-    public Polymerize() {
+    public A12() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.SELF);
 
@@ -28,10 +29,10 @@ public class Polymerize extends CustomCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        if (AbstractDungeon.actionManager.orbsChanneledThisTurn.size() > 0) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        }
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        if (AbstractDungeon.actionManager.orbsChanneledThisTurn.size() > 0) {
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        }
     }
 
     @Override

@@ -10,6 +10,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.red.Intimidate;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -116,26 +117,31 @@ public class ClintockMod implements
     public void receiveEditCards() {
         logger.info("Begin editing cards");
 
-        BaseMod.addCard(new A1());
-        BaseMod.addCard(new A2());
-        BaseMod.addCard(new A3());
+        BaseMod.addCard(new Intimidate());
+
         BaseMod.addCard(new A4());
         BaseMod.addCard(new A5());
-        BaseMod.addCard(new A6());
         BaseMod.addCard(new A7());
         BaseMod.addCard(new A8());
         BaseMod.addCard(new A9());
         BaseMod.addCard(new A10());
+        BaseMod.addCard(new A11());
+        BaseMod.addCard(new A12());
+        BaseMod.addCard(new A13());
         BaseMod.addCard(new Acupuncture());
         BaseMod.addCard(new Adenine());
+        BaseMod.addCard(new Alkylation());
+        BaseMod.addCard(new BruteForce());
         BaseMod.addCard(new ClintockDefend());
         BaseMod.addCard(new ClintockStrike());
+        BaseMod.addCard(new CompostBin());
         BaseMod.addCard(new Cytosine());
         BaseMod.addCard(new Deoxyadenosine());
         BaseMod.addCard(new Deoxycytidine());
         BaseMod.addCard(new Deoxyguanosine());
         BaseMod.addCard(new DnaMicroarray());
         BaseMod.addCard(new EnergyDrink());
+        BaseMod.addCard(new Eureka());
         BaseMod.addCard(new Excavate());
         BaseMod.addCard(new Fluorescein());
         BaseMod.addCard(new GeneAmplification());
@@ -148,8 +154,10 @@ public class ClintockMod implements
         BaseMod.addCard(new PurineMetabolism());
         BaseMod.addCard(new Reductase());
         BaseMod.addCard(new Replenish());
+        BaseMod.addCard(new TelomereErosion());
         BaseMod.addCard(new Thymidine());
         BaseMod.addCard(new Thymine());
+        BaseMod.addCard(new VectorFlow());
 
         logger.info("Done editing cards");
     }
