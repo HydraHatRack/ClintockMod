@@ -1,17 +1,14 @@
 package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
+import hydrahatrack.clintock.actions.MakeRandomNucleobaseInHandAction;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
-
-import java.util.Random;
 
 public class MonomerSynthesis extends CustomCard {
     public static final String ID = "clintock:MonomerSynthesis";
@@ -31,24 +28,7 @@ public class MonomerSynthesis extends CustomCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        Random random = new Random();
-        AbstractCard card;
-        switch (random.nextInt(4)) {
-            case 0:
-                card = new Adenine();
-                break;
-            case 1:
-                card = new Cytosine();
-                break;
-            case 2:
-                card = new Guanine();
-                break;
-            case 3:
-            default:
-                card = new Thymine();
-                break;
-        }
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new MakeRandomNucleobaseInHandAction(this.magicNumber));
     }
 
     @Override

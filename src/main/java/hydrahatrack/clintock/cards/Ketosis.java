@@ -38,7 +38,7 @@ public class Ketosis extends CustomCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        if (m != null) {
+        if (null != m) {
             boolean dealsDamage = false;
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof GuanineOrb || o instanceof ThymineOrb) {

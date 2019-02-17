@@ -7,7 +7,6 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.red.Intimidate;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -48,7 +47,7 @@ public class TheClintock extends CustomPlayer {
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
 
         this.loadAnimation(CLINTOCK_SKELETON_ATLAS_PATH, CLINTOCK_SKELETON_JSON_PATH, 1.0f);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "animation", true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
         // Initialize slot positions
@@ -70,51 +69,54 @@ public class TheClintock extends CustomPlayer {
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> startingDeck = new ArrayList<>();
 
-//        startingDeck.add(ClintockStrike.ID);
+        startingDeck.add(ClintockStrike.ID);
 //        startingDeck.add(ClintockStrike.ID);
 //        startingDeck.add(ClintockStrike.ID);
 //        startingDeck.add(ClintockStrike.ID);
 //        startingDeck.add(ClintockDefend.ID);
 //        startingDeck.add(ClintockDefend.ID);
 //        startingDeck.add(ClintockDefend.ID);
-//        startingDeck.add(ClintockDefend.ID);
-        startingDeck.add(MonomerSynthesis.ID);
-        startingDeck.add(Replenish.ID);
+        startingDeck.add(ClintockDefend.ID);
+        // startingDeck.add(MonomerSynthesis.ID);
+        // startingDeck.add(Replenish.ID);
 
-//        startingDeck.add(A4.ID);
-//        startingDeck.add(A5.ID);
-//        startingDeck.add(A7.ID);
-//        startingDeck.add(A8.ID);
 //        startingDeck.add(A9.ID);
-//        startingDeck.add(A10.ID);
-//        startingDeck.add(A11.ID);
 //        startingDeck.add(A12.ID);
-//        startingDeck.add(A13.ID);
+        startingDeck.add(A14.ID);
+        startingDeck.add(A16.ID);
 //        startingDeck.add(Acupuncture.ID); // DONE
 //        startingDeck.add(Alkylation.ID);
+        startingDeck.add(ATPReserves.ID);
 //        startingDeck.add(BruteForce.ID);
 //        startingDeck.add(ClintockDefend.ID); // DONE
 //        startingDeck.add(ClintockStrike.ID); // DONE
 //        startingDeck.add(CompostBin.ID);
+        startingDeck.add(DegradedPrimer.ID);
 //        startingDeck.add(Deoxyadenosine.ID); // DONE
 //        startingDeck.add(Deoxycytidine.ID); // DONE
 //        startingDeck.add(Deoxyguanosine.ID); // DONE
-        startingDeck.add(DnaMicroarray.ID); // DONE
-//        startingDeck.add(Intimidate.ID);
+        // startingDeck.add(DnaMicroarray.ID); // DONE
 //        startingDeck.add(EnergyDrink.ID); // DONE
+        startingDeck.add(EnergyMetabolism.ID);
 //        startingDeck.add(Eureka.ID);
-//        startingDeck.add(Excavate.ID); // DONE
+        startingDeck.add(Excavate.ID); // DONE
 //        startingDeck.add(Fluorescein.ID); // DONE
 //        startingDeck.add(GeneAmplification.ID); // DONE
-        startingDeck.add(Ketosis.ID); // DONE
+        startingDeck.add(GlucoseToxicity.ID);
+        startingDeck.add(Immunodeficiency.ID);
+        // startingDeck.add(Ketosis.ID); // DONE
+        startingDeck.add(MetabolicPathways.ID);
 //        startingDeck.add(MineAndDine.ID);
-//        startingDeck.add(MonomerSynthesis.ID); // DONE
+        startingDeck.add(MonomerSynthesis.ID); // DONE
 //        startingDeck.add(Nanopore.ID); // DONE
 //        startingDeck.add(Polymerize.ID); // DONE
-        startingDeck.add(ProteinUtilization.ID);
+        // startingDeck.add(ProteinUtilization.ID);
 //        startingDeck.add(PurineMetabolism.ID); // DONE
+        startingDeck.add(RandomForest.ID);
 //        startingDeck.add(Reductase.ID); // DONE
 //        startingDeck.add(Replenish.ID); // DONE
+        startingDeck.add(SampleSwap.ID);
+        startingDeck.add(SuperSeqX1.ID);
 //        startingDeck.add(TelomereErosion.ID);
 //        startingDeck.add(Thymidine.ID); // DONE
 //        startingDeck.add(VectorFlow.ID);
@@ -144,8 +146,8 @@ public class TheClintock extends CustomPlayer {
     public void incrementCardExhaustCount() {
         cardExhaustCount++;
         for (AbstractCard c : hand.group) {
-            if (c instanceof A5) {
-                ((A5) c).incrementCardExhaustCount();
+            if (c instanceof ATPReserves) {
+                ((ATPReserves) c).incrementCardExhaustCount();
             }
         }
     }

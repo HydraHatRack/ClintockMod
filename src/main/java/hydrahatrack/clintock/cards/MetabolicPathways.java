@@ -7,37 +7,37 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FeelNoPainPower;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.powers.AminoAcidPower;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 
-public class A4 extends CustomCard {
-    public static final String ID = "clintock:A4";
+public class MetabolicPathways extends CustomCard {
+    public static final String ID = "clintock:MetabolicPathways";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 6;
-    private static final int UPGRADED_COST = 5;
-    private static final int BASE_MAGIC_NUMBER = 1;
+    private static final int COST = 1;
+    private static final int BLOCK_AMOUNT = 2;
+    private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 1;
 
-    public A4() {
+    public MetabolicPathways() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
 
-        this.baseMagicNumber = this.magicNumber = BASE_MAGIC_NUMBER;
+        this.baseMagicNumber = this.magicNumber = BLOCK_AMOUNT;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new AminoAcidPower(p, this.magicNumber), this.magicNumber));
+                new ApplyPowerAction(p, p, new FeelNoPainPower(p, this.magicNumber), this.magicNumber));
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeBaseCost(UPGRADED_COST);
+            upgradeName();
+            upgradeMagicNumber(UPGRADE_PLUS_BLOCK_AMOUNT);
         }
     }
 }

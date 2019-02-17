@@ -12,15 +12,15 @@ import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.powers.PhosphatePower;
 import hydrahatrack.clintock.powers.SugarPower;
 
-public class A8 extends CustomCard {
-    public static final String ID = "clintock:A8";
+public class SampleSwap extends CustomCard {
+    public static final String ID = "clintock:SampleSwap";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
 
-    public A8() {
+    public SampleSwap() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
 

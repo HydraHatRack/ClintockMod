@@ -13,7 +13,8 @@ public class TelomereErosionAction extends AbstractGameAction {
     private DamageInfo info;
     private int drawCardAmount;
 
-    public TelomereErosionAction(AbstractCreature target, DamageInfo info, int drawCardAmount) {
+    public TelomereErosionAction(
+            final AbstractCreature target, final DamageInfo info, final int drawCardAmount) {
         this.info = info;
         this.target = target;
         this.drawCardAmount = drawCardAmount;
