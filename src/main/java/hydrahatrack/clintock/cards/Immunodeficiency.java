@@ -22,7 +22,7 @@ public class Immunodeficiency extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int VULNERABLE_AMOUNT = 3;
-    private static final int UPGRADE_PLUS_VULNERABLE_AMOUNT = 4;
+    private static final int UPGRADE_PLUS_VULNERABLE_AMOUNT = 1;
 
     public Immunodeficiency() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
