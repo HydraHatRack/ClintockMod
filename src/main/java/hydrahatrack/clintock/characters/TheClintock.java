@@ -70,52 +70,53 @@ public class TheClintock extends CustomPlayer {
         ArrayList<String> startingDeck = new ArrayList<>();
 
         startingDeck.add(ClintockStrike.ID);
-        startingDeck.add(ClintockStrike.ID);
-        startingDeck.add(ClintockStrike.ID);
-        startingDeck.add(ClintockStrike.ID);
-        startingDeck.add(ClintockDefend.ID);
-        startingDeck.add(ClintockDefend.ID);
-        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockStrike.ID);
+//        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockDefend.ID);
         startingDeck.add(ClintockDefend.ID);
         // startingDeck.add(MonomerSynthesis.ID);
         // startingDeck.add(Replenish.ID);
 
-//        startingDeck.add(A4.ID);
-//        startingDeck.add(A5.ID);
-//        startingDeck.add(A7.ID);
-//        startingDeck.add(A8.ID);
 //        startingDeck.add(A9.ID);
-//        startingDeck.add(A10.ID);
-//        startingDeck.add(A11.ID);
 //        startingDeck.add(A12.ID);
-//        startingDeck.add(A13.ID);
         startingDeck.add(A14.ID);
-        startingDeck.add(A15.ID);
+        startingDeck.add(A16.ID);
 //        startingDeck.add(Acupuncture.ID); // DONE
 //        startingDeck.add(Alkylation.ID);
+        startingDeck.add(ATPReserves.ID);
 //        startingDeck.add(BruteForce.ID);
 //        startingDeck.add(ClintockDefend.ID); // DONE
 //        startingDeck.add(ClintockStrike.ID); // DONE
 //        startingDeck.add(CompostBin.ID);
+        startingDeck.add(DegradedPrimer.ID);
 //        startingDeck.add(Deoxyadenosine.ID); // DONE
 //        startingDeck.add(Deoxycytidine.ID); // DONE
 //        startingDeck.add(Deoxyguanosine.ID); // DONE
         // startingDeck.add(DnaMicroarray.ID); // DONE
 //        startingDeck.add(EnergyDrink.ID); // DONE
+        startingDeck.add(EnergyMetabolism.ID);
 //        startingDeck.add(Eureka.ID);
         startingDeck.add(Excavate.ID); // DONE
 //        startingDeck.add(Fluorescein.ID); // DONE
 //        startingDeck.add(GeneAmplification.ID); // DONE
+        startingDeck.add(GlucoseToxicity.ID);
         startingDeck.add(Immunodeficiency.ID);
         // startingDeck.add(Ketosis.ID); // DONE
+        startingDeck.add(MetabolicPathways.ID);
 //        startingDeck.add(MineAndDine.ID);
-//        startingDeck.add(MonomerSynthesis.ID); // DONE
+        startingDeck.add(MonomerSynthesis.ID); // DONE
 //        startingDeck.add(Nanopore.ID); // DONE
 //        startingDeck.add(Polymerize.ID); // DONE
         // startingDeck.add(ProteinUtilization.ID);
 //        startingDeck.add(PurineMetabolism.ID); // DONE
+        startingDeck.add(RandomForest.ID);
 //        startingDeck.add(Reductase.ID); // DONE
 //        startingDeck.add(Replenish.ID); // DONE
+        startingDeck.add(SampleSwap.ID);
+        startingDeck.add(SuperSeqX1.ID);
 //        startingDeck.add(TelomereErosion.ID);
 //        startingDeck.add(Thymidine.ID); // DONE
 //        startingDeck.add(VectorFlow.ID);
@@ -145,8 +146,8 @@ public class TheClintock extends CustomPlayer {
     public void incrementCardExhaustCount() {
         cardExhaustCount++;
         for (AbstractCard c : hand.group) {
-            if (c instanceof A5) {
-                ((A5) c).incrementCardExhaustCount();
+            if (c instanceof ATPReserves) {
+                ((ATPReserves) c).incrementCardExhaustCount();
             }
         }
     }

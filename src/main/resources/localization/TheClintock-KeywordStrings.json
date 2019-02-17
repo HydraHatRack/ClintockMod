@@ -1,16 +1,16 @@
 {
-  "clintock:AAKeyword": {
+  "clintock:AminoAcidKeyword": {
     "NAMES": [
-      "AA",
-      "AAs"
+      "Amino-Acid",
+      "Amino-Acids"
     ],
-    "DESCRIPTION": "Amino acids (AA) are the structural units that make up proteins."
+    "DESCRIPTION": "Structural units that make up proteins. Activates at the end of each turn."
   },
   "clintock:AdenineKeyword": {
     "NAMES": [
       "adenine"
     ],
-    "DESCRIPTION": "Blue nucleobase. Gains block."
+    "DESCRIPTION": "Blue #yNucleobase: Gains #yBlock."
   },
   "clintock:BindKeyword": {
     "NAMES": [
@@ -19,91 +19,91 @@
       "binds",
       "bound"
     ],
-    "DESCRIPTION": "Consumes sugar and phosphate to put a nucleobase in an empty orb slot. If there are no empty slots, an amino acid is first generated."
+    "DESCRIPTION": "Consumes #ySugar and #yPhosphate to put a #yNucleobase into your first empty slot. If you have no empty slots, an #yAmino-Acid is generated to make room."
   },
   "clintock:CytosineKeyword": {
     "NAMES": [
       "cytosine"
     ],
-    "DESCRIPTION": "Red nucleobase. Deals damage to a random enemy."
+    "DESCRIPTION": "Red #yNucleobase: Deals damage to a random enemy."
   },
   "clintock:EssentialKeyword": {
     "NAMES": [
       "essential"
     ],
-    "DESCRIPTION": "Amino acids that must be supplied in diet. See the Clintock wiki for a complete list."
+    "DESCRIPTION": "#yAmino-Acids that must be supplied in diet. See the #bClintock #bWiki for a complete list."
   },
   "clintock:FluorophoreKeyword": {
     "NAMES": [
       "fluorophore",
       "fluorophores"
     ],
-    "DESCRIPTION": "Increases the potency of bound nucleobases."
+    "DESCRIPTION": "Increases the effectiveness of #yBound #yNucleobases."
   },
   "clintock:GuanineKeyword": {
     "NAMES": [
       "guanine"
     ],
-    "DESCRIPTION": "Green nucleobase. Gains energy."
+    "DESCRIPTION": "Green #yNucleobase: Gains energy."
   },
   "clintock:NonessentialKeyword": {
     "NAMES": [
       "nonessential"
     ],
-    "DESCRIPTION": "Amino acids that can be synthesized in the body. See the Clintock wiki for a complete list."
+    "DESCRIPTION": "#yAmino-Acids that can be synthesized in the body. See the #bClintock #bWiki for a complete list."
   },
   "clintock:NucleobaseKeyword": {
     "NAMES": [
       "nucleobase",
       "nucleobases"
     ],
-    "DESCRIPTION": "Fundamental units of the genetic code found in DNA (Adenine, Cytosine, Guanine, Thymine)."
+    "DESCRIPTION": "Fundamental units of the genetic code found in DNA (#yAdenine, #yCytosine, #yGuanine, and #yThymine)."
   },
   "clintock:NucleosideKeyword": {
     "NAMES": [
       "nucleoside",
       "nucleosides"
     ],
-    "DESCRIPTION": "Does not require sugar when binding."
+    "DESCRIPTION": "Does not require #ySugar when #yBinding."
   },
   "clintock:PeptideChainKeyword": {
     "NAMES": [
       "peptide-chain"
     ],
-    "DESCRIPTION": "Group of amino acids that activate at the end of each turn."
+    "DESCRIPTION": "Group of #yAmino-Acids that activate at the end of each turn."
   },
   "clintock:PhosphateKeyword": {
     "NAMES": [
       "phosphate",
       "phosphates"
     ],
-    "DESCRIPTION": "Phosphorus bound to four oxygen residues. Essential molecule in generating nucleotides."
+    "DESCRIPTION": "Phosphorus bound to four oxygen residues. Necessary molecule in generating nucleotides."
   },
   "clintock:PurineKeyword": {
     "NAMES": [
       "purine",
       "purines"
     ],
-    "DESCRIPTION": "Adenine and Guanine orbs."
+    "DESCRIPTION": "Nitrogenous base category (#yAdenine and #yGuanine)."
   },
   "clintock:PyrimidineKeyword": {
     "NAMES": [
       "pyrimidine",
       "pyrimidines"
     ],
-    "DESCRIPTION": "Cytosine and Thymine orbs."
+    "DESCRIPTION": "Nitrogenous base category (#yCytosine and #yThymine)."
   },
   "clintock:SugarKeyword": {
     "NAMES": [
       "sugar",
       "sugars"
     ],
-    "DESCRIPTION": "Specifically deoxyribose. Essential molecule in generating nucleotides."
+    "DESCRIPTION": "Specifically deoxyribose. Necessary molecule in generating nucleotides."
   },
   "clintock:ThymineKeyword": {
     "NAMES": [
       "thymine"
     ],
-    "DESCRIPTION": "Yellow nucleobase. Deals damage to ALL enemies."
+    "DESCRIPTION": "Yellow #yNucleobase: Deals damage to ALL enemies."
   }
 }

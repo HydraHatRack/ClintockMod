@@ -14,15 +14,15 @@ import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.powers.SugarPower;
 
-public class A7 extends CustomCard {
-    public static final String ID = "clintock:A7";
+public class GlucoseToxicity extends CustomCard {
+    public static final String ID = "clintock:GlucoseToxicity";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
     private static final int UPGRADED_COST = 1;
 
-    public A7() {
+    public GlucoseToxicity() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
     }

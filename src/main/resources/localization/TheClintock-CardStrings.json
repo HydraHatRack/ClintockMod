@@ -1,50 +1,19 @@
 {
-  "clintock:A4": {
-    "NAME": "Sequencer\\\\SuperSeq",
-    "DESCRIPTION": "At the start of each turn, apply a random AA."
-  },
-  "clintock:A5": {
-    "NAME": "ATP Reserves",
-    "DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted !M! cards).",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted 1 card)."
-  },
-  "clintock:A7": {
-    "NAME": "Sugar Rush",
-    "DESCRIPTION": "Lose half of your Sugar. Apply that much Poison."
-  },
-  "clintock:A8": {
-    "NAME": "Mirror Pool",
-    "DESCRIPTION": "Swap Sugar and Phosphate amounts. Exhaust."
-  },
   "clintock:A9": {
     "NAME": "Lethal Injection",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply a random AA to your Peptide-Chain."
-  },
-  "clintock:A10": {
-    "NAME": "Random Buff",
-    "DESCRIPTION": "Randomly gain X NL of one of the following: Strength, Dexterity, or Fluorophores",
-    "UPGRADE_DESCRIPTION": "Gain X NL of ALL of the following: Strength, Dexterity, and Fluorophores"
-  },
-  "clintock:A11": {
-    "NAME": "Life Tap",
-    "DESCRIPTION": "Lose X HP. NL Gain X Energy. NL Draw X cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Lose X HP. NL Gain X Energy. NL Draw X cards."
   },
   "clintock:A12": {
     "NAME": "Phalanx Support",
     "DESCRIPTION": "Gain !B! Block. NL If you Bound a Nucleobase this turn, draw 1 card."
   },
-  "clintock:A13": {
-    "NAME": "Feel Less Pain",
-    "DESCRIPTION": "Whenever a card is Exhausted, NL gain !M! Block."
-  },
   "clintock:A14": {
     "NAME": "Poison Plus",
     "DESCRIPTION": "Deal !D! damage. NL If your Peptide-Chain contains a Nonessential AA, apply !M! Poison."
   },
-  "clintock:A15": {
-    "NAME": "Poison Stab",
-    "DESCRIPTION": "Deal !D! damage. NL For each Bound Nucleobase, apply !M! Poison."
+  "clintock:A16": {
+    "NAME": "Nucleobase Attack",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Add a random Nucleobase to your hand for each enemy remaining."
   },
   "clintock:Acupuncture": {
     "NAME": "Acupuncture",
@@ -59,6 +28,11 @@
     "NAME": "Alkylation",
     "DESCRIPTION": "Evoke each Pyrimidine X times.",
     "UPGRADE_DESCRIPTION": "Evoke each Pyrimidine orb X+1 times."
+  },
+  "clintock:ATPReserves": {
+    "NAME": "ATP Reserves",
+    "DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted !M! cards).",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted 1 card)."
   },
   "clintock:BruteForce": {
     "NAME": "Brute Force",
@@ -82,6 +56,10 @@
     "DESCRIPTION": "Ethereal. NL Bind 1 Cytosine. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Bind 1 Cytosine. NL Exhaust."
   },
+  "clintock:DegradedPrimer": {
+    "NAME": "Degraded Primer",
+    "DESCRIPTION": "Deal !D! damage. NL For each Bound Nucleobase, apply !M! Poison."
+  },
   "clintock:Deoxyadenosine": {
     "NAME": "Deoxyadenosine",
     "DESCRIPTION": "Nucleoside. NL Gain !B! Block. NL Bind 1 Adenine."
@@ -102,6 +80,11 @@
     "NAME": "Energy Drink",
     "DESCRIPTION": "Gain !M! Sugars. NL Exhaust."
   },
+  "clintock:EnergyMetabolism": {
+    "NAME": "Energy Metabolism",
+    "DESCRIPTION": "Lose X HP. NL Gain X Energy. NL Draw X cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose X HP. NL Gain X Energy. NL Draw X cards."
+  },
   "clintock:Eureka": {
     "NAME": "Eureka!",
     "DESCRIPTION": "Draw 1 card. If you draw a Power, gain !M! Fluorophore.",
@@ -120,6 +103,10 @@
     "DESCRIPTION": "Double your Peptide-Chain. Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple your Peptide-Chain. Exhaust."
   },
+  "clintock:GlucoseToxicity": {
+    "NAME": "Glucose Toxicity",
+    "DESCRIPTION": "Lose half of your Sugar. Apply that much Poison."
+  },
   "clintock:Guanine": {
     "NAME": "Guanine",
     "DESCRIPTION": "Ethereal. NL Bind 1 Guanine. NL Exhaust.",
@@ -132,6 +119,10 @@
   "clintock:Ketosis": {
     "NAME": "Ketosis",
     "DESCRIPTION": "Lose !M! HP. NL For each Bound Guanine or Thymine, deal !D! damage."
+  },
+  "clintock:MetabolicPathways": {
+    "NAME": "Metabolic Pathways",
+    "DESCRIPTION": "Whenever a card is Exhausted, NL gain !M! Block."
   },
   "clintock:MineAndDine": {
     "NAME": "Mine and Dine",
@@ -157,6 +148,11 @@
     "NAME": "Purine Metabolism",
     "DESCRIPTION": "Gain !B! Block for each Purine orb."
   },
+  "clintock:RandomForest": {
+    "NAME": "Random Forest",
+    "DESCRIPTION": "Randomly gain X NL of one of the following: Strength, Dexterity, or Fluorophores. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X NL of ALL of the following: Strength, Dexterity, and Fluorophores. Exhaust."
+  },
   "clintock:Reductase": {
     "NAME": "Reductase",
     "DESCRIPTION": "Double your Sugar. NL Exhaust.",
@@ -166,6 +162,14 @@
     "NAME": "Replenish",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Sugar. NL Gain !M! Phosphate.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Sugars. NL Gain !M! Phosphates."
+  },
+  "clintock:SampleSwap": {
+    "NAME": "SampleSwap",
+    "DESCRIPTION": "Swap Sugar and Phosphate amounts. Exhaust."
+  },
+  "clintock:SuperSeqX1": {
+    "NAME": "SuperSeq X1",
+    "DESCRIPTION": "Sequencer. NL At the start of each turn, apply a random Amino-Acid."
   },
   "clintock:TelomereErosion": {
     "NAME": "Telomere Erosion",

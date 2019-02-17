@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 
-public class A15 extends CustomCard {
-    public static final String ID = "clintock:A15";
+public class DegradedPrimer extends CustomCard {
+    public static final String ID = "clintock:DegradedPrimer";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -25,7 +26,7 @@ public class A15 extends CustomCard {
     private static final int UPGRADE_PLUS_ATTACK_DMG = 3;
     private static final int UPGRADE_PLUS_POISON_AMOUNT = 1;
 
-    public A15() {
+    public DegradedPrimer() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
 
@@ -39,10 +40,17 @@ public class A15 extends CustomCard {
                     new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                             AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 
-        if (p.orbs.size() > 0) {
-            int poisonAmount = p.orbs.size() * this.magicNumber;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(
-                    m, p, poisonAmount), poisonAmount, AbstractGameAction.AttackEffect.POISON));
+        int numberOfOrbs = 0;
+        for (int i = 0; i < p.orbs.size(); i++) {
+            if (!(p.orbs.get(i) instanceof EmptyOrbSlot)) {
+                numberOfOrbs++;
+            }
+        }
+
+        if (numberOfOrbs > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
+                    new PoisonPower(m, p, numberOfOrbs * this.magicNumber),
+                    numberOfOrbs * this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         }
     }
 

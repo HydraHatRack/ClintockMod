@@ -10,14 +10,14 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.actions.ApplyRandomAminoAcidAction;
 
-public class AminoAcidPower extends AbstractPower {
-    private static final String POWER_ID = "clintock:AminoAcidPower";
+public class SuperSeqX1Power extends AbstractPower {
+    private static final String POWER_ID = "clintock:SuperSeqX1Power";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private static final Texture IMG = ImageMaster.loadImage(ClintockMod.getPowerImagePath(POWER_ID));
 
-    public AminoAcidPower(final AbstractCreature owner, final int amount) {
+    public SuperSeqX1Power(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
         this.name = NAME;
         this.owner = owner;

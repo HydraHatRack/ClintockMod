@@ -11,8 +11,8 @@ import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.characters.TheClintock;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 
-public class A5 extends CustomCard {
-    public static final String ID = "clintock:A5";
+public class ATPReserves extends CustomCard {
+    public static final String ID = "clintock:ATPReserves";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -22,7 +22,7 @@ public class A5 extends CustomCard {
     private static final int BLOCK_AMOUNT = 1;
     private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 1;
 
-    public A5() {
+    public ATPReserves() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.SELF);
 

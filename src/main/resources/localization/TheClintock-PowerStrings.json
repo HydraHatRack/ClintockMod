@@ -1,35 +1,35 @@
 {
-  "clintock:AminoAcidPower": {
-    "NAME": "A4",
+  "clintock:SuperSeqX1Power": {
+    "NAME": "SuperSeq X1",
     "DESCRIPTIONS": [
       "At the start of each turn, apply #b",
-      " random amino acid to your Peptide-chain.",
-      " random amino acids to your Peptide-chain."
+      " random #yAmino-Acid to your #yPeptide-Chain.",
+      " random #yAmino-Acids to your #yPeptide-Chain."
     ]
   },
   "clintock:FluorophorePower": {
     "NAME": "Fluorophore",
     "DESCRIPTIONS": [
-      "Increases the potency of bound #yNucleobases."
+      "Increases the effectiveness of #yBound #yNucleobases."
     ]
   },
   "clintock:MineAndDinePower": {
     "NAME": "Mine and Dine",
     "DESCRIPTIONS": [
       "At the start of each turn, gain #b",
-      " Sugar",
+      " #ySugar",
       " and #b",
-      " Phosphate",
-      " Sugars",
-      " Phosphates"
+      " #yPhosphate",
+      " #ySugars",
+      " #yPhosphates"
     ]
   },
   "clintock:NanoporePower": {
     "NAME": "Nanopore",
     "DESCRIPTIONS": [
       "At the start of each turn, add #b",
-      " random nucleobase to your hand.",
-      " random nucleobases to your hand."
+      " random #yNucleobase to your hand.",
+      " random #yNucleobases to your hand."
     ]
   },
   "clintock:PeptideChainPower": {
@@ -41,13 +41,13 @@
   "clintock:PhosphatePower": {
     "NAME": "Phosphate",
     "DESCRIPTIONS": [
-      "Essential molecule in generating nucleotides."
+      "Necessary molecule in generating nucleotides."
     ]
   },
   "clintock:SugarPower": {
     "NAME": "Sugar",
     "DESCRIPTIONS": [
-      "Essential molecule in generating nucleotides."
+      "Necessary molecule in generating nucleotides."
     ]
   }
 }
