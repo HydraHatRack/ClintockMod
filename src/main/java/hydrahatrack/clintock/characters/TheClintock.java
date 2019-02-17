@@ -7,7 +7,6 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.red.Intimidate;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -70,16 +69,16 @@ public class TheClintock extends CustomPlayer {
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> startingDeck = new ArrayList<>();
 
-//        startingDeck.add(ClintockStrike.ID);
-//        startingDeck.add(ClintockStrike.ID);
-//        startingDeck.add(ClintockStrike.ID);
-//        startingDeck.add(ClintockStrike.ID);
-//        startingDeck.add(ClintockDefend.ID);
-//        startingDeck.add(ClintockDefend.ID);
-//        startingDeck.add(ClintockDefend.ID);
-//        startingDeck.add(ClintockDefend.ID);
-        startingDeck.add(MonomerSynthesis.ID);
-        startingDeck.add(Replenish.ID);
+        startingDeck.add(ClintockStrike.ID);
+        startingDeck.add(ClintockStrike.ID);
+        startingDeck.add(ClintockStrike.ID);
+        startingDeck.add(ClintockStrike.ID);
+        startingDeck.add(ClintockDefend.ID);
+        startingDeck.add(ClintockDefend.ID);
+        startingDeck.add(ClintockDefend.ID);
+        startingDeck.add(ClintockDefend.ID);
+        // startingDeck.add(MonomerSynthesis.ID);
+        // startingDeck.add(Replenish.ID);
 
 //        startingDeck.add(A4.ID);
 //        startingDeck.add(A5.ID);
@@ -90,6 +89,8 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(A11.ID);
 //        startingDeck.add(A12.ID);
 //        startingDeck.add(A13.ID);
+        startingDeck.add(A14.ID);
+        startingDeck.add(A15.ID);
 //        startingDeck.add(Acupuncture.ID); // DONE
 //        startingDeck.add(Alkylation.ID);
 //        startingDeck.add(BruteForce.ID);
@@ -99,19 +100,19 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(Deoxyadenosine.ID); // DONE
 //        startingDeck.add(Deoxycytidine.ID); // DONE
 //        startingDeck.add(Deoxyguanosine.ID); // DONE
-        startingDeck.add(DnaMicroarray.ID); // DONE
-//        startingDeck.add(Intimidate.ID);
+        // startingDeck.add(DnaMicroarray.ID); // DONE
 //        startingDeck.add(EnergyDrink.ID); // DONE
 //        startingDeck.add(Eureka.ID);
-//        startingDeck.add(Excavate.ID); // DONE
+        startingDeck.add(Excavate.ID); // DONE
 //        startingDeck.add(Fluorescein.ID); // DONE
 //        startingDeck.add(GeneAmplification.ID); // DONE
-        startingDeck.add(Ketosis.ID); // DONE
+        startingDeck.add(Immunodeficiency.ID);
+        // startingDeck.add(Ketosis.ID); // DONE
 //        startingDeck.add(MineAndDine.ID);
 //        startingDeck.add(MonomerSynthesis.ID); // DONE
 //        startingDeck.add(Nanopore.ID); // DONE
 //        startingDeck.add(Polymerize.ID); // DONE
-        startingDeck.add(ProteinUtilization.ID);
+        // startingDeck.add(ProteinUtilization.ID);
 //        startingDeck.add(PurineMetabolism.ID); // DONE
 //        startingDeck.add(Reductase.ID); // DONE
 //        startingDeck.add(Replenish.ID); // DONE

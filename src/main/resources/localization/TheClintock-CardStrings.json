@@ -1,7 +1,7 @@
 {
   "clintock:A4": {
-    "NAME": "Sequencer\\\\XChrom3.2",
-    "DESCRIPTION": "At the start of each turn, apply a random amino acid."
+    "NAME": "Sequencer\\\\SuperSeq",
+    "DESCRIPTION": "At the start of each turn, apply a random AA."
   },
   "clintock:A5": {
     "NAME": "ATP Reserves",
@@ -18,7 +18,7 @@
   },
   "clintock:A9": {
     "NAME": "Lethal Injection",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply a random amino acid to your Peptide-Chain."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply a random AA to your Peptide-Chain."
   },
   "clintock:A10": {
     "NAME": "Random Buff",
@@ -37,6 +37,14 @@
   "clintock:A13": {
     "NAME": "Feel Less Pain",
     "DESCRIPTION": "Whenever a card is Exhausted, NL gain !M! Block."
+  },
+  "clintock:A14": {
+    "NAME": "Poison Plus",
+    "DESCRIPTION": "Deal !D! damage. NL If your Peptide-Chain contains a Nonessential AA, apply !M! Poison."
+  },
+  "clintock:A15": {
+    "NAME": "Poison Stab",
+    "DESCRIPTION": "Deal !D! damage. NL For each Bound Nucleobase, apply !M! Poison."
   },
   "clintock:Acupuncture": {
     "NAME": "Acupuncture",
@@ -105,8 +113,7 @@
   },
   "clintock:Fluorescein": {
     "NAME": "Fluorescein",
-    "DESCRIPTION": "Gain !M! Fluorophore.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Fluorophores."
+    "DESCRIPTION": "Gain !M! Fluorophores."
   },
   "clintock:GeneAmplification": {
     "NAME": "Gene Amplification",
@@ -117,6 +124,10 @@
     "NAME": "Guanine",
     "DESCRIPTION": "Ethereal. NL Bind 1 Guanine. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Bind 1 Guanine. NL Exhaust."
+  },
+  "clintock:Immunodeficiency": {
+    "NAME": "Immunodeficiency",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. Exhaust."
   },
   "clintock:Ketosis": {
     "NAME": "Ketosis",
@@ -140,7 +151,7 @@
   },
   "clintock:ProteinUtilization": {
     "NAME": "Protein Utilization",
-    "DESCRIPTION": "Deal !D! damage. NL If your Peptide-Chain contains an Essential amino acid, target ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL If your Peptide-Chain contains an Essential AA, target ALL enemies."
   },
   "clintock:PurineMetabolism": {
     "NAME": "Purine Metabolism",

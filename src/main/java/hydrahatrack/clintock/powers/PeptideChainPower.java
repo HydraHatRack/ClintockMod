@@ -70,6 +70,25 @@ public class PeptideChainPower extends AbstractPower {
         return false;
     }
 
+    public boolean containsAtLeastOneNonessentialAminoAcid() {
+        for (AbstractAminoAcid aminoAcid : aminoAcids) {
+            if (aminoAcid instanceof Alanine ||
+                aminoAcid instanceof Arginine ||
+                aminoAcid instanceof Asparagine ||
+                aminoAcid instanceof AsparticAcid ||
+                aminoAcid instanceof Cysteine ||
+                aminoAcid instanceof GlutamicAcid ||
+                aminoAcid instanceof Glutamine ||
+                aminoAcid instanceof Glycine ||
+                aminoAcid instanceof Proline ||
+                aminoAcid instanceof Serine ||
+                aminoAcid instanceof Tyrosine) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (this.amount > 0) {

@@ -1,9 +1,16 @@
 {
+  "clintock:AAKeyword": {
+    "NAMES": [
+      "AA",
+      "AAs"
+    ],
+    "DESCRIPTION": "Amino acids (AA) are the structural units that make up proteins."
+  },
   "clintock:AdenineKeyword": {
     "NAMES": [
       "adenine"
     ],
-    "DESCRIPTION": "Blue nucleobase."
+    "DESCRIPTION": "Blue nucleobase. Gains block."
   },
   "clintock:BindKeyword": {
     "NAMES": [
@@ -12,13 +19,19 @@
       "binds",
       "bound"
     ],
-    "DESCRIPTION": "Puts a nucleobase in an empty slot, consuming sugar and phosphate in the process. An amino acid forms when no empty slots remain."
+    "DESCRIPTION": "Consumes sugar and phosphate to put a nucleobase in an empty orb slot. If there are no empty slots, an amino acid is first generated."
   },
   "clintock:CytosineKeyword": {
     "NAMES": [
       "cytosine"
     ],
-    "DESCRIPTION": "Red nucleobase."
+    "DESCRIPTION": "Red nucleobase. Deals damage to a random enemy."
+  },
+  "clintock:EssentialKeyword": {
+    "NAMES": [
+      "essential"
+    ],
+    "DESCRIPTION": "Amino acids that must be supplied in diet. See the Clintock wiki for a complete list."
   },
   "clintock:FluorophoreKeyword": {
     "NAMES": [
@@ -31,14 +44,20 @@
     "NAMES": [
       "guanine"
     ],
-    "DESCRIPTION": "Green nucleobase."
+    "DESCRIPTION": "Green nucleobase. Gains energy."
+  },
+  "clintock:NonessentialKeyword": {
+    "NAMES": [
+      "nonessential"
+    ],
+    "DESCRIPTION": "Amino acids that can be synthesized in the body. See the Clintock wiki for a complete list."
   },
   "clintock:NucleobaseKeyword": {
     "NAMES": [
       "nucleobase",
       "nucleobases"
     ],
-    "DESCRIPTION": "Fundamental units of the genetic code found in DNA (adenine, cytosine, guanine, thymine)."
+    "DESCRIPTION": "Fundamental units of the genetic code found in DNA (Adenine, Cytosine, Guanine, Thymine)."
   },
   "clintock:NucleosideKeyword": {
     "NAMES": [
@@ -65,14 +84,14 @@
       "purine",
       "purines"
     ],
-    "DESCRIPTION": "Adenine or Guanine"
+    "DESCRIPTION": "Adenine and Guanine orbs."
   },
   "clintock:PyrimidineKeyword": {
     "NAMES": [
       "pyrimidine",
       "pyrimidines"
     ],
-    "DESCRIPTION": "Cytosine or Thymine"
+    "DESCRIPTION": "Cytosine and Thymine orbs."
   },
   "clintock:SugarKeyword": {
     "NAMES": [
@@ -85,6 +104,6 @@
     "NAMES": [
       "thymine"
     ],
-    "DESCRIPTION": "Yellow nucleobase."
+    "DESCRIPTION": "Yellow nucleobase. Deals damage to ALL enemies."
   }
 }

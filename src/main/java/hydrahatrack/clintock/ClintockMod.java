@@ -128,6 +128,8 @@ public class ClintockMod implements
         BaseMod.addCard(new A11());
         BaseMod.addCard(new A12());
         BaseMod.addCard(new A13());
+        BaseMod.addCard(new A14());
+        BaseMod.addCard(new A15());
         BaseMod.addCard(new Acupuncture());
         BaseMod.addCard(new Adenine());
         BaseMod.addCard(new Alkylation());
@@ -147,6 +149,7 @@ public class ClintockMod implements
         BaseMod.addCard(new GeneAmplification());
         BaseMod.addCard(new Guanine());
         BaseMod.addCard(new Ketosis());
+        BaseMod.addCard(new Immunodeficiency());
         BaseMod.addCard(new MineAndDine());
         BaseMod.addCard(new MonomerSynthesis());
         BaseMod.addCard(new Nanopore());
