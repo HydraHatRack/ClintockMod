@@ -13,15 +13,21 @@
       "Increases the effectiveness of #yBound #yNucleobases."
     ]
   },
+  "clintock:InterruptedPower": {
+    "NAME": "Interrupted",
+    "DESCRIPTIONS": [
+      "Nucleobases cannot evoke this turn."
+    ]
+  },
   "clintock:MineAndDinePower": {
     "NAME": "Mine and Dine",
     "DESCRIPTIONS": [
       "At the start of each turn, gain #b",
       " #ySugar",
       " and #b",
-      " #yPhosphate",
+      " #yPhosphate.",
       " #ySugars",
-      " #yPhosphates"
+      " #yPhosphates."
     ]
   },
   "clintock:NanoporePower": {

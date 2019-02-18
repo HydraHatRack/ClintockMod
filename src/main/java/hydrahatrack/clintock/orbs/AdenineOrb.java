@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.actions.AdenineOrbPassiveAction;
+import hydrahatrack.clintock.powers.InterruptedPower;
 
 public class AdenineOrb extends NucleobaseOrb {
     public static final String ORB_ID = "clintock:AdenineOrb";
@@ -39,6 +40,10 @@ public class AdenineOrb extends NucleobaseOrb {
 
     @Override
     public void onEndOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new AdenineOrbPassiveAction(this));
+        if (AbstractDungeon.player.hasPower(InterruptedPower.POWER_ID)) {
+            AbstractDungeon.player.getPower(InterruptedPower.POWER_ID).flash();
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new AdenineOrbPassiveAction(this));
+        }
     }
 }

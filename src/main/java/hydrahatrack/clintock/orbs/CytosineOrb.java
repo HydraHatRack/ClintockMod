@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.actions.CytosineOrbPassiveAction;
+import hydrahatrack.clintock.powers.InterruptedPower;
 
 public class CytosineOrb extends NucleobaseOrb {
     private static final String ORB_ID = "clintock:CytosineOrb";
@@ -40,7 +41,11 @@ public class CytosineOrb extends NucleobaseOrb {
 
     @Override
     public void onEndOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new CytosineOrbPassiveAction(
-                new DamageInfo(AbstractDungeon.player, this.passiveAmount, DamageInfo.DamageType.THORNS), this));
+        if (AbstractDungeon.player.hasPower(InterruptedPower.POWER_ID)) {
+            AbstractDungeon.player.getPower(InterruptedPower.POWER_ID).flash();
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new CytosineOrbPassiveAction(new DamageInfo(
+                    AbstractDungeon.player, this.passiveAmount, DamageInfo.DamageType.THORNS), this));
+        }
     }
 }

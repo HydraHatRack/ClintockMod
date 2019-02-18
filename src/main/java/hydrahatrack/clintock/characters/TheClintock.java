@@ -84,6 +84,7 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(A12.ID);
         startingDeck.add(A14.ID);
         startingDeck.add(A16.ID);
+        startingDeck.add(A17.ID);
 //        startingDeck.add(Acupuncture.ID); // DONE
 //        startingDeck.add(Alkylation.ID);
         startingDeck.add(ATPReserves.ID);
@@ -104,6 +105,7 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(GeneAmplification.ID); // DONE
         startingDeck.add(GlucoseToxicity.ID);
         startingDeck.add(Immunodeficiency.ID);
+        startingDeck.add(Interrupt.ID);
         // startingDeck.add(Ketosis.ID); // DONE
         startingDeck.add(MetabolicPathways.ID);
 //        startingDeck.add(MineAndDine.ID);

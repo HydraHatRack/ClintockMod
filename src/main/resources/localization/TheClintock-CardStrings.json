@@ -1,7 +1,7 @@
 {
   "clintock:A9": {
     "NAME": "Lethal Injection",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply a random AA to your Peptide-Chain."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Add a random Amino-Acid to your Peptide-Chain."
   },
   "clintock:A12": {
     "NAME": "Phalanx Support",
@@ -9,11 +9,15 @@
   },
   "clintock:A14": {
     "NAME": "Poison Plus",
-    "DESCRIPTION": "Deal !D! damage. NL If your Peptide-Chain contains a Nonessential AA, apply !M! Poison."
+    "DESCRIPTION": "Deal !D! damage. NL If you've generated a Nonessential Amino-Acid, apply !M! Poison."
   },
   "clintock:A16": {
     "NAME": "Nucleobase Attack",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. Add a random Nucleobase to your hand for each enemy remaining."
+  },
+  "clintock:A17": {
+    "NAME": "DV 4 All",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies (and apply !M! Vulnerable if you've generated a Nonessential Amino-Acid)."
   },
   "clintock:Acupuncture": {
     "NAME": "Acupuncture",
@@ -116,6 +120,14 @@
     "NAME": "Immunodeficiency",
     "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. Exhaust."
   },
+  "clintock:Interrupt": {
+    "NAME": "Interrupt",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle an Intron into your draw pile."
+  },
+  "clintock:Intron": {
+    "NAME": "Intron",
+    "DESCRIPTION": "Unplayable. Nucleobases cannot Evoke this turn."
+  },
   "clintock:Ketosis": {
     "NAME": "Ketosis",
     "DESCRIPTION": "Lose !M! HP. NL For each Bound Guanine or Thymine, deal !D! damage."
@@ -142,7 +154,7 @@
   },
   "clintock:ProteinUtilization": {
     "NAME": "Protein Utilization",
-    "DESCRIPTION": "Deal !D! damage. NL If your Peptide-Chain contains an Essential AA, target ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL If you've generated an Essential Amino-Acid, target ALL enemies."
   },
   "clintock:PurineMetabolism": {
     "NAME": "Purine Metabolism",
@@ -164,7 +176,7 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Sugars. NL Gain !M! Phosphates."
   },
   "clintock:SampleSwap": {
-    "NAME": "SampleSwap",
+    "NAME": "Sample Swap",
     "DESCRIPTION": "Swap Sugar and Phosphate amounts. Exhaust."
   },
   "clintock:SuperSeqX1": {

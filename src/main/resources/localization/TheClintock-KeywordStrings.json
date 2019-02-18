@@ -46,6 +46,13 @@
     ],
     "DESCRIPTION": "Green #yNucleobase: Gains energy."
   },
+  "clintock:Intron": {
+    "NAMES": [
+      "intron",
+      "introns"
+    ],
+    "DESCRIPTION": "Unplayable status card that prevents #yNucleobases from evoking."
+  },
   "clintock:NonessentialKeyword": {
     "NAMES": [
       "nonessential"
