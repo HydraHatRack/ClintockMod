@@ -8,11 +8,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
-public class A16Action extends AbstractGameAction {
+public class CentrifugeAction extends AbstractGameAction {
     private int[] damage;
     private boolean firstFrame = true;
 
-    public A16Action(final int[] amount) {
+    public CentrifugeAction(final int[] amount) {
         setValues(null, source, amount[0]);
         this.damage = amount;
         this.actionType = AbstractGameAction.ActionType.DAMAGE;

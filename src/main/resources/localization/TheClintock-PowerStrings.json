@@ -16,7 +16,7 @@
   "clintock:InterruptedPower": {
     "NAME": "Interrupted",
     "DESCRIPTIONS": [
-      "Nucleobases cannot evoke this turn."
+      "#yNucleobases cannot evoke this turn."
     ]
   },
   "clintock:MineAndDinePower": {

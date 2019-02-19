@@ -51,6 +51,13 @@
       "intron",
       "introns"
     ],
+    "DESCRIPTION": "Unplayable status card that prevents #yNucleobases from #yBinding."
+  },
+  "clintock:Knockout": {
+    "NAMES": [
+      "knockout",
+      "knockouts"
+    ],
     "DESCRIPTION": "Unplayable status card that prevents #yNucleobases from evoking."
   },
   "clintock:NonessentialKeyword": {
@@ -64,7 +71,7 @@
       "nucleobase",
       "nucleobases"
     ],
-    "DESCRIPTION": "Fundamental units of the genetic code found in DNA (#yAdenine, #yCytosine, #yGuanine, and #yThymine)."
+    "DESCRIPTION": "Fundamental units of the genetic code found in DNA ( #yAdenine, #yCytosine, #yGuanine, and #yThymine )."
   },
   "clintock:NucleosideKeyword": {
     "NAMES": [

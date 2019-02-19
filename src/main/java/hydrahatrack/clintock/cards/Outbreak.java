@@ -17,8 +17,8 @@ import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.powers.PeptideChainPower;
 
-public class A17 extends CustomCard {
-    public static final String ID = "clintock:A17";
+public class Outbreak extends CustomCard {
+    public static final String ID = "clintock:Outbreak";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -28,7 +28,7 @@ public class A17 extends CustomCard {
     private static final int UPGRADE_PLUS_ATTACK_DMG = 3;
     private static final int UPGRADE_PLUS_VULNERABLE_AMOUNT = 1;
 
-    public A17() {
+    public Outbreak() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 

@@ -1,24 +1,4 @@
 {
-  "clintock:A9": {
-    "NAME": "Lethal Injection",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Add a random Amino-Acid to your Peptide-Chain."
-  },
-  "clintock:A12": {
-    "NAME": "Phalanx Support",
-    "DESCRIPTION": "Gain !B! Block. NL If you Bound a Nucleobase this turn, draw 1 card."
-  },
-  "clintock:A14": {
-    "NAME": "Poison Plus",
-    "DESCRIPTION": "Deal !D! damage. NL If you've generated a Nonessential Amino-Acid, apply !M! Poison."
-  },
-  "clintock:A16": {
-    "NAME": "Nucleobase Attack",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Add a random Nucleobase to your hand for each enemy remaining."
-  },
-  "clintock:A17": {
-    "NAME": "DV 4 All",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies (and apply !M! Vulnerable if you've generated a Nonessential Amino-Acid)."
-  },
   "clintock:Acupuncture": {
     "NAME": "Acupuncture",
     "DESCRIPTION": "Deal !D! damage NL !M! times."
@@ -38,9 +18,21 @@
     "DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted !M! cards).",
     "UPGRADE_DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted 1 card)."
   },
+  "clintock:BaseSynthesis": {
+    "NAME": "Base Synthesis",
+    "DESCRIPTION": "Add a random Nucleobase to your hand."
+  },
+  "clintock:BoloPunch": {
+    "NAME": "Bolo Punch",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Add a random Amino-Acid to your Peptide-Chain."
+  },
   "clintock:BruteForce": {
     "NAME": "Brute Force",
     "DESCRIPTION": "Apply !M! Weak to ALL enemies. Gain 1 Phosphate for each Weakened enemy."
+  },
+  "clintock:Centrifuge": {
+    "NAME": "Centrifuge",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Add a random Nucleobase to your hand for each enemy remaining."
   },
   "clintock:ClintockStrike": {
     "NAME": "Strike",
@@ -80,6 +72,10 @@
     "NAME": "DNA Microarray",
     "DESCRIPTION": "Add all four Nucleobases to your hand. Exhaust."
   },
+  "clintock:Efflux": {
+    "NAME": "Efflux",
+    "DESCRIPTION": "Gain !B! Block. NL If you Bound a Nucleobase this turn, draw 1 card."
+  },
   "clintock:EnergyDrink": {
     "NAME": "Energy Drink",
     "DESCRIPTION": "Gain !M! Sugars. NL Exhaust."
@@ -107,6 +103,10 @@
     "DESCRIPTION": "Double your Peptide-Chain. Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple your Peptide-Chain. Exhaust."
   },
+  "clintock:GeneticPollution": {
+    "NAME": "Genetic Pollution",
+    "DESCRIPTION": "Deal !D! damage. NL If you've generated a Nonessential Amino-Acid, apply !M! Poison."
+  },
   "clintock:GlucoseToxicity": {
     "NAME": "Glucose Toxicity",
     "DESCRIPTION": "Lose half of your Sugar. Apply that much Poison."
@@ -126,11 +126,15 @@
   },
   "clintock:Intron": {
     "NAME": "Intron",
-    "DESCRIPTION": "Unplayable. Nucleobases cannot Evoke this turn."
+    "DESCRIPTION": "Unplayable. Nucleobases cannot Bind this turn."
   },
   "clintock:Ketosis": {
     "NAME": "Ketosis",
     "DESCRIPTION": "Lose !M! HP. NL For each Bound Guanine or Thymine, deal !D! damage."
+  },
+  "clintock:Knockout": {
+    "NAME": "Knockout",
+    "DESCRIPTION": "Unplayable. Nucleobases cannot evoke this turn."
   },
   "clintock:MetabolicPathways": {
     "NAME": "Metabolic Pathways",
@@ -140,13 +144,13 @@
     "NAME": "Mine and Dine",
     "DESCRIPTION": "At the start of each turn, gain !M! Sugar and !M! Phosphate."
   },
-  "clintock:MonomerSynthesis": {
-    "NAME": "Monomer Synthesis",
-    "DESCRIPTION": "Add a random Nucleobase to your hand."
-  },
   "clintock:Nanopore": {
     "NAME": "Nanopore",
     "DESCRIPTION": "At the start of each turn, add a random Nucleobase to your hand."
+  },
+  "clintock:Outbreak": {
+    "NAME": "Outbreak",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies (and apply !M! Vulnerable if you've generated a Nonessential Amino-Acid)."
   },
   "clintock:Polymerize": {
     "NAME": "Polymerize",
@@ -164,6 +168,10 @@
     "NAME": "Random Forest",
     "DESCRIPTION": "Randomly gain X NL of one of the following: Strength, Dexterity, or Fluorophores. Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain X NL of ALL of the following: Strength, Dexterity, and Fluorophores. Exhaust."
+  },
+  "clintock:Recombination": {
+    "NAME": "Recombination",
+    "DESCRIPTION": "Draw !M! cards. NL Shuffle a Knockout into your draw pile."
   },
   "clintock:Reductase": {
     "NAME": "Reductase",

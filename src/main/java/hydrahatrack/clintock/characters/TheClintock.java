@@ -73,55 +73,56 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(ClintockStrike.ID);
 //        startingDeck.add(ClintockStrike.ID);
 //        startingDeck.add(ClintockStrike.ID);
-//        startingDeck.add(ClintockDefend.ID);
-//        startingDeck.add(ClintockDefend.ID);
-//        startingDeck.add(ClintockDefend.ID);
         startingDeck.add(ClintockDefend.ID);
-        // startingDeck.add(MonomerSynthesis.ID);
-        // startingDeck.add(Replenish.ID);
+//        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockDefend.ID);
+//        startingDeck.add(ClintockDefend.ID);
+        startingDeck.add(BaseSynthesis.ID);
+        startingDeck.add(Replenish.ID);
 
-//        startingDeck.add(A9.ID);
-//        startingDeck.add(A12.ID);
-        startingDeck.add(A14.ID);
-        startingDeck.add(A16.ID);
-        startingDeck.add(A17.ID);
-//        startingDeck.add(Acupuncture.ID); // DONE
-//        startingDeck.add(Alkylation.ID);
+        startingDeck.add(Acupuncture.ID);
+        startingDeck.add(Alkylation.ID);
         startingDeck.add(ATPReserves.ID);
-//        startingDeck.add(BruteForce.ID);
-//        startingDeck.add(ClintockDefend.ID); // DONE
-//        startingDeck.add(ClintockStrike.ID); // DONE
-//        startingDeck.add(CompostBin.ID);
+        startingDeck.add(BoloPunch.ID);
+        startingDeck.add(BruteForce.ID);
+        startingDeck.add(Centrifuge.ID);
+        startingDeck.add(ClintockDefend.ID);
+        startingDeck.add(ClintockStrike.ID);
+        startingDeck.add(CompostBin.ID);
         startingDeck.add(DegradedPrimer.ID);
-//        startingDeck.add(Deoxyadenosine.ID); // DONE
-//        startingDeck.add(Deoxycytidine.ID); // DONE
-//        startingDeck.add(Deoxyguanosine.ID); // DONE
-        // startingDeck.add(DnaMicroarray.ID); // DONE
-//        startingDeck.add(EnergyDrink.ID); // DONE
+        startingDeck.add(Deoxyadenosine.ID);
+        startingDeck.add(Deoxycytidine.ID);
+        startingDeck.add(Deoxyguanosine.ID);
+        startingDeck.add(DnaMicroarray.ID);
+        startingDeck.add(Efflux.ID);
+        startingDeck.add(EnergyDrink.ID);
         startingDeck.add(EnergyMetabolism.ID);
-//        startingDeck.add(Eureka.ID);
-        startingDeck.add(Excavate.ID); // DONE
-//        startingDeck.add(Fluorescein.ID); // DONE
-//        startingDeck.add(GeneAmplification.ID); // DONE
+        startingDeck.add(Eureka.ID);
+        startingDeck.add(Excavate.ID);
+        startingDeck.add(Fluorescein.ID);
+        startingDeck.add(GeneAmplification.ID);
+        startingDeck.add(GeneticPollution.ID);
         startingDeck.add(GlucoseToxicity.ID);
         startingDeck.add(Immunodeficiency.ID);
         startingDeck.add(Interrupt.ID);
-        // startingDeck.add(Ketosis.ID); // DONE
+        startingDeck.add(Ketosis.ID);
         startingDeck.add(MetabolicPathways.ID);
-//        startingDeck.add(MineAndDine.ID);
-        startingDeck.add(MonomerSynthesis.ID); // DONE
-//        startingDeck.add(Nanopore.ID); // DONE
-//        startingDeck.add(Polymerize.ID); // DONE
-        // startingDeck.add(ProteinUtilization.ID);
-//        startingDeck.add(PurineMetabolism.ID); // DONE
+        startingDeck.add(MineAndDine.ID);
+        startingDeck.add(BaseSynthesis.ID);
+        startingDeck.add(Nanopore.ID);
+        startingDeck.add(Outbreak.ID);
+        startingDeck.add(Polymerize.ID);
+        startingDeck.add(ProteinUtilization.ID);
+        startingDeck.add(PurineMetabolism.ID);
         startingDeck.add(RandomForest.ID);
-//        startingDeck.add(Reductase.ID); // DONE
-//        startingDeck.add(Replenish.ID); // DONE
+        startingDeck.add(Recombination.ID);
+        startingDeck.add(Reductase.ID);
+        startingDeck.add(Replenish.ID);
         startingDeck.add(SampleSwap.ID);
         startingDeck.add(SuperSeqX1.ID);
-//        startingDeck.add(TelomereErosion.ID);
-//        startingDeck.add(Thymidine.ID); // DONE
-//        startingDeck.add(VectorFlow.ID);
+        startingDeck.add(TelomereErosion.ID);
+        startingDeck.add(Thymidine.ID);
+        startingDeck.add(VectorFlow.ID);
 
         return startingDeck;
     }
@@ -175,7 +176,7 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new MonomerSynthesis();
+        return new BaseSynthesis();
     }
 
     @Override

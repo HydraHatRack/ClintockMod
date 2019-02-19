@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import hydrahatrack.clintock.aminoacids.*;
 import hydrahatrack.clintock.orbs.NucleobaseOrb;
+import hydrahatrack.clintock.powers.InterruptedPower;
 import hydrahatrack.clintock.powers.PeptideChainPower;
 
 public class BindAction extends AbstractGameAction {
@@ -21,6 +22,11 @@ public class BindAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
+            if (AbstractDungeon.player.hasPower(InterruptedPower.POWER_ID)) {
+                this.isDone = true;
+                return;
+            }
+
             boolean foundEmptyOrbSlot = false;
             StringBuilder dnaCodonBuilder = new StringBuilder();
 
