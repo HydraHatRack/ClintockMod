@@ -14,6 +14,7 @@ import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.actions.BindAction;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.orbs.CytosineOrb;
+import hydrahatrack.clintock.powers.InterruptedPower;
 import hydrahatrack.clintock.powers.PhosphatePower;
 
 public class Deoxycytidine extends CustomCard {
@@ -34,7 +35,10 @@ public class Deoxycytidine extends CustomCard {
 
     @Override
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
-        if (null == AbstractDungeon.player.getPower(PhosphatePower.POWER_ID)) {
+        if (p.hasPower(InterruptedPower.POWER_ID)) {
+            this.cantUseMessage = ClintockMod.CANNOT_BIND;
+            return false;
+        } else if (p.hasPower(PhosphatePower.POWER_ID)) {
             this.cantUseMessage = ClintockMod.NEEDS_MORE_PHOSPHATE;
             return false;
         }

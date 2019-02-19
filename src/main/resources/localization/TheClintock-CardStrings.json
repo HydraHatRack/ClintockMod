@@ -34,6 +34,10 @@
     "NAME": "Centrifuge",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. Add a random Nucleobase to your hand for each enemy remaining."
   },
+  "clintock:Chromosome": {
+    "NAME": "Chromosome",
+    "DESCRIPTION": "Reduce the number of Chromosome pairs needed to complete the Genome Project. Exhaust."
+  },
   "clintock:ClintockStrike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -66,7 +70,7 @@
   },
   "clintock:Deoxyguanosine": {
     "NAME": "Deoxyguanosine",
-    "DESCRIPTION": "Nucleoside. NL Next turn, gain !M! energy. NL Bind 1 Guanine."
+    "DESCRIPTION": "Nucleoside. NL Next turn, gain !M! Energy. NL Bind 1 Guanine."
   },
   "clintock:DnaMicroarray": {
     "NAME": "DNA Microarray",
@@ -136,6 +140,11 @@
     "NAME": "Knockout",
     "DESCRIPTION": "Unplayable. Nucleobases cannot evoke this turn."
   },
+  "clintock:MendelPro": {
+    "NAME": "MendelPRO",
+    "DESCRIPTION": "Sequencer. Whenever you Bind a Nucleobase, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Sequencer. NL Whenever you Bind a Nucleobase, draw !M! cards."
+  },
   "clintock:MetabolicPathways": {
     "NAME": "Metabolic Pathways",
     "DESCRIPTION": "Whenever a card is Exhausted, NL gain !M! Block."
@@ -187,6 +196,10 @@
     "NAME": "Sample Swap",
     "DESCRIPTION": "Swap Sugar and Phosphate amounts. Exhaust."
   },
+  "clintock:SinsheimerT3": {
+    "NAME": "SinsheimerT3",
+    "DESCRIPTION": "Sequencer. NL Whenever you Bind a Nucleobase, gain !M! Energy."
+  },
   "clintock:SuperSeqX1": {
     "NAME": "SuperSeq X1",
     "DESCRIPTION": "Sequencer. NL At the start of each turn, apply a random Amino-Acid."
@@ -194,6 +207,10 @@
   "clintock:TelomereErosion": {
     "NAME": "Telomere Erosion",
     "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, draw !M! cards."
+  },
+  "clintock:TheGenomeProject": {
+    "NAME": "The Genome Project",
+    "DESCRIPTION": "Add 23 Chromosome pairs to your discard pile. Exhaust them all to deal !M! damage to NL ALL enemies."
   },
   "clintock:Thymine": {
     "NAME": "Thymine",

@@ -21,6 +21,13 @@
     ],
     "DESCRIPTION": "Consumes #ySugar and #yPhosphate to put a #yNucleobase into your first empty slot. If you have no empty slots, an #yAmino-Acid is generated to make room."
   },
+  "clintock:ChromosomeKeyword": {
+    "NAMES": [
+      "chromosome",
+      "chromosomes"
+    ],
+    "DESCRIPTION": "DNA molecule. Can be mapped as part of #yThe #yGenome #yProject."
+  },
   "clintock:CytosineKeyword": {
     "NAMES": [
       "cytosine"
@@ -71,7 +78,7 @@
       "nucleobase",
       "nucleobases"
     ],
-    "DESCRIPTION": "Fundamental units of the genetic code found in DNA ( #yAdenine, #yCytosine, #yGuanine, and #yThymine )."
+    "DESCRIPTION": "Fundamental units of the genetic code found in DNA - #yAdenine, #yCytosine, #yGuanine, and #yThymine."
   },
   "clintock:NucleosideKeyword": {
     "NAMES": [
@@ -98,14 +105,21 @@
       "purine",
       "purines"
     ],
-    "DESCRIPTION": "Nitrogenous base category (#yAdenine and #yGuanine)."
+    "DESCRIPTION": "Nitrogenous base category - #yAdenine and #yGuanine."
   },
   "clintock:PyrimidineKeyword": {
     "NAMES": [
       "pyrimidine",
       "pyrimidines"
     ],
-    "DESCRIPTION": "Nitrogenous base category (#yCytosine and #yThymine)."
+    "DESCRIPTION": "Nitrogenous base category - #yCytosine and #yThymine."
+  },
+  "clintock:SequencerKeyword": {
+    "NAMES": [
+      "sequencer",
+      "sequencers"
+    ],
+    "DESCRIPTION": "Scientific device used in determining the order of nucleotides in DNA."
   },
   "clintock:SugarKeyword": {
     "NAMES": [

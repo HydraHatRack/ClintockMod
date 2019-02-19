@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class Tryptophan extends AbstractAminoAcid {
     private static final int STRENGTH_AMOUNT = 1;
@@ -23,8 +24,8 @@ public class Tryptophan extends AbstractAminoAcid {
         AbstractMonster m = AbstractDungeon.getRandomMonster();
         if (null != m) {
             return new ApplyPowerAction(m, AbstractDungeon.player,
-                    new LoseStrengthPower(m, this.baseNumber),
-                    this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
+                    new StrengthPower(m, -this.baseNumber),
+                    -this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
         }
         return null;
     }

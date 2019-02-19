@@ -1,21 +1,22 @@
 package hydrahatrack.clintock.powers;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import hydrahatrack.clintock.ClintockMod;
 
-public class MineAndDinePower extends AbstractPower {
-    public static final String POWER_ID = "clintock:MineAndDinePower";
+public class SinsheimerT3Power extends AbstractPower {
+    public static final String POWER_ID = "clintock:SinsheimerT3Power";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public MineAndDinePower(final AbstractCreature owner, final int amount) {
+    public SinsheimerT3Power(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
         this.name = NAME;
         this.owner = owner;
@@ -25,20 +26,13 @@ public class MineAndDinePower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                AbstractDungeon.player,
-                AbstractDungeon.player,
-                new SugarPower(AbstractDungeon.player, this.amount), this.amount));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                AbstractDungeon.player,
-                AbstractDungeon.player,
-                new PhosphatePower(AbstractDungeon.player, this.amount), this.amount));
+    public void onChannel(final AbstractOrb orb) {
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(amount));
     }
 
     @Override
     public void playApplyPowerSfx() {
-        CardCrawlGame.sound.play("POWER_METALLICIZE", 0.05F);
+        CardCrawlGame.sound.play("POWER_FOCUS", 0.05F);
     }
 
     @Override

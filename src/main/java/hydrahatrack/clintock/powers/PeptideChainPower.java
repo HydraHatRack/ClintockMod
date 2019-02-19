@@ -1,6 +1,5 @@
 package hydrahatrack.clintock.powers;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,16 +19,15 @@ public class PeptideChainPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static final Texture IMG = ImageMaster.loadImage(ClintockMod.getPowerImagePath(POWER_ID));
 
     private List<AbstractAminoAcid> aminoAcids = new ArrayList<>();
 
-    public PeptideChainPower(AbstractCreature owner) {
+    public PeptideChainPower(final AbstractCreature owner) {
         this.ID = POWER_ID;
         this.name = NAME;
         this.owner = owner;
         this.amount = -1;
-        this.img = IMG;
+        this.img = ImageMaster.loadImage(ClintockMod.getPowerImagePath(POWER_ID));
         this.updateDescription();
     }
 
@@ -90,7 +88,7 @@ public class PeptideChainPower extends AbstractPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atEndOfTurn(final boolean isPlayer) {
         if (this.amount > 0) {
             this.flash();
             for (AbstractAminoAcid aminoAcid : aminoAcids) {

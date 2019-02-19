@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.actions.BindAction;
 import hydrahatrack.clintock.orbs.ThymineOrb;
+import hydrahatrack.clintock.powers.InterruptedPower;
 import hydrahatrack.clintock.powers.SugarPower;
 import hydrahatrack.clintock.powers.PhosphatePower;
 
@@ -33,10 +34,13 @@ public class Thymine extends CustomCard {
 
     @Override
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
-        if (null == AbstractDungeon.player.getPower(SugarPower.POWER_ID)) {
+        if (p.hasPower(InterruptedPower.POWER_ID)) {
+            this.cantUseMessage = ClintockMod.CANNOT_BIND;
+            return false;
+        } else if (!p.hasPower(SugarPower.POWER_ID)) {
             this.cantUseMessage = ClintockMod.NEEDS_MORE_SUGAR;
             return false;
-        } else if (null == AbstractDungeon.player.getPower(PhosphatePower.POWER_ID)) {
+        } else if (!p.hasPower(PhosphatePower.POWER_ID)) {
             this.cantUseMessage = ClintockMod.NEEDS_MORE_PHOSPHATE;
             return false;
         }

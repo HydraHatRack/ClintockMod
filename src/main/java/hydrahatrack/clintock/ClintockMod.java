@@ -47,11 +47,12 @@ public class ClintockMod implements
     private static final String DESCRIPTION = "Adds a new playable character, The Clintock.";
 
     // In-game messages
-    public static final String NEEDS_MORE_SUGAR = "I need more sugar!";
-    public static final String NEEDS_MORE_PHOSPHATE = "I need more phosphate!";
+    public static final String CANNOT_BIND = "I cannot #rBind right now!";
+    public static final String NEEDS_MORE_SUGAR = "I need more #rSugar!";
+    public static final String NEEDS_MORE_PHOSPHATE = "I need more #rPhosphate!";
     public static final String NEEDS_MORE_RESOURCES = "I need more resources!";
-    public static final String NEEDS_PEPTIDE_CHAIN = "I don't have a peptide-chain yet!";
-    public static final String NEEDS_PURINE_NUCLEOBASE = "I need at least one purine!";
+    public static final String NEEDS_PEPTIDE_CHAIN = "I don't have a #rPeptide-Chain yet!";
+    public static final String NEEDS_PURINE_NUCLEOBASE = "I need at least one #rPurine!";
 
     // Color theme
     private static final Color CLINTOCK_THEME_COLOR = CardHelper.getColor(108.0f, 48.0f, 130.0f);
@@ -124,6 +125,7 @@ public class ClintockMod implements
         BaseMod.addCard(new BoloPunch());
         BaseMod.addCard(new BruteForce());
         BaseMod.addCard(new Centrifuge());
+        BaseMod.addCard(new Chromosome());
         BaseMod.addCard(new ClintockDefend());
         BaseMod.addCard(new ClintockStrike());
         BaseMod.addCard(new CompostBin());
@@ -148,6 +150,7 @@ public class ClintockMod implements
         BaseMod.addCard(new Intron());
         BaseMod.addCard(new Ketosis());
         BaseMod.addCard(new Knockout());
+        BaseMod.addCard(new MendelPro());
         BaseMod.addCard(new MetabolicPathways());
         BaseMod.addCard(new MineAndDine());
         BaseMod.addCard(new Nanopore());
@@ -160,8 +163,10 @@ public class ClintockMod implements
         BaseMod.addCard(new Reductase());
         BaseMod.addCard(new Replenish());
         BaseMod.addCard(new SampleSwap());
+        BaseMod.addCard(new SinsheimerT3());
         BaseMod.addCard(new SuperSeqX1());
         BaseMod.addCard(new TelomereErosion());
+        BaseMod.addCard(new TheGenomeProject());
         BaseMod.addCard(new Thymidine());
         BaseMod.addCard(new Thymine());
         BaseMod.addCard(new VectorFlow());

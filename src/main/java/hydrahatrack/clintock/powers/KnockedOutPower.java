@@ -1,6 +1,5 @@
 package hydrahatrack.clintock.powers;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,13 +14,12 @@ public class KnockedOutPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static final Texture IMG = ImageMaster.loadImage(ClintockMod.getPowerImagePath(POWER_ID));
 
     public KnockedOutPower(final AbstractCreature owner) {
         this.ID = POWER_ID;
         this.name = NAME;
         this.owner = owner;
-        this.img = IMG;
+        this.img = ImageMaster.loadImage(ClintockMod.getPowerImagePath(POWER_ID));
         this.updateDescription();
     }
 

@@ -13,10 +13,31 @@
       "Increases the effectiveness of #yBound #yNucleobases."
     ]
   },
+  "clintock:GenomeMapperPower": {
+    "NAME": "Genome Mapper",
+    "DESCRIPTIONS": [
+      "Number of #yChromosome pairs needed to complete the Genome Project."
+    ]
+  },
+  "clintock:GenomeProjectPower": {
+    "NAME": "Genome Project",
+    "DESCRIPTIONS": [
+      "When completed, deals #b",
+      " damage to ALL enemies."
+    ]
+  },
   "clintock:InterruptedPower": {
     "NAME": "Interrupted",
     "DESCRIPTIONS": [
       "#yNucleobases cannot evoke this turn."
+    ]
+  },
+  "clintock:MendelProPower": {
+    "NAME": "MendelPRO",
+    "DESCRIPTIONS": [
+      "Whenever you #yBound a #yNucleobase, draw #b",
+      " card.",
+      " cards."
     ]
   },
   "clintock:MineAndDinePower": {
@@ -41,13 +62,20 @@
   "clintock:PeptideChainPower": {
     "NAME": "Peptide-Chain",
     "DESCRIPTIONS": [
-      "At the end of each turn, activate your #yPeptide-Chain:"
+      "Activate at the end of each turn:"
     ]
   },
   "clintock:PhosphatePower": {
     "NAME": "Phosphate",
     "DESCRIPTIONS": [
       "Necessary molecule in generating nucleotides."
+    ]
+  },
+  "clintock:SinsheimerT3Power": {
+    "NAME": "SinsheimerT3",
+    "DESCRIPTIONS": [
+      "Whenever you #yBound a #yNucleobase, gain #b",
+      " energy."
     ]
   },
   "clintock:SugarPower": {
