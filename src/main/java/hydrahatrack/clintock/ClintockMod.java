@@ -129,6 +129,7 @@ public class ClintockMod implements
         BaseMod.addCard(new ClintockDefend());
         BaseMod.addCard(new ClintockStrike());
         BaseMod.addCard(new CompostBin());
+        BaseMod.addCard(new Contamination());
         BaseMod.addCard(new Cytosine());
         BaseMod.addCard(new DegradedPrimer());
         BaseMod.addCard(new Deoxyadenosine());

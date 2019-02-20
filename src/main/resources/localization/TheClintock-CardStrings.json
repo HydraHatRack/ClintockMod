@@ -51,6 +51,11 @@
     "DESCRIPTION": "Exhaust a card. NL Gain Phosphate equal to twice its cost.",
     "UPGRADE_DESCRIPTION": "Exhaust a card. NL Gain Phosphate equal to three times its cost."
   },
+  "clintock:Contamination": {
+    "NAME": "Contamination",
+    "DESCRIPTION": "Your Pyrimidines apply Poison instead of dealing damage.",
+    "UPGRADE_DESCRIPTION": "Innate. Your Pyrimidines apply Poison instead of dealing damage."
+  },
   "clintock:Cytosine": {
     "NAME": "Cytosine",
     "DESCRIPTION": "Ethereal. NL Bind 1 Cytosine. NL Exhaust.",

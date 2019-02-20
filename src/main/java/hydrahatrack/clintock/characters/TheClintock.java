@@ -83,10 +83,11 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(Acupuncture.ID);
 //        startingDeck.add(Alkylation.ID);
 //        startingDeck.add(ATPReserves.ID);
-//        startingDeck.add(BoloPunch.ID);
+        startingDeck.add(BoloPunch.ID);
 //        startingDeck.add(BruteForce.ID);
 //        startingDeck.add(Centrifuge.ID);
 //        startingDeck.add(CompostBin.ID);
+        startingDeck.add(Contamination.ID);
 //        startingDeck.add(DegradedPrimer.ID);
 //        startingDeck.add(Deoxyadenosine.ID);
 //        startingDeck.add(Deoxycytidine.ID);

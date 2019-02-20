@@ -1,10 +1,8 @@
 {
-  "clintock:SuperSeqX1Power": {
-    "NAME": "SuperSeq X1",
+  "clintock:ContaminationPower": {
+    "NAME": "Contamination",
     "DESCRIPTIONS": [
-      "At the start of each turn, apply #b",
-      " random #yAmino-Acid to your #yPeptide-Chain.",
-      " random #yAmino-Acids to your #yPeptide-Chain."
+      "Your #yPyrimidines apply #yPoison instead of dealing damage."
     ]
   },
   "clintock:FluorophorePower": {
@@ -29,13 +27,19 @@
   "clintock:InterruptedPower": {
     "NAME": "Interrupted",
     "DESCRIPTIONS": [
+      "#yNucleobases cannot Bind this turn."
+    ]
+  },
+  "clintock:KnockedOutPower": {
+    "NAME": "Knocked Out",
+    "DESCRIPTIONS": [
       "#yNucleobases cannot evoke this turn."
     ]
   },
   "clintock:MendelProPower": {
     "NAME": "MendelPRO",
     "DESCRIPTIONS": [
-      "Whenever you #yBound a #yNucleobase, draw #b",
+      "Whenever you #yBind a #yNucleobase, draw #b",
       " card.",
       " cards."
     ]
@@ -82,6 +86,14 @@
     "NAME": "Sugar",
     "DESCRIPTIONS": [
       "Necessary molecule in generating nucleotides."
+    ]
+  },
+  "clintock:SuperSeqX1Power": {
+    "NAME": "SuperSeq X1",
+    "DESCRIPTIONS": [
+      "At the start of each turn, apply #b",
+      " random #yAmino-Acid to your #yPeptide-Chain.",
+      " random #yAmino-Acids to your #yPeptide-Chain."
     ]
   }
 }
