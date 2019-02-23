@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
 public class Isoleucine extends AbstractAminoAcid {
-    private static final int THORNS_AMOUNT = 2;
+    private static final int THORNS_AMOUNT = 3;
 
     public Isoleucine() {
         this.baseNumber = THORNS_AMOUNT;

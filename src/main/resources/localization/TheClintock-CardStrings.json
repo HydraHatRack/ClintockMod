@@ -5,8 +5,8 @@
   },
   "clintock:Adenine": {
     "NAME": "Adenine",
-    "DESCRIPTION": "Ethereal. NL Bind 1 Adenine. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Bind 1 Adenine. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Fuse 1 Adenine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Fuse 1 Adenine. NL Exhaust."
   },
   "clintock:Alkylation": {
     "NAME": "Alkylation",
@@ -22,9 +22,17 @@
     "NAME": "Base Synthesis",
     "DESCRIPTION": "Add a random Nucleobase to your hand."
   },
+  "clintock:Bateson9000": {
+    "NAME": "Bateson 9000",
+    "DESCRIPTION": "Sequencer. NL Whenever you Bind an Amino-Acid, gain !M! Block."
+  },
+  "clintock:BiolelePrime": {
+    "NAME": "Biolele Prime",
+    "DESCRIPTION": "Sequencer. NL Whenever you Bind an Amino-Acid, add another copy."
+  },
   "clintock:BoloPunch": {
     "NAME": "Bolo Punch",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Add a random Amino-Acid to your Peptide-Chain."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Bind a random Amino-Acid."
   },
   "clintock:BruteForce": {
     "NAME": "Brute Force",
@@ -58,32 +66,52 @@
   },
   "clintock:Cytosine": {
     "NAME": "Cytosine",
-    "DESCRIPTION": "Ethereal. NL Bind 1 Cytosine. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Bind 1 Cytosine. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Fuse 1 Cytosine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Fuse 1 Cytosine. NL Exhaust."
+  },
+  "clintock:DAMP": {
+    "NAME": "dAMP",
+    "DESCRIPTION": "Nucleotide. NL Gain !B! Block. NL Fuse 1 Adenine."
+  },
+  "clintock:DCMP": {
+    "NAME": "dCMP",
+    "DESCRIPTION": "Nucleotide. NL Deal !D! damage. NL Fuse 1 Cytosine."
+  },
+  "clintock:DealersLuck": {
+    "NAME": "Dealer's Luck",
+    "DESCRIPTION": "Transposon. NL Draw !M! cards. NL Exhaust."
   },
   "clintock:DegradedPrimer": {
     "NAME": "Degraded Primer",
-    "DESCRIPTION": "Deal !D! damage. NL For each Bound Nucleobase, apply !M! Poison."
+    "DESCRIPTION": "Deal !D! damage. NL For each Fused Nucleobase, apply !M! Poison."
   },
   "clintock:Deoxyadenosine": {
     "NAME": "Deoxyadenosine",
-    "DESCRIPTION": "Nucleoside. NL Gain !B! Block. NL Bind 1 Adenine."
+    "DESCRIPTION": "Nucleoside. NL Gain !B! Block. NL Fuse 1 Adenine."
   },
   "clintock:Deoxycytidine": {
     "NAME": "Deoxycytidine",
-    "DESCRIPTION": "Nucleoside. NL Deal !D! damage. NL Bind 1 Cytosine."
+    "DESCRIPTION": "Nucleoside. NL Deal !D! damage. NL Fuse 1 Cytosine."
   },
   "clintock:Deoxyguanosine": {
     "NAME": "Deoxyguanosine",
-    "DESCRIPTION": "Nucleoside. NL Next turn, gain !M! Energy. NL Bind 1 Guanine."
+    "DESCRIPTION": "Nucleoside. NL Next turn, gain !M! Energy. NL Fuse 1 Guanine."
+  },
+  "clintock:DGMP": {
+    "NAME": "dGMP",
+    "DESCRIPTION": "Nucleotide. NL Next turn, gain !M! Energy. NL Fuse 1 Guanine."
   },
   "clintock:DnaMicroarray": {
     "NAME": "DNA Microarray",
     "DESCRIPTION": "Add all four Nucleobases to your hand. Exhaust."
   },
+  "clintock:DTMP": {
+    "NAME": "dTMP",
+    "DESCRIPTION": "Nucleotide. NL Deal !D! damage to ALL enemies. NL Fuse 1 Thymine."
+  },
   "clintock:Efflux": {
     "NAME": "Efflux",
-    "DESCRIPTION": "Gain !B! Block. NL If you Bound a Nucleobase this turn, draw 1 card."
+    "DESCRIPTION": "Gain !B! Block. NL If you Fused a Nucleobase this turn, draw 1 card."
   },
   "clintock:EnergyDrink": {
     "NAME": "Energy Drink",
@@ -122,8 +150,8 @@
   },
   "clintock:Guanine": {
     "NAME": "Guanine",
-    "DESCRIPTION": "Ethereal. NL Bind 1 Guanine. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Bind 1 Guanine. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Fuse 1 Guanine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Fuse 1 Guanine. NL Exhaust."
   },
   "clintock:Immunodeficiency": {
     "NAME": "Immunodeficiency",
@@ -135,11 +163,15 @@
   },
   "clintock:Intron": {
     "NAME": "Intron",
-    "DESCRIPTION": "Unplayable. Nucleobases cannot Bind this turn."
+    "DESCRIPTION": "Unplayable. Nucleobases cannot Fuse this turn."
+  },
+  "clintock:Jab": {
+    "NAME": "Jab",
+    "DESCRIPTION": "Transposon. NL Deal !D! damage. NL Exhaust."
   },
   "clintock:Ketosis": {
     "NAME": "Ketosis",
-    "DESCRIPTION": "Lose !M! HP. NL For each Bound Guanine or Thymine, deal !D! damage."
+    "DESCRIPTION": "Lose !M! HP. NL For each Fused Guanine or Thymine, deal !D! damage."
   },
   "clintock:Knockout": {
     "NAME": "Knockout",
@@ -147,32 +179,44 @@
   },
   "clintock:MendelPro": {
     "NAME": "MendelPRO",
-    "DESCRIPTION": "Sequencer. Whenever you Bind a Nucleobase, draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Sequencer. NL Whenever you Bind a Nucleobase, draw !M! cards."
+    "DESCRIPTION": "Sequencer. Whenever you Fuse a Nucleobase, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Sequencer. NL Whenever you Fuse a Nucleobase, draw !M! cards."
   },
   "clintock:MetabolicPathways": {
     "NAME": "Metabolic Pathways",
     "DESCRIPTION": "Whenever a card is Exhausted, NL gain !M! Block."
   },
+  "clintock:Miasma": {
+    "NAME": "Miasma",
+    "DESCRIPTION": "Transposon. NL Apply !M! Poison. NL Exhaust."
+  },
   "clintock:MineAndDine": {
     "NAME": "Mine and Dine",
     "DESCRIPTION": "At the start of each turn, gain !M! Sugar and !M! Phosphate."
+  },
+  "clintock:Mitosis": {
+    "NAME": "Mitosis",
+    "DESCRIPTION": "Deal damage equal to half an enemy's remaining health. Cannot target elite or boss enemies."
   },
   "clintock:Nanopore": {
     "NAME": "Nanopore",
     "DESCRIPTION": "At the start of each turn, add a random Nucleobase to your hand."
   },
+  "clintock:Obstruct": {
+    "NAME": "Obstruct",
+    "DESCRIPTION": "Transposon. NL Gain !B! Block. NL Exhaust."
+  },
   "clintock:Outbreak": {
     "NAME": "Outbreak",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies (and apply !M! Vulnerable if you've generated a Nonessential Amino-Acid)."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies (and apply !M! Vulnerable if you've Bound a Nonessential Amino-Acid)."
   },
   "clintock:Polymerize": {
     "NAME": "Polymerize",
-    "DESCRIPTION": "Gain !B! Block. NL If you Bound a Nucleobase this turn, gain !B! Block again."
+    "DESCRIPTION": "Gain !B! Block. NL If you Fused a Nucleobase this turn, gain !B! Block again."
   },
   "clintock:ProteinUtilization": {
     "NAME": "Protein Utilization",
-    "DESCRIPTION": "Deal !D! damage. NL If you've generated an Essential Amino-Acid, target ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL If you've Bound an Essential Amino-Acid, target ALL enemies."
   },
   "clintock:PurineMetabolism": {
     "NAME": "Purine Metabolism",
@@ -203,11 +247,23 @@
   },
   "clintock:SinsheimerT3": {
     "NAME": "SinsheimerT3",
-    "DESCRIPTION": "Sequencer. NL Whenever you Bind a Nucleobase, gain !M! Energy."
+    "DESCRIPTION": "Sequencer. NL Whenever you Fuse a Nucleobase, gain !M! Energy."
+  },
+  "clintock:Splinter": {
+    "NAME": "Splinter",
+    "DESCRIPTION": "Transposon. NL Deal !D! damage to ALL enemies. NL Exhaust."
+  },
+  "clintock:Sting": {
+    "NAME": "Sting",
+    "DESCRIPTION": "Transposon. NL Deal !D! damage and apply !M! Vulnerable. NL Exhaust."
   },
   "clintock:SuperSeqX1": {
     "NAME": "SuperSeq X1",
-    "DESCRIPTION": "Sequencer. NL At the start of each turn, apply a random Amino-Acid."
+    "DESCRIPTION": "Sequencer. NL At the start of each turn, Bind a random Amino-Acid."
+  },
+  "clintock:SuspendAnimation": {
+    "NAME": "Suspend Animation",
+    "DESCRIPTION": "Transposon. NL Next turn, gain !M! Energy. NL Exhaust."
   },
   "clintock:TelomereErosion": {
     "NAME": "Telomere Erosion",
@@ -219,15 +275,15 @@
   },
   "clintock:Thymine": {
     "NAME": "Thymine",
-    "DESCRIPTION": "Ethereal. NL Bind 1 Thymine. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Bind 1 Thymine. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Fuse 1 Thymine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Fuse 1 Thymine. NL Exhaust."
   },
   "clintock:Thymidine": {
     "NAME": "Thymidine",
-    "DESCRIPTION": "Nucleoside. NL Deal !D! damage to ALL enemies. NL Bind 1 Thymine."
+    "DESCRIPTION": "Nucleoside. NL Deal !D! damage to ALL enemies. NL Fuse 1 Thymine."
   },
   "clintock:VectorFlow": {
     "NAME": "Vector Flow",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [R] for each Nucleobase Bound this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [R] for each Nucleobase Fused this turn."
   }
 }

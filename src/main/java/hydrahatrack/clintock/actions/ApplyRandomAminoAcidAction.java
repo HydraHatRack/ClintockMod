@@ -86,7 +86,7 @@ public class ApplyRandomAminoAcidAction extends AbstractGameAction {
                 aminoAcid = new Valine();
                 break;
         }
-        power.addAminoAcid(aminoAcid);
+        power.bindAminoAcid(aminoAcid);
         this.isDone = true;
     }
 }

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import hydrahatrack.clintock.powers.PhosphatePower;
 
 public class Valine extends AbstractAminoAcid {
-    private static final int PHOSPHATE_AMOUNT = 1;
+    private static final int PHOSPHATE_AMOUNT = 2;
 
     public Valine() {
         this.baseNumber = PHOSPHATE_AMOUNT;

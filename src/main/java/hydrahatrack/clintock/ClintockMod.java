@@ -47,7 +47,8 @@ public class ClintockMod implements
     private static final String DESCRIPTION = "Adds a new playable character, The Clintock.";
 
     // In-game messages
-    public static final String CANNOT_BIND = "I cannot #rBind right now!";
+    public static final String CANNOT_FUSE = "I cannot #rFuse right now!";
+    public static final String CANNOT_TARGET_ENEMY = "I cannot target that enemy!";
     public static final String NEEDS_MORE_SUGAR = "I need more #rSugar!";
     public static final String NEEDS_MORE_PHOSPHATE = "I need more #rPhosphate!";
     public static final String NEEDS_MORE_RESOURCES = "I need more resources!";
@@ -122,6 +123,8 @@ public class ClintockMod implements
         BaseMod.addCard(new Alkylation());
         BaseMod.addCard(new ATPReserves());
         BaseMod.addCard(new BaseSynthesis());
+        BaseMod.addCard(new Bateson9000());
+        BaseMod.addCard(new BiolelePrime());
         BaseMod.addCard(new BoloPunch());
         BaseMod.addCard(new BruteForce());
         BaseMod.addCard(new Centrifuge());
@@ -131,11 +134,16 @@ public class ClintockMod implements
         BaseMod.addCard(new CompostBin());
         BaseMod.addCard(new Contamination());
         BaseMod.addCard(new Cytosine());
+        BaseMod.addCard(new DAMP());
+        BaseMod.addCard(new DCMP());
+        BaseMod.addCard(new DealersLuck());
         BaseMod.addCard(new DegradedPrimer());
         BaseMod.addCard(new Deoxyadenosine());
         BaseMod.addCard(new Deoxycytidine());
         BaseMod.addCard(new Deoxyguanosine());
+        BaseMod.addCard(new DGMP());
         BaseMod.addCard(new DnaMicroarray());
+        BaseMod.addCard(new DTMP());
         BaseMod.addCard(new Efflux());
         BaseMod.addCard(new EnergyDrink());
         BaseMod.addCard(new EnergyMetabolism());
@@ -149,12 +157,16 @@ public class ClintockMod implements
         BaseMod.addCard(new Immunodeficiency());
         BaseMod.addCard(new Interrupt());
         BaseMod.addCard(new Intron());
+        BaseMod.addCard(new Jab());
         BaseMod.addCard(new Ketosis());
         BaseMod.addCard(new Knockout());
         BaseMod.addCard(new MendelPro());
         BaseMod.addCard(new MetabolicPathways());
+        BaseMod.addCard(new Miasma());
         BaseMod.addCard(new MineAndDine());
+        BaseMod.addCard(new Mitosis());
         BaseMod.addCard(new Nanopore());
+        BaseMod.addCard(new Obstruct());
         BaseMod.addCard(new Outbreak());
         BaseMod.addCard(new Polymerize());
         BaseMod.addCard(new ProteinUtilization());
@@ -165,7 +177,10 @@ public class ClintockMod implements
         BaseMod.addCard(new Replenish());
         BaseMod.addCard(new SampleSwap());
         BaseMod.addCard(new SinsheimerT3());
+        BaseMod.addCard(new Splinter());
+        BaseMod.addCard(new Sting());
         BaseMod.addCard(new SuperSeqX1());
+        BaseMod.addCard(new SuspendAnimation());
         BaseMod.addCard(new TelomereErosion());
         BaseMod.addCard(new TheGenomeProject());
         BaseMod.addCard(new Thymidine());

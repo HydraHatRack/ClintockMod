@@ -8,7 +8,7 @@
   "clintock:FluorophorePower": {
     "NAME": "Fluorophore",
     "DESCRIPTIONS": [
-      "Increases the effectiveness of #yBound #yNucleobases."
+      "Increases the effectiveness of #yFused #yNucleobases."
     ]
   },
   "clintock:GenomeMapperPower": {
@@ -27,7 +27,7 @@
   "clintock:InterruptedPower": {
     "NAME": "Interrupted",
     "DESCRIPTIONS": [
-      "#yNucleobases cannot Bind this turn."
+      "#yNucleobases cannot Fuse this turn."
     ]
   },
   "clintock:KnockedOutPower": {
@@ -39,7 +39,7 @@
   "clintock:MendelProPower": {
     "NAME": "MendelPRO",
     "DESCRIPTIONS": [
-      "Whenever you #yBind a #yNucleobase, draw #b",
+      "Whenever you #yFuse a #yNucleobase, draw #b",
       " card.",
       " cards."
     ]
@@ -78,7 +78,7 @@
   "clintock:SinsheimerT3Power": {
     "NAME": "SinsheimerT3",
     "DESCRIPTIONS": [
-      "Whenever you #yBound a #yNucleobase, gain #b",
+      "Whenever you #yFuse a #yNucleobase, gain #b",
       " energy."
     ]
   },

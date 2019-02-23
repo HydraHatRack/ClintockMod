@@ -12,14 +12,14 @@
     ],
     "DESCRIPTION": "Blue #yNucleobase: Gains #yBlock."
   },
-  "clintock:BindKeyword": {
+  "clintock:FuseKeyword": {
     "NAMES": [
-      "bind",
-      "binding",
-      "binds",
-      "bound"
+      "fuse",
+      "fusing",
+      "fuses",
+      "fused"
     ],
-    "DESCRIPTION": "Consumes #ySugar and #yPhosphate to put a #yNucleobase into your first empty slot. If you have no empty slots, an #yAmino-Acid is generated to make room."
+    "DESCRIPTION": "Consumes #ySugar and #yPhosphate to put a #yNucleobase into your first empty slot. If you have no empty slots, #yBinds an #yAmino-Acid to make room."
   },
   "clintock:ChromosomeKeyword": {
     "NAMES": [
@@ -45,7 +45,7 @@
       "fluorophore",
       "fluorophores"
     ],
-    "DESCRIPTION": "Increases the effectiveness of #yBound #yNucleobases."
+    "DESCRIPTION": "Increases the effectiveness of #yFused #yNucleobases."
   },
   "clintock:GuanineKeyword": {
     "NAMES": [
@@ -58,7 +58,7 @@
       "intron",
       "introns"
     ],
-    "DESCRIPTION": "Unplayable status card that prevents #yNucleobases from #yBinding."
+    "DESCRIPTION": "Unplayable status card that prevents #yNucleobases from #yFusing."
   },
   "clintock:Knockout": {
     "NAMES": [
@@ -85,7 +85,14 @@
       "nucleoside",
       "nucleosides"
     ],
-    "DESCRIPTION": "Does not require #ySugar when #yBinding."
+    "DESCRIPTION": "Does not require #ySugar when #yFusing."
+  },
+  "clintock:NucleotideKeyword": {
+    "NAMES": [
+      "nucleotide",
+      "nucleotides"
+    ],
+    "DESCRIPTION": "Does not require #ySugar or #yPhosphate when #yFusing."
   },
   "clintock:PeptideChainKeyword": {
     "NAMES": [
@@ -127,6 +134,13 @@
       "sugars"
     ],
     "DESCRIPTION": "Specifically deoxyribose. Necessary molecule in generating nucleotides."
+  },
+  "clintock:Transposon": {
+    "NAMES": [
+      "transposon",
+      "transposons"
+    ],
+    "DESCRIPTION": "Adds a copy of the card to your hand when played."
   },
   "clintock:ThymineKeyword": {
     "NAMES": [

@@ -83,16 +83,23 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(Acupuncture.ID);
 //        startingDeck.add(Alkylation.ID);
 //        startingDeck.add(ATPReserves.ID);
+        startingDeck.add(Bateson9000.ID);
+        startingDeck.add(BiolelePrime.ID);
         startingDeck.add(BoloPunch.ID);
 //        startingDeck.add(BruteForce.ID);
 //        startingDeck.add(Centrifuge.ID);
 //        startingDeck.add(CompostBin.ID);
         startingDeck.add(Contamination.ID);
+        startingDeck.add(DAMP.ID);
+        startingDeck.add(DCMP.ID);
+        startingDeck.add(DealersLuck.ID);
 //        startingDeck.add(DegradedPrimer.ID);
 //        startingDeck.add(Deoxyadenosine.ID);
 //        startingDeck.add(Deoxycytidine.ID);
 //        startingDeck.add(Deoxyguanosine.ID);
+        startingDeck.add(DGMP.ID);
 //        startingDeck.add(DnaMicroarray.ID);
+        startingDeck.add(DTMP.ID);
 //        startingDeck.add(Efflux.ID);
 //        startingDeck.add(EnergyDrink.ID);
 //        startingDeck.add(EnergyMetabolism.ID);
@@ -104,12 +111,16 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(GlucoseToxicity.ID);
 //        startingDeck.add(Immunodeficiency.ID);
 //        startingDeck.add(Interrupt.ID);
+        startingDeck.add(Jab.ID);
 //        startingDeck.add(Ketosis.ID);
 //        startingDeck.add(MendelPro.ID);
 //        startingDeck.add(MetabolicPathways.ID);
+        startingDeck.add(Miasma.ID);
 //        startingDeck.add(MineAndDine.ID);
+        startingDeck.add(Mitosis.ID);
 //        startingDeck.add(Nanopore.ID);
 //        startingDeck.add(Outbreak.ID);
+        startingDeck.add(Obstruct.ID);
 //        startingDeck.add(Polymerize.ID);
 //        startingDeck.add(ProteinUtilization.ID);
 //        startingDeck.add(PurineMetabolism.ID);
@@ -118,7 +129,10 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(Reductase.ID);
 //        startingDeck.add(SampleSwap.ID);
 //        startingDeck.add(SinsheimerT3.ID);
+        startingDeck.add(Splinter.ID);
+        startingDeck.add(Sting.ID);
 //        startingDeck.add(SuperSeqX1.ID);
+        startingDeck.add(SuspendAnimation.ID);
 //        startingDeck.add(TelomereErosion.ID);
 //        startingDeck.add(TheGenomeProject.ID);
 //        startingDeck.add(Thymidine.ID);
@@ -217,7 +231,7 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public String getSpireHeartText() {
-        return "NL You ready your scalpel...";
+        return "NL You ready your pipette...";
     }
 
     @Override

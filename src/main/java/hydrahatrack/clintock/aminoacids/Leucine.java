@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class Leucine extends AbstractAminoAcid {
-    private static final int DAMAGE_AMOUNT = 4;
+    private static final int DAMAGE_AMOUNT = 6;
 
     public Leucine() {
         this.baseNumber = DAMAGE_AMOUNT;

@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class Arginine extends AbstractAminoAcid {
-    private static final int BLOCK_AMOUNT = 3;
+    private static final int BLOCK_AMOUNT = 6;
 
     public Arginine() {
         this.baseNumber = BLOCK_AMOUNT;

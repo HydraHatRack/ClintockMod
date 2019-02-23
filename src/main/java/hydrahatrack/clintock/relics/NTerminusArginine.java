@@ -21,7 +21,7 @@ public class NTerminusArginine extends CustomRelic {
     @Override
     public void atBattleStart() {
         PeptideChainPower power = new PeptideChainPower(AbstractDungeon.player);
-        power.addAminoAcid(new Arginine());
+        power.bindAminoAcid(new Arginine());
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, power));
     }

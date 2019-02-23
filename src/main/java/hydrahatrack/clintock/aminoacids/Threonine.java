@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import hydrahatrack.clintock.powers.SugarPower;
 
 public class Threonine extends AbstractAminoAcid {
-    private static final int SUGAR_AMOUNT = 1;
+    private static final int SUGAR_AMOUNT = 2;
 
     public Threonine() {
         this.baseNumber = SUGAR_AMOUNT;
@@ -14,7 +14,7 @@ public class Threonine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Threonine (Gain " + this.baseNumber + " Sugar)";
+        return " NL Threonine (Gain " + this.baseNumber + " Sugars)";
     }
 
     @Override

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
 public class Lysine extends AbstractAminoAcid {
-    private static final int PLATED_ARMOR_AMOUNT = 1;
+    private static final int PLATED_ARMOR_AMOUNT = 2;
 
     public Lysine() {
         this.baseNumber = PLATED_ARMOR_AMOUNT;
