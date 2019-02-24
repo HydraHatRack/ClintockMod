@@ -3,6 +3,7 @@ package hydrahatrack.clintock.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,7 +34,12 @@ public class SuspendAnimation extends CustomCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.makeCopy()));
+
+        AbstractCard copy = this.makeCopy();
+        if (this.upgraded) {
+            copy.upgrade();
+        }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(copy));
     }
 
     @Override

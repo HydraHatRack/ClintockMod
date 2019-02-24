@@ -20,8 +20,8 @@ public class Mitosis extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 3;
-    private static final int UPGRADED_COST = 2;
+    private static final int COST = 2;
+    private static final int UPGRADED_COST = 1;
 
     public Mitosis() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
@@ -30,7 +30,7 @@ public class Mitosis extends CustomCard {
 
     @Override
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
-        if (AbstractMonster.EnemyType.NORMAL != m.type) {
+        if (null != m && AbstractMonster.EnemyType.NORMAL != m.type) {
             this.cantUseMessage = ClintockMod.CANNOT_TARGET_ENEMY;
             return false;
         }
@@ -39,11 +39,13 @@ public class Mitosis extends CustomCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(
-                new WeightyImpactEffect(m.hb.cX, m.hb.cY, Color.PURPLE)));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                m, new DamageInfo(p, m.currentHealth / 2, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.NONE));
+        if (null != m) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(
+                    new WeightyImpactEffect(m.hb.cX, m.hb.cY, Color.PURPLE)));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(
+                    m, new DamageInfo(p, (m.currentHealth + 1) / 2, this.damageTypeForTurn),
+                    AbstractGameAction.AttackEffect.NONE));
+        }
     }
 
     @Override
