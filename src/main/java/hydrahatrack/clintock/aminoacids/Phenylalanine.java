@@ -1,22 +1,28 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import hydrahatrack.clintock.actions.PhenylalanineAction;
 
 public class Phenylalanine extends AbstractAminoAcid {
-    public Phenylalanine() {}
+    public static final String LABEL = "Phenylalanine";
+    private static final int CARD_AMOUNT = 1;
+
+    public Phenylalanine() {
+        this.baseNumber = CARD_AMOUNT;
+    }
 
     @Override
     public String getLabel() {
-        return " NL Phenylalanine (Add a random uncommon card to your draw pile)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Phe: Add #yUncommon card";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new MakeTempCardInDrawPileAction(
-                AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON, AbstractDungeon.cardRandomRng),
-                1, true, true);
+        return new PhenylalanineAction(this.baseNumber);
     }
 }

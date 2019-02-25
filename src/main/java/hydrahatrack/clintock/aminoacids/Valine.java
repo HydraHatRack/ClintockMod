@@ -1,11 +1,10 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import hydrahatrack.clintock.powers.PhosphatePower;
+import hydrahatrack.clintock.actions.ValineAction;
 
 public class Valine extends AbstractAminoAcid {
+    public static final String LABEL = "Valine";
     private static final int PHOSPHATE_AMOUNT = 2;
 
     public Valine() {
@@ -14,13 +13,16 @@ public class Valine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Valine (Gain " + this.baseNumber + " Phosphate)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Val: #b" + this.baseNumber + " #yPhosphates -> Self";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new PhosphatePower(AbstractDungeon.player, this.baseNumber),
-                this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
+        return new ValineAction(this.baseNumber);
     }
 }

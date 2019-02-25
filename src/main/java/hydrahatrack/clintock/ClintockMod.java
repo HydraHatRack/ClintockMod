@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -19,6 +20,7 @@ import hydrahatrack.clintock.cards.*;
 import hydrahatrack.clintock.characters.TheClintock;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.enums.TheClintockEnum;
+import hydrahatrack.clintock.powers.NextGenBoostPower;
 import hydrahatrack.clintock.relics.BiomoleculePool;
 import hydrahatrack.clintock.relics.NTerminusArginine;
 import org.apache.logging.log4j.LogManager;
@@ -160,12 +162,14 @@ public class ClintockMod implements
         BaseMod.addCard(new Jab());
         BaseMod.addCard(new Ketosis());
         BaseMod.addCard(new Knockout());
+        BaseMod.addCard(new LifeSager());
         BaseMod.addCard(new MendelPro());
         BaseMod.addCard(new MetabolicPathways());
         BaseMod.addCard(new Miasma());
         BaseMod.addCard(new MineAndDine());
         BaseMod.addCard(new Mitosis());
         BaseMod.addCard(new Nanopore());
+        BaseMod.addCard(new NextGenBoost());
         BaseMod.addCard(new Obstruct());
         BaseMod.addCard(new Outbreak());
         BaseMod.addCard(new Polymerize());
@@ -253,6 +257,23 @@ public class ClintockMod implements
     public void receivePostExhaust(final AbstractCard c) {
         if (AbstractDungeon.player instanceof TheClintock) {
             ((TheClintock) AbstractDungeon.player).incrementCardExhaustCount();
+            if (AbstractDungeon.player.hasPower(NextGenBoostPower.POWER_ID) &&
+                    null != c &&
+                    !c.upgraded &&
+                    !(c instanceof DealersLuck) &&
+                    !(c instanceof Jab) &&
+                    !(c instanceof Miasma) &&
+                    !(c instanceof Obstruct) &&
+                    !(c instanceof Splinter) &&
+                    !(c instanceof Sting) &&
+                    !(c instanceof SuspendAnimation) &&
+                    AbstractCard.CardType.CURSE != c.type &&
+                    AbstractCard.CardType.STATUS != c.type) {
+                AbstractCard copy = c.makeCopy();
+                copy.upgrade();
+                AbstractDungeon.player.getPower(NextGenBoostPower.POWER_ID).flash();
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(copy, 1));
+            }
         }
     }
 
@@ -276,20 +297,3 @@ public class ClintockMod implements
         return "img/relics/outlines/" + relicID.replaceFirst("clintock:", "") + ".png";
     }
 }
-
-// ERRORS
-
-// Happened at end of battle
-//05:08:36.433 INFO helpers.File> Attempting to save file=C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\preferences\CLINTOCK_CLASS
-//        05:08:36.434 ERROR core.CardCrawlGame> Exception caught
-//        java.lang.NullPointerException: null
-//        at com.megacrit.cardcrawl.actions.GameActionManager.clearPostCombatActions(GameActionManager.java:120) ~[?:?]
-//        at com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction.update(DamageRandomEnemyAction.java:50) ~[desktop-1.0.jar:?]
-//        at com.megacrit.cardcrawl.actions.GameActionManager.update(GameActionManager.java:155) ~[?:?]
-//        at com.megacrit.cardcrawl.rooms.AbstractRoom.update(AbstractRoom.java:279) ~[?:?]
-//        at com.megacrit.cardcrawl.dungeons.AbstractDungeon.update(AbstractDungeon.java:2552) ~[?:?]
-//        at com.megacrit.cardcrawl.core.CardCrawlGame.update(CardCrawlGame.java:878) ~[?:?]
-//        at com.megacrit.cardcrawl.core.CardCrawlGame.render(CardCrawlGame.java:429) [?:?]
-//        at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225) [?:?]
-//        at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126) [desktop-1.0.jar:?]
-//        Controllers: removed manager for application, 0 managers active

@@ -1,11 +1,10 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import hydrahatrack.clintock.actions.CysteineAction;
 
 public class Cysteine extends AbstractAminoAcid {
+    public static final String LABEL = "Cysteine";
     private static final int STRENGTH_AMOUNT = 1;
 
     public Cysteine() {
@@ -14,13 +13,16 @@ public class Cysteine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Cysteine (Gain " + this.baseNumber + " Strength)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Cys: #b" + this.baseNumber + " #yStrength -> Self";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new StrengthPower(AbstractDungeon.player, this.baseNumber),
-                this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
+        return new CysteineAction(this.baseNumber);
     }
 }

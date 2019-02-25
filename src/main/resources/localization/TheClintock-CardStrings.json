@@ -56,8 +56,8 @@
   },
   "clintock:CompostBin": {
     "NAME": "Compost Bin",
-    "DESCRIPTION": "Exhaust a card. NL Gain Phosphate equal to twice its cost.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. NL Gain Phosphate equal to three times its cost."
+    "DESCRIPTION": "Exhaust a card. NL Gain Phosphates equal to twice its cost.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. NL Gain Phosphates equal to three times its cost."
   },
   "clintock:Contamination": {
     "NAME": "Contamination",
@@ -163,7 +163,7 @@
   },
   "clintock:Intron": {
     "NAME": "Intron",
-    "DESCRIPTION": "Unplayable. Nucleobases cannot Link this turn."
+    "DESCRIPTION": "Unplayable. Bases cannot Link this turn."
   },
   "clintock:Jab": {
     "NAME": "Jab",
@@ -175,7 +175,11 @@
   },
   "clintock:Knockout": {
     "NAME": "Knockout",
-    "DESCRIPTION": "Unplayable. Nucleobases cannot evoke this turn."
+    "DESCRIPTION": "Unplayable. Bases cannot evoke this turn."
+  },
+  "clintock:LifeSager": {
+    "NAME": "LifeSager",
+    "DESCRIPTION": "Sequencer. NL Random enemy effects from your Polypeptide now target ALL enemies."
   },
   "clintock:MendelPro": {
     "NAME": "MendelPRO",
@@ -192,7 +196,7 @@
   },
   "clintock:MineAndDine": {
     "NAME": "Mine and Dine",
-    "DESCRIPTION": "At the start of each turn, gain !M! Sugar and !M! Phosphate."
+    "DESCRIPTION": "At the start of each turn, gain 1 Sugar and 1 Phosphate."
   },
   "clintock:Mitosis": {
     "NAME": "Mitosis",
@@ -201,6 +205,11 @@
   "clintock:Nanopore": {
     "NAME": "Nanopore",
     "DESCRIPTION": "At the start of each turn, add a random Nucleobase to your hand."
+  },
+  "clintock:NextGenBoost": {
+    "NAME": "Next-Gen Boost",
+    "DESCRIPTION": "Ethereal. Whenever an upgradable card is Exhausted, put an Upgraded copy in your discard pile. Does not affect Transposons.",
+    "UPGRADE_DESCRIPTION": "Whenever an upgradable card is Exhausted, put an Upgraded copy in your discard pile. Does not affect Transposons."
   },
   "clintock:Obstruct": {
     "NAME": "Obstruct",

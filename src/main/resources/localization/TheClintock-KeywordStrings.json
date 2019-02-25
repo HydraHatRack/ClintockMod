@@ -81,7 +81,7 @@
       "linking",
       "links"
     ],
-    "DESCRIPTION": "Puts a #yBase into your first empty slot. If no empty slots, #yBinds an #yAmino-Acid to make room."
+    "DESCRIPTION": "Puts a #yBase into your first empty slot. If no empty slots exist, #yBinds an #yAmino-Acid to make room."
   },
   "clintock:NonessentialKeyword": {
     "NAMES": [

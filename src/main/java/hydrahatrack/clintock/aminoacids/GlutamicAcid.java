@@ -1,9 +1,10 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
+import hydrahatrack.clintock.actions.GlutamicAcidAction;
 
 public class GlutamicAcid extends AbstractAminoAcid {
+    public static final String LABEL = "Glutamic Acid";
     private static final int UPGRADE_CARD_AMOUNT = 1;
 
     public GlutamicAcid() {
@@ -12,11 +13,16 @@ public class GlutamicAcid extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Glutamic Acid (Upgrade a card in your hand for the rest of combat)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Gln: #yUpgrade card in hand";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new UpgradeRandomCardAction();
+        return new GlutamicAcidAction(this.baseNumber);
     }
 }

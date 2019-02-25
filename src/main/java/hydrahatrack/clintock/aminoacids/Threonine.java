@@ -1,11 +1,10 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import hydrahatrack.clintock.powers.SugarPower;
+import hydrahatrack.clintock.actions.ThreonineAction;
 
 public class Threonine extends AbstractAminoAcid {
+    public static final String LABEL = "Threonine";
     private static final int SUGAR_AMOUNT = 2;
 
     public Threonine() {
@@ -14,13 +13,16 @@ public class Threonine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Threonine (Gain " + this.baseNumber + " Sugars)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Thr: #b" + this.baseNumber + " #ySugars -> Self";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new SugarPower(AbstractDungeon.player, this.baseNumber),
-                this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
+        return new ThreonineAction(this.baseNumber);
     }
 }

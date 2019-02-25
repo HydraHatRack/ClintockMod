@@ -28,7 +28,8 @@ public class CentrifugeAction extends AbstractGameAction {
             playedMusic = false;
             int temp = AbstractDungeon.getCurrRoom().monsters.monsters.size();
             for (int i = 0; i < temp; i++) {
-                if ((!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).isDying) &&
+                if (null != AbstractDungeon.getCurrRoom().monsters.monsters.get(i) &&
+                        (!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).isDying) &&
                         ((AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).currentHealth > 0) &&
                         (!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).isEscaping)) {
                     if (playedMusic) {
@@ -53,12 +54,14 @@ public class CentrifugeAction extends AbstractGameAction {
             }
             int temp = AbstractDungeon.getCurrRoom().monsters.monsters.size();
             for (int i = 0; i < temp; i++) {
-                if (!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).isDeadOrEscaped()) {
-                    (AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).damage(
-                            new DamageInfo(this.source, this.damage[i], this.damageType));
-                }
-                if (!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDying)) {
-                    AbstractDungeon.actionManager.addToBottom(new MakeRandomNucleobaseInHandAction(1));
+                if (null != AbstractDungeon.getCurrRoom().monsters.monsters.get(i)) {
+                    if (!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).isDeadOrEscaped()) {
+                        (AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).damage(
+                                new DamageInfo(this.source, this.damage[i], this.damageType));
+                    }
+                    if (!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDying)) {
+                        AbstractDungeon.actionManager.addToBottom(new MakeRandomNucleobaseInHandAction(1));
+                    }
                 }
             }
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {

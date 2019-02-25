@@ -49,6 +49,12 @@
       "#yBases cannot evoke this turn."
     ]
   },
+  "clintock:LifeSagerPower": {
+    "NAME": "LifeSager",
+    "DESCRIPTIONS": [
+      "Random enemy effects from your #yPolypeptide now target ALL enemies."
+    ]
+  },
   "clintock:MendelProPower": {
     "NAME": "MendelPRO",
     "DESCRIPTIONS": [
@@ -76,16 +82,22 @@
       " random #yNucleobases to your hand."
     ]
   },
+  "clintock:NextGenBoostPower": {
+    "NAME": "Next-Gen Boost",
+    "DESCRIPTIONS": [
+      "Whenever an upgradable card is Exhausted, put an #yUpgraded copy in your discard pile. Does not affect #yTransposons."
+    ]
+  },
   "clintock:PeptideChainPower": {
     "NAME": "Polypeptide",
     "DESCRIPTIONS": [
-      "Activate at the end of each turn:"
+      "At the end of each turn:"
     ]
   },
   "clintock:PhosphatePower": {
     "NAME": "Phosphate",
     "DESCRIPTIONS": [
-      "Necessary resource in #yLinking #yBases."
+      "Resource for #yLinking #yBases."
     ]
   },
   "clintock:SinsheimerT3Power": {
@@ -98,7 +110,7 @@
   "clintock:SugarPower": {
     "NAME": "Sugar",
     "DESCRIPTIONS": [
-      "Necessary resource in #yLinking #yBases."
+      "Resource for #yLinking #yBases."
     ]
   },
   "clintock:SuperSeqX1Power": {

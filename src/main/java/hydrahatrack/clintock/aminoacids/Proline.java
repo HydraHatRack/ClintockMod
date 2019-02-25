@@ -1,12 +1,10 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
+import hydrahatrack.clintock.actions.ProlineAction;
 
 public class Proline extends AbstractAminoAcid {
+    public static final String LABEL = "Proline";
     private static final int VULNERABLE_AMOUNT = 2;
 
     public Proline() {
@@ -15,17 +13,16 @@ public class Proline extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Proline (Apply " + this.baseNumber + " Vulnerable to a random enemy)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Pro: #b" + this.baseNumber + " #yVulnerable -> Enemy";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        AbstractMonster m = AbstractDungeon.getRandomMonster();
-        if (null != m) {
-            return new ApplyPowerAction(m, AbstractDungeon.player,
-                    new VulnerablePower(m, this.baseNumber, false),
-                    this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
-        }
-        return null;
+        return new ProlineAction(this.baseNumber);
     }
 }
