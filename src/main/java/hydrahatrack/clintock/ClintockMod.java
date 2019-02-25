@@ -149,14 +149,17 @@ public class ClintockMod implements
         BaseMod.addCard(new Efflux());
         BaseMod.addCard(new EnergyDrink());
         BaseMod.addCard(new EnergyMetabolism());
+        BaseMod.addCard(new Epidemic());
         BaseMod.addCard(new Eureka());
         BaseMod.addCard(new Excavate());
         BaseMod.addCard(new Fluorescein());
         BaseMod.addCard(new GeneAmplification());
         BaseMod.addCard(new GeneticPollution());
+        BaseMod.addCard(new GeneticsLab());
         BaseMod.addCard(new GlucoseToxicity());
         BaseMod.addCard(new Guanine());
         BaseMod.addCard(new Immunodeficiency());
+        BaseMod.addCard(new ImpulsiveShot());
         BaseMod.addCard(new Interrupt());
         BaseMod.addCard(new Intron());
         BaseMod.addCard(new Jab());

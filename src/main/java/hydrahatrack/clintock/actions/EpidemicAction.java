@@ -8,12 +8,16 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
-public class CentrifugeAction extends AbstractGameAction {
+public class EpidemicAction extends AbstractGameAction {
     private int[] damage;
     private boolean firstFrame = true;
+    private int baseNumberOfMonstersAlive;
+    private int numberOfMonstersAlive;
 
-    public CentrifugeAction(final int[] amount) {
+    public EpidemicAction(final int[] amount, final int numberOfMonstersAlive) {
         setValues(null, source, amount[0]);
+        this.baseNumberOfMonstersAlive = numberOfMonstersAlive;
+        this.numberOfMonstersAlive = 0;
         this.damage = amount;
         this.actionType = AbstractGameAction.ActionType.DAMAGE;
         this.damageType = DamageInfo.DamageType.NORMAL;
@@ -59,10 +63,13 @@ public class CentrifugeAction extends AbstractGameAction {
                         (AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).damage(
                                 new DamageInfo(AbstractDungeon.player, this.damage[i], this.damageType));
                     }
-                    if (!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDying)) {
-                        AbstractDungeon.actionManager.addToBottom(new MakeRandomNucleobaseInHandAction(1));
+                    if (!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDying) {
+                        numberOfMonstersAlive++;
                     }
                 }
+            }
+            if (numberOfMonstersAlive < baseNumberOfMonstersAlive) {
+                AbstractDungeon.actionManager.addToBottom(new EpidemicAction(this.damage, numberOfMonstersAlive));
             }
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();

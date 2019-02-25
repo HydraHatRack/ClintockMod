@@ -122,6 +122,10 @@
     "DESCRIPTION": "Lose X HP. NL Gain X Energy. NL Draw X cards. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Lose X HP. NL Gain X Energy. NL Draw X cards."
   },
+  "clintock:Epidemic": {
+    "NAME": "Epidemic",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. If any die, play this again."
+  },
   "clintock:Eureka": {
     "NAME": "Eureka!",
     "DESCRIPTION": "Draw 1 card. If you draw a Power, gain !M! Fluorophore.",
@@ -144,6 +148,10 @@
     "NAME": "Genetic Pollution",
     "DESCRIPTION": "Deal !D! damage. NL If you've generated a Nonessential Amino-Acid, apply !M! Poison."
   },
+  "clintock:GeneticsLab": {
+    "NAME": "Genetics Lab",
+    "DESCRIPTION": "Add a random Sequencer to your hand. It costs !M! less. Exhaust."
+  },
   "clintock:GlucoseToxicity": {
     "NAME": "Glucose Toxicity",
     "DESCRIPTION": "Lose half of your Sugar. Apply that much Poison."
@@ -156,6 +164,11 @@
   "clintock:Immunodeficiency": {
     "NAME": "Immunodeficiency",
     "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. Exhaust."
+  },
+  "clintock:ImpulsiveShot": {
+    "NAME": "Impulsive Shot",
+    "DESCRIPTION": "Deal !D! damage. Exhaust !M! random cards from your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Exhaust !M! random card from your hand."
   },
   "clintock:Interrupt": {
     "NAME": "Interrupt",
