@@ -1,11 +1,10 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.EnergizedBluePower;
+import hydrahatrack.clintock.actions.AlanineAction;
 
 public class Alanine extends AbstractAminoAcid {
+    public static final String LABEL = "Alanine";
     private static final int ENERGY_AMOUNT = 1;
 
     public Alanine() {
@@ -14,13 +13,16 @@ public class Alanine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Alanine (Gain " + this.baseNumber + " additional [R] next turn)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Ala: [R] -> Self (next turn)";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new ApplyPowerAction(
-                AbstractDungeon.player, AbstractDungeon.player,
-                new EnergizedBluePower(AbstractDungeon.player, this.baseNumber), this.baseNumber);
+        return new AlanineAction(this.baseNumber);
     }
 }

@@ -1,11 +1,11 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import hydrahatrack.clintock.actions.ArginineAction;
 
 public class Arginine extends AbstractAminoAcid {
-    private static final int BLOCK_AMOUNT = 3;
+    public static final String LABEL = "Arginine";
+    private static final int BLOCK_AMOUNT = 6;
 
     public Arginine() {
         this.baseNumber = BLOCK_AMOUNT;
@@ -13,11 +13,16 @@ public class Arginine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Arginine (Gain " + this.baseNumber + " Block)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Arg: #b" + this.baseNumber + " #yBlock -> Self";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.baseNumber);
+        return new ArginineAction(this.baseNumber);
     }
 }

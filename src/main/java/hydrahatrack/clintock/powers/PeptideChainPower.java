@@ -1,5 +1,7 @@
 package hydrahatrack.clintock.powers;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,10 +33,30 @@ public class PeptideChainPower extends AbstractPower {
         this.updateDescription();
     }
 
-    public void addAminoAcid(final AbstractAminoAcid aminoAcid) {
+    public void bindAminoAcid(final AbstractAminoAcid aminoAcid) {
+        AbstractDungeon.actionManager.addToBottom(
+                new TextAboveCreatureAction(AbstractDungeon.player, aminoAcid.getLabel()));
         aminoAcids.add(aminoAcid);
+
         this.amount = aminoAcids.size();
         this.updateDescription();
+
+        Bateson9000Power bateson9000Power =
+                (Bateson9000Power) AbstractDungeon.player.getPower(Bateson9000Power.POWER_ID);
+        if (null != bateson9000Power) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(
+                    AbstractDungeon.player, AbstractDungeon.player, bateson9000Power.amount));
+        }
+
+        BiolelePrimePower biolelePrimePower =
+                (BiolelePrimePower) AbstractDungeon.player.getPower(BiolelePrimePower.POWER_ID);
+        if (null != biolelePrimePower) {
+            for (int i = 0; i < biolelePrimePower.amount; i++) {
+                AbstractDungeon.actionManager.addToBottom(
+                        new TextAboveCreatureAction(AbstractDungeon.player, aminoAcid.getLabel()));
+                aminoAcids.add(aminoAcid);
+            }
+        }
     }
 
     public void doubleAminoAcidList() {
@@ -101,8 +123,11 @@ public class PeptideChainPower extends AbstractPower {
     public void updateDescription() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(DESCRIPTIONS[0]);
-        for (AbstractAminoAcid aminoAcid : aminoAcids) {
-            stringBuilder.append(aminoAcid.getLabel());
+        for (int i = 0; i < Math.min(aminoAcids.size(), 10); i++) {
+            stringBuilder.append(aminoAcids.get(i).getDescription());
+        }
+        if (aminoAcids.size() > 10) {
+            stringBuilder.append(" NL ...and ").append(aminoAcids.size() - 10).append(" more.");
         }
         this.description = stringBuilder.toString();
     }

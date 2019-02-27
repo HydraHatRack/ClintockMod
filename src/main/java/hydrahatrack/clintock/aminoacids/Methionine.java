@@ -1,10 +1,10 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import hydrahatrack.clintock.actions.MethionineAction;
 
 public class Methionine extends AbstractAminoAcid {
+    public static final String LABEL = "Methionine";
     private static final int HEALTH_AMOUNT = 1;
 
     public Methionine() {
@@ -13,11 +13,16 @@ public class Methionine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Methionine (Heal " + this.baseNumber + " HP)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Met: Heal #b" + this.baseNumber + " HP -> Self";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new HealAction(AbstractDungeon.player, AbstractDungeon.player, this.baseNumber);
+        return new MethionineAction(this.baseNumber);
     }
 }

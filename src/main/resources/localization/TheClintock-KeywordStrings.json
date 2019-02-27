@@ -10,7 +10,14 @@
     "NAMES": [
       "adenine"
     ],
-    "DESCRIPTION": "Blue #yNucleobase: Gains #yBlock."
+    "DESCRIPTION": "Blue #yBase: Gains #yBlock."
+  },
+  "clintock:BaseKeyword": {
+    "NAMES": [
+      "base",
+      "bases"
+    ],
+    "DESCRIPTION": "Fundamental units of the genetic code found in DNA."
   },
   "clintock:BindKeyword": {
     "NAMES": [
@@ -19,7 +26,7 @@
       "binds",
       "bound"
     ],
-    "DESCRIPTION": "Consumes #ySugar and #yPhosphate to put a #yNucleobase into your first empty slot. If you have no empty slots, an #yAmino-Acid is generated to make room."
+    "DESCRIPTION": "Converts three #yLinked #yBases into an #yAmino-Acid."
   },
   "clintock:ChromosomeKeyword": {
     "NAMES": [
@@ -32,7 +39,14 @@
     "NAMES": [
       "cytosine"
     ],
-    "DESCRIPTION": "Red #yNucleobase: Deals damage to a random enemy."
+    "DESCRIPTION": "Red #yBase: Deals damage to a random enemy."
+  },
+  "clintock:DeletionKeyword": {
+    "NAMES": [
+      "deletion",
+      "deletions"
+    ],
+    "DESCRIPTION": "Unplayable status card that removes a #Linked #Base at the end of the turn."
   },
   "clintock:EssentialKeyword": {
     "NAMES": [
@@ -45,27 +59,36 @@
       "fluorophore",
       "fluorophores"
     ],
-    "DESCRIPTION": "Increases the effectiveness of #yBound #yNucleobases."
+    "DESCRIPTION": "Increases the effectiveness of #yLinked #yBases."
   },
   "clintock:GuanineKeyword": {
     "NAMES": [
       "guanine"
     ],
-    "DESCRIPTION": "Green #yNucleobase: Gains energy."
+    "DESCRIPTION": "Green #yBase: Gains energy."
   },
   "clintock:Intron": {
     "NAMES": [
       "intron",
       "introns"
     ],
-    "DESCRIPTION": "Unplayable status card that prevents #yNucleobases from #yBinding."
+    "DESCRIPTION": "Unplayable status card that prevents #yBases from #yLinking."
   },
   "clintock:Knockout": {
     "NAMES": [
       "knockout",
       "knockouts"
     ],
-    "DESCRIPTION": "Unplayable status card that prevents #yNucleobases from evoking."
+    "DESCRIPTION": "Unplayable status card that prevents #yBases from evoking."
+  },
+  "clintock:LinkKeyword": {
+    "NAMES": [
+      "link",
+      "linked",
+      "linking",
+      "links"
+    ],
+    "DESCRIPTION": "Puts a #yBase into your first empty slot. If no empty slots exist, #yBinds an #yAmino-Acid to make room."
   },
   "clintock:NonessentialKeyword": {
     "NAMES": [
@@ -78,60 +101,74 @@
       "nucleobase",
       "nucleobases"
     ],
-    "DESCRIPTION": "Fundamental units of the genetic code found in DNA - #yAdenine, #yCytosine, #yGuanine, and #yThymine."
+    "DESCRIPTION": "Requires #b1 #ySugar and #b1 #yPhosphate when #yLinking."
   },
   "clintock:NucleosideKeyword": {
     "NAMES": [
       "nucleoside",
       "nucleosides"
     ],
-    "DESCRIPTION": "Does not require #ySugar when #yBinding."
+    "DESCRIPTION": "Requires #b1 #yPhosphate when #yLinking."
   },
-  "clintock:PeptideChainKeyword": {
+  "clintock:NucleotideKeyword": {
     "NAMES": [
-      "peptide-chain"
+      "nucleotide",
+      "nucleotides"
     ],
-    "DESCRIPTION": "Group of #yAmino-Acids that activate at the end of each turn."
+    "DESCRIPTION": "Does not require #ySugar or #yPhosphate when #yLinking."
   },
   "clintock:PhosphateKeyword": {
     "NAMES": [
       "phosphate",
       "phosphates"
     ],
-    "DESCRIPTION": "Phosphorus bound to four oxygen residues. Necessary molecule in generating nucleotides."
+    "DESCRIPTION": "Necessary resource for #yLinking #yBases."
+  },
+  "clintock:PolypeptideKeyword": {
+    "NAMES": [
+      "polypeptide"
+    ],
+    "DESCRIPTION": "Group of #yAmino-Acids that activate at the end of each turn."
   },
   "clintock:PurineKeyword": {
     "NAMES": [
       "purine",
       "purines"
     ],
-    "DESCRIPTION": "Nitrogenous base category - #yAdenine and #yGuanine."
+    "DESCRIPTION": "Nitrogenous #yBase category that includes #yAdenine and #yGuanine."
   },
   "clintock:PyrimidineKeyword": {
     "NAMES": [
       "pyrimidine",
       "pyrimidines"
     ],
-    "DESCRIPTION": "Nitrogenous base category - #yCytosine and #yThymine."
+    "DESCRIPTION": "Nitrogenous #yBase category that includes #yCytosine and #yThymine."
   },
   "clintock:SequencerKeyword": {
     "NAMES": [
       "sequencer",
       "sequencers"
     ],
-    "DESCRIPTION": "Scientific device used in determining the order of nucleotides in DNA."
+    "DESCRIPTION": "Scientific device used in determining the order of #yBases in DNA."
   },
   "clintock:SugarKeyword": {
     "NAMES": [
       "sugar",
       "sugars"
     ],
-    "DESCRIPTION": "Specifically deoxyribose. Necessary molecule in generating nucleotides."
+    "DESCRIPTION": "Necessary resource for #yLinking #yBases."
+  },
+  "clintock:Transposon": {
+    "NAMES": [
+      "transposon",
+      "transposons"
+    ],
+    "DESCRIPTION": "Adds a copy of the card to your hand when played."
   },
   "clintock:ThymineKeyword": {
     "NAMES": [
       "thymine"
     ],
-    "DESCRIPTION": "Yellow #yNucleobase: Deals damage to ALL enemies."
+    "DESCRIPTION": "Yellow #yBase: Deals damage to ALL enemies."
   }
 }

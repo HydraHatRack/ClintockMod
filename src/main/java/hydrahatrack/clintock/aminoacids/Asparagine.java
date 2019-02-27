@@ -1,11 +1,10 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.DexterityPower;
+import hydrahatrack.clintock.actions.AsparagineAction;
 
 public class Asparagine extends AbstractAminoAcid {
+    public static final String LABEL = "Asparagine";
     private static final int DEXTERITY_AMOUNT = 1;
 
     public Asparagine() {
@@ -14,13 +13,16 @@ public class Asparagine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Asparagine (Gain " + this.baseNumber + " Dexterity)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Asn: #b" + this.baseNumber + " #yDexterity -> Self";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new DexterityPower(AbstractDungeon.player, this.baseNumber),
-                this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
+        return new AsparagineAction(this.baseNumber);
     }
 }

@@ -44,7 +44,11 @@ public class VectorFlow extends CustomCard {
                 c.cardID.equals(Deoxyadenosine.ID) ||
                 c.cardID.equals(Deoxycytidine.ID) ||
                 c.cardID.equals(Deoxyguanosine.ID) ||
-                c.cardID.equals(Thymidine.ID)) {
+                c.cardID.equals(Thymidine.ID) ||
+                c.cardID.equals(DAMP.ID) ||
+                c.cardID.equals(DCMP.ID) ||
+                c.cardID.equals(DGMP.ID) ||
+                c.cardID.equals(DTMP.ID)) {
             modifyCostForTurn(-1);
         }
     }

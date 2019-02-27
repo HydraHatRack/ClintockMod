@@ -17,8 +17,8 @@ public class EnergyDrink extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 0;
-    private static final int SUGAR_AMOUNT = 10;
-    private static final int UPGRADE_PLUS_SUGAR_AMOUNT = 10;
+    private static final int SUGAR_AMOUNT = 6;
+    private static final int UPGRADE_PLUS_SUGAR_AMOUNT = 4;
 
     public EnergyDrink() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,

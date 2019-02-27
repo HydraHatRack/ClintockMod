@@ -1,12 +1,11 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import hydrahatrack.clintock.actions.LysineAction;
 
 public class Lysine extends AbstractAminoAcid {
-    private static final int PLATED_ARMOR_AMOUNT = 1;
+    public static final String LABEL = "Lysine";
+    private static final int PLATED_ARMOR_AMOUNT = 2;
 
     public Lysine() {
         this.baseNumber = PLATED_ARMOR_AMOUNT;
@@ -14,13 +13,16 @@ public class Lysine extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Lysine (Gain " + this.baseNumber + " Plated Armor)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Lys: #b" + this.baseNumber + " #yPlated #yArmor -> Self";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new PlatedArmorPower(AbstractDungeon.player, this.baseNumber),
-                this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
+        return new LysineAction(this.baseNumber);
     }
 }

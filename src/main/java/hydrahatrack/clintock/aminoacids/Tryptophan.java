@@ -1,13 +1,10 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import hydrahatrack.clintock.actions.TryptophanAction;
 
 public class Tryptophan extends AbstractAminoAcid {
+    public static final String LABEL = "Tryptophan";
     private static final int STRENGTH_AMOUNT = 1;
 
     public Tryptophan() {
@@ -16,17 +13,16 @@ public class Tryptophan extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Tryptophan (A random enemy loses " + this.baseNumber + " Strength)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Trp: #b-" + this.baseNumber + " #yStrength -> Enemy";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        AbstractMonster m = AbstractDungeon.getRandomMonster();
-        if (null != m) {
-            return new ApplyPowerAction(m, AbstractDungeon.player,
-                    new StrengthPower(m, -this.baseNumber),
-                    -this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
-        }
-        return null;
+        return new TryptophanAction(this.baseNumber);
     }
 }

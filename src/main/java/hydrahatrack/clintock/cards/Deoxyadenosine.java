@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.actions.BindAction;
+import hydrahatrack.clintock.actions.LinkAction;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.orbs.AdenineOrb;
 import hydrahatrack.clintock.powers.InterruptedPower;
@@ -34,9 +34,9 @@ public class Deoxyadenosine extends CustomCard {
     @Override
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
         if (p.hasPower(InterruptedPower.POWER_ID)) {
-            this.cantUseMessage = ClintockMod.CANNOT_BIND;
+            this.cantUseMessage = ClintockMod.CANNOT_LINK;
             return false;
-        } else if (p.hasPower(PhosphatePower.POWER_ID)) {
+        } else if (!p.hasPower(PhosphatePower.POWER_ID)) {
             this.cantUseMessage = ClintockMod.NEEDS_MORE_PHOSPHATE;
             return false;
         }
@@ -46,7 +46,7 @@ public class Deoxyadenosine extends CustomCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new BindAction(new AdenineOrb()));
+        AbstractDungeon.actionManager.addToBottom(new LinkAction(new AdenineOrb()));
         AbstractDungeon.actionManager.addToBottom(
                 new ReducePowerAction(p, p, PhosphatePower.POWER_ID, 1));
     }

@@ -34,7 +34,7 @@ public class ThymineOrbPassiveAction extends AbstractGameAction {
         if (AbstractDungeon.player.hasPower(ContaminationPower.POWER_ID)) {
             if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-                    if ((!m.isDead) && (!m.isDying)) {
+                    if (null != m && (!m.isDead) && (!m.isDying)) {
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player,
                                 new PoisonPower(m, AbstractDungeon.player, this.info.output), this.info.output));
                     }

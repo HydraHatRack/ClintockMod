@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.actions.BindAction;
+import hydrahatrack.clintock.actions.LinkAction;
 import hydrahatrack.clintock.orbs.CytosineOrb;
 import hydrahatrack.clintock.powers.InterruptedPower;
 import hydrahatrack.clintock.powers.SugarPower;
@@ -35,7 +35,7 @@ public class Cytosine extends CustomCard {
     @Override
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
         if (p.hasPower(InterruptedPower.POWER_ID)) {
-            this.cantUseMessage = ClintockMod.CANNOT_BIND;
+            this.cantUseMessage = ClintockMod.CANNOT_LINK;
             return false;
         } else if (!p.hasPower(SugarPower.POWER_ID)) {
             this.cantUseMessage = ClintockMod.NEEDS_MORE_SUGAR;
@@ -49,7 +49,7 @@ public class Cytosine extends CustomCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new BindAction(new CytosineOrb()));
+        AbstractDungeon.actionManager.addToBottom(new LinkAction(new CytosineOrb()));
         AbstractDungeon.actionManager.addToBottom(
                 new ReducePowerAction(p, p, SugarPower.POWER_ID, 1));
         AbstractDungeon.actionManager.addToBottom(

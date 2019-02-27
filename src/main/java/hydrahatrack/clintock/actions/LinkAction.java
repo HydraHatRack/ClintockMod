@@ -12,10 +12,10 @@ import hydrahatrack.clintock.orbs.NucleobaseOrb;
 import hydrahatrack.clintock.powers.InterruptedPower;
 import hydrahatrack.clintock.powers.PeptideChainPower;
 
-public class BindAction extends AbstractGameAction {
+public class LinkAction extends AbstractGameAction {
     private AbstractOrb orbType;
 
-    public BindAction(AbstractOrb newOrbType) {
+    public LinkAction(AbstractOrb newOrbType) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.orbType = newOrbType;
     }
@@ -56,7 +56,7 @@ public class BindAction extends AbstractGameAction {
                     case "GCC":
                     case "GCA":
                     case "GCG":
-                        power.addAminoAcid(new Alanine()); // DONE
+                        power.bindAminoAcid(new Alanine());
                         break;
                     case "CGT":
                     case "CGC":
@@ -64,42 +64,42 @@ public class BindAction extends AbstractGameAction {
                     case "CGG":
                     case "AGA":
                     case "AGG":
-                        power.addAminoAcid(new Arginine()); // DONE
+                        power.bindAminoAcid(new Arginine());
                         break;
                     case "AAT":
                     case "AAC":
-                        power.addAminoAcid(new Asparagine()); // DONE
+                        power.bindAminoAcid(new Asparagine());
                         break;
                     case "GAT":
                     case "GAC":
-                        power.addAminoAcid(new AsparticAcid());
+                        power.bindAminoAcid(new AsparticAcid());
                         break;
                     case "TGT":
                     case "TGC":
-                        power.addAminoAcid(new Cysteine()); // DONE
+                        power.bindAminoAcid(new Cysteine());
                         break;
                     case "GAA":
                     case "GAG":
-                        power.addAminoAcid(new GlutamicAcid()); // DONE
+                        power.bindAminoAcid(new GlutamicAcid());
                         break;
                     case "CAA":
                     case "CAG":
-                        power.addAminoAcid(new Glutamine()); // DONE
+                        power.bindAminoAcid(new Glutamine());
                         break;
                     case "GGT":
                     case "GGC":
                     case "GGA":
                     case "GGG":
-                        power.addAminoAcid(new Glycine()); // DONE
+                        power.bindAminoAcid(new Glycine());
                         break;
                     case "CAT":
                     case "CAC":
-                        power.addAminoAcid(new Histidine()); // DONE
+                        power.bindAminoAcid(new Histidine());
                         break;
                     case "ATT":
                     case "ATC":
                     case "ATA":
-                        power.addAminoAcid(new Isoleucine()); // DONE
+                        power.bindAminoAcid(new Isoleucine());
                         break;
                     case "CTT":
                     case "CTC":
@@ -107,24 +107,24 @@ public class BindAction extends AbstractGameAction {
                     case "CTG":
                     case "TTA":
                     case "TTG":
-                        power.addAminoAcid(new Leucine()); // DONE
+                        power.bindAminoAcid(new Leucine());
                         break;
                     case "AAA":
                     case "AAG":
-                        power.addAminoAcid(new Lysine()); // DONE
+                        power.bindAminoAcid(new Lysine());
                         break;
                     case "ATG":
-                        power.addAminoAcid(new Methionine()); // DONE
+                        power.bindAminoAcid(new Methionine());
                         break;
                     case "TTT":
                     case "TTC":
-                        power.addAminoAcid(new Phenylalanine()); // DONE
+                        power.bindAminoAcid(new Phenylalanine());
                         break;
                     case "CCT":
                     case "CCC":
                     case "CCA":
                     case "CCG":
-                        power.addAminoAcid(new Proline()); // DONE
+                        power.bindAminoAcid(new Proline());
                         break;
                     case "TCT":
                     case "TCC":
@@ -132,31 +132,31 @@ public class BindAction extends AbstractGameAction {
                     case "TCG":
                     case "AGT":
                     case "AGC":
-                        power.addAminoAcid(new Serine()); // DONE
+                        power.bindAminoAcid(new Serine());
                         break;
                     case "TAA":
                     case "TAG":
                     case "TGA":
-                        power.addAminoAcid(new StopCodon());
+                        power.bindAminoAcid(new StopCodon());
                         break;
                     case "ACT":
                     case "ACC":
                     case "ACA":
                     case "ACG":
-                        power.addAminoAcid(new Threonine()); // DONE
+                        power.bindAminoAcid(new Threonine());
                         break;
                     case "TGG":
-                        power.addAminoAcid(new Tryptophan()); // DONE
+                        power.bindAminoAcid(new Tryptophan());
                         break;
                     case "TAT":
                     case "TAC":
-                        power.addAminoAcid(new Tyrosine()); // DONE
+                        power.bindAminoAcid(new Tyrosine());
                         break;
                     case "GTT":
                     case "GTC":
                     case "GTA":
                     case "GTG":
-                        power.addAminoAcid(new Valine()); // DONE
+                        power.bindAminoAcid(new Valine());
                         break;
                     default:
                         System.out.println("Unexpected nucleotide chain!");

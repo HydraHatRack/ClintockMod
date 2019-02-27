@@ -1,24 +1,25 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hydrahatrack.clintock.actions.HistidineAction;
 
 public class Histidine extends AbstractAminoAcid {
+    public static final String LABEL = "Histidine";
+
     public Histidine() {}
 
     @Override
     public String getLabel() {
-        return " NL Histidine (Remove all Block from a random enemy)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL His: Remove #yBlock -> Enemy";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        AbstractMonster m = AbstractDungeon.getRandomMonster();
-        if (null != m) {
-            return new RemoveAllBlockAction(m, AbstractDungeon.player);
-        }
-        return null;
+        return new HistidineAction();
     }
 }

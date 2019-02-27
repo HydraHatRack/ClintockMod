@@ -2,8 +2,8 @@
   "clintock:AdenineOrb": {
     "NAME": "Adenine",
     "DESCRIPTION": [
-      "Gain #b",
-      " block."
+      "Gains #b",
+      " #yBlock."
     ]
   },
   "clintock:CytosineOrb": {
@@ -16,7 +16,7 @@
   "clintock:GuanineOrb": {
     "NAME": "Guanine",
     "DESCRIPTION": [
-      "Next turn, gain [R] . NL Unaffected by Fluorophores."
+      "Next turn, gains [R] . NL Unaffected by Fluorophores."
     ]
   },
   "clintock:ThymineOrb": {

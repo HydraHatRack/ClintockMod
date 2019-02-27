@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.actions.BindAction;
+import hydrahatrack.clintock.actions.LinkAction;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.orbs.ThymineOrb;
 import hydrahatrack.clintock.powers.InterruptedPower;
@@ -39,9 +39,9 @@ public class Thymidine extends CustomCard {
     @Override
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
         if (p.hasPower(InterruptedPower.POWER_ID)) {
-            this.cantUseMessage = ClintockMod.CANNOT_BIND;
+            this.cantUseMessage = ClintockMod.CANNOT_LINK;
             return false;
-        } else if (p.hasPower(PhosphatePower.POWER_ID)) {
+        } else if (!p.hasPower(PhosphatePower.POWER_ID)) {
             this.cantUseMessage = ClintockMod.NEEDS_MORE_PHOSPHATE;
             return false;
         }
@@ -54,7 +54,7 @@ public class Thymidine extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.0F));
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
                 p, this.multiDamage, this.damageType, AbstractGameAction.AttackEffect.NONE, false));
-        AbstractDungeon.actionManager.addToBottom(new BindAction(new ThymineOrb()));
+        AbstractDungeon.actionManager.addToBottom(new LinkAction(new ThymineOrb()));
         AbstractDungeon.actionManager.addToBottom(
                 new ReducePowerAction(p, p, PhosphatePower.POWER_ID, 1));
     }

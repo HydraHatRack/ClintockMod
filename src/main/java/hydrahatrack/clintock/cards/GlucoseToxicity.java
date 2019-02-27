@@ -23,7 +23,7 @@ public class GlucoseToxicity extends CustomCard {
     private static final int UPGRADED_COST = 1;
 
     public GlucoseToxicity() {
-        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
+        super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
     }
 

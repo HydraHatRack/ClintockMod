@@ -5,8 +5,8 @@
   },
   "clintock:Adenine": {
     "NAME": "Adenine",
-    "DESCRIPTION": "Ethereal. NL Bind 1 Adenine. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Bind 1 Adenine. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Link 1 Adenine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Link 1 Adenine. NL Exhaust."
   },
   "clintock:Alkylation": {
     "NAME": "Alkylation",
@@ -22,9 +22,17 @@
     "NAME": "Base Synthesis",
     "DESCRIPTION": "Add a random Nucleobase to your hand."
   },
+  "clintock:Bateson9000": {
+    "NAME": "Bateson 9000",
+    "DESCRIPTION": "Sequencer. NL Whenever you Bind an Amino-Acid, gain !M! Block."
+  },
+  "clintock:BiolelePrime": {
+    "NAME": "Biolele Prime",
+    "DESCRIPTION": "Sequencer. NL Whenever you Bind an Amino-Acid, add another copy."
+  },
   "clintock:BoloPunch": {
     "NAME": "Bolo Punch",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Add a random Amino-Acid to your Peptide-Chain."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Bind a random Amino-Acid."
   },
   "clintock:BruteForce": {
     "NAME": "Brute Force",
@@ -48,42 +56,66 @@
   },
   "clintock:CompostBin": {
     "NAME": "Compost Bin",
-    "DESCRIPTION": "Exhaust a card. NL Gain Phosphate equal to twice its cost.",
-    "UPGRADE_DESCRIPTION": "Exhaust a card. NL Gain Phosphate equal to three times its cost."
+    "DESCRIPTION": "Exhaust a card. NL Gain Phosphates equal to twice its cost.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. NL Gain Phosphates equal to three times its cost."
   },
   "clintock:Contamination": {
     "NAME": "Contamination",
     "DESCRIPTION": "Your Pyrimidines apply Poison instead of dealing damage.",
-    "UPGRADE_DESCRIPTION": "Innate. Your Pyrimidines apply Poison instead of dealing damage."
+    "UPGRADE_DESCRIPTION": "Innate. NL Your Pyrimidines apply Poison instead of dealing damage."
   },
   "clintock:Cytosine": {
     "NAME": "Cytosine",
-    "DESCRIPTION": "Ethereal. NL Bind 1 Cytosine. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Bind 1 Cytosine. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Link 1 Cytosine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Link 1 Cytosine. NL Exhaust."
+  },
+  "clintock:DAMP": {
+    "NAME": "dAMP",
+    "DESCRIPTION": "Nucleotide. NL Gain !B! Block. NL Link 1 Adenine."
+  },
+  "clintock:DCMP": {
+    "NAME": "dCMP",
+    "DESCRIPTION": "Nucleotide. NL Deal !D! damage. NL Link 1 Cytosine."
+  },
+  "clintock:DealersLuck": {
+    "NAME": "Dealer's Luck",
+    "DESCRIPTION": "Transposon. NL Draw !M! cards. NL Exhaust."
   },
   "clintock:DegradedPrimer": {
     "NAME": "Degraded Primer",
-    "DESCRIPTION": "Deal !D! damage. NL For each Bound Nucleobase, apply !M! Poison."
+    "DESCRIPTION": "Deal !D! damage. NL For each Linked Base, apply !M! Poison."
+  },
+  "clintock:Deletion": {
+    "NAME": "Deletion",
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, remove a Linked Base."
   },
   "clintock:Deoxyadenosine": {
     "NAME": "Deoxyadenosine",
-    "DESCRIPTION": "Nucleoside. NL Gain !B! Block. NL Bind 1 Adenine."
+    "DESCRIPTION": "Nucleoside. NL Gain !B! Block. NL Link 1 Adenine."
   },
   "clintock:Deoxycytidine": {
     "NAME": "Deoxycytidine",
-    "DESCRIPTION": "Nucleoside. NL Deal !D! damage. NL Bind 1 Cytosine."
+    "DESCRIPTION": "Nucleoside. NL Deal !D! damage. NL Link 1 Cytosine."
   },
   "clintock:Deoxyguanosine": {
     "NAME": "Deoxyguanosine",
-    "DESCRIPTION": "Nucleoside. NL Next turn, gain !M! Energy. NL Bind 1 Guanine."
+    "DESCRIPTION": "Nucleoside. NL Next turn, gain !M! Energy. NL Link 1 Guanine."
+  },
+  "clintock:DGMP": {
+    "NAME": "dGMP",
+    "DESCRIPTION": "Nucleotide. NL Next turn, NL gain !M! Energy. NL Link 1 Guanine."
   },
   "clintock:DnaMicroarray": {
     "NAME": "DNA Microarray",
     "DESCRIPTION": "Add all four Nucleobases to your hand. Exhaust."
   },
+  "clintock:DTMP": {
+    "NAME": "dTMP",
+    "DESCRIPTION": "Nucleotide. NL Deal !D! damage to ALL enemies. NL Link 1 Thymine."
+  },
   "clintock:Efflux": {
     "NAME": "Efflux",
-    "DESCRIPTION": "Gain !B! Block. NL If you Bound a Nucleobase this turn, draw 1 card."
+    "DESCRIPTION": "Gain !B! Block. NL If you Linked a Base this turn, draw 1 card."
   },
   "clintock:EnergyDrink": {
     "NAME": "Energy Drink",
@@ -93,6 +125,10 @@
     "NAME": "Energy Metabolism",
     "DESCRIPTION": "Lose X HP. NL Gain X Energy. NL Draw X cards. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Lose X HP. NL Gain X Energy. NL Draw X cards."
+  },
+  "clintock:Epidemic": {
+    "NAME": "Epidemic",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. If any die, play this again."
   },
   "clintock:Eureka": {
     "NAME": "Eureka!",
@@ -109,12 +145,16 @@
   },
   "clintock:GeneAmplification": {
     "NAME": "Gene Amplification",
-    "DESCRIPTION": "Double your Peptide-Chain. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple your Peptide-Chain. Exhaust."
+    "DESCRIPTION": "Double your Polypeptide. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple your Polypeptide. Exhaust."
   },
   "clintock:GeneticPollution": {
     "NAME": "Genetic Pollution",
     "DESCRIPTION": "Deal !D! damage. NL If you've generated a Nonessential Amino-Acid, apply !M! Poison."
+  },
+  "clintock:GeneticsLab": {
+    "NAME": "Genetics Lab",
+    "DESCRIPTION": "Add a random Sequencer to your hand. It costs !M! less. Exhaust."
   },
   "clintock:GlucoseToxicity": {
     "NAME": "Glucose Toxicity",
@@ -122,12 +162,17 @@
   },
   "clintock:Guanine": {
     "NAME": "Guanine",
-    "DESCRIPTION": "Ethereal. NL Bind 1 Guanine. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Bind 1 Guanine. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Link 1 Guanine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Link 1 Guanine. NL Exhaust."
   },
   "clintock:Immunodeficiency": {
     "NAME": "Immunodeficiency",
     "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. Exhaust."
+  },
+  "clintock:ImpulsiveShot": {
+    "NAME": "Impulsive Shot",
+    "DESCRIPTION": "Deal !D! damage. Exhaust !M! random cards from your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Exhaust !M! random card from your hand."
   },
   "clintock:Interrupt": {
     "NAME": "Interrupt",
@@ -135,44 +180,73 @@
   },
   "clintock:Intron": {
     "NAME": "Intron",
-    "DESCRIPTION": "Unplayable. Nucleobases cannot Bind this turn."
+    "DESCRIPTION": "Unplayable. Bases cannot Link this turn."
+  },
+  "clintock:Irradiate": {
+    "NAME": "Irradiate",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Shuffle a Deletion into your draw pile."
+  },
+  "clintock:Jab": {
+    "NAME": "Jab",
+    "DESCRIPTION": "Transposon. NL Deal !D! damage. NL Exhaust."
   },
   "clintock:Ketosis": {
     "NAME": "Ketosis",
-    "DESCRIPTION": "Lose !M! HP. NL For each Bound Guanine or Thymine, deal !D! damage."
+    "DESCRIPTION": "Lose !M! HP. NL For each Linked Guanine or Thymine, deal !D! damage."
   },
   "clintock:Knockout": {
     "NAME": "Knockout",
-    "DESCRIPTION": "Unplayable. Nucleobases cannot evoke this turn."
+    "DESCRIPTION": "Unplayable. Bases cannot evoke this turn."
+  },
+  "clintock:LifeSager": {
+    "NAME": "LifeSager",
+    "DESCRIPTION": "Sequencer. NL Random enemy effects from your Polypeptide now target ALL enemies."
   },
   "clintock:MendelPro": {
     "NAME": "MendelPRO",
-    "DESCRIPTION": "Sequencer. Whenever you Bind a Nucleobase, draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Sequencer. NL Whenever you Bind a Nucleobase, draw !M! cards."
+    "DESCRIPTION": "Sequencer. Whenever you Link a Base, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Sequencer. NL Whenever you Link a Base, draw !M! cards."
   },
   "clintock:MetabolicPathways": {
     "NAME": "Metabolic Pathways",
     "DESCRIPTION": "Whenever a card is Exhausted, NL gain !M! Block."
   },
+  "clintock:Miasma": {
+    "NAME": "Miasma",
+    "DESCRIPTION": "Transposon. NL Apply !M! Poison. NL Exhaust."
+  },
   "clintock:MineAndDine": {
     "NAME": "Mine and Dine",
-    "DESCRIPTION": "At the start of each turn, gain !M! Sugar and !M! Phosphate."
+    "DESCRIPTION": "At the start of each turn, gain 1 Sugar and 1 Phosphate."
+  },
+  "clintock:Mitosis": {
+    "NAME": "Mitosis",
+    "DESCRIPTION": "Deal damage equal to half an enemy's remaining health. Cannot target elite or boss enemies."
   },
   "clintock:Nanopore": {
     "NAME": "Nanopore",
     "DESCRIPTION": "At the start of each turn, add a random Nucleobase to your hand."
   },
+  "clintock:NextGenBoost": {
+    "NAME": "Next-Gen Boost",
+    "DESCRIPTION": "Ethereal. Whenever an upgradable card is Exhausted, put an Upgraded copy in your discard pile. Does not affect Transposons.",
+    "UPGRADE_DESCRIPTION": "Whenever an upgradable card is Exhausted, put an Upgraded copy in your discard pile. Does not affect Transposons."
+  },
+  "clintock:Obstruct": {
+    "NAME": "Obstruct",
+    "DESCRIPTION": "Transposon. NL Gain !B! Block. NL Exhaust."
+  },
   "clintock:Outbreak": {
     "NAME": "Outbreak",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies (and apply !M! Vulnerable if you've generated a Nonessential Amino-Acid)."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies (and apply !M! Vulnerable if you've Bound a Nonessential Amino-Acid)."
   },
   "clintock:Polymerize": {
     "NAME": "Polymerize",
-    "DESCRIPTION": "Gain !B! Block. NL If you Bound a Nucleobase this turn, gain !B! Block again."
+    "DESCRIPTION": "Gain !B! Block. NL If you Linked a Base this turn, gain !B! Block again."
   },
   "clintock:ProteinUtilization": {
     "NAME": "Protein Utilization",
-    "DESCRIPTION": "Deal !D! damage. NL If you've generated an Essential Amino-Acid, target ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL If you've Bound an Essential Amino-Acid, target ALL enemies."
   },
   "clintock:PurineMetabolism": {
     "NAME": "Purine Metabolism",
@@ -203,11 +277,23 @@
   },
   "clintock:SinsheimerT3": {
     "NAME": "SinsheimerT3",
-    "DESCRIPTION": "Sequencer. NL Whenever you Bind a Nucleobase, gain !M! Energy."
+    "DESCRIPTION": "Sequencer. NL Whenever you Link a Base, gain !M! Energy."
+  },
+  "clintock:Splinter": {
+    "NAME": "Splinter",
+    "DESCRIPTION": "Transposon. NL Deal !D! damage to ALL enemies. NL Exhaust."
+  },
+  "clintock:Sting": {
+    "NAME": "Sting",
+    "DESCRIPTION": "Transposon. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
   },
   "clintock:SuperSeqX1": {
     "NAME": "SuperSeq X1",
-    "DESCRIPTION": "Sequencer. NL At the start of each turn, apply a random Amino-Acid."
+    "DESCRIPTION": "Sequencer. NL At the start of each turn, Bind a random Amino-Acid."
+  },
+  "clintock:SuspendAnimation": {
+    "NAME": "Suspend Animation",
+    "DESCRIPTION": "Transposon. NL Next turn, gain !M! Energy. NL Exhaust."
   },
   "clintock:TelomereErosion": {
     "NAME": "Telomere Erosion",
@@ -219,15 +305,15 @@
   },
   "clintock:Thymine": {
     "NAME": "Thymine",
-    "DESCRIPTION": "Ethereal. NL Bind 1 Thymine. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Bind 1 Thymine. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Link 1 Thymine. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Link 1 Thymine. NL Exhaust."
   },
   "clintock:Thymidine": {
     "NAME": "Thymidine",
-    "DESCRIPTION": "Nucleoside. NL Deal !D! damage to ALL enemies. NL Bind 1 Thymine."
+    "DESCRIPTION": "Nucleoside. NL Deal !D! damage to ALL enemies. NL Link 1 Thymine."
   },
   "clintock:VectorFlow": {
     "NAME": "Vector Flow",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [R] for each Nucleobase Bound this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [R] for each Base Linked this turn."
   }
 }

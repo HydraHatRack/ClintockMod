@@ -1,11 +1,10 @@
 package hydrahatrack.clintock.aminoacids;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.BlurPower;
+import hydrahatrack.clintock.actions.AsparticAcidAction;
 
 public class AsparticAcid extends AbstractAminoAcid {
+    public static final String LABEL = "Aspartic Acid";
     private static final int BLUR_AMOUNT = 1;
 
     public AsparticAcid() {
@@ -14,13 +13,16 @@ public class AsparticAcid extends AbstractAminoAcid {
 
     @Override
     public String getLabel() {
-        return " NL Aspartic Acid (Block is not removed at the start of your next turn)";
+        return LABEL;
+    }
+
+    @Override
+    public String getDescription() {
+        return " NL Asp: Persist #yBlock -> Self";
     }
 
     @Override
     public AbstractGameAction getAction() {
-        return new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new BlurPower(AbstractDungeon.player, this.baseNumber),
-                this.baseNumber, true, AbstractGameAction.AttackEffect.NONE);
+        return new AsparticAcidAction(this.baseNumber);
     }
 }

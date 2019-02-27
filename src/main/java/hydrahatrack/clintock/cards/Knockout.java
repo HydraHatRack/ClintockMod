@@ -31,6 +31,7 @@ public class Knockout extends CustomCard {
                 new KnockedOutPower(AbstractDungeon.player)));
     }
 
+    @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         if (p.hasRelic(MedicalKit.ID)) {
             useMedicalKit(p);
