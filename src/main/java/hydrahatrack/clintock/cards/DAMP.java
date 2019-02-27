@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.actions.FuseAction;
+import hydrahatrack.clintock.actions.LinkAction;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.orbs.AdenineOrb;
 import hydrahatrack.clintock.powers.InterruptedPower;
@@ -32,7 +32,7 @@ public class DAMP extends CustomCard {
     @Override
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
         if (p.hasPower(InterruptedPower.POWER_ID)) {
-            this.cantUseMessage = ClintockMod.CANNOT_FUSE;
+            this.cantUseMessage = ClintockMod.CANNOT_LINK;
             return false;
         }
         return true;
@@ -41,7 +41,7 @@ public class DAMP extends CustomCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new FuseAction(new AdenineOrb()));
+        AbstractDungeon.actionManager.addToBottom(new LinkAction(new AdenineOrb()));
     }
 
     @Override

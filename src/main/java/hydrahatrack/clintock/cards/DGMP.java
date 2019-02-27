@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.actions.FuseAction;
+import hydrahatrack.clintock.actions.LinkAction;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.orbs.GuanineOrb;
 import hydrahatrack.clintock.powers.InterruptedPower;
@@ -33,7 +33,7 @@ public class DGMP extends CustomCard {
     @Override
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
         if (p.hasPower(InterruptedPower.POWER_ID)) {
-            this.cantUseMessage = ClintockMod.CANNOT_FUSE;
+            this.cantUseMessage = ClintockMod.CANNOT_LINK;
             return false;
         }
         return true;
@@ -43,7 +43,7 @@ public class DGMP extends CustomCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new FuseAction(new GuanineOrb()));
+        AbstractDungeon.actionManager.addToBottom(new LinkAction(new GuanineOrb()));
     }
 
     @Override

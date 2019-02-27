@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.actions.FuseAction;
+import hydrahatrack.clintock.actions.LinkAction;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.orbs.ThymineOrb;
 import hydrahatrack.clintock.powers.InterruptedPower;
@@ -37,7 +37,7 @@ public class DTMP extends CustomCard {
     @Override
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
         if (p.hasPower(InterruptedPower.POWER_ID)) {
-            this.cantUseMessage = ClintockMod.CANNOT_FUSE;
+            this.cantUseMessage = ClintockMod.CANNOT_LINK;
             return false;
         }
         return true;
@@ -49,7 +49,7 @@ public class DTMP extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.0F));
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
                 p, this.multiDamage, this.damageType, AbstractGameAction.AttackEffect.NONE, false));
-        AbstractDungeon.actionManager.addToBottom(new FuseAction(new ThymineOrb()));
+        AbstractDungeon.actionManager.addToBottom(new LinkAction(new ThymineOrb()));
     }
 
     @Override

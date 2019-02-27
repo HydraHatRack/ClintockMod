@@ -49,7 +49,7 @@ public class ClintockMod implements
     private static final String DESCRIPTION = "Adds a new playable character, The Clintock.";
 
     // In-game messages
-    public static final String CANNOT_FUSE = "I cannot #rFuse right now!";
+    public static final String CANNOT_LINK = "I cannot #rLink right now!";
     public static final String CANNOT_TARGET_ENEMY = "I cannot target that enemy!";
     public static final String NEEDS_MORE_SUGAR = "I need more #rSugar!";
     public static final String NEEDS_MORE_PHOSPHATE = "I need more #rPhosphate!";
@@ -140,6 +140,7 @@ public class ClintockMod implements
         BaseMod.addCard(new DCMP());
         BaseMod.addCard(new DealersLuck());
         BaseMod.addCard(new DegradedPrimer());
+        BaseMod.addCard(new Deletion());
         BaseMod.addCard(new Deoxyadenosine());
         BaseMod.addCard(new Deoxycytidine());
         BaseMod.addCard(new Deoxyguanosine());
@@ -162,6 +163,7 @@ public class ClintockMod implements
         BaseMod.addCard(new ImpulsiveShot());
         BaseMod.addCard(new Interrupt());
         BaseMod.addCard(new Intron());
+        BaseMod.addCard(new Irradiate());
         BaseMod.addCard(new Jab());
         BaseMod.addCard(new Ketosis());
         BaseMod.addCard(new Knockout());

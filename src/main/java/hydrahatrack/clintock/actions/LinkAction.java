@@ -12,10 +12,10 @@ import hydrahatrack.clintock.orbs.NucleobaseOrb;
 import hydrahatrack.clintock.powers.InterruptedPower;
 import hydrahatrack.clintock.powers.PeptideChainPower;
 
-public class FuseAction extends AbstractGameAction {
+public class LinkAction extends AbstractGameAction {
     private AbstractOrb orbType;
 
-    public FuseAction(AbstractOrb newOrbType) {
+    public LinkAction(AbstractOrb newOrbType) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.orbType = newOrbType;
     }

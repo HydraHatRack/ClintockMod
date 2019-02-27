@@ -85,6 +85,10 @@
     "NAME": "Degraded Primer",
     "DESCRIPTION": "Deal !D! damage. NL For each Linked Base, apply !M! Poison."
   },
+  "clintock:Deletion": {
+    "NAME": "Deletion",
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, remove a Linked Base."
+  },
   "clintock:Deoxyadenosine": {
     "NAME": "Deoxyadenosine",
     "DESCRIPTION": "Nucleoside. NL Gain !B! Block. NL Link 1 Adenine."
@@ -177,6 +181,10 @@
   "clintock:Intron": {
     "NAME": "Intron",
     "DESCRIPTION": "Unplayable. Bases cannot Link this turn."
+  },
+  "clintock:Irradiate": {
+    "NAME": "Irradiate",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Shuffle a Deletion into your draw pile."
   },
   "clintock:Jab": {
     "NAME": "Jab",
@@ -277,7 +285,7 @@
   },
   "clintock:Sting": {
     "NAME": "Sting",
-    "DESCRIPTION": "Transposon. NL Deal !D! damage and apply !M! Vulnerable. NL Exhaust."
+    "DESCRIPTION": "Transposon. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
   },
   "clintock:SuperSeqX1": {
     "NAME": "SuperSeq X1",

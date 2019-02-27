@@ -41,6 +41,13 @@
     ],
     "DESCRIPTION": "Red #yBase: Deals damage to a random enemy."
   },
+  "clintock:DeletionKeyword": {
+    "NAMES": [
+      "deletion",
+      "deletions"
+    ],
+    "DESCRIPTION": "Unplayable status card that removes a #Linked #Base at the end of the turn."
+  },
   "clintock:EssentialKeyword": {
     "NAMES": [
       "essential"

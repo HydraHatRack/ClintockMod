@@ -21,7 +21,6 @@ import hydrahatrack.clintock.cards.*;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.enums.TheClintockEnum;
 import hydrahatrack.clintock.relics.BiomoleculePool;
-import hydrahatrack.clintock.relics.NTerminusArginine;
 
 import java.util.ArrayList;
 
@@ -115,6 +114,7 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(Immunodeficiency.ID);
         startingDeck.add(ImpulsiveShot.ID);
 //        startingDeck.add(Interrupt.ID);
+        startingDeck.add(Irradiate.ID);
 //        startingDeck.add(Jab.ID);
 //        startingDeck.add(Ketosis.ID);
 //        startingDeck.add(LifeSager.ID);
@@ -136,7 +136,7 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(SampleSwap.ID);
 //        startingDeck.add(SinsheimerT3.ID);
 //        startingDeck.add(Splinter.ID);
-//        startingDeck.add(Sting.ID);
+       startingDeck.add(Sting.ID);
 //        startingDeck.add(SuperSeqX1.ID);
 //        startingDeck.add(SuspendAnimation.ID);
 //        startingDeck.add(TelomereErosion.ID);
