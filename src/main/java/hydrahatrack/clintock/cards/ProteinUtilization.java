@@ -28,7 +28,7 @@ public class ProteinUtilization extends CustomCard {
 
     public ProteinUtilization() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
+                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
 
         this.baseDamage = this.damage = ATTACK_DMG;
         this.isMultiDamage = true;
