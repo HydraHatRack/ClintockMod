@@ -20,8 +20,8 @@ public class DegradedPrimer extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 1;
-    private static final int ATTACK_DMG = 6;
+    private static final int COST = 2;
+    private static final int ATTACK_DMG = 8;
     private static final int POISON_AMOUNT = 2;
     private static final int UPGRADE_PLUS_ATTACK_DMG = 3;
     private static final int UPGRADE_PLUS_POISON_AMOUNT = 1;

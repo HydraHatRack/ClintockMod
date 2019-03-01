@@ -18,7 +18,7 @@ public class Acupuncture extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 0;
+    private static final int ATTACK_DMG = 1;
     private static final int ATTACK_COUNT = 7;
     private static final int UPGRADE_PLUS_ATTACK_COUNT = 3;
 
