@@ -2,29 +2,26 @@ package hydrahatrack.clintock.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.aminoacids.Arginine;
 import hydrahatrack.clintock.powers.PeptideChainPower;
 
-public class NTerminusArginine extends CustomRelic {
-    public static final String ID = "clintock:NTerminusArginine";
+public class MG53 extends CustomRelic {
+    public static final String ID = "clintock:MG53";
     private static final Texture IMG = ImageMaster.loadImage(ClintockMod.getRelicImagePath(ID));
     private static final Texture OUTLINE = ImageMaster.loadImage(ClintockMod.getRelicOutlineImagePath(ID));
 
-    public NTerminusArginine() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+    public MG53() {
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
     }
 
     @Override
-    public void atBattleStart() {
+    public void onVictory() {
+        PeptideChainPower p = (PeptideChainPower) AbstractDungeon.player.getPower(PeptideChainPower.POWER_ID);
+        if (null != p && p.)
         flash();
-        PeptideChainPower power = new PeptideChainPower(AbstractDungeon.player);
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, power));
-        power.bindAminoAcid(new Arginine());
+        AbstractDungeon.actionManager.addToBottom(new MG53Action());
     }
 
     @Override

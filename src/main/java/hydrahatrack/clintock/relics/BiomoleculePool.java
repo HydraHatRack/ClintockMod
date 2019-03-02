@@ -20,6 +20,7 @@ public class BiomoleculePool extends CustomRelic {
 
     @Override
     public void atBattleStart() {
+        flash();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 AbstractDungeon.player,
                 AbstractDungeon.player,

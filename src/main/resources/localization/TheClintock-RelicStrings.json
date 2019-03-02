@@ -6,6 +6,13 @@
       "At the start of battle, gain 3 #ySugars and 3 #yPhosphates."
     ]
   },
+  "clintock:MG53": {
+    "NAME": "MG53",
+    "FLAVOR": "\"I was taught that the way of progress was neither swift nor easy.\" NL #yMarie #yCurie",
+    "DESCRIPTIONS": [
+      "At the end of battle, heal 1 HP for each #yAmino acid in your #yPolypeptide chain."
+    ]
+  },
   "clintock:NTerminusArginine": {
     "NAME": "N-terminus Arginine",
     "FLAVOR": "\"If you know you are on the right track, if you have this inner knowledge, then nobody can turn you off... no matter what they say.\" NL #yBarbara #yMcClintock",
