@@ -5,7 +5,7 @@ import hydrahatrack.clintock.actions.MethionineAction;
 
 public class Methionine extends AbstractAminoAcid {
     public static final String LABEL = "Methionine";
-    private static final int HEALTH_AMOUNT = 1;
+    private static final int HEALTH_AMOUNT = 2;
 
     public Methionine() {
         this.baseNumber = HEALTH_AMOUNT;

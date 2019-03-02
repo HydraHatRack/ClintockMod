@@ -41,7 +41,7 @@ public class GeneticPollution extends CustomCard {
                             AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 
         PeptideChainPower power = (PeptideChainPower) p.getPower(PeptideChainPower.POWER_ID);
-        if (null != power && power.containsAtLeastOneNonessentialAminoAcid()) {
+        if (null != power && !power.isEmpty()) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(
                     m, p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         }

@@ -37,18 +37,20 @@ public class RandomForest extends CustomCard {
             this.energyOnUse = EnergyPanel.totalCount;
         }
 
-        int randomValue = new Random().nextInt(3);
-        if (this.upgraded || 0 == randomValue) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(p, p, new StrengthPower(p, this.energyOnUse), this.energyOnUse));
-        }
-        if (this.upgraded || 1 == randomValue) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(p, p, new DexterityPower(p, this.energyOnUse), this.energyOnUse));
-        }
-        if (this.upgraded || 2 == randomValue) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(p, p, new FluorophorePower(p, this.energyOnUse), this.energyOnUse));
+        if (this.energyOnUse > 0) {
+            int randomValue = new Random().nextInt(3);
+            if (this.upgraded || 0 == randomValue) {
+                AbstractDungeon.actionManager.addToBottom(
+                        new ApplyPowerAction(p, p, new StrengthPower(p, this.energyOnUse), this.energyOnUse));
+            }
+            if (this.upgraded || 1 == randomValue) {
+                AbstractDungeon.actionManager.addToBottom(
+                        new ApplyPowerAction(p, p, new DexterityPower(p, this.energyOnUse), this.energyOnUse));
+            }
+            if (this.upgraded || 2 == randomValue) {
+                AbstractDungeon.actionManager.addToBottom(
+                        new ApplyPowerAction(p, p, new FluorophorePower(p, this.energyOnUse), this.energyOnUse));
+            }
         }
 
         if (!this.freeToPlayOnce) {

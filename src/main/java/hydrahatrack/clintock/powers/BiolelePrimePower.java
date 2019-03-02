@@ -30,6 +30,5 @@ public class BiolelePrimePower extends AbstractPower {
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];
-        this.type = AbstractPower.PowerType.BUFF;
     }
 }

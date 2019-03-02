@@ -37,7 +37,7 @@ public class ProteinUtilization extends CustomCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         PeptideChainPower power = (PeptideChainPower) p.getPower(PeptideChainPower.POWER_ID);
-        if (null != power && power.containsAtLeastOneEssentialAminoAcid()) {
+        if (null != power && !power.isEmpty()) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.0F));
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(

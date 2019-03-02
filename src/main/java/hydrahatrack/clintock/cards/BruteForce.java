@@ -23,7 +23,7 @@ public class BruteForce extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int WEAK_AMOUNT = 1;
+    private static final int WEAK_AMOUNT = 2;
     private static final int UPGRADE_PLUS_WEAK_AMOUNT = 1;
 
     public BruteForce() {

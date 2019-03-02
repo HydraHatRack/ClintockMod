@@ -10,8 +10,8 @@
   },
   "clintock:Alkylation": {
     "NAME": "Alkylation",
-    "DESCRIPTION": "Evoke each Pyrimidine X times.",
-    "UPGRADE_DESCRIPTION": "Evoke each Pyrimidine orb X+1 times."
+    "DESCRIPTION": "Evoke each Linked Pyrimidine X times.",
+    "UPGRADE_DESCRIPTION": "Evoke each Linked Pyrimidine X+1 times."
   },
   "clintock:ATPReserves": {
     "NAME": "ATP Reserves",
@@ -24,15 +24,15 @@
   },
   "clintock:Bateson9000": {
     "NAME": "Bateson 9000",
-    "DESCRIPTION": "Sequencer. NL Whenever you Bind an Amino-Acid, gain !M! Block."
+    "DESCRIPTION": "Sequencer. NL Whenever you Bind an Amino acid, gain !M! Block."
   },
   "clintock:BiolelePrime": {
     "NAME": "Biolele Prime",
-    "DESCRIPTION": "Sequencer. NL Whenever you Bind an Amino-Acid, add another copy."
+    "DESCRIPTION": "Sequencer. NL Whenever you Bind an Amino acid, add another copy."
   },
   "clintock:BoloPunch": {
     "NAME": "Bolo Punch",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Bind a random Amino-Acid."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Bind a random Amino acid."
   },
   "clintock:BruteForce": {
     "NAME": "Brute Force",
@@ -150,7 +150,7 @@
   },
   "clintock:GeneticPollution": {
     "NAME": "Genetic Pollution",
-    "DESCRIPTION": "Deal !D! damage. NL If you've generated a Nonessential Amino-Acid, apply !M! Poison."
+    "DESCRIPTION": "Deal !D! damage. NL If you've Bound an Amino acid, apply !M! Poison."
   },
   "clintock:GeneticsLab": {
     "NAME": "Genetics Lab",
@@ -176,7 +176,7 @@
   },
   "clintock:Interrupt": {
     "NAME": "Interrupt",
-    "DESCRIPTION": "Deal !D! damage. NL Shuffle an Intron into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Shuffle an Intron into your draw pile."
   },
   "clintock:Intron": {
     "NAME": "Intron",
@@ -217,7 +217,8 @@
   },
   "clintock:MineAndDine": {
     "NAME": "Mine and Dine",
-    "DESCRIPTION": "At the start of each turn, gain 1 Sugar and 1 Phosphate."
+    "DESCRIPTION": "At the start of each turn, gain !M! Sugar NL and !M! Phosphate.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, gain !M! Sugars NL and !M! Phosphates."
   },
   "clintock:Mitosis": {
     "NAME": "Mitosis",
@@ -229,8 +230,8 @@
   },
   "clintock:NextGenBoost": {
     "NAME": "Next-Gen Boost",
-    "DESCRIPTION": "Ethereal. Whenever an upgradable card is Exhausted, put an Upgraded copy in your discard pile. Does not affect Transposons.",
-    "UPGRADE_DESCRIPTION": "Whenever an upgradable card is Exhausted, put an Upgraded copy in your discard pile. Does not affect Transposons."
+    "DESCRIPTION": "Ethereal. Whenever an upgradable card is Exhausted, shuffle an Upgraded copy into your draw pile. Does not affect Transposons.",
+    "UPGRADE_DESCRIPTION": "Whenever an upgradable card is Exhausted, shuffle an Upgraded copy into your draw pile. Does not affect Transposons."
   },
   "clintock:Obstruct": {
     "NAME": "Obstruct",
@@ -238,7 +239,7 @@
   },
   "clintock:Outbreak": {
     "NAME": "Outbreak",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies (and apply !M! Vulnerable if you've Bound a Nonessential Amino-Acid)."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies (and apply !M! Vulnerable if you've Bound an Amino acid)."
   },
   "clintock:Polymerize": {
     "NAME": "Polymerize",
@@ -246,11 +247,11 @@
   },
   "clintock:ProteinUtilization": {
     "NAME": "Protein Utilization",
-    "DESCRIPTION": "Deal !D! damage. NL If you've Bound an Essential Amino-Acid, target ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL If you've Bound an Amino acid, target ALL enemies."
   },
   "clintock:PurineMetabolism": {
     "NAME": "Purine Metabolism",
-    "DESCRIPTION": "Gain !B! Block for each Purine orb."
+    "DESCRIPTION": "Gain !B! Block for each Linked Purine."
   },
   "clintock:RandomForest": {
     "NAME": "Random Forest",
@@ -289,7 +290,7 @@
   },
   "clintock:SuperSeqX1": {
     "NAME": "SuperSeq X1",
-    "DESCRIPTION": "Sequencer. NL At the start of each turn, Bind a random Amino-Acid."
+    "DESCRIPTION": "Sequencer. NL At the start of each turn, Bind a random Amino acid."
   },
   "clintock:SuspendAnimation": {
     "NAME": "Suspend Animation",

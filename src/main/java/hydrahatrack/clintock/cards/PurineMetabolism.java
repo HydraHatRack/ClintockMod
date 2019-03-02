@@ -19,7 +19,7 @@ public class PurineMetabolism extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BLOCK_AMOUNT = 7;
+    private static final int BLOCK_AMOUNT = 8;
     private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 3;
 
     public PurineMetabolism() {

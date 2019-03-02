@@ -16,9 +16,10 @@ public class MineAndDine extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
     private static final int RESOURCE_AMOUNT = 1;
+    private static final int UPGRADE_PLUS_RESOURCE_AMOUNT = 1;
 
     public MineAndDine() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
@@ -37,7 +38,9 @@ public class MineAndDine extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(UPGRADE_PLUS_RESOURCE_AMOUNT);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

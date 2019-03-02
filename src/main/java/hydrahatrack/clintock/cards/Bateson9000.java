@@ -18,8 +18,8 @@ public class Bateson9000 extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 2;
-    private static final int BLOCK_AMOUNT = 9;
-    private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 3;
+    private static final int BLOCK_AMOUNT = 12;
+    private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 4;
 
     public Bateson9000() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,

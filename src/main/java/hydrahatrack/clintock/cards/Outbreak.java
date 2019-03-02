@@ -45,7 +45,7 @@ public class Outbreak extends CustomCard {
                 p, this.multiDamage, this.damageType, AbstractGameAction.AttackEffect.NONE, false));
 
         PeptideChainPower power = (PeptideChainPower) p.getPower(PeptideChainPower.POWER_ID);
-        if (null != power && power.containsAtLeastOneNonessentialAminoAcid()) {
+        if (null != power && !power.isEmpty()) {
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 AbstractDungeon.actionManager.addToBottom(
                         new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false),

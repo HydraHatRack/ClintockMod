@@ -5,7 +5,7 @@ import hydrahatrack.clintock.actions.LeucineAction;
 
 public class Leucine extends AbstractAminoAcid {
     public static final String LABEL = "Leucine";
-    private static final int DAMAGE_AMOUNT = 6;
+    private static final int DAMAGE_AMOUNT = 8;
 
     public Leucine() {
         this.baseNumber = DAMAGE_AMOUNT;

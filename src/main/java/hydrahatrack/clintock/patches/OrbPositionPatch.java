@@ -21,8 +21,7 @@ public class OrbPositionPatch {
             o.tY = ((TheClintock) AbstractDungeon.player).orbPositionsY[slotNumber];
             o.hb.move(o.tX, o.tY);
             return SpireReturn.Return(null);
-        } else {
-            return SpireReturn.Continue();
         }
+        return SpireReturn.Continue();
     }
 }

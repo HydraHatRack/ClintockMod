@@ -136,7 +136,7 @@ public class TheClintock extends CustomPlayer {
 //        startingDeck.add(SampleSwap.ID);
 //        startingDeck.add(SinsheimerT3.ID);
 //        startingDeck.add(Splinter.ID);
-//       startingDeck.add(Sting.ID);
+//        startingDeck.add(Sting.ID);
 //        startingDeck.add(SuperSeqX1.ID);
 //        startingDeck.add(SuspendAnimation.ID);
 //        startingDeck.add(TelomereErosion.ID);
@@ -158,7 +158,7 @@ public class TheClintock extends CustomPlayer {
         return new CharSelectInfo(CLINTOCK_NAME,
                 "A genetic engineer tired of CRISPR getting all the credit in movies. NL " +
                         "Wields the tools of biology to slay the parasites of the spire.",
-                75, 75, 3, 99, 5,
+                80, 80, 3, 99, 5,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
 

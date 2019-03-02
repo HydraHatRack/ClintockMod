@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -277,7 +277,8 @@ public class ClintockMod implements
                 AbstractCard copy = c.makeCopy();
                 copy.upgrade();
                 AbstractDungeon.player.getPower(NextGenBoostPower.POWER_ID).flash();
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(copy, 1));
+                AbstractDungeon.actionManager.addToBottom(
+                        new MakeTempCardInDrawPileAction(copy, 1, true, false));
             }
         }
     }

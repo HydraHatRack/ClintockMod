@@ -18,8 +18,8 @@ public class Obstruct extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BLOCK_AMOUNT = 4;
-    private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 2;
+    private static final int BLOCK_AMOUNT = 5;
+    private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 3;
 
     public Obstruct() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,

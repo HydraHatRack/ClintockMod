@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PenNibPower;
+import com.megacrit.cardcrawl.relics.PenNib;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
@@ -42,9 +44,15 @@ public class Mitosis extends CustomCard {
         if (null != m) {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(
                     new WeightyImpactEffect(m.hb.cX, m.hb.cY, Color.PURPLE)));
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                    m, new DamageInfo(p, (m.currentHealth + 1) / 2, this.damageTypeForTurn),
-                    AbstractGameAction.AttackEffect.NONE));
+            if (p.hasPower(PenNibPower.POWER_ID)) {
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(
+                        m, new DamageInfo(p, m.currentHealth, this.damageTypeForTurn),
+                        AbstractGameAction.AttackEffect.NONE));
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(
+                        m, new DamageInfo(p, (m.currentHealth + 1) / 2, this.damageTypeForTurn),
+                        AbstractGameAction.AttackEffect.NONE));
+            }
         }
     }
 

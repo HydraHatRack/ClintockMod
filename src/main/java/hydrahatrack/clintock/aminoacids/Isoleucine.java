@@ -5,7 +5,7 @@ import hydrahatrack.clintock.actions.IsoleucineAction;
 
 public class Isoleucine extends AbstractAminoAcid {
     public static final String LABEL = "Isoleucine";
-    private static final int THORNS_AMOUNT = 3;
+    private static final int THORNS_AMOUNT = 2;
 
     public Isoleucine() {
         this.baseNumber = THORNS_AMOUNT;

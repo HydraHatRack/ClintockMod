@@ -37,7 +37,6 @@ public class SinsheimerT3Power extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
-        this.type = AbstractPower.PowerType.BUFF;
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
     }
 }

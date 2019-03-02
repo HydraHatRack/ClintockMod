@@ -19,7 +19,7 @@ public class Epidemic extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 6;
+    private static final int ATTACK_DMG = 7;
     private static final int UPGRADE_PLUS_ATTACK_DMG = 3;
 
     public Epidemic() {
@@ -32,10 +32,15 @@ public class Epidemic extends CustomCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
+        int monsterCount = 0;
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (null != monster && !monster.isDying && monster.currentHealth > 0 && !monster.isEscaping) {
+                monsterCount++;
+            }
+        }
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_PIERCING_WAIL"));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
-        AbstractDungeon.actionManager.addToBottom(new EpidemicAction(
-                this.multiDamage, AbstractDungeon.getMonsters().monsters.size()));
+        AbstractDungeon.actionManager.addToBottom(new EpidemicAction(this.multiDamage, monsterCount));
     }
 
     @Override

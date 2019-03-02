@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
@@ -30,22 +31,18 @@ public class EpidemicAction extends AbstractGameAction {
         boolean playedMusic;
         if (this.firstFrame) {
             playedMusic = false;
-            int temp = AbstractDungeon.getCurrRoom().monsters.monsters.size();
-            for (int i = 0; i < temp; i++) {
-                if (null != AbstractDungeon.getCurrRoom().monsters.monsters.get(i) &&
-                        (!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).isDying) &&
-                        ((AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).currentHealth > 0) &&
-                        (!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).isEscaping)) {
+            for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (null != monster && !monster.isDying && monster.currentHealth > 0 && !monster.isEscaping) {
                     if (playedMusic) {
                         AbstractDungeon.effectList.add(new FlashAtkImgEffect(
-                                (AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).hb.cX,
-                                (AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).hb.cY,
+                                monster.hb.cX,
+                                monster.hb.cY,
                                 this.attackEffect, true));
                     } else {
                         playedMusic = true;
                         AbstractDungeon.effectList.add(new FlashAtkImgEffect(
-                                (AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).hb.cX,
-                                (AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).hb.cY, this.attackEffect));
+                                monster.hb.cX,
+                                monster.hb.cY, this.attackEffect));
                     }
                 }
             }
@@ -58,12 +55,12 @@ public class EpidemicAction extends AbstractGameAction {
             }
             int temp = AbstractDungeon.getCurrRoom().monsters.monsters.size();
             for (int i = 0; i < temp; i++) {
-                if (null != AbstractDungeon.getCurrRoom().monsters.monsters.get(i)) {
-                    if (!(AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).isDeadOrEscaped()) {
-                        (AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).damage(
-                                new DamageInfo(AbstractDungeon.player, this.damage[i], this.damageType));
+                AbstractMonster monster = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+                if (null != monster) {
+                    if (!monster.isDeadOrEscaped()) {
+                        monster.damage(new DamageInfo(AbstractDungeon.player, this.damage[i], this.damageType));
                     }
-                    if (!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDying) {
+                    if (!monster.isDying) {
                         numberOfMonstersAlive++;
                     }
                 }

@@ -18,7 +18,7 @@ public class Efflux extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
     private static final int BLOCK_AMOUNT = 9;
-    private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 3;
+    private static final int UPGRADE_PLUS_BLOCK_AMOUNT = 4;
 
     public Efflux() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,

@@ -21,6 +21,6 @@ public class ModifyPowerPatch {
                 }
             }
         }
-        return SpireReturn.Return(null);
+        return SpireReturn.Continue();
     }
 }

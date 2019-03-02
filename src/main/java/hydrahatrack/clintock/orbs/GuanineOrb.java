@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.powers.InterruptedPower;
+import hydrahatrack.clintock.powers.KnockedOutPower;
 
 public class GuanineOrb extends NucleobaseOrb {
     private static final String ORB_ID = "clintock:GuanineOrb";
@@ -39,8 +39,8 @@ public class GuanineOrb extends NucleobaseOrb {
 
     @Override
     public void onStartOfTurn() {
-        if (AbstractDungeon.player.hasPower(InterruptedPower.POWER_ID)) {
-            AbstractDungeon.player.getPower(InterruptedPower.POWER_ID).flash();
+        if (AbstractDungeon.player.hasPower(KnockedOutPower.POWER_ID)) {
+            AbstractDungeon.player.getPower(KnockedOutPower.POWER_ID).flash();
         } else {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(
                     new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), 0.1F));

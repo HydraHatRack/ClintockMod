@@ -1,10 +1,9 @@
 {
-  "clintock:AminoAcidKeyword": {
+  "clintock:AminoKeyword": {
     "NAMES": [
-      "Amino-Acid",
-      "Amino-Acids"
+      "amino"
     ],
-    "DESCRIPTION": "Structural units that make up proteins. Activates at the end of each turn."
+    "DESCRIPTION": "An amino acid is a structural unit of proteins. Activates at the end of each turn."
   },
   "clintock:AdenineKeyword": {
     "NAMES": [
@@ -26,7 +25,7 @@
       "binds",
       "bound"
     ],
-    "DESCRIPTION": "Converts three #yLinked #yBases into an #yAmino-Acid."
+    "DESCRIPTION": "Converts three #yLinked #yBases into an #yAmino acid."
   },
   "clintock:ChromosomeKeyword": {
     "NAMES": [
@@ -52,7 +51,7 @@
     "NAMES": [
       "essential"
     ],
-    "DESCRIPTION": "#yAmino-Acids that must be supplied in diet. See the #bClintock #bWiki for a complete list."
+    "DESCRIPTION": "#yAmino acids that must be supplied in diet. See the #bClintock #bWiki for a complete list."
   },
   "clintock:FluorophoreKeyword": {
     "NAMES": [
@@ -88,13 +87,13 @@
       "linking",
       "links"
     ],
-    "DESCRIPTION": "Puts a #yBase into your first empty slot. If no empty slots exist, #yBinds an #yAmino-Acid to make room."
+    "DESCRIPTION": "Puts a #yBase into your first empty slot. If no empty slots exist, #yBinds an #yAmino acid to make room."
   },
   "clintock:NonessentialKeyword": {
     "NAMES": [
       "nonessential"
     ],
-    "DESCRIPTION": "#yAmino-Acids that can be synthesized in the body. See the #bClintock #bWiki for a complete list."
+    "DESCRIPTION": "#yAmino acids that can be synthesized in the body. See the #bClintock #bWiki for a complete list."
   },
   "clintock:NucleobaseKeyword": {
     "NAMES": [
@@ -128,7 +127,7 @@
     "NAMES": [
       "polypeptide"
     ],
-    "DESCRIPTION": "Group of #yAmino-Acids that activate at the end of each turn."
+    "DESCRIPTION": "Group of #yAmino acids that activate at the end of each turn."
   },
   "clintock:PurineKeyword": {
     "NAMES": [

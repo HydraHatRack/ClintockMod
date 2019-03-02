@@ -5,7 +5,7 @@ import hydrahatrack.clintock.actions.ArginineAction;
 
 public class Arginine extends AbstractAminoAcid {
     public static final String LABEL = "Arginine";
-    private static final int BLOCK_AMOUNT = 6;
+    private static final int BLOCK_AMOUNT = 8;
 
     public Arginine() {
         this.baseNumber = BLOCK_AMOUNT;

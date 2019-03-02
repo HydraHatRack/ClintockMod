@@ -38,12 +38,10 @@ public class PeptideChainPower extends AbstractPower {
                 new TextAboveCreatureAction(AbstractDungeon.player, aminoAcid.getLabel()));
         aminoAcids.add(aminoAcid);
 
-        this.amount = aminoAcids.size();
-        this.updateDescription();
-
         Bateson9000Power bateson9000Power =
                 (Bateson9000Power) AbstractDungeon.player.getPower(Bateson9000Power.POWER_ID);
         if (null != bateson9000Power) {
+            bateson9000Power.flash();
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(
                     AbstractDungeon.player, AbstractDungeon.player, bateson9000Power.amount));
         }
@@ -52,11 +50,15 @@ public class PeptideChainPower extends AbstractPower {
                 (BiolelePrimePower) AbstractDungeon.player.getPower(BiolelePrimePower.POWER_ID);
         if (null != biolelePrimePower) {
             for (int i = 0; i < biolelePrimePower.amount; i++) {
+                biolelePrimePower.flash();
                 AbstractDungeon.actionManager.addToBottom(
                         new TextAboveCreatureAction(AbstractDungeon.player, aminoAcid.getLabel()));
                 aminoAcids.add(aminoAcid);
             }
         }
+
+        this.amount = aminoAcids.size();
+        this.updateDescription();
     }
 
     public void doubleAminoAcidList() {
@@ -73,40 +75,8 @@ public class PeptideChainPower extends AbstractPower {
         this.updateDescription();
     }
 
-    public boolean containsAtLeastOneEssentialAminoAcid() {
-        for (AbstractAminoAcid aminoAcid : aminoAcids) {
-            if (aminoAcid instanceof Histidine ||
-                aminoAcid instanceof Isoleucine ||
-                aminoAcid instanceof Leucine ||
-                aminoAcid instanceof Lysine ||
-                aminoAcid instanceof Methionine ||
-                aminoAcid instanceof Phenylalanine ||
-                aminoAcid instanceof Threonine ||
-                aminoAcid instanceof Tryptophan ||
-                aminoAcid instanceof Valine) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean containsAtLeastOneNonessentialAminoAcid() {
-        for (AbstractAminoAcid aminoAcid : aminoAcids) {
-            if (aminoAcid instanceof Alanine ||
-                aminoAcid instanceof Arginine ||
-                aminoAcid instanceof Asparagine ||
-                aminoAcid instanceof AsparticAcid ||
-                aminoAcid instanceof Cysteine ||
-                aminoAcid instanceof GlutamicAcid ||
-                aminoAcid instanceof Glutamine ||
-                aminoAcid instanceof Glycine ||
-                aminoAcid instanceof Proline ||
-                aminoAcid instanceof Serine ||
-                aminoAcid instanceof Tyrosine) {
-                return true;
-            }
-        }
-        return false;
+    public boolean isEmpty() {
+        return aminoAcids.size() == 0;
     }
 
     @Override

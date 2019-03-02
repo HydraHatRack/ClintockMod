@@ -1,16 +1,16 @@
 {
   "clintock:BiomoleculePool": {
     "NAME": "Biomolecule Pool",
-    "FLAVOR": "Don't let your organs see you drinking this.",
+    "FLAVOR": "\"[Pure research] is worth every penny it costs.\" NL #yHarold #yUrey",
     "DESCRIPTIONS": [
-      "At the start of battle, gain 3 Sugars and 3 Phosphates."
+      "At the start of battle, gain 3 #ySugars and 3 #yPhosphates."
     ]
   },
   "clintock:NTerminusArginine": {
     "NAME": "N-terminus Arginine",
-    "FLAVOR": "Beginnings were made to be ended.",
+    "FLAVOR": "\"If you know you are on the right track, if you have this inner knowledge, then nobody can turn you off... no matter what they say.\" NL #yBarbara #yMcClintock",
     "DESCRIPTIONS": [
-      "At the start of battle, add #yArginine to your #yPolypeptide chain."
+      "At the start of battle, #yBind #yArginine to your #yPolypeptide chain."
     ]
   }
 }
