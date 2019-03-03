@@ -20,7 +20,8 @@
   },
   "clintock:BaseSynthesis": {
     "NAME": "Base Synthesis",
-    "DESCRIPTION": "Add a random Nucleobase to your hand."
+    "DESCRIPTION": "Add a random Nucleobase to your hand.",
+    "UPGRADE_DESCRIPTION": "Select a Nucleobase to add to your hand."
   },
   "clintock:Bateson9000": {
     "NAME": "Bateson 9000",

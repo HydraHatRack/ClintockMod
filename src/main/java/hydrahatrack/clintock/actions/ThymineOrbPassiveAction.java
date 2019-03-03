@@ -26,7 +26,7 @@ public class ThymineOrbPassiveAction extends AbstractGameAction {
     }
 
     public void update() {
-        float speedTime = 0.2F / AbstractDungeon.player.orbs.size();
+        float speedTime = Settings.ACTION_DUR_FAST;
         if (Settings.FAST_MODE) {
             speedTime = 0.0F;
         }

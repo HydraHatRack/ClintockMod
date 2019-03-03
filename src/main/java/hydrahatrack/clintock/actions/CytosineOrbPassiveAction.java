@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect.OrbFlareColor;
-import hydrahatrack.clintock.cards.Contamination;
 import hydrahatrack.clintock.powers.ContaminationPower;
 
 public class CytosineOrbPassiveAction extends AbstractGameAction {
@@ -28,7 +27,7 @@ public class CytosineOrbPassiveAction extends AbstractGameAction {
     public void update() {
         AbstractCreature m = AbstractDungeon.getRandomMonster();
         if (m != null) {
-            float speedTime = 0.2F;
+            float speedTime = Settings.ACTION_DUR_FAST;
             if (Settings.FAST_MODE) {
                 speedTime = 0.0F;
             }
