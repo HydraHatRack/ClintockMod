@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,12 +17,16 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import hydrahatrack.clintock.actions.OverrideWaitAction;
 import hydrahatrack.clintock.cards.*;
 import hydrahatrack.clintock.characters.TheClintock;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.enums.TheClintockEnum;
 import hydrahatrack.clintock.powers.NextGenBoostPower;
+import hydrahatrack.clintock.powers.PeptideChainPower;
 import hydrahatrack.clintock.relics.BiomoleculePool;
+import hydrahatrack.clintock.relics.Isopropanol;
+import hydrahatrack.clintock.relics.MG53;
 import hydrahatrack.clintock.relics.NTerminusArginine;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,6 +34,7 @@ import org.apache.logging.log4j.Logger;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
+import java.util.Random;
 
 @SpireInitializer
 public class ClintockMod implements
@@ -53,9 +59,20 @@ public class ClintockMod implements
     public static final String CANNOT_TARGET_ENEMY = "I cannot target that enemy!";
     public static final String NEEDS_MORE_SUGAR = "I need more #rSugar!";
     public static final String NEEDS_MORE_PHOSPHATE = "I need more #rPhosphate!";
-    public static final String NEEDS_MORE_RESOURCES = "I need more resources!";
     public static final String NEEDS_PEPTIDE_CHAIN = "I don't have a #rPeptide-Chain yet!";
     public static final String NEEDS_PURINE_NUCLEOBASE = "I need at least one #rPurine!";
+    private static final String[] TAUNTS = {
+            "I #rAM THE DANGER!",
+            "Your parents didn't give you a single #rdominant gene, did they?",
+            "No, I am the one who #rknocks.",
+            "Maybe your best course would be to #rtread #rlightly.",
+            "You seem to be in #ralkynes of trouble.",
+            "Press #rF to pay respects.",
+            "It's a pity those #rgenes no longer fit.",
+            "Looks like I just #rpruned your evolutionary tree.",
+            "Are you a #rquark? 'Cause you seem down.",
+            "Yo' Mama so fat, she thought #rDonu was a #rCheerio."
+    };
 
     // Color theme
     private static final Color CLINTOCK_THEME_COLOR = CardHelper.getColor(108.0f, 48.0f, 130.0f);
@@ -234,6 +251,8 @@ public class ClintockMod implements
         logger.info("Begin editing relics");
 
         BaseMod.addRelicToCustomPool(new BiomoleculePool(), AbstractCardEnum.CLINTOCK_COLOR);
+        BaseMod.addRelicToCustomPool(new Isopropanol(), AbstractCardEnum.CLINTOCK_COLOR);
+        BaseMod.addRelicToCustomPool(new MG53(), AbstractCardEnum.CLINTOCK_COLOR);
         BaseMod.addRelicToCustomPool(new NTerminusArginine(), AbstractCardEnum.CLINTOCK_COLOR);
 
         logger.info("Done editing relics");
@@ -254,6 +273,14 @@ public class ClintockMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         if (AbstractDungeon.player instanceof TheClintock) {
+            PeptideChainPower peptideChainPower =
+                    (PeptideChainPower) AbstractDungeon.player.getPower(PeptideChainPower.POWER_ID);
+            if (null != peptideChainPower && peptideChainPower.containsStopCodon()) {
+                AbstractDungeon.actionManager.addToBottom(new TalkAction(
+                        true, TAUNTS[new Random().nextInt(10)], 2.0F, 3.0F));
+                AbstractDungeon.actionManager.addToBottom(new OverrideWaitAction(2.0F));
+                AbstractDungeon.actionManager.addToBottom(new OverrideWaitAction(0.1F));
+            }
             ((TheClintock) AbstractDungeon.player).resetCardExhaustCount();
         }
     }

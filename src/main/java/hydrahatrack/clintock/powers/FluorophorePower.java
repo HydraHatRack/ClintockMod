@@ -24,7 +24,7 @@ public class FluorophorePower extends AbstractPower {
 
     @Override
     public void playApplyPowerSfx() {
-        CardCrawlGame.sound.play("POWER_FOCUS", 0.05F);
+        CardCrawlGame.sound.play("POWER_METALLICIZE", 0.05F);
     }
 
     @Override

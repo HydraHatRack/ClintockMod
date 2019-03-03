@@ -2,6 +2,7 @@ package hydrahatrack.clintock.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import hydrahatrack.clintock.ClintockMod;
@@ -19,9 +20,13 @@ public class MG53 extends CustomRelic {
     @Override
     public void onVictory() {
         PeptideChainPower p = (PeptideChainPower) AbstractDungeon.player.getPower(PeptideChainPower.POWER_ID);
-        if (null != p && p.)
-        flash();
-        AbstractDungeon.actionManager.addToBottom(new MG53Action());
+        if (null != p) {
+            flash();
+            AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            if (AbstractDungeon.player.currentHealth > 0) {
+                AbstractDungeon.player.heal(p.getNumberOfAminoAcids());
+            }
+        }
     }
 
     @Override

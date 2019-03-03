@@ -24,7 +24,7 @@ public class Bateson9000Power extends AbstractPower {
 
     @Override
     public void playApplyPowerSfx() {
-        CardCrawlGame.sound.play("POWER_FOCUS", 0.05F);
+        CardCrawlGame.sound.play("SPHERE_DETECT_VO_1", 0.05F);
     }
 
     @Override

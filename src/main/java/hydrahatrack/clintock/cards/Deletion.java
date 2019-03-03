@@ -25,6 +25,7 @@ public class Deletion extends CustomCard {
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
+        this.flash();
         AbstractDungeon.actionManager.addToBottom(new RemoveNextOrbAction());
     }
 

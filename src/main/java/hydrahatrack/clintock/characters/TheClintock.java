@@ -216,13 +216,13 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("ATTACK_HEAVY", MathUtils.random(-0.2f, 0.2f));
+        CardCrawlGame.sound.playA("POTION_DROP_2", MathUtils.random(-0.2f, 0.2f));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, true);
     }
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "ATTACK_HEAVY";
+        return "POTION_DROP_2";
     }
 
     @Override

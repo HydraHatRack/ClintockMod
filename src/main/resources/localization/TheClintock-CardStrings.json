@@ -255,8 +255,8 @@
   },
   "clintock:RandomForest": {
     "NAME": "Random Forest",
-    "DESCRIPTION": "Randomly gain X NL of one of the following: Strength, Dexterity, or Fluorophores. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X NL of ALL of the following: Strength, Dexterity, and Fluorophores. Exhaust."
+    "DESCRIPTION": "Randomly gain X NL of one of the following: NL Strength, Dexterity, or Fluorophores. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X of ALL NL of the following: NL Strength, Dexterity, and Fluorophores. Exhaust."
   },
   "clintock:Recombination": {
     "NAME": "Recombination",

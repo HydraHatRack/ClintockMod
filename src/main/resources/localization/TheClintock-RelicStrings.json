@@ -1,21 +1,28 @@
 {
   "clintock:BiomoleculePool": {
     "NAME": "Biomolecule Pool",
-    "FLAVOR": "\"[Pure research] is worth every penny it costs.\" NL #yHarold #yUrey",
+    "FLAVOR": "\"[Pure research] is worth every penny it costs.\"\n- Harold Urey",
     "DESCRIPTIONS": [
       "At the start of battle, gain 3 #ySugars and 3 #yPhosphates."
     ]
   },
+  "clintock:Isopropanol": {
+    "NAME": "Isopropanol",
+    "FLAVOR": "\"An expert is a person who has made all the mistakes that can be made in a very narrow field.\"\n - Niels Bohr",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yExhaust all #yStatus cards."
+    ]
+  },
   "clintock:MG53": {
     "NAME": "MG53",
-    "FLAVOR": "\"I was taught that the way of progress was neither swift nor easy.\" NL #yMarie #yCurie",
+    "FLAVOR": "\"I was taught that the way of progress was neither swift nor easy.\"\n - Marie Curie",
     "DESCRIPTIONS": [
       "At the end of battle, heal 1 HP for each #yAmino acid in your #yPolypeptide chain."
     ]
   },
   "clintock:NTerminusArginine": {
-    "NAME": "N-terminus Arginine",
-    "FLAVOR": "\"If you know you are on the right track, if you have this inner knowledge, then nobody can turn you off... no matter what they say.\" NL #yBarbara #yMcClintock",
+    "NAME": "N-Terminus Arginine",
+    "FLAVOR": "\"Basically, I have been compelled by curiosity.\"\n - Mary Leakey",
     "DESCRIPTIONS": [
       "At the start of battle, #yBind #yArginine to your #yPolypeptide chain."
     ]

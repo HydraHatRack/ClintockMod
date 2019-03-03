@@ -53,6 +53,11 @@ public class NanoporePower extends AbstractPower {
     }
 
     @Override
+    public void playApplyPowerSfx() {
+        CardCrawlGame.sound.play("DARKLING_REGROW_2", 0.05F);
+    }
+
+    @Override
     public void updateDescription() {
         if (this.amount == 1) {
             this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
