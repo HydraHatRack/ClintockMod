@@ -38,10 +38,16 @@ public class Replenish extends CustomCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(Settings.ACTION_DUR_FAST));
+        if (!Settings.FAST_MODE) {
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(Settings.ACTION_DUR_FAST));
+        }
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new SugarPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(Settings.ACTION_DUR_FAST));
+        if (!Settings.FAST_MODE) {
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(Settings.ACTION_DUR_FAST));
+        }
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new PhosphatePower(p, this.magicNumber), this.magicNumber));
     }

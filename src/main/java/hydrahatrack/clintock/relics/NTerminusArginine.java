@@ -19,7 +19,7 @@ public class NTerminusArginine extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
+    public void atBattleStartPreDraw() {
         flash();
         PeptideChainPower power = new PeptideChainPower(AbstractDungeon.player);
         AbstractDungeon.actionManager.addToBottom(

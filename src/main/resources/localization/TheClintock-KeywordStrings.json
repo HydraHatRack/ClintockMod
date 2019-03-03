@@ -53,6 +53,13 @@
     ],
     "DESCRIPTION": "#yAmino acids that must be supplied in diet. See the #bClintock #bWiki for a complete list."
   },
+  "clintock:ExpressKeyword": {
+    "NAMES": [
+      "express",
+      "expresses"
+    ],
+    "DESCRIPTION": "Activates a #yLinked #yBase at the end of each turn."
+  },
   "clintock:FluorophoreKeyword": {
     "NAMES": [
       "fluorophore",
@@ -121,7 +128,7 @@
       "phosphate",
       "phosphates"
     ],
-    "DESCRIPTION": "Necessary resource for #yLinking #yBases."
+    "DESCRIPTION": "Resource for #yLinking #yBases."
   },
   "clintock:PolypeptideKeyword": {
     "NAMES": [
@@ -155,7 +162,7 @@
       "sugar",
       "sugars"
     ],
-    "DESCRIPTION": "Necessary resource for #yLinking #yBases."
+    "DESCRIPTION": "Resource for #yLinking #yBases."
   },
   "clintock:Transposon": {
     "NAMES": [
