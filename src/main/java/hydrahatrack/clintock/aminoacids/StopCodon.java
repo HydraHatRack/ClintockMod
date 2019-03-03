@@ -12,7 +12,7 @@ public class StopCodon extends AbstractAminoAcid {
 
     @Override
     public String getDescription() {
-        return " NL Stop: Does nothing";
+        return " NL Stop Codon: #y???";
     }
 
     @Override

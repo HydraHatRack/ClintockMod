@@ -23,6 +23,11 @@ public class LifeSagerPower extends AbstractPower {
     }
 
     @Override
+    public void playApplyPowerSfx() {
+        CardCrawlGame.sound.play("SPHERE_DETECT_VO_1", 0.05F);
+    }
+
+    @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];
     }

@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PenNibPower;
-import com.megacrit.cardcrawl.relics.PenNib;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;

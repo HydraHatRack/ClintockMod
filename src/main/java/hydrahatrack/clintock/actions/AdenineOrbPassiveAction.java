@@ -18,7 +18,7 @@ public class AdenineOrbPassiveAction extends AbstractGameAction {
     }
 
     public void update() {
-        float speedTime = 0.1F;
+        float speedTime = Settings.ACTION_DUR_FAST;
         if (Settings.FAST_MODE) {
             speedTime = 0.0F;
         }

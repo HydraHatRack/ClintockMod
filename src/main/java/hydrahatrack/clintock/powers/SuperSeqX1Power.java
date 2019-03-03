@@ -31,7 +31,7 @@ public class SuperSeqX1Power extends AbstractPower {
 
     @Override
     public void playApplyPowerSfx() {
-        CardCrawlGame.sound.play("POWER_FOCUS", 0.05F);
+        CardCrawlGame.sound.play("SPHERE_DETECT_VO_2", 0.05F);
     }
 
     @Override

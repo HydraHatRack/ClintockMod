@@ -15,7 +15,7 @@ public class Histidine extends AbstractAminoAcid {
 
     @Override
     public String getDescription() {
-        return " NL His: Remove #yBlock -> Enemy";
+        return " NL His: Remove #yDebuffs -> Self";
     }
 
     @Override

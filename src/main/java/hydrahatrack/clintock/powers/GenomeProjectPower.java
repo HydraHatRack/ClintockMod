@@ -24,7 +24,7 @@ public class GenomeProjectPower extends AbstractPower {
 
     @Override
     public void playApplyPowerSfx() {
-        CardCrawlGame.sound.play("POWER_FOCUS", 0.05F);
+        CardCrawlGame.sound.play("MONSTER_GUARDIAN_DESTROY", 0.05F);
     }
 
     @Override

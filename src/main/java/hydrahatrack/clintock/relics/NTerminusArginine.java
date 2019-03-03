@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.aminoacids.*;
+import hydrahatrack.clintock.aminoacids.Arginine;
 import hydrahatrack.clintock.powers.PeptideChainPower;
 
 public class NTerminusArginine extends CustomRelic {
@@ -19,32 +19,12 @@ public class NTerminusArginine extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
+    public void atBattleStartPreDraw() {
+        flash();
         PeptideChainPower power = new PeptideChainPower(AbstractDungeon.player);
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, power));
-
-//        power.bindAminoAcid(new Alanine());
         power.bindAminoAcid(new Arginine());
-//        power.bindAminoAcid(new Asparagine());
-//        power.bindAminoAcid(new AsparticAcid());
-//        power.bindAminoAcid(new Cysteine());
-//        power.bindAminoAcid(new GlutamicAcid());
-//        power.bindAminoAcid(new Glutamine());
-//        power.bindAminoAcid(new Glycine());
-//        power.bindAminoAcid(new Histidine());
-//        power.bindAminoAcid(new Isoleucine());
-//        power.bindAminoAcid(new Leucine());
-//        power.bindAminoAcid(new Lysine());
-//        power.bindAminoAcid(new Methionine());
-//        power.bindAminoAcid(new Phenylalanine());
-//        power.bindAminoAcid(new Proline());
-//        power.bindAminoAcid(new Serine());
-//        power.bindAminoAcid(new StopCodon());
-//        power.bindAminoAcid(new Threonine());
-//        power.bindAminoAcid(new Tryptophan());
-//        power.bindAminoAcid(new Tyrosine());
-//        power.bindAminoAcid(new Valine());
     }
 
     @Override

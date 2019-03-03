@@ -17,13 +17,18 @@ public class MakeRandomNucleobaseInHandAction extends AbstractGameAction {
 
     public MakeRandomNucleobaseInHandAction(final int cardCount) {
         this.cardCount = cardCount;
-        this.duration = Settings.ACTION_DUR_FASTER;
         this.actionType = AbstractGameAction.ActionType.SPECIAL;
+        if (Settings.FAST_MODE) {
+            this.startDuration = Settings.ACTION_DUR_FASTER;
+        } else {
+            this.startDuration = Settings.ACTION_DUR_MED;
+        }
+        this.duration = this.startDuration;
     }
 
     @Override
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_FASTER) {
+        if (this.duration == this.startDuration) {
             Random random = new Random();
             for (int i = 0; i < cardCount; i++) {
                 AbstractCard card;
@@ -45,7 +50,6 @@ public class MakeRandomNucleobaseInHandAction extends AbstractGameAction {
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1));
             }
         }
-
         this.tickDuration();
     }
 }

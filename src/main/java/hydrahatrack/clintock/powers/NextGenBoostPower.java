@@ -23,6 +23,11 @@ public class NextGenBoostPower extends AbstractPower {
     }
 
     @Override
+    public void playApplyPowerSfx() {
+        CardCrawlGame.sound.play("EVENT_LAB", 0.05F);
+    }
+
+    @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];
     }

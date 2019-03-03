@@ -24,7 +24,7 @@ public class SugarPower extends AbstractPower {
 
     @Override
     public void playApplyPowerSfx() {
-        CardCrawlGame.sound.play("POWER_FOCUS", 0.05F);
+        CardCrawlGame.sound.play("GOLD_GAIN_3", 0.05F);
     }
 
     @Override

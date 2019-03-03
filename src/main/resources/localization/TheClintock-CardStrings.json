@@ -10,8 +10,8 @@
   },
   "clintock:Alkylation": {
     "NAME": "Alkylation",
-    "DESCRIPTION": "Evoke each Linked Pyrimidine X times.",
-    "UPGRADE_DESCRIPTION": "Evoke each Linked Pyrimidine X+1 times."
+    "DESCRIPTION": "Express each Linked Pyrimidine X times.",
+    "UPGRADE_DESCRIPTION": "Express each Linked Pyrimidine X+1 times."
   },
   "clintock:ATPReserves": {
     "NAME": "ATP Reserves",
@@ -20,7 +20,8 @@
   },
   "clintock:BaseSynthesis": {
     "NAME": "Base Synthesis",
-    "DESCRIPTION": "Add a random Nucleobase to your hand."
+    "DESCRIPTION": "Add a random Nucleobase to your hand.",
+    "UPGRADE_DESCRIPTION": "Select a Nucleobase to add to your hand."
   },
   "clintock:Bateson9000": {
     "NAME": "Bateson 9000",
@@ -196,7 +197,7 @@
   },
   "clintock:Knockout": {
     "NAME": "Knockout",
-    "DESCRIPTION": "Unplayable. Bases cannot evoke this turn."
+    "DESCRIPTION": "Unplayable. Bases cannot Express this turn."
   },
   "clintock:LifeSager": {
     "NAME": "LifeSager",
@@ -255,8 +256,8 @@
   },
   "clintock:RandomForest": {
     "NAME": "Random Forest",
-    "DESCRIPTION": "Randomly gain X NL of one of the following: Strength, Dexterity, or Fluorophores. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X NL of ALL of the following: Strength, Dexterity, and Fluorophores. Exhaust."
+    "DESCRIPTION": "Randomly gain X NL of one of the following: NL Strength, Dexterity, or Fluorophores. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X of ALL NL of the following: NL Strength, Dexterity, and Fluorophores. Exhaust."
   },
   "clintock:Recombination": {
     "NAME": "Recombination",

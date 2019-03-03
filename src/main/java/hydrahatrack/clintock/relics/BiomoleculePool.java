@@ -3,6 +3,8 @@ package hydrahatrack.clintock.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import hydrahatrack.clintock.ClintockMod;
@@ -19,15 +21,18 @@ public class BiomoleculePool extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
+    public void atBattleStartPreDraw() {
+        int RESOURCE_AMOUNT = 3;
+        flash();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 AbstractDungeon.player,
                 AbstractDungeon.player,
-                new SugarPower(AbstractDungeon.player, 3)));
+                new SugarPower(AbstractDungeon.player, RESOURCE_AMOUNT)));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(Settings.ACTION_DUR_MED));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 AbstractDungeon.player,
                 AbstractDungeon.player,
-                new PhosphatePower(AbstractDungeon.player, 3)));
+                new PhosphatePower(AbstractDungeon.player, RESOURCE_AMOUNT)));
     }
 
     @Override

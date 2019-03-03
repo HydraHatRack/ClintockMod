@@ -75,8 +75,17 @@ public class PeptideChainPower extends AbstractPower {
         this.updateDescription();
     }
 
-    public boolean isEmpty() {
-        return aminoAcids.size() == 0;
+    public int getNumberOfAminoAcids() {
+        return aminoAcids.size();
+    }
+
+    public boolean containsStopCodon() {
+        for (AbstractAminoAcid aminoAcid : aminoAcids) {
+            if (aminoAcid instanceof StopCodon) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

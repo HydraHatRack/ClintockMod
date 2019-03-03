@@ -46,7 +46,7 @@
   "clintock:KnockedOutPower": {
     "NAME": "Knocked Out",
     "DESCRIPTIONS": [
-      "#yBases cannot evoke this turn."
+      "#yBases cannot #yExpress this turn."
     ]
   },
   "clintock:LifeSagerPower": {
