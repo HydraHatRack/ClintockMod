@@ -277,7 +277,7 @@ public class ClintockMod implements
                     (PeptideChainPower) AbstractDungeon.player.getPower(PeptideChainPower.POWER_ID);
             if (null != peptideChainPower && peptideChainPower.containsStopCodon()) {
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(
-                        true, TAUNTS[new Random().nextInt(10)], 2.0F, 3.0F));
+                        true, TAUNTS[new Random().nextInt(TAUNTS.length)], 2.0F, 3.0F));
                 AbstractDungeon.actionManager.addToBottom(new OverrideWaitAction(2.0F));
                 AbstractDungeon.actionManager.addToBottom(new OverrideWaitAction(0.1F));
             }
