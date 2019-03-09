@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.actions.CytosineOrbPassiveAction;
@@ -31,27 +32,31 @@ public class Alkylation extends CustomCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        if (this.energyOnUse < EnergyPanel.totalCount) {
-            this.energyOnUse = EnergyPanel.totalCount;
+        int effect = this.energyOnUse;
+        if (effect < EnergyPanel.totalCount) {
+            effect = EnergyPanel.totalCount;
         }
-
-        int offset = 0;
         if (this.upgraded) {
-            offset = 1;
+            effect += 1;
+        }
+        if (p.hasRelic(ChemicalX.ID)) {
+            effect += ChemicalX.BOOST;
         }
 
-        for (AbstractOrb orb : p.orbs) {
-            if (orb instanceof CytosineOrb) {
-                for (int i = 0; i < this.energyOnUse + offset; i++) {
-                    AbstractDungeon.actionManager.addToBottom(
-                            new CytosineOrbPassiveAction(new DamageInfo(
-                                    AbstractDungeon.player, orb.passiveAmount, DamageInfo.DamageType.THORNS), orb));
-                }
-            } else if (orb instanceof ThymineOrb) {
-                for (int i = 0; i < this.energyOnUse + offset; i++) {
-                    AbstractDungeon.actionManager.addToBottom(
-                            new ThymineOrbPassiveAction(new DamageInfo(
-                                    AbstractDungeon.player, orb.passiveAmount, DamageInfo.DamageType.THORNS), orb));
+        if (effect > 0) {
+            for (AbstractOrb orb : p.orbs) {
+                if (orb instanceof CytosineOrb) {
+                    for (int i = 0; i < effect; i++) {
+                        AbstractDungeon.actionManager.addToBottom(
+                                new CytosineOrbPassiveAction(new DamageInfo(
+                                        AbstractDungeon.player, orb.passiveAmount, DamageInfo.DamageType.THORNS), orb));
+                    }
+                } else if (orb instanceof ThymineOrb) {
+                    for (int i = 0; i < effect; i++) {
+                        AbstractDungeon.actionManager.addToBottom(
+                                new ThymineOrbPassiveAction(new DamageInfo(
+                                        AbstractDungeon.player, orb.passiveAmount, DamageInfo.DamageType.THORNS), orb));
+                    }
                 }
             }
         }

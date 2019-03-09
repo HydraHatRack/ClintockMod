@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
@@ -30,13 +31,19 @@ public class EnergyMetabolism extends CustomCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        if (this.energyOnUse < EnergyPanel.totalCount) {
-            this.energyOnUse = EnergyPanel.totalCount;
+        int effect = this.energyOnUse;
+        if (effect < EnergyPanel.totalCount) {
+            effect = EnergyPanel.totalCount;
+        }
+        if (p.hasRelic(ChemicalX.ID)) {
+            effect += ChemicalX.BOOST;
         }
 
-        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, this.energyOnUse));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.energyOnUse));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.energyOnUse));
+        if (effect > 0) {
+            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, effect));
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(effect));
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, effect));
+        }
 
         if (!this.freeToPlayOnce) {
             p.energy.use(EnergyPanel.totalCount);
