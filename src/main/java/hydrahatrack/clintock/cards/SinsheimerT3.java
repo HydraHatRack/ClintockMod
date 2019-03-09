@@ -23,7 +23,7 @@ public class SinsheimerT3 extends CustomCard {
 
     public SinsheimerT3() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.RARE, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = ENERGY_AMOUNT;
     }

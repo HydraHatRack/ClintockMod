@@ -23,7 +23,7 @@ public class EnergyMetabolism extends CustomCard {
 
     public EnergyMetabolism() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.SELF);
 
         this.exhaust = true;
     }

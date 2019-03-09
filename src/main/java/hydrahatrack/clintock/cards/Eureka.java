@@ -24,7 +24,7 @@ public class Eureka extends CustomCard {
 
     public Eureka() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.COMMON, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = FLUOROPHORE_AMOUNT;
     }

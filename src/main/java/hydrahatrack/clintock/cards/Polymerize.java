@@ -21,7 +21,7 @@ public class Polymerize extends CustomCard {
 
     public Polymerize() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.COMMON, CardTarget.SELF);
 
         this.baseBlock = this.block = BLOCK_AMOUNT;
     }

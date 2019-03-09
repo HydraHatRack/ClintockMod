@@ -24,7 +24,7 @@ public class GeneAmplification extends CustomCard {
 
     public GeneAmplification() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.RARE, CardTarget.SELF);
 
         this.exhaust = true;
     }

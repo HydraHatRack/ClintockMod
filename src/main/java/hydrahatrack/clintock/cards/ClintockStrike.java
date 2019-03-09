@@ -24,7 +24,7 @@ public class ClintockStrike extends CustomCard {
 
     public ClintockStrike() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
+                AbstractCardEnum.CLINTOCK, CardRarity.BASIC, CardTarget.ENEMY);
 
         this.baseDamage = this.damage = ATTACK_DMG;
 

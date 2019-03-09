@@ -24,7 +24,7 @@ public class Epidemic extends CustomCard {
 
     public Epidemic() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+                AbstractCardEnum.CLINTOCK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
 
         this.baseDamage = this.damage = ATTACK_DMG;
         this.isMultiDamage = true;

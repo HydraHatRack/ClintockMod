@@ -23,7 +23,7 @@ public class Obstruct extends CustomCard {
 
     public Obstruct() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.COMMON, CardTarget.SELF);
 
         this.baseBlock = this.block = BLOCK_AMOUNT;
         this.exhaust = true;

@@ -28,7 +28,7 @@ public class BruteForce extends CustomCard {
 
     public BruteForce() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.ALL);
+                AbstractCardEnum.CLINTOCK, CardRarity.COMMON, CardTarget.ALL);
 
         this.baseMagicNumber = this.magicNumber = WEAK_AMOUNT;
     }

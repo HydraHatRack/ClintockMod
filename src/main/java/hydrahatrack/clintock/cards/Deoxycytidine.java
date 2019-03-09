@@ -28,7 +28,7 @@ public class Deoxycytidine extends CustomCard {
 
     public Deoxycytidine() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
 
         this.baseDamage = this.damage = ATTACK_DMG;
     }

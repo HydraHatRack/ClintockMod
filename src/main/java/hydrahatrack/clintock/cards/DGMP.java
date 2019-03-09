@@ -25,7 +25,7 @@ public class DGMP extends CustomCard {
 
     public DGMP() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = ENERGY_AMOUNT;
     }

@@ -25,7 +25,7 @@ public class Miasma extends CustomCard {
 
     public Miasma() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.ENEMY);
 
         this.baseMagicNumber = this.magicNumber = POISON_AMOUNT;
         this.exhaust = true;

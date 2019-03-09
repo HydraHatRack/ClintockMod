@@ -22,7 +22,7 @@ public class Fluorescein extends CustomCard {
 
     public Fluorescein() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = FLUOROPHORE_AMOUNT;
     }

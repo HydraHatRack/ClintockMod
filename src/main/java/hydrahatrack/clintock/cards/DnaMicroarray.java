@@ -20,7 +20,7 @@ public class DnaMicroarray extends CustomCard {
 
     public DnaMicroarray() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, CardTarget.NONE);
+                AbstractCardEnum.CLINTOCK, CardRarity.RARE, CardTarget.NONE);
 
         this.exhaust = true;
     }

@@ -23,7 +23,7 @@ public class MendelPro extends CustomCard {
 
     public MendelPro() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.RARE, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = DRAW_CARD_AMOUNT;
     }

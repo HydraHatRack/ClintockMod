@@ -121,7 +121,7 @@ public class TheClintock extends CustomPlayer {
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return AbstractCardEnum.CLINTOCK_COLOR;
+        return AbstractCardEnum.CLINTOCK;
     }
 
     @Override

@@ -28,7 +28,7 @@ public class DTMP extends CustomCard {
 
     public DTMP() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.ALL);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.ALL);
 
         this.baseDamage = this.damage = ATTACK_DMG;
         this.isMultiDamage = true;

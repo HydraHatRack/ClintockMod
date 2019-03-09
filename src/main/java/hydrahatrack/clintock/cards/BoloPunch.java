@@ -24,7 +24,7 @@ public class BoloPunch extends CustomCard {
 
     public BoloPunch() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, CardTarget.SELF_AND_ENEMY);
+                AbstractCardEnum.CLINTOCK, CardRarity.RARE, CardTarget.SELF_AND_ENEMY);
 
         this.baseDamage = this.damage = ATTACK_DMG;
         this.isEthereal = true;

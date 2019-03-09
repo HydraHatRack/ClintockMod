@@ -26,7 +26,7 @@ public class Deoxyadenosine extends CustomCard {
 
     public Deoxyadenosine() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.SELF);
 
         this.baseBlock = this.block = BLOCK_AMOUNT;
     }

@@ -26,7 +26,7 @@ public class Immunodeficiency extends CustomCard {
 
     public Immunodeficiency() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+                AbstractCardEnum.CLINTOCK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
 
         this.baseMagicNumber = this.magicNumber = VULNERABLE_AMOUNT;
         this.exhaust = true;

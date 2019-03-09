@@ -26,7 +26,7 @@ public class Mitosis extends CustomCard {
 
     public Mitosis() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, CardTarget.ENEMY);
+                AbstractCardEnum.CLINTOCK, CardRarity.RARE, CardTarget.ENEMY);
     }
 
     @Override

@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.powers.Bateson9000Power;
-import hydrahatrack.clintock.powers.FluorophorePower;
 
 public class Bateson9000 extends CustomCard {
     public static final String ID = "clintock:Bateson9000";
@@ -23,7 +22,7 @@ public class Bateson9000 extends CustomCard {
 
     public Bateson9000() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = BLOCK_AMOUNT;
     }

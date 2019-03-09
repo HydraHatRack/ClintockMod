@@ -29,7 +29,7 @@ public class Replenish extends CustomCard {
 
     public Replenish() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.BASIC, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.BASIC, CardTarget.SELF);
 
         this.baseBlock = this.block = BLOCK_AMOUNT;
         this.baseMagicNumber = this.magicNumber = BASE_MAGIC_NUMBER;

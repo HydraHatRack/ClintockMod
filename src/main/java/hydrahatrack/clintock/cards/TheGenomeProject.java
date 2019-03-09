@@ -25,7 +25,7 @@ public class TheGenomeProject extends CustomCard {
 
     public TheGenomeProject() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.RARE, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = FINAL_ATTACK_DMG;
     }

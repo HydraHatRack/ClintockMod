@@ -5,5 +5,5 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class AbstractCardEnum {
     @SpireEnum
-    public static AbstractCard.CardColor CLINTOCK_COLOR;
+    public static AbstractCard.CardColor CLINTOCK;
 }

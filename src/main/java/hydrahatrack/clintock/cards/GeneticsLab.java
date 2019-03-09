@@ -21,7 +21,7 @@ public class GeneticsLab extends CustomCard {
 
     public GeneticsLab() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.SELF);
 
         this.baseMagicNumber = this.magicNumber = CARD_COST_DISCOUNT;
         this.exhaust = true;

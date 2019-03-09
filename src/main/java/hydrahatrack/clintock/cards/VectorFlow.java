@@ -24,7 +24,7 @@ public class VectorFlow extends CustomCard {
 
     public VectorFlow() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
+                AbstractCardEnum.CLINTOCK, CardRarity.COMMON, CardTarget.ENEMY);
 
         this.baseDamage = this.damage = ATTACK_DMG;
     }

@@ -21,7 +21,7 @@ public class NextGenBoost extends CustomCard {
 
     public NextGenBoost() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.POWER,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.RARE, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.RARE, CardTarget.SELF);
 
         this.isEthereal = true;
     }

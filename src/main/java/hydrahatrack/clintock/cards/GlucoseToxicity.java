@@ -24,7 +24,7 @@ public class GlucoseToxicity extends CustomCard {
 
     public GlucoseToxicity() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.ENEMY);
     }
 
     @Override

@@ -101,9 +101,9 @@ public class ClintockMod implements
     public ClintockMod() {
         BaseMod.subscribe(this);
 
-        logger.info("Creating the color " + AbstractCardEnum.CLINTOCK_COLOR.toString());
+        logger.info("Creating the color " + AbstractCardEnum.CLINTOCK.toString());
 
-        BaseMod.addColor(AbstractCardEnum.CLINTOCK_COLOR,
+        BaseMod.addColor(AbstractCardEnum.CLINTOCK,
                 CLINTOCK_THEME_COLOR,
                 CLINTOCK_ATTACK_BACKGROUND,
                 CLINTOCK_SKILL_BACKGROUND,
@@ -250,10 +250,10 @@ public class ClintockMod implements
     public void receiveEditRelics() {
         logger.info("Begin editing relics");
 
-        BaseMod.addRelicToCustomPool(new BiomoleculePool(), AbstractCardEnum.CLINTOCK_COLOR);
-        BaseMod.addRelicToCustomPool(new Isopropanol(), AbstractCardEnum.CLINTOCK_COLOR);
-        BaseMod.addRelicToCustomPool(new MG53(), AbstractCardEnum.CLINTOCK_COLOR);
-        BaseMod.addRelicToCustomPool(new NTerminusArginine(), AbstractCardEnum.CLINTOCK_COLOR);
+        BaseMod.addRelicToCustomPool(new BiomoleculePool(), AbstractCardEnum.CLINTOCK);
+        BaseMod.addRelicToCustomPool(new Isopropanol(), AbstractCardEnum.CLINTOCK);
+        BaseMod.addRelicToCustomPool(new MG53(), AbstractCardEnum.CLINTOCK);
+        BaseMod.addRelicToCustomPool(new NTerminusArginine(), AbstractCardEnum.CLINTOCK);
 
         logger.info("Done editing relics");
     }

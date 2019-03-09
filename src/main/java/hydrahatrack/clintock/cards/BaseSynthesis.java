@@ -1,20 +1,15 @@
 package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.actions.MakeRandomNucleobaseInHandAction;
-import hydrahatrack.clintock.actions.OverrideWaitAction;
 import hydrahatrack.clintock.actions.SelectNucleobaseInHandAction;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 
@@ -29,7 +24,7 @@ public class BaseSynthesis extends CustomCard {
 
     public BaseSynthesis() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.BASIC, CardTarget.NONE);
+                AbstractCardEnum.CLINTOCK, CardRarity.BASIC, CardTarget.NONE);
 
         this.baseMagicNumber = this.magicNumber = BASE_MAGIC_NUMBER;
     }

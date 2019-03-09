@@ -30,7 +30,7 @@ public class Outbreak extends CustomCard {
 
     public Outbreak() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+                AbstractCardEnum.CLINTOCK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 
         this.baseDamage = this.damage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = VULNERABLE_AMOUNT;

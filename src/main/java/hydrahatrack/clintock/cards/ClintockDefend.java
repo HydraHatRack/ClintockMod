@@ -22,7 +22,7 @@ public class ClintockDefend extends CustomCard {
 
     public ClintockDefend() {
         super(ID, NAME, ClintockMod.getCardImagePath(ID), COST, DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.CLINTOCK_COLOR, CardRarity.BASIC, CardTarget.SELF);
+                AbstractCardEnum.CLINTOCK, CardRarity.BASIC, CardTarget.SELF);
 
         this.baseBlock = this.block = BLOCK_AMOUNT;
 
