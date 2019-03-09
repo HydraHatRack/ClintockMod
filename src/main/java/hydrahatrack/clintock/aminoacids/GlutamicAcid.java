@@ -18,7 +18,7 @@ public class GlutamicAcid extends AbstractAminoAcid {
 
     @Override
     public String getDescription() {
-        return " NL Gln: #yUpgrade card in hand";
+        return " NL Glu: #yUpgrade card in hand";
     }
 
     @Override
