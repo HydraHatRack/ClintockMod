@@ -15,8 +15,7 @@
   },
   "clintock:ATPReserves": {
     "NAME": "ATP Reserves",
-    "DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted !M! cards).",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block for each card Exhausted this battle (Exhausted 1 card)."
+    "DESCRIPTION": "Gain !B! Block. NL Gain an additional NL !M! Block for each card Exhausted this battle."
   },
   "clintock:BaseSynthesis": {
     "NAME": "Base Synthesis",
@@ -25,11 +24,11 @@
   },
   "clintock:Bateson9000": {
     "NAME": "Bateson 9000",
-    "DESCRIPTION": "Sequencer. NL Whenever you Bind an Amino acid, gain !M! Block."
+    "DESCRIPTION": "Whenever you Bind an Amino acid, gain !M! Block."
   },
   "clintock:BiolelePrime": {
     "NAME": "Biolele Prime",
-    "DESCRIPTION": "Sequencer. NL Whenever you Bind an Amino acid, add another copy."
+    "DESCRIPTION": "Whenever you Bind an Amino acid, add another copy."
   },
   "clintock:BoloPunch": {
     "NAME": "Bolo Punch",
@@ -201,12 +200,12 @@
   },
   "clintock:LifeSager": {
     "NAME": "LifeSager",
-    "DESCRIPTION": "Sequencer. NL Random enemy effects from your Polypeptide now target ALL enemies."
+    "DESCRIPTION": "Random enemy effects from your Polypeptide now target ALL enemies."
   },
   "clintock:MendelPro": {
     "NAME": "MendelPRO",
-    "DESCRIPTION": "Sequencer. Whenever you Link a Base, draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Sequencer. NL Whenever you Link a Base, draw !M! cards."
+    "DESCRIPTION": "Whenever you Link a Base, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Whenever you Link a Base, draw !M! cards."
   },
   "clintock:MetabolicPathways": {
     "NAME": "Metabolic Pathways",
@@ -279,7 +278,7 @@
   },
   "clintock:SinsheimerT3": {
     "NAME": "SinsheimerT3",
-    "DESCRIPTION": "Sequencer. NL Whenever you Link a Base, gain !M! Energy."
+    "DESCRIPTION": "Whenever you Link a Base, gain !M! Energy."
   },
   "clintock:Splinter": {
     "NAME": "Splinter",
@@ -291,7 +290,7 @@
   },
   "clintock:SuperSeqX1": {
     "NAME": "SuperSeq X1",
-    "DESCRIPTION": "Sequencer. NL At the start of each turn, Bind a random Amino acid."
+    "DESCRIPTION": "At the start of each turn, Bind a random Amino acid."
   },
   "clintock:SuspendAnimation": {
     "NAME": "Suspend Animation",

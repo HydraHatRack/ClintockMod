@@ -103,11 +103,6 @@ public class TheClintock extends CustomPlayer {
 
     public void incrementCardExhaustCount() {
         cardExhaustCount++;
-        for (AbstractCard c : hand.group) {
-            if (c instanceof ATPReserves) {
-                ((ATPReserves) c).incrementCardExhaustCount();
-            }
-        }
     }
 
     public int getCardExhaustCount() {

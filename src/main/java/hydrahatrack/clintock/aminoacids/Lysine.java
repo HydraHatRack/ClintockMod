@@ -5,7 +5,7 @@ import hydrahatrack.clintock.actions.LysineAction;
 
 public class Lysine extends AbstractAminoAcid {
     public static final String LABEL = "Lysine";
-    private static final int PLATED_ARMOR_AMOUNT = 2;
+    private static final int PLATED_ARMOR_AMOUNT = 1;
 
     public Lysine() {
         this.baseNumber = PLATED_ARMOR_AMOUNT;
