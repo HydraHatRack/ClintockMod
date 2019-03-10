@@ -46,15 +46,15 @@
 
 *Glycine (Gly)* - Apply 1 Weak to a random enemy at the end of your turn.<br/>GGT, GGC, GGA, GGG
 
-*Histidine (His)* - Remove all of your debuffs at the end of your turn.<br/>CAT, CAC
+*Histidine (His)* - Remove all your debuffs at the end of your turn.<br/>CAT, CAC
 
 *Isoleucine (Ile)* - Gain 2 Thorns at the end of your turn.<br/>ATT, ATC, ATA
 
-*Leucine (Leu)* - Deal 8 damage to a random enemy at the end of your turn.<br/>CTT, CTC, CTA, CTG, TTA, TTG
+*Leucine (Leu)* - Deal 6 damage to a random enemy at the end of your turn.<br/>CTT, CTC, CTA, CTG, TTA, TTG
 
-*Lysine (Lys)* - Gain 2 Plated Armor at the end of your turn.<br/>AAA, AAG
+*Lysine (Lys)* - Gain 1 Plated Armor at the end of your turn.<br/>AAA, AAG
 
-*Methionine (Met)* - Heal 2 HP at the end of your turn.<br/>ATG
+*Methionine (Met)* - Heal 1 HP at the end of your turn.<br/>ATG
 
 *Phenylalanine (Phe)* - Add a random uncommon card to your draw pile.<br/>TTT, TTC
 

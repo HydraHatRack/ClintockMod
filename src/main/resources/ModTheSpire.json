@@ -3,6 +3,6 @@
   "name": "The Clintock",
   "author_list": ["HydraHatRack"],
   "description": "Adds a new character, the Clintock",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": ["basemod"]
 }

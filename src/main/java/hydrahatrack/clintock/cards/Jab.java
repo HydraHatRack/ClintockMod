@@ -20,7 +20,7 @@ public class Jab extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 6;
+    private static final int ATTACK_DMG = 5;
     private static final int UPGRADE_PLUS_ATTACK_DMG = 2;
 
     public Jab() {

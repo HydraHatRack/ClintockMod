@@ -9,14 +9,14 @@
     "NAMES": [
       "adenine"
     ],
-    "DESCRIPTION": "Blue #yBase: Gains #yBlock."
+    "DESCRIPTION": "Blue #yBase: Gains #b3 #yBlock."
   },
   "clintock:BaseKeyword": {
     "NAMES": [
       "base",
       "bases"
     ],
-    "DESCRIPTION": "Fundamental units of the genetic code found in DNA."
+    "DESCRIPTION": "Orbs that represent the fundamental units of DNA."
   },
   "clintock:BindKeyword": {
     "NAMES": [
@@ -38,7 +38,7 @@
     "NAMES": [
       "cytosine"
     ],
-    "DESCRIPTION": "Red #yBase: Deals damage to a random enemy."
+    "DESCRIPTION": "Red #yBase: Deals #b4 damage to a random enemy."
   },
   "clintock:DeletionKeyword": {
     "NAMES": [
@@ -47,15 +47,10 @@
     ],
     "DESCRIPTION": "Unplayable status card that removes a #Linked #Base at the end of the turn."
   },
-  "clintock:EssentialKeyword": {
-    "NAMES": [
-      "essential"
-    ],
-    "DESCRIPTION": "#yAmino acids that must be supplied in diet. See the #bClintock #bWiki for a complete list."
-  },
   "clintock:ExpressKeyword": {
     "NAMES": [
       "express",
+      "expressing",
       "expresses"
     ],
     "DESCRIPTION": "Activates a #yLinked #yBase at the end of each turn."
@@ -71,7 +66,7 @@
     "NAMES": [
       "guanine"
     ],
-    "DESCRIPTION": "Green #yBase: Gains energy."
+    "DESCRIPTION": "Green #yBase: Gains #b Energy."
   },
   "clintock:Intron": {
     "NAMES": [
@@ -85,7 +80,7 @@
       "knockout",
       "knockouts"
     ],
-    "DESCRIPTION": "Unplayable status card that prevents #yBases from evoking."
+    "DESCRIPTION": "Unplayable status card that prevents #yBases from #yExpressing."
   },
   "clintock:LinkKeyword": {
     "NAMES": [
@@ -95,12 +90,6 @@
       "links"
     ],
     "DESCRIPTION": "Puts a #yBase into your first empty slot. If no empty slots exist, #yBinds an #yAmino acid to make room."
-  },
-  "clintock:NonessentialKeyword": {
-    "NAMES": [
-      "nonessential"
-    ],
-    "DESCRIPTION": "#yAmino acids that can be synthesized in the body. See the #bClintock #bWiki for a complete list."
   },
   "clintock:NucleobaseKeyword": {
     "NAMES": [
@@ -155,7 +144,7 @@
       "sequencer",
       "sequencers"
     ],
-    "DESCRIPTION": "Scientific device used in determining the order of #yBases in DNA."
+    "DESCRIPTION": "Includes #yBateson #y9000, #yBiolele #yPrime, #yLifeSager, #yMendelPRO, #ySinsheimerT3, and #ySuperSeq #yX1."
   },
   "clintock:SugarKeyword": {
     "NAMES": [
@@ -175,6 +164,6 @@
     "NAMES": [
       "thymine"
     ],
-    "DESCRIPTION": "Yellow #yBase: Deals damage to ALL enemies."
+    "DESCRIPTION": "Yellow #yBase: Deals #b2 damage to ALL enemies."
   }
 }

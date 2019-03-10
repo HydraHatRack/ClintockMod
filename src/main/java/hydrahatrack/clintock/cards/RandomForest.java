@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
@@ -33,23 +34,27 @@ public class RandomForest extends CustomCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        if (this.energyOnUse < EnergyPanel.totalCount) {
-            this.energyOnUse = EnergyPanel.totalCount;
+        int effect = this.energyOnUse;
+        if (effect < EnergyPanel.totalCount) {
+            effect = EnergyPanel.totalCount;
+        }
+        if (p.hasRelic(ChemicalX.ID)) {
+            effect += ChemicalX.BOOST;
         }
 
-        if (this.energyOnUse > 0) {
+        if (effect > 0) {
             int randomValue = new Random().nextInt(3);
             if (this.upgraded || 0 == randomValue) {
                 AbstractDungeon.actionManager.addToBottom(
-                        new ApplyPowerAction(p, p, new StrengthPower(p, this.energyOnUse), this.energyOnUse));
+                        new ApplyPowerAction(p, p, new StrengthPower(p, effect), effect));
             }
             if (this.upgraded || 1 == randomValue) {
                 AbstractDungeon.actionManager.addToBottom(
-                        new ApplyPowerAction(p, p, new DexterityPower(p, this.energyOnUse), this.energyOnUse));
+                        new ApplyPowerAction(p, p, new DexterityPower(p, effect), effect));
             }
             if (this.upgraded || 2 == randomValue) {
                 AbstractDungeon.actionManager.addToBottom(
-                        new ApplyPowerAction(p, p, new FluorophorePower(p, this.energyOnUse), this.energyOnUse));
+                        new ApplyPowerAction(p, p, new FluorophorePower(p, effect), effect));
             }
         }
 
