@@ -19,7 +19,7 @@ public class IsoleucineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Isoleucine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Isoleucine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                             new ThornsPower(AbstractDungeon.player, this.amount),

@@ -21,7 +21,7 @@ public class LeucineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Leucine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Leucine.NAME));
 
             if (AbstractDungeon.player.hasPower(LifeSagerPower.POWER_ID)) {
                 AbstractDungeon.actionManager.addToBottom(

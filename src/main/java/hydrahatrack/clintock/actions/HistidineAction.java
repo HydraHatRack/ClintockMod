@@ -17,7 +17,7 @@ public class HistidineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Histidine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Histidine.NAME));
             AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(AbstractDungeon.player));
 
             this.isDone = true;

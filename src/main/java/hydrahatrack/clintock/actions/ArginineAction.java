@@ -18,7 +18,7 @@ public class ArginineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Arginine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Arginine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.amount));
 

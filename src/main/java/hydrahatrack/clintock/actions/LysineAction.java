@@ -19,7 +19,7 @@ public class LysineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Lysine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Lysine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                             new PlatedArmorPower(AbstractDungeon.player, this.amount),

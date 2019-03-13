@@ -1,11 +1,15 @@
 package hydrahatrack.clintock;
 
-import basemod.BaseMod;
-import basemod.ModPanel;
+import basemod.*;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
+import com.badlogic.gdx.InputAdapter;
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -14,6 +18,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -28,13 +33,20 @@ import hydrahatrack.clintock.relics.BiomoleculePool;
 import hydrahatrack.clintock.relics.Isopropanol;
 import hydrahatrack.clintock.relics.MG53;
 import hydrahatrack.clintock.relics.NTerminusArginine;
+import hydrahatrack.clintock.ui.AminoAcidGuide;
+import hydrahatrack.clintock.ui.AminoAcidGuideButton;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Random;
+
+import static basemod.BaseModInit.*;
+import static basemod.BaseModInit.BUTTON_Y;
 
 @SpireInitializer
 public class ClintockMod implements
@@ -45,9 +57,17 @@ public class ClintockMod implements
         EditStringsSubscriber,
         PostExhaustSubscriber,
         PostBattleSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        PostRenderSubscriber {
 
     private final Logger logger = LogManager.getLogger(TheClintock.class.getName());
+
+    // Amino Acid Helper
+    private static SpireConfig config;
+    private InputProcessor oldInputProcessor;
+    private AminoAcidGuide aminoAcidGuide;
+    private static AminoAcidGuideButton aminoAcidGuideButton;
+    public static final String CONFIG_FILE = "amino-acid-helper-config";
 
     // Mod metadata
     private static final String MOD_NAME = "The Clintock";
@@ -115,10 +135,46 @@ public class ClintockMod implements
                 CLINTOCK_ENERGY_ORB_PORTRAIT,
                 CLINTOCK_ENERGY_ORB_IN_DESCRIPTION
         );
+
+        aminoAcidGuide = new AminoAcidGuide();
     }
 
     public static void initialize() {
-        new ClintockMod();
+        try {
+            new ClintockMod();
+            config = makeConfig();
+            setProperties();
+        } catch (final Exception e) {
+            System.out.println("An error occurred during initialization:");
+            e.printStackTrace();
+        }
+    }
+
+    private static SpireConfig makeConfig() {
+        Properties defaultProperties = new Properties();
+        defaultProperties.setProperty("amino-acid-guide-toggle-key", "W");
+        defaultProperties.setProperty("amino-acid-guide-button-enabled", "true");
+
+        try {
+            return new SpireConfig(MOD_NAME, CONFIG_FILE, defaultProperties);
+        } catch (final IOException e) {
+            System.out.println("An error occurred while configuring the amino acid guide:");
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private static void setProperties() {
+        if (null == config) {
+            return;
+        }
+
+        String toggleKey = config.getString("amino-acid-guide-toggle-key");
+        if (null != toggleKey) {
+            AminoAcidGuide.toggleKey = Input.Keys.valueOf(toggleKey);
+        }
+
+        AminoAcidGuideButton.enabled = config.getBool("amino-acid-guide-button-enabled");
     }
 
     @Override
@@ -130,7 +186,82 @@ public class ClintockMod implements
         ModPanel settingsPanel = new ModPanel();
         BaseMod.registerModBadge(badgeTexture, MOD_NAME, AUTHOR, DESCRIPTION, settingsPanel);
 
+        // Add Amino Acid Helper
+        AminoAcidGuideButton.IMG = ImageMaster.loadImage("img/ui/AminoAcidHelperIcon.png");
+        aminoAcidGuideButton = new AminoAcidGuideButton(aminoAcidGuide);
+
+        ModPanel modPanel = new ModPanel();
+
+        ModLabeledToggleButton enableTopBarButton = new ModLabeledToggleButton("Enable button in top bar",
+                BUTTON_ENABLE_X, BUTTON_ENABLE_Y, Color.WHITE, FontHelper.charDescFont,
+                AminoAcidGuideButton.enabled, modPanel, (label) -> {
+        }, (button) -> {
+            AminoAcidGuideButton.enabled = button.enabled;
+            setAminoAcidGuideButtonEnabled(button.enabled);
+        });
+        modPanel.addUIElement(enableTopBarButton);
+
+        ModLabel buttonLabel = new ModLabel("Hotkey", BUTTON_LABEL_X, BUTTON_LABEL_Y, modPanel, (me) -> {
+            if (me.parent.waitingOnEvent) {
+                me.text = "Press key";
+            } else {
+                me.text = "Change Amino Acid Helper hotkey (" + Input.Keys.toString(AminoAcidGuide.toggleKey) + ")";
+            }
+        });
+        modPanel.addUIElement(buttonLabel);
+
+        ModButton consoleKeyButton = new ModButton(BUTTON_X, BUTTON_Y, modPanel, (me) -> {
+            me.parent.waitingOnEvent = true;
+            oldInputProcessor = Gdx.input.getInputProcessor();
+            Gdx.input.setInputProcessor(new InputAdapter() {
+                @Override
+                public boolean keyUp(int keycode) {
+                    AminoAcidGuide.toggleKey = keycode;
+                    setAminoAcidGuideToggleKey(Input.Keys.toString(keycode));
+                    me.parent.waitingOnEvent = false;
+                    Gdx.input.setInputProcessor(oldInputProcessor);
+                    return true;
+                }
+            });
+        });
+        modPanel.addUIElement(consoleKeyButton);
+
+        if (AminoAcidGuideButton.enabled) {
+            BaseMod.addTopPanelItem(aminoAcidGuideButton);
+        }
+
         logger.info("Done setting up post-initialization");
+    }
+
+
+    private static void setAminoAcidGuideButtonEnabled(final Boolean value) {
+        config.setBool("amino-acid-guide-button-enabled", value);
+        try {
+            config.save();
+            if (value) {
+                BaseMod.addTopPanelItem(aminoAcidGuideButton);
+            } else {
+                BaseMod.removeTopPanelItem(aminoAcidGuideButton);
+            }
+        } catch (final Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void setAminoAcidGuideToggleKey(final String value) {
+        config.setString("amino-acid-guide-toggle-key", value);
+        try {
+            config.save();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @Override
+    public void receivePostRender(final SpriteBatch sb) {
+        if (aminoAcidGuide.isShowing() && aminoAcidGuide.canShow()) {
+            aminoAcidGuide.render(sb);
+        }
     }
 
     @Override

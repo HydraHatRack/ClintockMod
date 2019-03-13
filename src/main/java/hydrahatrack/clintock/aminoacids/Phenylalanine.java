@@ -4,7 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import hydrahatrack.clintock.actions.PhenylalanineAction;
 
 public class Phenylalanine extends AbstractAminoAcid {
-    public static final String LABEL = "Phenylalanine";
+    public static final String NAME = "Phenylalanine";
+    public static final String CODE = "Phe";
+    public static final String DESCRIPTION = "Add a random uncommon card to your draw pile.";
+    public static final String[] DNA_CODONS = {"TTT", "TTC"};
     private static final int CARD_AMOUNT = 1;
 
     public Phenylalanine() {
@@ -12,13 +15,23 @@ public class Phenylalanine extends AbstractAminoAcid {
     }
 
     @Override
-    public String getLabel() {
-        return LABEL;
+    public String getName() {
+        return NAME;
+    }
+
+    @Override
+    public String getCode() {
+        return CODE;
     }
 
     @Override
     public String getDescription() {
-        return " NL Phe: Add #yUncommon card";
+        return DESCRIPTION;
+    }
+
+    @Override
+    public String[] getDnaCodons() {
+        return DNA_CODONS;
     }
 
     @Override

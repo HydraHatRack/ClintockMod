@@ -22,7 +22,7 @@ public class SerineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Serine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Serine.NAME));
 
             if (AbstractDungeon.player.hasPower(LifeSagerPower.POWER_ID)) {
                 if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {

@@ -4,7 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import hydrahatrack.clintock.actions.MethionineAction;
 
 public class Methionine extends AbstractAminoAcid {
-    public static final String LABEL = "Methionine";
+    public static final String NAME = "Methionine";
+    public static final String CODE = "Met";
+    public static final String DESCRIPTION = "Heal #b1 #yHP at the end of your turn.";
+    public static final String[] DNA_CODONS = {"ATG"};
     private static final int HEALTH_AMOUNT = 1;
 
     public Methionine() {
@@ -12,13 +15,23 @@ public class Methionine extends AbstractAminoAcid {
     }
 
     @Override
-    public String getLabel() {
-        return LABEL;
+    public String getName() {
+        return NAME;
+    }
+
+    @Override
+    public String getCode() {
+        return CODE;
     }
 
     @Override
     public String getDescription() {
-        return " NL Met: Heal #b" + this.baseNumber + " HP -> Self";
+        return DESCRIPTION;
+    }
+
+    @Override
+    public String[] getDnaCodons() {
+        return DNA_CODONS;
     }
 
     @Override

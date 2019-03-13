@@ -19,7 +19,7 @@ public class AsparagineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Asparagine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Asparagine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                             new DexterityPower(AbstractDungeon.player, this.amount),
