@@ -14,10 +14,12 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import hydrahatrack.clintock.aminoacids.*;
+import hydrahatrack.clintock.characters.TheClintock;
 
 public class AminoAcidGuide implements
         OnStartBattleSubscriber,
@@ -157,13 +159,17 @@ public class AminoAcidGuide implements
     }
 
     void show() {
-        CardCrawlGame.sound.play("POTION_DROP_2", 0.05F);
-        showing = true;
+        if (AbstractDungeon.player instanceof TheClintock) {
+            CardCrawlGame.sound.play("POTION_DROP_2", 0.05F);
+            showing = true;
+        }
     }
 
     void hide() {
-        CardCrawlGame.sound.play("POTION_DROP_2", 0.05F);
-        showing = false;
+        if (AbstractDungeon.player instanceof TheClintock && showing) {
+            CardCrawlGame.sound.play("POTION_DROP_2", 0.05F);
+            showing = false;
+        }
     }
 
     public boolean isShowing() {

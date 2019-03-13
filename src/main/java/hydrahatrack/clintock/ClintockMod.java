@@ -55,19 +55,21 @@ public class ClintockMod implements
         EditKeywordsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
+        PreStartGameSubscriber,
         PostExhaustSubscriber,
         PostBattleSubscriber,
         PostInitializeSubscriber,
-        PostRenderSubscriber {
+        PostRenderSubscriber,
+        OnStartBattleSubscriber {
 
     private final Logger logger = LogManager.getLogger(TheClintock.class.getName());
 
-    // Amino Acid Helper
+    // Amino Acid Guide
     private static SpireConfig config;
     private InputProcessor oldInputProcessor;
     private AminoAcidGuide aminoAcidGuide;
     private static AminoAcidGuideButton aminoAcidGuideButton;
-    public static final String CONFIG_FILE = "amino-acid-helper-config";
+    public static final String CONFIG_FILE = "amino-acid-guide-config";
 
     // Mod metadata
     private static final String MOD_NAME = "The Clintock";
@@ -186,8 +188,8 @@ public class ClintockMod implements
         ModPanel settingsPanel = new ModPanel();
         BaseMod.registerModBadge(badgeTexture, MOD_NAME, AUTHOR, DESCRIPTION, settingsPanel);
 
-        // Add Amino Acid Helper
-        AminoAcidGuideButton.IMG = ImageMaster.loadImage("img/ui/AminoAcidHelperIcon.png");
+        // Add Amino Acid Guide
+        AminoAcidGuideButton.IMG = ImageMaster.loadImage("img/ui/AminoAcidGuideIcon.png");
         aminoAcidGuideButton = new AminoAcidGuideButton(aminoAcidGuide);
 
         ModPanel modPanel = new ModPanel();
@@ -205,7 +207,7 @@ public class ClintockMod implements
             if (me.parent.waitingOnEvent) {
                 me.text = "Press key";
             } else {
-                me.text = "Change Amino Acid Helper hotkey (" + Input.Keys.toString(AminoAcidGuide.toggleKey) + ")";
+                me.text = "Change Amino Acid Guide hotkey (" + Input.Keys.toString(AminoAcidGuide.toggleKey) + ")";
             }
         });
         modPanel.addUIElement(buttonLabel);
@@ -226,13 +228,8 @@ public class ClintockMod implements
         });
         modPanel.addUIElement(consoleKeyButton);
 
-        if (AminoAcidGuideButton.enabled) {
-            BaseMod.addTopPanelItem(aminoAcidGuideButton);
-        }
-
         logger.info("Done setting up post-initialization");
     }
-
 
     private static void setAminoAcidGuideButtonEnabled(final Boolean value) {
         config.setBool("amino-acid-guide-button-enabled", value);
@@ -402,8 +399,24 @@ public class ClintockMod implements
     }
 
     @Override
+    public void receivePreStartGame() {
+        BaseMod.removeTopPanelItem(aminoAcidGuideButton);
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        if (AbstractDungeon.player instanceof TheClintock && AminoAcidGuideButton.enabled) {
+            BaseMod.addTopPanelItem(aminoAcidGuideButton);
+        } else {
+            BaseMod.removeTopPanelItem(aminoAcidGuideButton);
+        }
+    }
+
+    @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         if (AbstractDungeon.player instanceof TheClintock) {
+            BaseMod.removeTopPanelItem(aminoAcidGuideButton);
+
             PeptideChainPower peptideChainPower =
                     (PeptideChainPower) AbstractDungeon.player.getPower(PeptideChainPower.POWER_ID);
             if (null != peptideChainPower && peptideChainPower.containsStopCodon()) {
