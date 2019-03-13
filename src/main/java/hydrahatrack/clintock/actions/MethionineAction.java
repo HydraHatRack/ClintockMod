@@ -18,7 +18,7 @@ public class MethionineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Methionine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Methionine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new HealAction(AbstractDungeon.player, AbstractDungeon.player, this.amount));
 

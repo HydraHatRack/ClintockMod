@@ -4,7 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import hydrahatrack.clintock.actions.ThreonineAction;
 
 public class Threonine extends AbstractAminoAcid {
-    public static final String LABEL = "Threonine";
+    public static final String NAME = "Threonine";
+    public static final String CODE = "Thr";
+    public static final String DESCRIPTION = "Gain #b2 #ySugars at the end of your turn.";
+    public static final String[] DNA_CODONS = {"ACT", "ACC", "ACA", "ACG"};
     private static final int SUGAR_AMOUNT = 2;
 
     public Threonine() {
@@ -12,13 +15,23 @@ public class Threonine extends AbstractAminoAcid {
     }
 
     @Override
-    public String getLabel() {
-        return LABEL;
+    public String getName() {
+        return NAME;
+    }
+
+    @Override
+    public String getCode() {
+        return CODE;
     }
 
     @Override
     public String getDescription() {
-        return " NL Thr: #b" + this.baseNumber + " #ySugars -> Self";
+        return DESCRIPTION;
+    }
+
+    @Override
+    public String[] getDnaCodons() {
+        return DNA_CODONS;
     }
 
     @Override

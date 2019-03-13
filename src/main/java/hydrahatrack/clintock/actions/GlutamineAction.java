@@ -19,7 +19,7 @@ public class GlutamineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Glutamine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Glutamine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new MakeTempCardInDrawPileAction(
                             AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON, AbstractDungeon.cardRandomRng),

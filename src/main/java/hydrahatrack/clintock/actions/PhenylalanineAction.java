@@ -19,7 +19,7 @@ public class PhenylalanineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Phenylalanine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Phenylalanine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new MakeTempCardInDrawPileAction(
                             AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON, AbstractDungeon.cardRandomRng),

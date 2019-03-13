@@ -21,7 +21,7 @@ public class ProlineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Proline.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Proline.NAME));
 
             if (AbstractDungeon.player.hasPower(LifeSagerPower.POWER_ID)) {
                 for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {

@@ -19,7 +19,7 @@ public class ThreonineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Threonine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Threonine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                             new SugarPower(AbstractDungeon.player, this.amount),

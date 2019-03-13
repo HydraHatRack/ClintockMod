@@ -4,7 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import hydrahatrack.clintock.actions.LysineAction;
 
 public class Lysine extends AbstractAminoAcid {
-    public static final String LABEL = "Lysine";
+    public static final String NAME = "Lysine";
+    public static final String CODE = "Lys";
+    public static final String DESCRIPTION = "Gain #b1 #yPlated #yArmor at the end of your turn.";
+    public static final String[] DNA_CODONS = {"AAA", "AAG"};
     private static final int PLATED_ARMOR_AMOUNT = 1;
 
     public Lysine() {
@@ -12,13 +15,23 @@ public class Lysine extends AbstractAminoAcid {
     }
 
     @Override
-    public String getLabel() {
-        return LABEL;
+    public String getName() {
+        return NAME;
+    }
+
+    @Override
+    public String getCode() {
+        return CODE;
     }
 
     @Override
     public String getDescription() {
-        return " NL Lys: #b" + this.baseNumber + " #yPlated #yArmor -> Self";
+        return DESCRIPTION;
+    }
+
+    @Override
+    public String[] getDnaCodons() {
+        return DNA_CODONS;
     }
 
     @Override

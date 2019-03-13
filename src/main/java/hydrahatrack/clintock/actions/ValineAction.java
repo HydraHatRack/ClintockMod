@@ -19,7 +19,7 @@ public class ValineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Valine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Valine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                             new PhosphatePower(AbstractDungeon.player, this.amount),

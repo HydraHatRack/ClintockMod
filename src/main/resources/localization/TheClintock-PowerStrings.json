@@ -90,7 +90,7 @@
   "clintock:PeptideChainPower": {
     "NAME": "Polypeptide",
     "DESCRIPTIONS": [
-      "At the end of each turn:"
+      "Activate the following at the end of each turn: "
     ]
   },
   "clintock:PhosphatePower": {

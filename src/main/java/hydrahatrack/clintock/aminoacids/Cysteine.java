@@ -4,7 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import hydrahatrack.clintock.actions.CysteineAction;
 
 public class Cysteine extends AbstractAminoAcid {
-    public static final String LABEL = "Cysteine";
+    public static final String NAME = "Cysteine";
+    public static final String CODE = "Cys";
+    public static final String DESCRIPTION = "Gain #b1 #yStrength at the end of your turn.";
+    public static final String[] DNA_CODONS = {"TGT", "TGC"};
     private static final int STRENGTH_AMOUNT = 1;
 
     public Cysteine() {
@@ -12,13 +15,23 @@ public class Cysteine extends AbstractAminoAcid {
     }
 
     @Override
-    public String getLabel() {
-        return LABEL;
+    public String getName() {
+        return NAME;
+    }
+
+    @Override
+    public String getCode() {
+        return CODE;
     }
 
     @Override
     public String getDescription() {
-        return " NL Cys: #b" + this.baseNumber + " #yStrength -> Self";
+        return DESCRIPTION;
+    }
+
+    @Override
+    public String[] getDnaCodons() {
+        return DNA_CODONS;
     }
 
     @Override

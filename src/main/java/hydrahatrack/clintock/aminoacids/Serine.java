@@ -4,7 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import hydrahatrack.clintock.actions.SerineAction;
 
 public class Serine extends AbstractAminoAcid {
-    public static final String LABEL = "Serine";
+    public static final String NAME = "Serine";
+    public static final String CODE = "Ser";
+    public static final String DESCRIPTION = "Apply #b3 #yPoison to a random enemy at the end of your turn.";
+    public static final String[] DNA_CODONS = {"TCT", "TCC", "TCA", "TCG", "AGT", "AGC"};
     private static final int POISON_AMOUNT = 3;
 
     public Serine() {
@@ -12,13 +15,23 @@ public class Serine extends AbstractAminoAcid {
     }
 
     @Override
-    public String getLabel() {
-        return LABEL;
+    public String getName() {
+        return NAME;
+    }
+
+    @Override
+    public String getCode() {
+        return CODE;
     }
 
     @Override
     public String getDescription() {
-        return " NL Ser: #b" + this.baseNumber + " #yPoison -> Enemy";
+        return DESCRIPTION;
+    }
+
+    @Override
+    public String[] getDnaCodons() {
+        return DNA_CODONS;
     }
 
     @Override

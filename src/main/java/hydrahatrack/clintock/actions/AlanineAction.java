@@ -19,7 +19,7 @@ public class AlanineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Alanine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Alanine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(
                             AbstractDungeon.player, AbstractDungeon.player,

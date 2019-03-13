@@ -19,7 +19,7 @@ public class CysteineAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, Cysteine.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, Cysteine.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                             new StrengthPower(AbstractDungeon.player, this.amount),

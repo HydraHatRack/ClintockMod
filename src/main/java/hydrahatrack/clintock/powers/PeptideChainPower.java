@@ -35,7 +35,7 @@ public class PeptideChainPower extends AbstractPower {
 
     public void bindAminoAcid(final AbstractAminoAcid aminoAcid) {
         AbstractDungeon.actionManager.addToBottom(
-                new TextAboveCreatureAction(AbstractDungeon.player, aminoAcid.getLabel()));
+                new TextAboveCreatureAction(AbstractDungeon.player, aminoAcid.getName()));
         aminoAcids.add(aminoAcid);
 
         Bateson9000Power bateson9000Power =
@@ -52,7 +52,7 @@ public class PeptideChainPower extends AbstractPower {
             for (int i = 0; i < biolelePrimePower.amount; i++) {
                 biolelePrimePower.flash();
                 AbstractDungeon.actionManager.addToBottom(
-                        new TextAboveCreatureAction(AbstractDungeon.player, aminoAcid.getLabel()));
+                        new TextAboveCreatureAction(AbstractDungeon.player, aminoAcid.getName()));
                 aminoAcids.add(aminoAcid);
             }
         }
@@ -102,11 +102,8 @@ public class PeptideChainPower extends AbstractPower {
     public void updateDescription() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(DESCRIPTIONS[0]);
-        for (int i = 0; i < Math.min(aminoAcids.size(), 10); i++) {
-            stringBuilder.append(aminoAcids.get(i).getDescription());
-        }
-        if (aminoAcids.size() > 10) {
-            stringBuilder.append(" NL ...and ").append(aminoAcids.size() - 10).append(" more.");
+        for (AbstractAminoAcid aminoAcid : aminoAcids) {
+            stringBuilder.append(aminoAcid.getName()).append(" ");
         }
         this.description = stringBuilder.toString();
     }

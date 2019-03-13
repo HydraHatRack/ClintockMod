@@ -4,7 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import hydrahatrack.clintock.actions.GlutamineAction;
 
 public class Glutamine extends AbstractAminoAcid {
-    public static final String LABEL = "Glutamine";
+    public static final String NAME = "Glutamine";
+    public static final String CODE = "Gln";
+    public static final String DESCRIPTION = "Add a random common card to your draw pile.";
+    public static final String[] DNA_CODONS = {"CAA", "CAG"};
     private static final int CARD_AMOUNT = 1;
 
     public Glutamine() {
@@ -12,13 +15,23 @@ public class Glutamine extends AbstractAminoAcid {
     }
 
     @Override
-    public String getLabel() {
-        return LABEL;
+    public String getName() {
+        return NAME;
+    }
+
+    @Override
+    public String getCode() {
+        return CODE;
     }
 
     @Override
     public String getDescription() {
-        return " NL Gln: Add #yCommon card";
+        return DESCRIPTION;
+    }
+
+    @Override
+    public String[] getDnaCodons() {
+        return DNA_CODONS;
     }
 
     @Override

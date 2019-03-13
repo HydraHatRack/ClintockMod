@@ -18,7 +18,7 @@ public class GlutamicAcidAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, GlutamicAcid.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, GlutamicAcid.NAME));
             AbstractDungeon.actionManager.addToBottom(new UpgradeRandomCardAction());
 
             this.isDone = true;

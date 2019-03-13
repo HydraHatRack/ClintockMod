@@ -4,7 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import hydrahatrack.clintock.actions.AsparagineAction;
 
 public class Asparagine extends AbstractAminoAcid {
-    public static final String LABEL = "Asparagine";
+    public static final String NAME = "Asparagine";
+    public static final String CODE = "Asn";
+    public static final String DESCRIPTION = "Gain #b1 #yDexterity at the end of your turn.";
+    public static final String[] DNA_CODONS = {"AAT", "AAC"};
     private static final int DEXTERITY_AMOUNT = 1;
 
     public Asparagine() {
@@ -12,13 +15,23 @@ public class Asparagine extends AbstractAminoAcid {
     }
 
     @Override
-    public String getLabel() {
-        return LABEL;
+    public String getName() {
+        return NAME;
+    }
+
+    @Override
+    public String getCode() {
+        return CODE;
     }
 
     @Override
     public String getDescription() {
-        return " NL Asn: #b" + this.baseNumber + " #yDexterity -> Self";
+        return DESCRIPTION;
+    }
+
+    @Override
+    public String[] getDnaCodons() {
+        return DNA_CODONS;
     }
 
     @Override

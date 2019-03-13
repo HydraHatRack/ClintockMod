@@ -19,7 +19,7 @@ public class AsparticAcidAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_XFAST) {
             AbstractDungeon.actionManager.addToBottom(
-                    new TextAboveCreatureAction(AbstractDungeon.player, AsparticAcid.LABEL));
+                    new TextAboveCreatureAction(AbstractDungeon.player, AsparticAcid.NAME));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                             new BlurPower(AbstractDungeon.player, this.amount),
