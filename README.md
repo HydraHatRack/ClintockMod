@@ -40,7 +40,7 @@
 
 *Cysteine (Cys)* - Gain 1 Strength at the end of your turn.<br/>TGT, TGC
 
-*Glutamic Acid (Glu)* - Upgrade a random card in your hand.<br/>GAA, GAG
+*Glutamic Acid (Glu)* - Express each of your Linked Bases (except Guanine).<br/>GAA, GAG
 
 *Glutamine (Gln)* - Add a random common card to your draw pile.<br/>CAA, CAG
 
@@ -62,11 +62,11 @@
 
 *Serine (Ser)* - Apply 3 Poison to a random enemy at the end of your turn.<br/>TCT, TCC, TCA, TCG, AGT, AGC
 
-*Threonine (Thr)* - Gain 2 Sugars at the end of your turn.<br/>ACT, ACC, ACA, ACG
+*Threonine (Thr)* - Gain 4 Sugars at the end of your turn.<br/>ACT, ACC, ACA, ACG
 
 *Tryptophan (Trp)* - Remove 1 Strength from a random enemy at the end of your turn.<br/>TGG
 
 *Tyrosine (Tyr)* - Gain 1 Fluorophore at the end of your turn.<br/>TAT, TAC
 
-*Valine (Val)* - Gain 2 Phosphates at the end of your turn.<br/>GTT, GTC, GTA, GTG
+*Valine (Val)* - Gain 4 Phosphates at the end of your turn.<br/>GTT, GTC, GTA, GTG
 

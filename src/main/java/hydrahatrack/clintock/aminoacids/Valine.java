@@ -6,9 +6,9 @@ import hydrahatrack.clintock.actions.ValineAction;
 public class Valine extends AbstractAminoAcid {
     public static final String NAME = "Valine";
     public static final String CODE = "Val";
-    public static final String DESCRIPTION = "Gain #b2 #yPhosphates at the end of your turn.";
+    public static final String DESCRIPTION = "Gain #b4 #yPhosphates at the end of your turn.";
     public static final String[] DNA_CODONS = {"GTT", "GTC", "GTA", "GTG"};
-    private static final int PHOSPHATE_AMOUNT = 2;
+    private static final int PHOSPHATE_AMOUNT = 4;
 
     public Valine() {
         this.baseNumber = PHOSPHATE_AMOUNT;

@@ -15,8 +15,8 @@ public class CytosineOrb extends NucleobaseOrb {
     private static final OrbStrings orbStrings = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     private static final String NAME = orbStrings.NAME;
     private static final String[] DESCRIPTIONS = orbStrings.DESCRIPTION;
-    private static final String LABEL = "C";
-    private static final int DAMAGE_AMOUNT = 4;
+    public static final String LABEL = "C";
+    private static final int DAMAGE_AMOUNT = 3;
 
     public CytosineOrb() {
         this.ID = ORB_ID;

@@ -15,11 +15,19 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.cards.*;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
 import hydrahatrack.clintock.enums.TheClintockEnum;
+import hydrahatrack.clintock.orbs.AdenineOrb;
+import hydrahatrack.clintock.orbs.CytosineOrb;
+import hydrahatrack.clintock.orbs.GuanineOrb;
+import hydrahatrack.clintock.orbs.ThymineOrb;
 import hydrahatrack.clintock.relics.BiomoleculePool;
 
 import java.util.ArrayList;
@@ -107,6 +115,36 @@ public class TheClintock extends CustomPlayer {
 
     public int getCardExhaustCount() {
         return cardExhaustCount;
+    }
+
+    @Override
+    public void channelOrb(final AbstractOrb orbToSet) {
+        if (orbToSet instanceof AdenineOrb ||
+            orbToSet instanceof CytosineOrb ||
+            orbToSet instanceof GuanineOrb ||
+            orbToSet instanceof ThymineOrb ||
+            orbToSet instanceof EmptyOrbSlot) {
+            super.channelOrb(orbToSet);
+        } else {
+            AbstractDungeon.effectList.add(new ThoughtBubble(
+                    this.dialogX, this.dialogY, 3.0F, ClintockMod.INVALID_ORB, true));
+        }
+    }
+
+    @Override
+    public void increaseMaxOrbSlots(final int amount, final boolean playSfx) {
+        if (3 == this.maxOrbs) {
+            AbstractDungeon.effectList.add(new ThoughtBubble(
+                    this.dialogX, this.dialogY, 3.0F, ClintockMod.CANNOT_INCREASE_ORB_COUNT, true));
+        } else {
+            super.increaseMaxOrbSlots(amount, playSfx);
+        }
+    }
+
+    @Override
+    public void decreaseMaxOrbSlots(final int amount) {
+        AbstractDungeon.effectList.add(new ThoughtBubble(
+                this.dialogX, this.dialogY, 3.0F, ClintockMod.CANNOT_DECREASE_ORB_COUNT, true));
     }
 
     @Override

@@ -9,7 +9,7 @@
     "NAMES": [
       "adenine"
     ],
-    "DESCRIPTION": "Blue #yBase: Gains #b3 #yBlock."
+    "DESCRIPTION": "At the end of your turn, gains #b2 #yBlock."
   },
   "clintock:BaseKeyword": {
     "NAMES": [
@@ -38,7 +38,7 @@
     "NAMES": [
       "cytosine"
     ],
-    "DESCRIPTION": "Red #yBase: Deals #b4 damage to a random enemy."
+    "DESCRIPTION": "At the end of your turn, deals #b3 damage to a random enemy."
   },
   "clintock:DeletionKeyword": {
     "NAMES": [
@@ -66,7 +66,7 @@
     "NAMES": [
       "guanine"
     ],
-    "DESCRIPTION": "Green #yBase: Gains #b Energy."
+    "DESCRIPTION": "At the start of your next turn, gains #b Energy."
   },
   "clintock:Intron": {
     "NAMES": [
@@ -96,7 +96,7 @@
       "nucleobase",
       "nucleobases"
     ],
-    "DESCRIPTION": "Requires #b1 #ySugar and #b1 #yPhosphate when #yLinking."
+    "DESCRIPTION": "#yEthereal. Requires #b1 #ySugar and #b1 #yPhosphate when #yLinking."
   },
   "clintock:NucleosideKeyword": {
     "NAMES": [
@@ -144,7 +144,7 @@
       "sequencer",
       "sequencers"
     ],
-    "DESCRIPTION": "Includes #yBateson #y9000, #yBiolele #yPrime, #yLifeSager, #yMendelPRO, #ySinsheimerT3, and #ySuperSeq #yX1."
+    "DESCRIPTION": "Includes the following cards: #yBateson #y9000, #yBiolele #yPrime, #yLifeSager, #yMendelPRO, #ySinsheimerT3, and #ySuperSeq #yX1."
   },
   "clintock:SugarKeyword": {
     "NAMES": [
@@ -164,6 +164,6 @@
     "NAMES": [
       "thymine"
     ],
-    "DESCRIPTION": "Yellow #yBase: Deals #b2 damage to ALL enemies."
+    "DESCRIPTION": "At the end of your turn, deals #b2 damage to ALL enemies."
   }
 }

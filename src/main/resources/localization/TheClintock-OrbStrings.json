@@ -2,27 +2,27 @@
   "clintock:AdenineOrb": {
     "NAME": "Adenine",
     "DESCRIPTION": [
-      "Gains #b",
+      "At the end of your turn, gain #b",
       " #yBlock."
     ]
   },
   "clintock:CytosineOrb": {
     "NAME": "Cytosine",
     "DESCRIPTION": [
-      "Deals #b",
+      "At the end of your turn, deal #b",
       " damage to a random enemy."
     ]
   },
   "clintock:GuanineOrb": {
     "NAME": "Guanine",
     "DESCRIPTION": [
-      "Next turn, gains [R] . NL Unaffected by #yFluorophores."
+      "At the start of your next turn, gain [R] . NL Unaffected by #yFluorophores."
     ]
   },
   "clintock:ThymineOrb": {
     "NAME": "Thymine",
     "DESCRIPTION": [
-      "Deals #b",
+      "At the end of your turn, deal #b",
       " damage to ALL enemies."
     ]
   }

@@ -2,13 +2,18 @@ package hydrahatrack.clintock.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.defect.RemoveAllOrbsAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import hydrahatrack.clintock.aminoacids.*;
+import hydrahatrack.clintock.orbs.AdenineOrb;
+import hydrahatrack.clintock.orbs.CytosineOrb;
 import hydrahatrack.clintock.orbs.NucleobaseOrb;
+import hydrahatrack.clintock.orbs.ThymineOrb;
 import hydrahatrack.clintock.powers.InterruptedPower;
 import hydrahatrack.clintock.powers.PeptideChainPower;
 
@@ -39,17 +44,28 @@ public class LinkAction extends AbstractGameAction {
                 }
             }
 
-            AbstractDungeon.player.channelOrb(this.orbType);
-
             if (!foundEmptyOrbSlot) {
-                AbstractDungeon.actionManager.addToTop(new RemoveAllOrbsAction());
-
                 PeptideChainPower power = (PeptideChainPower) AbstractDungeon.player.getPower(PeptideChainPower.POWER_ID);
                 if (null == power) {
                     power = new PeptideChainPower(AbstractDungeon.player);
-                    AbstractDungeon.actionManager.addToTop(
+                    AbstractDungeon.actionManager.addToBottom(
                             new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, power));
                 }
+
+                for (AbstractOrb orb : AbstractDungeon.player.orbs) {
+                    if (orb instanceof AdenineOrb) {
+                        AbstractDungeon.actionManager.addToBottom(new AdenineOrbPassiveAction(orb));
+                    } else if (orb instanceof CytosineOrb) {
+                        AbstractDungeon.actionManager.addToBottom(
+                                new CytosineOrbPassiveAction(new DamageInfo(
+                                        AbstractDungeon.player, orb.passiveAmount, DamageInfo.DamageType.THORNS), orb));
+                    } else if (orb instanceof ThymineOrb) {
+                        AbstractDungeon.actionManager.addToBottom(
+                                new ThymineOrbPassiveAction(new DamageInfo(
+                                        AbstractDungeon.player, orb.passiveAmount, DamageInfo.DamageType.THORNS), orb));
+                    }
+                }
+                AbstractDungeon.actionManager.addToBottom(new RemoveAllOrbsAction());
 
                 switch (dnaCodonBuilder.toString()) {
                     case "GCT":
@@ -162,6 +178,8 @@ public class LinkAction extends AbstractGameAction {
                         System.out.println("Unexpected nucleotide chain!");
                 }
             }
+
+            AbstractDungeon.actionManager.addToBottom(new ChannelAction(this.orbType));
 
             if (Settings.FAST_MODE) {
                 this.isDone = true;

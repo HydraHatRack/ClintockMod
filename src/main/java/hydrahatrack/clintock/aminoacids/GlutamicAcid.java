@@ -6,7 +6,7 @@ import hydrahatrack.clintock.actions.GlutamicAcidAction;
 public class GlutamicAcid extends AbstractAminoAcid {
     public static final String NAME = "Glutamic Acid";
     public static final String CODE = "Glu";
-    public static final String DESCRIPTION = "#yUpgrade a random card in your hand.";
+    public static final String DESCRIPTION = "#yExpress each of your #yLinked #yBases (except #yGuanine).";
     public static final String[] DNA_CODONS = {"GAA", "GAG"};
     private static final int UPGRADE_CARD_AMOUNT = 1;
 

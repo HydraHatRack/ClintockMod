@@ -24,7 +24,7 @@ public class Ketosis extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 10;
+    private static final int ATTACK_DMG = 12;
     private static final int SELF_DMG = 4;
     private static final int UPGRADE_MINUS_SELF_DMG = -2;
 

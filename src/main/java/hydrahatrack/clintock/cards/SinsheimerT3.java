@@ -31,7 +31,7 @@ public class SinsheimerT3 extends CustomCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new SinsheimerT3Power(p, this.magicNumber)));
+                new ApplyPowerAction(p, p, new SinsheimerT3Power(p, this.magicNumber), this.magicNumber));
     }
 
     @Override

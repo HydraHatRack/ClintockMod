@@ -17,6 +17,7 @@ public class SinsheimerT3Power extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public SinsheimerT3Power(final AbstractCreature owner, final int amount) {
+        System.out.println(amount);
         this.ID = POWER_ID;
         this.name = NAME;
         this.owner = owner;

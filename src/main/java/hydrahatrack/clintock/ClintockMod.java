@@ -69,7 +69,7 @@ public class ClintockMod implements
     private InputProcessor oldInputProcessor;
     private AminoAcidGuide aminoAcidGuide;
     private static AminoAcidGuideButton aminoAcidGuideButton;
-    public static final String CONFIG_FILE = "amino-acid-guide-config";
+    private static final String CONFIG_FILE = "amino-acid-guide-config";
 
     // Mod metadata
     private static final String MOD_NAME = "The Clintock";
@@ -77,8 +77,11 @@ public class ClintockMod implements
     private static final String DESCRIPTION = "Adds a new playable character, The Clintock.";
 
     // In-game messages
+    public static final String CANNOT_DECREASE_ORB_COUNT = "I cannot decrease my #rOrb count!";
+    public static final String CANNOT_INCREASE_ORB_COUNT = "I cannot increase my #rOrb count!";
     public static final String CANNOT_LINK = "I cannot #rLink right now!";
     public static final String CANNOT_TARGET_ENEMY = "I cannot target that enemy!";
+    public static final String INVALID_ORB = "I cannot #rLink that kind of orb!";
     public static final String NEEDS_MORE_SUGAR = "I need more #rSugar!";
     public static final String NEEDS_MORE_PHOSPHATE = "I need more #rPhosphate!";
     public static final String NEEDS_PEPTIDE_CHAIN = "I don't have a #rPeptide-Chain yet!";

@@ -16,7 +16,7 @@ public class GuanineOrb extends NucleobaseOrb {
     private static final OrbStrings orbStrings = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     private static final String NAME = orbStrings.NAME;
     private static final String[] DESCRIPTIONS = orbStrings.DESCRIPTION;
-    private static final String LABEL = "G";
+    public static final String LABEL = "G";
     private static final int ENERGY_AMOUNT = 1;
 
     public GuanineOrb() {

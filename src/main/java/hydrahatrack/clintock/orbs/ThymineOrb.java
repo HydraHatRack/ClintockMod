@@ -15,7 +15,7 @@ public class ThymineOrb extends NucleobaseOrb {
     private static final OrbStrings orbStrings = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     private static final String NAME = orbStrings.NAME;
     private static final String[] DESCRIPTIONS = orbStrings.DESCRIPTION;
-    private static final String LABEL = "T";
+    public static final String LABEL = "T";
     private static final int DAMAGE_AMOUNT = 2;
 
     public ThymineOrb() {

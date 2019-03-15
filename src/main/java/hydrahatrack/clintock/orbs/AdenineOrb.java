@@ -10,12 +10,12 @@ import hydrahatrack.clintock.actions.AdenineOrbPassiveAction;
 import hydrahatrack.clintock.powers.KnockedOutPower;
 
 public class AdenineOrb extends NucleobaseOrb {
-    public static final String ORB_ID = "clintock:AdenineOrb";
+    private static final String ORB_ID = "clintock:AdenineOrb";
     private static final OrbStrings orbStrings = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     private static final String NAME = orbStrings.NAME;
     private static final String[] DESCRIPTIONS = orbStrings.DESCRIPTION;
-    private static final String LABEL = "A";
-    private static final int BLOCK_AMOUNT = 3;
+    public static final String LABEL = "A";
+    private static final int BLOCK_AMOUNT = 2;
 
     public AdenineOrb() {
         this.ID = ORB_ID;

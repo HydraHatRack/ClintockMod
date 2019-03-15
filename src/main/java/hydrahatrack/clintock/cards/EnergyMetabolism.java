@@ -1,6 +1,7 @@
 package hydrahatrack.clintock.cards;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import hydrahatrack.clintock.ClintockMod;
 import hydrahatrack.clintock.enums.AbstractCardEnum;
+import hydrahatrack.clintock.powers.SugarPower;
 
 public class EnergyMetabolism extends CustomCard {
     public static final String ID = "clintock:EnergyMetabolism";
@@ -42,6 +44,7 @@ public class EnergyMetabolism extends CustomCard {
         if (effect > 0) {
             AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, effect));
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(effect));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SugarPower(p, effect), effect));
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, effect));
         }
 
