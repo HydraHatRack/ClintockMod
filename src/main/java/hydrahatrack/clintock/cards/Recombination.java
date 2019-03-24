@@ -3,7 +3,7 @@ package hydrahatrack.clintock.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -34,8 +34,7 @@ public class Recombination extends CustomCard {
             AbstractDungeon.actionManager.addToBottom(new EmptyDeckShuffleAction());
         }
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(
-                new MakeTempCardInDrawPileAction(new Knockout(), 1, true, true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Knockout(), 1));
     }
 
     @Override

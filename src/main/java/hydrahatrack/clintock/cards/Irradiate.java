@@ -4,7 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -42,8 +42,7 @@ public class Irradiate extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false),
                         this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(
-                new MakeTempCardInDrawPileAction(new Deletion(), 1, true, true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Deletion(), 1));
     }
 
     @Override

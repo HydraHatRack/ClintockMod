@@ -6,15 +6,15 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import hydrahatrack.clintock.ClintockMod;
-import hydrahatrack.clintock.aminoacids.Arginine;
+import hydrahatrack.clintock.aminoacids.Methionine;
 import hydrahatrack.clintock.powers.PeptideChainPower;
 
-public class NTerminusArginine extends CustomRelic {
-    public static final String ID = "clintock:NTerminusArginine";
+public class StartCodon extends CustomRelic {
+    public static final String ID = "clintock:StartCodon";
     private static final Texture IMG = ImageMaster.loadImage(ClintockMod.getRelicImagePath(ID));
     private static final Texture OUTLINE = ImageMaster.loadImage(ClintockMod.getRelicOutlineImagePath(ID));
 
-    public NTerminusArginine() {
+    public StartCodon() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
@@ -24,7 +24,7 @@ public class NTerminusArginine extends CustomRelic {
         PeptideChainPower power = new PeptideChainPower(AbstractDungeon.player);
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, power));
-        power.bindAminoAcid(new Arginine());
+        power.bindAminoAcid(new Methionine());
     }
 
     @Override

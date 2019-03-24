@@ -20,11 +20,11 @@
       "At the end of battle, heal 1 HP for each #yAmino acid in your #yPolypeptide chain."
     ]
   },
-  "clintock:NTerminusArginine": {
-    "NAME": "N-Terminus Arginine",
+  "clintock:StartCodon": {
+    "NAME": "Start Codon",
     "FLAVOR": "\"Basically, I have been compelled by curiosity.\"\n - Mary Leakey",
     "DESCRIPTIONS": [
-      "At the start of battle, #yBind #yArginine to your #yPolypeptide chain."
+      "At the start of battle, #yBind #yMethionine to your #yPolypeptide chain."
     ]
   }
 }

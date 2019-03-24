@@ -32,7 +32,7 @@ import hydrahatrack.clintock.powers.PeptideChainPower;
 import hydrahatrack.clintock.relics.BiomoleculePool;
 import hydrahatrack.clintock.relics.Isopropanol;
 import hydrahatrack.clintock.relics.MG53;
-import hydrahatrack.clintock.relics.NTerminusArginine;
+import hydrahatrack.clintock.relics.StartCodon;
 import hydrahatrack.clintock.ui.AminoAcidGuide;
 import hydrahatrack.clintock.ui.AminoAcidGuideButton;
 import org.apache.logging.log4j.LogManager;
@@ -384,7 +384,7 @@ public class ClintockMod implements
         BaseMod.addRelicToCustomPool(new BiomoleculePool(), AbstractCardEnum.CLINTOCK);
         BaseMod.addRelicToCustomPool(new Isopropanol(), AbstractCardEnum.CLINTOCK);
         BaseMod.addRelicToCustomPool(new MG53(), AbstractCardEnum.CLINTOCK);
-        BaseMod.addRelicToCustomPool(new NTerminusArginine(), AbstractCardEnum.CLINTOCK);
+        BaseMod.addRelicToCustomPool(new StartCodon(), AbstractCardEnum.CLINTOCK);
 
         logger.info("Done editing relics");
     }

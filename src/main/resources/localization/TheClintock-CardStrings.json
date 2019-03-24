@@ -180,7 +180,7 @@
   },
   "clintock:Intron": {
     "NAME": "Intron",
-    "DESCRIPTION": "Unplayable. Bases cannot Link this turn."
+    "DESCRIPTION": "Exhaust. NL Bases cannot Link while this is in your hand."
   },
   "clintock:Irradiate": {
     "NAME": "Irradiate",
@@ -196,7 +196,7 @@
   },
   "clintock:Knockout": {
     "NAME": "Knockout",
-    "DESCRIPTION": "Unplayable. Bases cannot Express this turn."
+    "DESCRIPTION": "Unplayable. NL When drawn, prevent Bases from Expressing this turn."
   },
   "clintock:LifeSager": {
     "NAME": "LifeSager",
