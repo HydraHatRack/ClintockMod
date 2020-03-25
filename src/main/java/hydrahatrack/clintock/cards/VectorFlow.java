@@ -49,7 +49,7 @@ public class VectorFlow extends CustomCard {
                 c.cardID.equals(DCMP.ID) ||
                 c.cardID.equals(DGMP.ID) ||
                 c.cardID.equals(DTMP.ID)) {
-            modifyCostForTurn(-1);
+            setCostForTurn(this.cost - 1);
         }
     }
 

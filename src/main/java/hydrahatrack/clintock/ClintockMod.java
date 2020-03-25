@@ -46,7 +46,6 @@ import java.util.Properties;
 import java.util.Random;
 
 import static basemod.BaseModInit.*;
-import static basemod.BaseModInit.BUTTON_Y;
 
 @SpireInitializer
 public class ClintockMod implements

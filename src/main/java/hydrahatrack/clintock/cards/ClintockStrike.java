@@ -29,7 +29,7 @@ public class ClintockStrike extends CustomCard {
         this.baseDamage = this.damage = ATTACK_DMG;
 
         this.tags.add(CardTags.STRIKE);
-        this.tags.add(BaseModCardTags.BASIC_STRIKE);
+        this.tags.add(CardTags.STARTER_STRIKE);
     }
 
     @Override

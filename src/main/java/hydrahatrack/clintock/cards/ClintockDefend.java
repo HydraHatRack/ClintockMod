@@ -26,7 +26,7 @@ public class ClintockDefend extends CustomCard {
 
         this.baseBlock = this.block = BLOCK_AMOUNT;
 
-        this.tags.add(BaseModCardTags.BASIC_DEFEND);
+        this.tags.add(CardTags.STARTER_DEFEND);
     }
 
     @Override
